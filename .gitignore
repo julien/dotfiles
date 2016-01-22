@@ -1,4 +1,8 @@
+**/vim/vimfiles/bundle/**
+*.d/
+*.txt
 .DS_Store
 authrc
-*.txt
-**/vim/vimfiles/bundle/**
+awesome
+openbox
+urxvt
