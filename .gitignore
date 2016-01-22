@@ -1,5 +1,6 @@
 **/vim/vimfiles/bundle/**
 *.d/
+*.sh
 *.txt
 .DS_Store
 authrc
