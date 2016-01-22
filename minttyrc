@@ -1,0 +1,15 @@
+BoldAsFont=yes
+FontHeight=12
+Transparency=off
+OpaqueWhenFocused=no
+Columns=120
+Rows=40
+Term=xterm-256color
+Font=Terminus
+AllowBlinking=yes
+Locale=en_GB
+Charset=UTF-8
+CursorType=block
+BellFlash=yes
+Printer=Microsoft Print to PDF
+CursorBlinks=no
