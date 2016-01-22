@@ -1,0 +1,141 @@
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+
+let mapleader = "\<space>"
+set nocp
+
+" editing
+set et sw=2 ts=2
+set bs=indent,eol,start
+set ve=block
+set nospell nowrap
+set t_Co=256
+
+" backup
+set nobackup nowritebackup noswapfile viminfo="NONE"
+
+" errors
+set noeb visualbell t_vb=""
+
+" all the rest
+set ar
+set acd
+set ch=1
+set ek
+set hid
+set mouse=a mousemodel=extend
+
+set noru
+set shm=atI
+set stal=1
+set nu
+set nocul
+set so=2
+set gcr=n:blinkon0
+set tf
+set wmnu wim=longest,list,full
+set nosol
+
+" statusline
+set ls=0
+set stl=%F%m%r%h%w\ [%l/%L,\ %v]\ %p%%\ %=%{&ff}
+
+" search
+set scs is sm
+
+runtime macros/matchit.vim
+
+""" key mappings
+" map! ii <ESC>
+" imap ii <ESC>
+
+nn j gj
+nn k gk
+
+nn   <F1> <nop>
+map  <F1> <nop>
+imap <F1> <nop>
+map! <F1> <nop>
+nn   <F9> mzggg?G`z
+
+" move lines up or down
+nn  <c-j> :m+<cr>==
+nn  <c-k> :m-2<cr>==
+ino <c-j> <Esc>:m+<cr>==gi
+ino <c-k> <Esc>:m-2<cr>==gi
+vn  <c-j> :m'>+<cr>gv=gv
+vn  <c-k> :m-2<cr>gv=gv
+
+" file managment
+" nm <c-p> :e <c-d>
+nm <silent> <leader>b :ls<cr>:e #
+nn <silent> <leader>i :set invlist<cr>
+nn <silent> <leader>q :call wipeout#Wipeout()<cr>
+
+" json
+nn <silent> <leader>j :%!python -m json.tool<cr>
+
+" reselect visual block after indent/outdent
+vn < <gv
+vn > >gv
+
+""" autocommands
+" strip trailing whitespace on save
+au BufWritePre * :%s/\s\+$//e
+au FileType c,cpp,java,hcl,go,lua,make,python setlocal noet sw=4 ts=4
+
+" netrw settings
+let g:netrw_banner       = 0
+let g:netrw_list_hide    = '*.db,desktop.ini,\.DS_Store,\.\/$'
+let g:netrw_dirhistmax   = 0
+let g:netrw_keepdir      = 0
+let g:netrw_cursorline   = 0
+let g:netrw_cursor       = 0
+let g:netrw_fastbrowse   = 2
+let g:netrw_browse_split = 0
+
+" vim-go
+let g:go_fmt_autosave =                        1
+let g:go_fmt_command =                         "goimports"
+let g:go_highlight_array_whitespace_error =    0
+let g:go_highlight_space_tab_error =           0
+let g:go_highlight_trailing_whitespace_error = 0
+
+" ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|svn'
+let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" colors
+hi CursorLine cterm=none ctermbg=black ctermfg=white guibg=black guifg=white
+hi LineNr ctermbg=none ctermfg=darkgrey guifg=darkgrey
+hi Search term=none ctermbg=0 guibg=black
+hi StatusLine term=none ctermbg=none ctermfg=0
+hi Visual term=reverse ctermbg=8 ctermfg=7 guibg=black guifg=white
+
+" gvim specific settings
+au! GuiEnter * silent set visualbell t_vb=""
+
+if has("gui_running")
+  set lines=40 columns=110
+  set guitablabel=%M%t
+  set guioptions-=T
+  set guioptions-=e
+  set guioptions-=m
+  set guioptions-=r
+  colo atom-dark-256
+
+  if has("unix")
+    if has("mac")
+      set guifont=Menlo:h14
+    else
+      set guifont=Menlo\ 11
+    endif
+  elseif has("win32")
+    set guifont=Consolas:h11
+  endif
+
+endif

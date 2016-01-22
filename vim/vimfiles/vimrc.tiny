@@ -1,0 +1,9 @@
+syntax on
+filetype plugin indent on
+let mapleader = " "
+set nocp paste acd is scs nu hid ssl sm wmnu ar noerrorbells visualbell t_vb="" sw=2 ch=2 ls=2 so=2 wim=longest,list,full mouse=a mousemodel=extend
+runtime macros/matchit.vim
+" key mappings
+map! ii <ESC>
+imap ii <ESC>
+let g:netrw_cursorline = 0
