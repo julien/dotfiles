@@ -1,0 +1,100 @@
+! colors -------------------------------------------------------------
+*background:    #101010
+*foreground:    #66FF66
+*cursorColor:   #66ff66
+!black
+*color0:        #1c1c1c
+*color8:        #4d4d4d
+!red
+*color1:        #D81860
+*color9:        #F00060
+!green
+*color2:        #60FF60
+*color10:       #70FF70
+!yellow
+*color3:        #f9fd75
+*color11:       #f9fd80
+!blue
+*color4:        #4695c8
+*color12:       #5a9dc8
+!magenta
+*color5:        #a78edb
+*color13:       #b29fdb
+!cyan
+*color6:        #43afce
+*color14:       #69b8ce
+!white
+*color7:        #f3ebe2
+*color15:       #eeeeee
+
+
+! Xft ---------------------------------------------------------------
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+! Xft.rgba:      rgb
+Xft.hintstyle: hintfull
+
+! xterm -------------------------------------------------------------
+xterm*loginShell:      true
+xterm*vt100*geometry:  100x40
+xterm*faceName:        Terminus:style=Regular:size=14
+xterm*saveLines:       2000
+xterm*charClass:       33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName:        xterm-256color
+xterm*locale:          true
+xterm*metaSendsEscape: true
+xterm*eightBitInput:   false
+! right hand side scrollbar...
+xterm*rightScrollBar:  true
+xterm*ScrollBar:       true
+! stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
+! colors
+xterm*foreground:      rgb:a8/a8/a8
+xterm*background:      rgb:00/00/00
+xterm*boldMode:        false
+xterm*colorBDMode:     true
+xterm*colorBD:         rgb:fc/fc/fc
+
+! urxvt --------------------------------------------------------------
+URxvt*termName:           rxvt-256color
+URxvt*loginShell:         true
+URxvt*geometry:           100x40
+URxvt*iconFile:           /usr/share/icons/gnome/32x32/apps/terminal.png
+URxvt*saveLines:          10000
+! URxvt*cutchars:           "`\"'&()*,:;<=>?[\\]^{|}$"
+URxvt*visualBell:         false
+! URxvt*fading:           30
+URxvt*letterSpace:        -1
+! URxvt.font:              xft:terminus:pixelsize=16:antialias=true
+! URxvt.boldFont:          xft:terminus:bold:pixelsize=16:antialias=true
+URxvt.font:               xft:monospace:size=11:antialias=true
+URxvt.boldFont:           xft:monospace:bold:size=11:antialias=true
+
+URxvt*foreground:         rgb:a8/a8/a8
+URxvt*background:         rgb:0/0/0
+! URxvt*background:         rgb:11/11/11
+! URxvt*background:         rgb:10/13/16
+
+! URxvt*.transparent: true
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+! URxvt*.shading: 3
+
+URxvt*scrollBar:          true
+URxvt*scrollBar_right:    true
+URxvt*scrollBar_floating: false
+URxvt*secondaryScroll:    true
+URxvt.scrollstyle:        plain
+URxvt*scrollTtyOutput:    false
+URxvt*scrollWithBuffer:   true
+URxvt*scrollTtyKeypress:  true
+
+! extensions
+URxvt.perl-lib:                .urxvt/
+URxvt.perl-ext-common:         default,tabbedex,resize-font
+URxvt.keysym.Control-Shift-t:  perl:tabbedex:new_tab
+URxvt.keysym.Shifft-Right:     perl:tabbedex:next_tab
+URxvt.keysym.Shift-Left:       perl:tabbedex:prev_tab
+
+URxvt.tabbed.autohide:         true
