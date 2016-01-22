@@ -1,0 +1,51 @@
+# vim: ft=gitconfig
+[user]
+  name = Julien C
+  email = jcastelain@gmail.com
+  logallrefupdates = true
+
+[core]
+  safecrlf = false
+  quotepath = false
+  precomposeUnicode = true
+  filemode = false
+
+[color]
+  diff = true
+  ui = true
+
+[color "status"]
+  added = green
+  changed = blue
+  untracked = bold magenta
+
+[diff]
+  tool = vimdiff
+
+[difftool "vimdiff"]
+  cmd = vim -f -d \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+  tool = vimdiff
+
+[alias]
+  edit = !vim `git ls-files -m` -p
+  fi = !git ls-files | grep -i
+  gr = grep -Ii
+  lf = log --pretty=format:'%C(yellow)%h%C(red)%d %C(reset)%s%C(blue) [%cn]' --decorate --numstat
+  s = status -vsb
+  # if no arguments clear the stash or drop multiple stashes passing the numbers, usage: git shd 2 5 6 9
+  shd = "!f() { !(($#)) && git stash clear || for ((i=1;i<=$#;i++)); do n=$((${!i}+1-$i)); git stash drop stash@{$n} & done; wait; }; f"
+  # show specified stash changes, usage: git shs 3
+  shs = !sh -c 'git stash show -p stash@{$0}'
+  # show un merged
+  sm = diff --name-status --diff-filter=U
+
+[http]
+  sslVerify = false
+
+[help]
+  autocorrect = 1
+
+[push]
+  default = simple
