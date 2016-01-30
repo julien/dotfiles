@@ -31,7 +31,7 @@ set mouse=a mousemodel=extend
 set noru
 set shm=atI
 set stal=1
-set nu
+set nonu
 set nocul
 set so=2
 set gcr=n:blinkon0
@@ -40,7 +40,7 @@ set wmnu wim=longest,list,full
 set nosol
 
 " statusline
-set ls=0
+set ls=2
 set stl=%F%m%r%h%w\ [%l/%L,\ %v]\ %p%%\ %=%{&ff}
 
 " search
@@ -116,6 +116,7 @@ hi Search term=none ctermbg=0 guibg=black
 hi StatusLine term=none ctermbg=none ctermfg=0
 hi Visual term=reverse ctermbg=8 ctermfg=7 guibg=black guifg=white
 
+set bg=dark
 " gvim specific settings
 au! GuiEnter * silent set visualbell t_vb=""
 
@@ -126,13 +127,13 @@ if has("gui_running")
   set guioptions-=e
   set guioptions-=m
   set guioptions-=r
-  colo atom-dark-256
+  colo vividchalk
 
   if has("unix")
     if has("mac")
       set guifont=Menlo:h14
     else
-      set guifont=Menlo\ 11
+      set guifont=Monospace\ 11
     endif
   elseif has("win32")
     set guifont=Consolas:h11

@@ -26,6 +26,7 @@ then
   ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -1a'
 fi
 
+
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=1000
 setopt incappendhistory
@@ -39,6 +40,19 @@ setopt interactivecomments
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
 
+# Navigate to previous dir
+# emulate bash PROMPT_COMMAND (only for zsh)
+precmd() { eval "$PROMPT_COMMAND" }
+# open new terminal in same dir
+PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
+[[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"
+
+alias ls="ls -1a"
+alias ll="ls -ahl"
+alias mem="top -l 1 | head -n 10 | grep PhysMem"
+alias fix="git diff --name-only | uniq | xargs vim"
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim $*"
+alias rm="echo 😱 ;rm $*"
 
 # ENV vars
 export PS1="%U%C%u [%1j] %% "
@@ -47,7 +61,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR="vim"
 
 export GOROOT="/usr/local/opt/go/libexec"
-export GOPATH="$HOME/Downloads/code"
+export GOPATH="$HOME/Documents"
 export GOBIN="$GOPATH/bin"
 
 export GREP_OPTIONS='--color=always'
@@ -59,5 +73,5 @@ export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
-export PATH="$PATH:./node_modules/.bin:"
+export PATH="$PATH:./node_modules/.bin"
 
