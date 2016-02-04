@@ -31,7 +31,7 @@ set mouse=a mousemodel=extend
 set noru
 set shm=atI
 set stal=1
-set nonu
+set nu
 set nocul
 set so=2
 set gcr=n:blinkon0
@@ -45,6 +45,10 @@ set stl=%F%m%r%h%w\ [%l/%L,\ %v]\ %p%%\ %=%{&ff}
 
 " search
 set scs is sm
+
+" tags
+set tags+=$GOPATH/tags
+
 
 runtime macros/matchit.vim
 
@@ -109,17 +113,10 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|svn'
 let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" colors
-hi CursorLine cterm=none ctermbg=black ctermfg=white guibg=black guifg=white
-hi LineNr ctermbg=none ctermfg=darkgrey guifg=darkgrey
-hi Search term=none ctermbg=0 guibg=black
-hi StatusLine term=none ctermbg=none ctermfg=0
-hi Visual term=reverse ctermbg=8 ctermfg=7 guibg=black guifg=white
-
 set bg=dark
+
 " gvim specific settings
 au! GuiEnter * silent set visualbell t_vb=""
-
 if has("gui_running")
   set lines=40 columns=110
   set guitablabel=%M%t
@@ -128,7 +125,6 @@ if has("gui_running")
   set guioptions-=m
   set guioptions-=r
   colo vividchalk
-
   if has("unix")
     if has("mac")
       set guifont=Menlo:h14
@@ -138,5 +134,11 @@ if has("gui_running")
   elseif has("win32")
     set guifont=Consolas:h11
   endif
-
 endif
+
+" colors
+hi CursorLine   cterm=none ctermbg=black ctermfg=white guibg=black guifg=white
+hi LineNr       ctermbg=none ctermfg=darkgrey guifg=darkgrey guibg=black
+hi Search       term=none ctermbg=0 guibg=black
+hi Visual       term=reverse ctermbg=8 ctermfg=7 guibg=black guifg=white
+

@@ -38,6 +38,8 @@ export GOROOT="/usr/local/go"
 export GOPATH="$HOME/Documents"
 export GOBIN="$GOPATH/bin"
 
+export GO15VENDOREXPERIMENT=1
+
 export GREP_COLOR="1;35;40"
 
 # Erase duplicates in history

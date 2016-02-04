@@ -40,7 +40,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR="vim"
 
-export GOROOT="/usr/local/opt/go/libexec"
+export GOROOT="/usr/local/go"
 export GOPATH="$HOME/Documents"
 export GOBIN="$GOPATH/bin"
 
@@ -66,3 +66,7 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:./node_modules/.bin"
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

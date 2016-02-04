@@ -26,13 +26,11 @@ then
   ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -1a'
 fi
 
-
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=1000
 setopt incappendhistory
 setopt sharehistory
 setopt extendedhistory
-
 
 # Useful to remember command in history without executing them
 setopt interactivecomments
@@ -47,6 +45,9 @@ precmd() { eval "$PROMPT_COMMAND" }
 PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
 [[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"
 
+# Load credentials and other stuff
+[[ -f "${HOME}/.authrc" ]] && source "$HOME/.authrc"
+
 alias ls="ls -1a"
 alias ll="ls -ahl"
 alias mem="top -l 1 | head -n 10 | grep PhysMem"
@@ -60,7 +61,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR="vim"
 
-export GOROOT="/usr/local/opt/go/libexec"
+export GOROOT="/usr/local/go"
 export GOPATH="$HOME/Documents"
 export GOBIN="$GOPATH/bin"
 
@@ -75,3 +76,5 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:./node_modules/.bin"
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
