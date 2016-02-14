@@ -28,7 +28,7 @@ set ek
 set hid
 set mouse=a mousemodel=extend
 
-set noru
+set ru
 set shm=atI
 set stal=1
 set nu
@@ -40,7 +40,7 @@ set wmnu wim=longest,list,full
 set nosol
 
 " statusline
-set ls=2
+set ls=0
 set stl=%F%m%r%h%w\ [%l/%L,\ %v]\ %p%%\ %=%{&ff}
 
 " search
@@ -74,8 +74,9 @@ vn  <c-j> :m'>+<cr>gv=gv
 vn  <c-k> :m-2<cr>gv=gv
 
 " file managment
-" nm <c-p> :e <c-d>
+nm <c-e> :e <c-d>
 nm <silent> <leader>b :ls<cr>:e #
+nn <silent> <leader>e :Explore<cr>
 nn <silent> <leader>i :set invlist<cr>
 nn <silent> <leader>q :call wipeout#Wipeout()<cr>
 
@@ -89,7 +90,7 @@ vn > >gv
 """ autocommands
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
-au FileType c,cpp,java,hcl,go,lua,make,python setlocal noet sw=4 ts=4
+au FileType c,cpp,ruby,java,hcl,go,lua,make,python setlocal noet sw=4 ts=4
 
 " netrw settings
 let g:netrw_banner       = 0
@@ -114,6 +115,7 @@ let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 set bg=dark
+color jellybeans
 
 " gvim specific settings
 au! GuiEnter * silent set visualbell t_vb=""
@@ -124,12 +126,11 @@ if has("gui_running")
   set guioptions-=e
   set guioptions-=m
   set guioptions-=r
-  colo vividchalk
   if has("unix")
     if has("mac")
       set guifont=Menlo:h14
     else
-      set guifont=Monospace\ 11
+    " set you favourite linux font here
     endif
   elseif has("win32")
     set guifont=Consolas:h11
@@ -137,8 +138,8 @@ if has("gui_running")
 endif
 
 " colors
-hi CursorLine   cterm=none ctermbg=black ctermfg=white guibg=black guifg=white
-hi LineNr       ctermbg=none ctermfg=darkgrey guifg=darkgrey guibg=black
-hi Search       term=none ctermbg=0 guibg=black
-hi Visual       term=reverse ctermbg=8 ctermfg=7 guibg=black guifg=white
+hi CursorLine   term=none gui=none
+hi LineNr       term=none ctermfg=darkgrey gui=none guifg=darkgrey
+hi Search       term=none gui=none
+hi Visual       term=reverse ctermbg=black ctermfg=white guibg=black guifg=white
 

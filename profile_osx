@@ -21,11 +21,6 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-if [ -f "$HOME/.git-prompt" ] ; then
- . "$HOME/.git-prompt"
-fi
-
-
 export FIGNORE=DS_Store
 
 alias ls="ls -1a"
@@ -33,9 +28,8 @@ alias ll="ls -ahl"
 alias mem="top -l 1 | head -n 10 | grep PhysMem"
 alias fix="git diff --name-only | uniq | xargs vim"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim $*"
-alias rm="echo 😱 ;rm $*"
 
-export PS1="\W [\j] $ "
+export PS1="\W [\j] "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR="vim"
@@ -67,6 +61,3 @@ export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:./node_modules/.bin"
 
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

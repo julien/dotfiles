@@ -56,7 +56,7 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim $*"
 alias rm="echo 😱 ;rm $*"
 
 # ENV vars
-export PS1="%U%C%u [%1j] %% "
+export PS1="%C%u [%1j] %% "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR="vim"

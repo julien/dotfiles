@@ -1,39 +1,11 @@
-! colors -------------------------------------------------------------
-*.cursorColor:  #98d1ce
-
-!black
-*color0:        #1c1c1c
-*color8:        #4d4d4d
-!red
-*color1:        #D81860
-*color9:        #F00060
-!green
-*color2:        #60FF60
-*color10:       #70FF70
-!yellow
-*color3:        #f9fd75
-*color11:       #f9fd80
-!blue
-*color4:        #4695c8
-*color12:       #5a9dc8
-!magenta
-*color5:        #a78edb
-*color13:       #b29fdb
-!cyan
-*color6:        #43afce
-*color14:       #69b8ce
-!white
-*color7:        #f3ebe2
-*color15:       #eeeeee
-
-! Xft ---------------------------------------------------------------
+! Xft
 Xft.dpi:       96
-Xft.antialias: true
-Xft.hinting:   true
-! Xft.rgba:      rgb
-Xft.hintstyle: hintfull
+Xft.antialias: 1
+Xft.hinting:   -1
+Xft.rgba:      none
+Xft.hintstyle: hintsfull
 
-! urxvt --------------------------------------------------------------
+! urxvt
 URxvt*termName:           rxvt-256color
 URxvt*loginShell:         true
 URxvt*geometry:           100x40
@@ -55,4 +27,33 @@ URxvt*scrollTtyOutput:    false
 URxvt*scrollWithBuffer:   true
 URxvt*scrollTtyKeypress:  true
 ! extensions
-URxvt.perl-ext-common:         default,tabbed
+URxvt.perl-ext-common:    default,tabbed
+! URxvt.tabbed.autohide:    yes
+! URxvt.tabbed.new-button:  no
+! colors
+URxvt.cursorColor:  #98d1ce
+!black
+URxvt.color0:          #393939
+URxvt.color8:          #535551
+!red
+URxvt.color1:          #ca674a
+URxvt.color9:          #ea2828
+!green
+URxvt.color2:          #96a967
+URxvt.color10:         #87dd32
+!yellow
+URxvt.color3:          #d3a94a
+URxvt.color11:         #f7e44d
+!blue
+URxvt.color4:          #5778c1
+URxvt.color12:         #6f9bca
+!magenta
+URxvt.color5:          #9c35ac
+URxvt.color13:         #a97ca4
+!cyan
+URxvt.color6:          #6eb5f3
+URxvt.color14:         #32dddd
+!white
+URxvt.color7: #a9a9a9
+URxvt.color15: #e9e9e7
+

@@ -6,4 +6,4 @@ runtime macros/matchit.vim
 " key mappings
 map! ii <ESC>
 imap ii <ESC>
-let g:netrw_cursorline = 0
+let g:netrw_cursorline=0

@@ -23,9 +23,11 @@ fi
 
 # open new terminal in same dir
 PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
-[[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"
+if [[ -f "${HOME}/.cwd" ]]; then
+  cd "$(< ${HOME}/.cwd)"
+fi
 
-alias ls="ls -1a --color"
+alias ls="ls -1 --color"
 alias ll="ls -ahl --color"
 alias fix="git diff --name-only | uniq | xargs vim"
 
@@ -33,7 +35,6 @@ export PS1="\W [\j] $ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR="vim"
-
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/Documents"
 export GOBIN="$GOPATH/bin"
@@ -44,10 +45,6 @@ export GREP_COLOR="1;35;40"
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups
-# Store 10k history entries
-export HISTSIZE=10000
-# Append to the history file when exiting instead of overwriting it
-shopt -s histappend
 
 if [ -f "$HOME/.authrc" ]; then
 . "$HOME/.authrc"
@@ -63,9 +60,4 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:./node_modules/.bin"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
-
-export WINEARCH=win32
-export WINEPREFIX=~/.wine
