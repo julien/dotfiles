@@ -1,17 +1,17 @@
 ! Xft
 Xft.dpi:       96
 Xft.antialias: 1
-Xft.hinting:   -1
-Xft.rgba:      none
-Xft.hintstyle: hintsfull
+Xft.hinting:   1
+Xft.rgba:      rgb
+Xft.hintstyle: hintfull
 
 ! urxvt
 URxvt*termName:           rxvt-256color
 URxvt*loginShell:         true
-URxvt*geometry:           100x40
+URxvt*geometry:           120x50
 URxvt*iconFile:           /usr/share/icons/gnome/32x32/apps/terminal.png
 URxvt*saveLines:          10000
-URxvt*cutchars:           "`\"'&()*,:;<=>?[\\]^{|}$"
+! URxvt*cutchars:           "`\"'&()*,:;<=>?[\\]^{|}$"
 URxvt*visualBell:         false
 URxvt*letterSpace:        -1
 URxvt.font:               xft:monospace:size=11:antialias=true
@@ -26,34 +26,32 @@ URxvt.scrollstyle:        plain
 URxvt*scrollTtyOutput:    false
 URxvt*scrollWithBuffer:   true
 URxvt*scrollTtyKeypress:  true
+URxvt*depth:              24
 ! extensions
-URxvt.perl-ext-common:    default,tabbed
-! URxvt.tabbed.autohide:    yes
-! URxvt.tabbed.new-button:  no
-! colors
-URxvt.cursorColor:  #98d1ce
-!black
-URxvt.color0:          #393939
-URxvt.color8:          #535551
-!red
-URxvt.color1:          #ca674a
-URxvt.color9:          #ea2828
-!green
-URxvt.color2:          #96a967
-URxvt.color10:         #87dd32
-!yellow
-URxvt.color3:          #d3a94a
-URxvt.color11:         #f7e44d
-!blue
-URxvt.color4:          #5778c1
-URxvt.color12:         #6f9bca
-!magenta
-URxvt.color5:          #9c35ac
-URxvt.color13:         #a97ca4
-!cyan
-URxvt.color6:          #6eb5f3
-URxvt.color14:         #32dddd
-!white
-URxvt.color7: #a9a9a9
-URxvt.color15: #e9e9e7
+URxvt.perl-ext-common:    default,clipboard,tabbedex
 
+URxvt.keysym.M-c:	        perl:clipboard:copy
+URxvt.keysym.M-v:	        perl:clipboard:paste
+URxvt.keysym.M-C-p:	      perl:clipboard:paste_escaped
+
+URxvt.tabbed.autohide:    yes
+URxvt.tabbed.new-button:  no
+
+! colors
+URxvt.cursorColor:        #98d1ce
+URxvt.color0:             #393939
+URxvt.color8:             #535551
+URxvt.color1:             #ca674a
+URxvt.color9:             #ea2828
+URxvt.color2:             #96a967
+URxvt.color10:            #87dd32
+URxvt.color3:             #d3a94a
+URxvt.color11:            #f7e44d
+URxvt.color4:             #5778c1
+URxvt.color12:            #6f9bca
+URxvt.color5:             #9c35ac
+URxvt.color13:            #a97ca4
+URxvt.color6:             #6eb5f3
+URxvt.color14:            #32dddd
+URxvt.color7:             #a9a9a9
+URxvt.color15:            #e9e9e7

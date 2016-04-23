@@ -1,11 +1,11 @@
 BoldAsFont=yes
-FontHeight=12
+FontHeight=11
 Transparency=off
 OpaqueWhenFocused=no
 Columns=120
 Rows=40
 Term=xterm-256color
-Font=Terminus
+Font=Consolas
 AllowBlinking=yes
 Locale=en_GB
 Charset=UTF-8
