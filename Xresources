@@ -1,5 +1,5 @@
 ! Xft
-Xft.dpi:       96
+Xft.dpi:       92
 Xft.antialias: 1
 Xft.hinting:   1
 Xft.rgba:      rgb
@@ -11,11 +11,12 @@ URxvt*loginShell:         true
 URxvt*geometry:           120x50
 URxvt*iconFile:           /usr/share/icons/gnome/32x32/apps/terminal.png
 URxvt*saveLines:          10000
-! URxvt*cutchars:           "`\"'&()*,:;<=>?[\\]^{|}$"
+URxvt*cutchars:           "`\"'&()*,:;<=>?[\\]^{|}$"
 URxvt*visualBell:         false
-URxvt*letterSpace:        -1
-URxvt.font:               xft:monospace:size=11:antialias=true
-URxvt.boldFont:           xft:monospace:bold:size=11:antialias=true
+! URxvt*letterSpace:        -1
+! URvvt*lineSpace:          1
+URxvt*font:               xft:monospace:size=11:antialias=true
+
 URxvt*foreground:         rgb:a8/a8/a8
 URxvt*background:         rgb:0/0/0
 URxvt*scrollBar:          true
@@ -28,30 +29,48 @@ URxvt*scrollWithBuffer:   true
 URxvt*scrollTtyKeypress:  true
 URxvt*depth:              24
 ! extensions
-URxvt.perl-ext-common:    default,clipboard,tabbedex
+URxvt.perl-ext-common:    default
 
-URxvt.keysym.M-c:	        perl:clipboard:copy
-URxvt.keysym.M-v:	        perl:clipboard:paste
-URxvt.keysym.M-C-p:	      perl:clipboard:paste_escaped
+! xterm
+! XTerm*background:        rgb:0/0/0
+! XTerm*foreground:        rgb:00/cc/00
+XTerm*background:        rgb:00/00/00
+XTerm*foreground:        rgb:a8/a8/a8
 
-URxvt.tabbed.autohide:    yes
-URxvt.tabbed.new-button:  no
+XTerm*geometry:          140x50
+XTerm*font:              *-fixed-*-*-*-18-*
+XTerm*faceName:          Monospace:size=11:antialias=true
+XTerm*loginShell:        true
+XTerm*vt100*geometry:    100x40
+XTerm*saveLines:         2000
+XTerm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+XTerm*termName:          xterm-256color
+XTerm*locale:            true
+XTerm*metaSendsEscape:   true
+XTerm*eightBitInput:     false
+XTerm*rightScrollBar:    true
+XTerm*ScrollBar:         true
+XTerm*scrollTtyOutput:   false
+XTerm*boldMode:          false
+XTerm*colorBDMode:       true
+XTerm*colorBD:           rgb:fc/fc/fc
 
 ! colors
-URxvt.cursorColor:        #98d1ce
-URxvt.color0:             #393939
-URxvt.color8:             #535551
-URxvt.color1:             #ca674a
-URxvt.color9:             #ea2828
-URxvt.color2:             #96a967
-URxvt.color10:            #87dd32
-URxvt.color3:             #d3a94a
-URxvt.color11:            #f7e44d
-URxvt.color4:             #5778c1
-URxvt.color12:            #6f9bca
-URxvt.color5:             #9c35ac
-URxvt.color13:            #a97ca4
-URxvt.color6:             #6eb5f3
-URxvt.color14:            #32dddd
-URxvt.color7:             #a9a9a9
-URxvt.color15:            #e9e9e7
+*cursorColor:            #98d1ce
+*color0:                 #393939
+*color8:                 #535551
+*color1:                 #ca674a
+*color9:                 #ea2828
+*color2:                 #96a967
+*color10:                #87dd32
+*color3:                 #d3a94a
+*color11:                #f7e44d
+*color4:                 #5778c1
+*color12:                #6f9bca
+*color5:                 #9c35ac
+*color13:                #a97ca4
+*color6:                 #6eb5f3
+*color14:                #32dddd
+*color7:                 #a9a9a9
+*color15:                #e9e9e7
+
