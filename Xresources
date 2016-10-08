@@ -19,7 +19,7 @@ URxvt*font:               xft:monospace:size=11:antialias=true
 
 URxvt*foreground:         rgb:a8/a8/a8
 URxvt*background:         rgb:0/0/0
-URxvt*scrollBar:          false
+URxvt*scrollBar:          true
 URxvt*scrollBar_right:    true
 URxvt*scrollBar_floating: false
 URxvt*secondaryScroll:    true
@@ -48,8 +48,8 @@ XTerm*termName:          xterm-256color
 XTerm*locale:            true
 XTerm*metaSendsEscape:   true
 XTerm*eightBitInput:     false
-! XTerm*rightScrollBar:    true
-! XTerm*ScrollBar:         true
+XTerm*rightScrollBar:    true
+XTerm*ScrollBar:         true
 XTerm*scrollTtyOutput:   false
 XTerm*boldMode:          false
 XTerm*colorBDMode:       true

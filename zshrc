@@ -38,9 +38,6 @@ setopt interactivecomments
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
 
-# Load credentials and other stuff
-[[ -f "${HOME}/.authrc" ]] && source "$HOME/.authrc"
-
 # OS specific things
 case "$OSTYPE" in
   darwin*)
@@ -63,12 +60,15 @@ export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
-export CLICOLOR=1
 export EDITOR="vim"
 
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/Documents"
 export GOBIN="$GOPATH/bin"
+
+export CDPATH="./:$HOME/Documents"
+export CDPATH="$CDPATH:$GOPATH/src/github.com"
+export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
@@ -76,4 +76,3 @@ export PATH="$PATH:./node_modules/.bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-

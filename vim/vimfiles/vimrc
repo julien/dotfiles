@@ -70,6 +70,11 @@ let g:netrw_cursorline   = 0
 let g:netrw_cursor       = 0
 let g:netrw_browse_split = 0
 let g:netrw_winsize      = 24
+let g:netrw_cursorline   = 0
+let g:netrw_cursor       = 0
+let g:netrw_fastbrowse   = 2
+let g:netrw_browse_split = 0
+
 " vim-go
 let g:go_fmt_autosave =                        1
 let g:go_fmt_command =                         "goimports"
@@ -78,10 +83,12 @@ let g:go_highlight_space_tab_error =           0
 let g:go_highlight_trailing_whitespace_error = 0
 
 colo jellybeans
+
+" gvim specific settings
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set lines=40 columns=110
-  " set guitablabel=%M%t
+  set guitablabel=%M%t
   set guioptions-=T
   set guioptions-=e
   set guioptions-=m
