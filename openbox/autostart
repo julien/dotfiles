@@ -1,0 +1,24 @@
+# map Capslock to ESC
+setxkbmap -option caps:escape &
+
+# turn off beep sound
+xset -b
+
+# mouse speed
+xset m 1/5
+
+# keyboard repeat speed
+xset r rate 200 50
+
+# set a background color
+xsetroot -solid "#000000"
+
+# start xscreensaver
+xscreensaver -no-splash &
+
+
+# start Conky after a slight delay
+(sleep 3s && conky -c ~/.conkyrc) &
+
+# start dropbox after a slight delay
+# (sleep 6s && dropbox start)
