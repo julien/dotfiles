@@ -37,7 +37,7 @@ URxvt.perl-ext-common:    default
 XTerm*background:        rgb:00/00/00
 XTerm*foreground:        rgb:a8/a8/a8
 
-! XTerm*geometry:          140x50
+XTerm*geometry:          140x50
 XTerm*font:              *-fixed-*-*-*-18-*
 XTerm*faceName:          Monospace:size=11:antialias=true
 XTerm*loginShell:        true
@@ -49,7 +49,7 @@ XTerm*locale:            true
 XTerm*metaSendsEscape:   true
 XTerm*eightBitInput:     false
 XTerm*rightScrollBar:    true
-XTerm*ScrollBar:         true
+! XTerm*ScrollBar:         true
 XTerm*scrollTtyOutput:   false
 XTerm*boldMode:          false
 XTerm*colorBDMode:       true

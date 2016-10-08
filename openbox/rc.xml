@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Nightmare</name>
+    <name>ubuntustudio</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -337,37 +337,30 @@
         <command>scrot</command>
       </action>
     </keybind>
-
     <!-- My entries -->
-
     <!-- Launch gmrun when ALT+F2 is pressed -->
     <keybind key="A-F2">
       <action name="Execute">
         <command>gmrun</command>
       </action>
     </keybind>
-
     <!-- Volume control -->
     <keybind key="XF86AudioRaiseVolume">
-        <action name="Execute">
-            <command>amixer set Master 5%+ unmute</command>
-        </action>
-    </keybind>
-    <keybind key="XF86AudioLowerVolume">
-        <action name="Execute">
-            <command>amixer set Master 5%- unmute</command>
-        </action>
-    </keybind>
-
-    <!-- Launch scrot when F13 is pressed -->
-    <keybind key="F13">
       <action name="Execute">
-        <command>scrot</command>
+        <command>amixer set Master 5%+ unmute</command>
       </action>
     </keybind>
-
-
-
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>amixer set Master 5%- unmute</command>
+      </action>
+    </keybind>
+    <!-- Launch scrot when F13 is pressed -->
+    <keybind key="A-F12">
+      <action name="Execute">
+        <command>skippy-xd</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

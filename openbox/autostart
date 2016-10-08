@@ -11,14 +11,17 @@ xset m 1/5
 xset r rate 200 50
 
 # set a background color
-xsetroot -solid "#000000"
+# xsetroot -solid "#000000"
+xsetroot -solid "#2b2b2b"
+
+# set background image
+feh --bg-fill ~/Pictures/awesome_01.jpg
 
 # start xscreensaver
 xscreensaver -no-splash &
 
-
 # start Conky after a slight delay
-(sleep 3s && conky -c ~/.conkyrc) &
+# (sleep 3s && conky -c ~/.conkyrc) &
 
 # start dropbox after a slight delay
 # (sleep 6s && dropbox start)

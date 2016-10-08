@@ -16,6 +16,17 @@
 				<execute>gmrun</execute>
 			</action>
 		</item>
+		<item label="File explorer">
+			<action name="Execute">
+				<execute>spacefm</execute>
+			</action>
+		</item>
+		<item label="VLC">
+			<action name="Execute">
+				<execute>vlc</execute>
+			</action>
+		</item>
+
 		<!-- This requires the presence of the 'menu' package to work -->
 		<menu id="/Debian"/>
 		<separator/>
