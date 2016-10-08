@@ -18,8 +18,6 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx2048m -Xms1024m -XX:MaxPermSize=512m"
 
-    # homebrew
-    export HOMEBREW_GITHUB_API_TOKEN="a263ff404cf18d8b21cd7ada7361daf8802b32de"
     ;;
   linux*)
     alias ls="ls -ahl --color"
@@ -27,7 +25,6 @@ case "$OSTYPE" in
     ;;
 esac
 
-# rmall() { find . | grep $1 | xargs rm -fr {} }
 
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
