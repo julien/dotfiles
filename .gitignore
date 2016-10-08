@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # if ever I edit this on macOS
 .DS_Store
 
@@ -12,15 +11,3 @@ vim/vimfiles/bunde/**
 vim/vimfiles/plugged/**
 vim/vimfiles/.netrwhist
 
-
-=======
-**/vim/vimfiles/bundle/**
-*.d/
-*.sh
-*.txt
-.DS_Store
-authrc
-awesome
-openbox
-urxvt
->>>>>>> 41feae9d5d7f0cd4c2d090e6ffd1b6ad1387b715
