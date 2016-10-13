@@ -10,7 +10,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'tikhomirov/vim-glsl', { 'for': 'glsl' }
-Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
+" Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
 call plug#end()
 
@@ -20,6 +20,7 @@ let mapleader = "\<space>"
 
 set autoread hidden
 set shiftwidth=4 tabstop=4 backspace=indent,eol,start
+set scrolloff=2
 set expandtab
 set smartcase incsearch
 set guicursor=n:blinkon0
@@ -27,7 +28,7 @@ set lazyredraw
 set mouse=a mousemodel=extend
 set number ls=2
 set omnifunc=syntaxcomplete#Complete
-set shortmess=atI
+set shortmess=atIc
 set showtabline=1
 set ttyfast ttyscroll=3
 set wildmenu wildmode=longest,list,full
@@ -51,10 +52,11 @@ vn > >gv
 nm <silent> <leader>b :ls<cr>:e #
 nm <silent> <leader>e :Explore<cr>
 nn <silent> <leader>q :call wipeout#Wipeout()<cr>
-nn  <F1> :set hls!<cr>
 nn  <F2> :set invnumber<cr>
 nn  <F3> :if exists("g:syntax_on")<Bar>syntax off<Bar>else<Bar>syntax enable<Bar>endif<cr>
-noremap <F1> <nop>
+
+noremap  <F1> :set hls!<cr>
+inoremap <F1> <nop>
 
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
