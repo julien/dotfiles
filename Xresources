@@ -8,13 +8,13 @@ Xft.hintstyle: hintfull
 ! urxvt
 URxvt*termName:           rxvt-256color
 URxvt*loginShell:         true
-URxvt*geometry:           120x50
+URxvt*geometry:           110x50
 URxvt*iconFile:           /usr/share/icons/gnome/32x32/apps/terminal.png
 URxvt*saveLines:          10000
 URxvt*cutchars:           "`\"'&()*,:;<=>?[\\]^{|}$"
 URxvt*visualBell:         false
-! URxvt*letterSpace:        -1
-! URvvt*lineSpace:          1
+URxvt*letterSpace:        -1
+URvvt*lineSpace:          1
 URxvt*font:               xft:monospace:size=11:antialias=true
 
 URxvt*foreground:         rgb:a8/a8/a8
@@ -55,7 +55,10 @@ XTerm*boldMode:          false
 XTerm*colorBDMode:       true
 XTerm*colorBD:           rgb:fc/fc/fc
 
-! colors
+! xclock
+XClock*geometry:        160x160+10+10
+
+! colors - jellybeans
 *cursorColor:            #98d1ce
 *color0:                 #393939
 *color8:                 #535551
