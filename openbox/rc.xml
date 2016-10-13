@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>ubuntustudio</name>
+    <name>Onyx</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -344,6 +344,11 @@
         <command>gmrun</command>
       </action>
     </keybind>
+    <keybind key="A-F3">
+      <action name="Execute">
+        <command>scrot</command>
+      </action>
+    </keybind>
     <!-- Volume control -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
@@ -355,11 +360,25 @@
         <command>amixer set Master 5%- unmute</command>
       </action>
     </keybind>
-    <!-- Launch scrot when F13 is pressed -->
-    <keybind key="A-F12">
-      <action name="Execute">
-        <command>skippy-xd</command>
+    <!-- Window Tiling: Emulates Windows 7 Snap feature -->
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
       </action>
+      <action name="MoveToEdgeWest"/>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+      </action>
+      <action name="MoveToEdgeEast"/>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Unmaximize"/>
     </keybind>
   </keyboard>
   <mouse>
@@ -621,6 +640,7 @@
       </mousebind>
     </context>
     <context name="Desktop">
+      <!--
       <mousebind button="Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
@@ -631,6 +651,7 @@
           <to>next</to>
         </action>
       </mousebind>
+      -->
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
@@ -724,6 +745,17 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
+    <application name="gmrun">
+      <focus>yes</focus>
+    </application>
+
+    <application name="xterm">
+      <focus>yes</focus>
+    </application>
+
+    <application name="google-chrome">
+      <focus>yes</focus>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.

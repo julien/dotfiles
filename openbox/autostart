@@ -15,10 +15,11 @@ xset r rate 200 50
 xsetroot -solid "#2b2b2b"
 
 # set background image
-feh --bg-fill ~/Pictures/awesome_01.jpg
+feh --bg-fill ~/Pictures/by_procession_1920.jpg
 
 # start xscreensaver
 xscreensaver -no-splash &
+
 
 # start Conky after a slight delay
 # (sleep 3s && conky -c ~/.conkyrc) &
