@@ -7,8 +7,10 @@ case "$OSTYPE" in
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
     alias ls="ls -ahl"
+    alias gradlew="/Users/jc/Documents/work/portal/liferay-portal/gradlew"
+    alias lrportal="/Users/jc/Documents/work/portal/bundles/tomcat-8.0.32/bin/catalina.sh run"
+    alias lspkgs="pkgutil --pkgs"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-    alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 
     # ant config
     export ANT_HOME=/usr/share/ant
@@ -24,7 +26,6 @@ case "$OSTYPE" in
     alias open="xdg-open"
     ;;
 esac
-
 
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
@@ -58,3 +59,6 @@ export PATH="$PATH:./node_modules/.bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+# Adding autocomplete for 'we'
+[ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
