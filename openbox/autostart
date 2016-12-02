@@ -8,21 +8,16 @@ xset -b
 xset m 1/5
 
 # keyboard repeat speed
-xset r rate 200 50
+xset r rate 300 50
 
 # set a background color
-# xsetroot -solid "#000000"
-xsetroot -solid "#2b2b2b"
+xsetroot -solid grey5
 
 # set background image
-feh --bg-fill ~/Pictures/by_procession_1920.jpg
+# feh --bg-fill ...
 
 # start xscreensaver
 xscreensaver -no-splash &
-
-
-# start Conky after a slight delay
-# (sleep 3s && conky -c ~/.conkyrc) &
 
 # start dropbox after a slight delay
 # (sleep 6s && dropbox start)

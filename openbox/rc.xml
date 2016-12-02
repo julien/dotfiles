@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Onyx</name>
+    <name>Nightmare-02</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
@@ -338,24 +338,32 @@
       </action>
     </keybind>
     <!-- My entries -->
+    <keybind key="C-A-t">
+      <action name="Execute">
+        <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
     <!-- Launch gmrun when ALT+F2 is pressed -->
     <keybind key="A-F2">
       <action name="Execute">
         <command>gmrun</command>
       </action>
     </keybind>
+    <!--
     <keybind key="A-F3">
       <action name="Execute">
         <command>scrot</command>
       </action>
     </keybind>
+    -->
     <!-- Volume control -->
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="A-F10">
       <action name="Execute">
         <command>amixer set Master 5%+ unmute</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <!-- XF86AudioLowerVolume -->
+    <keybind key="A-F9">
       <action name="Execute">
         <command>amixer set Master 5%- unmute</command>
       </action>
@@ -748,11 +756,9 @@
     <application name="gmrun">
       <focus>yes</focus>
     </application>
-
-    <application name="xterm">
+    <application name="x-terminal-emulator">
       <focus>yes</focus>
     </application>
-
     <application name="google-chrome">
       <focus>yes</focus>
     </application>
