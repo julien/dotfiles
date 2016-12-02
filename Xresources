@@ -5,58 +5,31 @@ Xft.hinting:   1
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
 
-! urxvt
-URxvt*termName:           rxvt-256color
-URxvt*loginShell:         true
-URxvt*geometry:           110x50
-URxvt*iconFile:           /usr/share/icons/gnome/32x32/apps/terminal.png
-URxvt*saveLines:          10000
-URxvt*cutchars:           "`\"'&()*,:;<=>?[\\]^{|}$"
-URxvt*visualBell:         false
-URxvt*letterSpace:        -1
-URvvt*lineSpace:          1
-URxvt*font:               xft:monospace:size=11:antialias=true
-
-URxvt*foreground:         rgb:a8/a8/a8
-URxvt*background:         rgb:0/0/0
-URxvt*scrollBar:          true
-URxvt*scrollBar_right:    true
-URxvt*scrollBar_floating: false
-URxvt*secondaryScroll:    true
-URxvt.scrollstyle:        plain
-URxvt*scrollTtyOutput:    false
-URxvt*scrollWithBuffer:   true
-URxvt*scrollTtyKeypress:  true
-URxvt*depth:              24
-! extensions
-URxvt.perl-ext-common:    default
 
 ! xterm
 ! XTerm*background:        rgb:0/0/0
 ! XTerm*foreground:        rgb:00/cc/00
-XTerm*background:        rgb:00/00/00
-XTerm*foreground:        rgb:a8/a8/a8
+! XTerm*background:        rgb:00/00/00
+! XTerm*foreground:        rgb:a8/a8/a8
 
-XTerm*geometry:          140x50
-XTerm*font:              *-fixed-*-*-*-18-*
+XTerm*geometry:          110x50
+! XTerm*vt100*geometry:    110x50
+! XTerm*font:              *-fixed-*-*-*-18-*
 XTerm*faceName:          Monospace:size=11:antialias=true
 XTerm*loginShell:        true
-XTerm*vt100*geometry:    100x40
 XTerm*saveLines:         2000
 XTerm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 XTerm*termName:          xterm-256color
 XTerm*locale:            true
 XTerm*metaSendsEscape:   true
 XTerm*eightBitInput:     false
-XTerm*rightScrollBar:    true
+! XTerm*rightScrollBar:    true
 ! XTerm*ScrollBar:         true
-XTerm*scrollTtyOutput:   false
+XTerm*scrollTtyOutput:   true
 XTerm*boldMode:          false
 XTerm*colorBDMode:       true
 XTerm*colorBD:           rgb:fc/fc/fc
 
-! xclock
-XClock*geometry:        160x160+10+10
 
 ! colors - jellybeans
 *cursorColor:            #98d1ce
