@@ -1,5 +1,5 @@
 # vim set ft=config
-export FIGNORE=DS_Store
+export FIGNORE="$FIGNORE:DS_Store"
 
 # OS specific things
 case "$OSTYPE" in
@@ -10,30 +10,34 @@ case "$OSTYPE" in
     alias gradlew="/Users/jc/Documents/work/portal/liferay-portal/gradlew"
     alias lrportal="/Users/jc/Documents/work/portal/bundles/tomcat-8.0.32/bin/catalina.sh run"
     alias lspkgs="pkgutil --pkgs"
+    alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
-    # ant config
     export ANT_HOME=/usr/share/ant
-    export ANT_OPTS="-Xmx4096m -Xms4096m -XX:MaxPermSize=1024m -XX:-UseGCOverheadLimit"
-
-    # java config
+    export ANT_OPTS="-Xmx4096m -Xms4096m -XX:-UseGCOverheadLimit"
     export JAVA_HOME=$(/usr/libexec/java_home)
-    export JAVA_OPTS="-Xmx2048m -Xms1024m -XX:MaxPermSize=512m"
-
+    export JAVA_OPTS="-Xmx2048m -Xms1024m"
     ;;
   linux*)
     alias ls="ls -ahl --color"
     alias open="xdg-open"
+    [ -f /etc/bash_completion ] && . /etc/bash_completion
     ;;
 esac
+
+alias reset="clear && printf '\e[3J'"
 
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
 
-export PS1="[\W]$ "
+export PS1='\u:\W $ '
+if [  -f $HOME/.git-prompt.sh ]; then
+  . $HOME/.git-prompt.sh
+  export PS1='\u:\W$(__git_ps1) $ '
+fi
 
 export CDPATH="./:$HOME/Documents"
-export CDPATH="$CDPATH:$HOME/Documents/of_v0.9.3/apps"
+export CDPATH="$CDPATH:$HOME/Documents/of/apps"
 export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
@@ -55,10 +59,8 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:/Library/TeX/texbin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-
-# Adding autocomplete for 'we'
-[ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
