@@ -7,8 +7,12 @@ case "$OSTYPE" in
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
     alias ls="ls -ahl"
-    alias gradlew="/Users/jc/Documents/work/portal/liferay-portal/gradlew"
-    alias lrportal="/Users/jc/Documents/work/portal/bundles/tomcat-8.0.32/bin/catalina.sh run"
+
+    export LR_HOME="$HOME/Documents/work/portal"
+
+    alias gradlew="$LR_HOME/liferay-portal/gradlew"
+    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
+
     alias lspkgs="pkgutil --pkgs"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
@@ -25,15 +29,13 @@ case "$OSTYPE" in
     ;;
 esac
 
-alias reset="clear && printf '\e[3J'"
-
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
 
-export PS1='\u:\W $ '
+export PS1='\W '
 if [  -f $HOME/.git-prompt.sh ]; then
   . $HOME/.git-prompt.sh
-  export PS1='\u:\W$(__git_ps1) $ '
+  export PS1='\W$(__git_ps1) '
 fi
 
 export CDPATH="./:$HOME/Documents"
