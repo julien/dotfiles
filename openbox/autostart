@@ -11,10 +11,7 @@ xset m 1/5
 xset r rate 300 50
 
 # set a background color
-xsetroot -solid grey5
-
-# set background image
-# feh --bg-fill ...
+xsetroot -solid black
 
 # start xscreensaver
 xscreensaver -no-splash &
