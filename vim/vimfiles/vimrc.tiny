@@ -2,7 +2,7 @@ syntax on
 filetype plugin indent on
 let mapleader = "<\space>"
 set nocp paste acd is scs nu hid ssl showmatch wmnu autoread
-set sw=4 ch=4 ls=0 so=2
+set sw=4 ch=4
 set noerrorbells visualbell t_vb=""
 set wim=longest,list,full
 set mouse=a mousemodel=extend

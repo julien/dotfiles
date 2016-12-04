@@ -1,13 +1,13 @@
 " execute pathogen#infect()
 call plug#begin()
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
 call plug#end()
 
@@ -16,16 +16,14 @@ filetype plugin indent on
 let mapleader = "\<space>"
 
 set autoread hidden
-set shiftwidth=4 tabstop=4 backspace=indent,eol,start
-set expandtab
+set expandtab shiftwidth=4 tabstop=4 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
-set lazyredraw
 set mouse=a mousemodel=extend
-set number ls=0
+set number ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
-set ttyfast ttyscroll=3
+set lazyredraw ttyfast ttyscroll=3
 set wildmenu wildmode=longest,list,full
 set path+=**
 set noerrorbells vb t_vb=""
@@ -56,7 +54,6 @@ au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
 au FileType javascript setlocal noexpandtab tabstop=4 shiftwidth=4
 au FileType go setlocal noexpandtab shiftwidth=8 tabstop=8
 
-" netrw settings
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
 let g:netrw_cursor       = 0
@@ -64,10 +61,9 @@ let g:netrw_cursorline   = 0
 let g:netrw_dirhistmax   = 0
 let g:netrw_fastbrowse   = 2
 let g:netrw_keepdir      = 1
-let g:netrw_list_hide    = '*.db,desktop.ini,\.DS_Store,\.\/$'
+let g:netrw_list_hide    = '*.db,desktop.ini,\$Recycle\.Bin,NTUSER\.*,\.DS_Store,\.\/$'
 let g:netrw_winsize      = 24
 
-" vim-go
 let g:go_fmt_autosave =                        1
 let g:go_fmt_command =                         "goimports"
 let g:go_highlight_array_whitespace_error =    0
@@ -75,20 +71,12 @@ let g:go_highlight_space_tab_error =           0
 let g:go_highlight_trailing_whitespace_error = 0
 
 colo jellybeans
-
-" gvim specific settings
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
-  set guioptions-=L
-  set guioptions-=T
-  set guioptions-=e
-  set guioptions-=m
-  set guioptions-=r
-  if has("mac")
-    set guifont=Menlo:h14
+  set go=""
+  if has("mac") set guifont=Menlo:h14
   elseif has("win32")
-    set guifont=Consolas:h11    ndif
+    set columns=120 lines=45
+    set guifont=Consolas:h12
   endif
 endif
-
-hi Visual term=none ctermfg=White gui=reverse guifg=White
