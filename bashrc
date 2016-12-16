@@ -12,8 +12,8 @@ case "$OSTYPE" in
 
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
-
     alias lspkgs="pkgutil --pkgs"
+    alias rm_nodemodules="find . -type d -name node_modules -exec rm -rf {} +"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
@@ -32,10 +32,10 @@ esac
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
 
-export PS1='\W '
+export PS1='[\W]$ '
 if [  -f $HOME/.git-prompt.sh ]; then
   . $HOME/.git-prompt.sh
-  export PS1='\W$(__git_ps1) '
+  export PS1='[\W$(__git_ps1)]$ '
 fi
 
 export CDPATH="./:$HOME/Documents"
@@ -56,7 +56,7 @@ export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
 shopt -s cmdhist
 # after each command, save and reload history
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
 
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
@@ -66,3 +66,5 @@ export PATH="$PATH:/Library/TeX/texbin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
