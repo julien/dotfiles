@@ -4,8 +4,14 @@ Xft.hinting:   1
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
 
+XTerm*background:        rgb:00/00/00
+XTerm*foreground:        rgb:a8/a8/a8
 XTerm*geometry:          110x50
-XTerm*faceName:          Monospace:size=11:antialias=true
+
+!XTerm*faceName:          Monospace:size=11:antialias=true
+XTerm*faceName:          Input:size=11:antialias=true
+
+
 XTerm*loginShell:        true
 XTerm*saveLines:         20000
 XTerm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
@@ -17,7 +23,6 @@ XTerm*scrollTtyOutput:   true
 XTerm*boldMode:          false
 XTerm*colorBDMode:       true
 XTerm*colorBD:           rgb:fc/fc/fc
-
 
 *cursorColor:            #98d1ce
 *color0:                 #393939
@@ -36,4 +41,5 @@ XTerm*colorBD:           rgb:fc/fc/fc
 *color14:                #32dddd
 *color7:                 #a9a9a9
 *color15:                #e9e9e7
+
 
