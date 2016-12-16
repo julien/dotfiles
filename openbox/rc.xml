@@ -159,7 +159,7 @@
     <right>0</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>Top</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
@@ -332,43 +332,46 @@
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command>scrot</command>
-      </action>
-    </keybind>
-    <!-- My entries -->
+    <!-- <keybind key="Print"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>scrot</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+
+    <!-- my entries -->
     <keybind key="C-A-t">
       <action name="Execute">
         <command>x-terminal-emulator</command>
       </action>
     </keybind>
-    <!-- Launch gmrun when ALT+F2 is pressed -->
+
+    <!-- launch gmrun -->
     <keybind key="A-F2">
       <action name="Execute">
         <command>gmrun</command>
       </action>
     </keybind>
-    <!--
+
+    <!-- screenshot -->
     <keybind key="A-F3">
       <action name="Execute">
         <command>scrot</command>
       </action>
     </keybind>
-    -->
-    <!-- Volume control -->
+
+    <!-- volume control -->
     <keybind key="A-F10">
       <action name="Execute">
         <command>amixer set Master 5%+ unmute</command>
       </action>
     </keybind>
-    <!-- XF86AudioLowerVolume -->
     <keybind key="A-F9">
       <action name="Execute">
         <command>amixer set Master 5%- unmute</command>
       </action>
     </keybind>
-    <!-- Window Tiling: Emulates Windows 7 Snap feature -->
+
+    <!-- window tiling: emulates Windows 7 snap feature -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
@@ -387,6 +390,13 @@
     </keybind>
     <keybind key="W-Down">
       <action name="Unmaximize"/>
+    </keybind>
+
+    <!-- lock screen -->
+    <keybind key="W-l">
+        <action name="Execute">
+            <command>xscreensaver-command -lock</command>
+        </action>
     </keybind>
   </keyboard>
   <mouse>
