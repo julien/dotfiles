@@ -45,13 +45,15 @@ nn <silent> <leader>q :call wipeout#Wipeout()<cr>
 noremap  <F1> :set hls!<cr>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<cr>
+nn <F3> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
+
 
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 " enter automatically into the files directory
 au BufEnter * silent! lcd %:p:h
 au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
-au FileType javascript setlocal noexpandtab tabstop=4 shiftwidth=4
+au FileType javascript setlocal noexpandtab tabstop=2 shiftwidth=2
 au FileType go setlocal noexpandtab shiftwidth=8 tabstop=8
 
 let g:netrw_banner       = 0
@@ -74,7 +76,8 @@ colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
-  if has("mac") set guifont=Menlo:h14
+  if has("mac")
+      set guifont=Menlo:h14
   elseif has("win32")
     set columns=120 lines=45
     set guifont=Consolas:h12
