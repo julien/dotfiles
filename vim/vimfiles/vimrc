@@ -9,6 +9,8 @@ Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
+Plug 'kien/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
 call plug#end()
 
 syntax on
@@ -51,7 +53,10 @@ nn <F3> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 " enter automatically into the files directory
-au BufEnter * silent! lcd %:p:h
+" au BufEnter * silent! lcd %:p:h
+" this is supposed to fix html syntax highlighting
+autocmd BufEnter *.html :syntax sync fromstart
+
 au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
 au FileType javascript setlocal noexpandtab tabstop=2 shiftwidth=2
 au FileType go setlocal noexpandtab shiftwidth=8 tabstop=8
@@ -72,12 +77,18 @@ let g:go_highlight_array_whitespace_error =    0
 let g:go_highlight_space_tab_error =           0
 let g:go_highlight_trailing_whitespace_error = 0
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|svn'
+let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
   if has("mac")
       set guifont=Menlo:h14
+  elseif has("unix")
+      set guifont=Input\ 11
   elseif has("win32")
     set columns=120 lines=45
     set guifont=Consolas:h12
