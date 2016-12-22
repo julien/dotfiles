@@ -6,7 +6,7 @@ Xft.hintstyle: hintfull
 
 XTerm*background:        rgb:00/00/00
 XTerm*foreground:        rgb:a8/a8/a8
-XTerm*geometry:          110x50
+XTerm*geometry:          100x50
 
 !XTerm*faceName:          Monospace:size=11:antialias=true
 XTerm*faceName:          Input:size=11:antialias=true
