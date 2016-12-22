@@ -326,9 +326,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Konqueror</name>
+          <name>Spacefm</name>
         </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>spacefm</command>
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
@@ -337,28 +337,24 @@
     <!--     <command>scrot</command> -->
     <!--   </action> -->
     <!-- </keybind> -->
-
     <!-- my entries -->
     <keybind key="C-A-t">
       <action name="Execute">
         <command>x-terminal-emulator</command>
       </action>
     </keybind>
-
     <!-- launch gmrun -->
     <keybind key="A-F2">
       <action name="Execute">
         <command>gmrun</command>
       </action>
     </keybind>
-
     <!-- screenshot -->
     <keybind key="A-F3">
       <action name="Execute">
         <command>scrot</command>
       </action>
     </keybind>
-
     <!-- volume control -->
     <keybind key="A-F10">
       <action name="Execute">
@@ -370,7 +366,6 @@
         <command>amixer set Master 5%- unmute</command>
       </action>
     </keybind>
-
     <!-- window tiling: emulates Windows 7 snap feature -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
@@ -391,12 +386,11 @@
     <keybind key="W-Down">
       <action name="Unmaximize"/>
     </keybind>
-
     <!-- lock screen -->
     <keybind key="W-l">
-        <action name="Execute">
-            <command>xscreensaver-command -lock</command>
-        </action>
+      <action name="Execute">
+        <command>xscreensaver-command -lock</command>
+      </action>
     </keybind>
   </keyboard>
   <mouse>
