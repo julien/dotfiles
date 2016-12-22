@@ -13,7 +13,7 @@ case "$OSTYPE" in
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
     alias lspkgs="pkgutil --pkgs"
-    alias rm_nodemodules="find . -type d -name node_modules -exec rm -rf {} +"
+    alias rm_nodemodules="find . -type d -name \"node_modules\" -exec rm -rf '{}' +"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
@@ -26,6 +26,9 @@ case "$OSTYPE" in
     alias ls="ls -ahl --color"
     alias open="xdg-open"
     [ -f /etc/bash_completion ] && . /etc/bash_completion
+    ;;
+
+  msys*)
     ;;
 esac
 
@@ -47,7 +50,7 @@ export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CLICOLOR=1
 export EDITOR="vim"
 
-export GOROOT="/usr/local/go"
+# export GOROOT="/usr/local/go"
 export GOPATH="$HOME/Documents"
 export GOBIN="$GOPATH/bin"
 
@@ -65,6 +68,5 @@ export PATH="$PATH:/Library/TeX/texbin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
