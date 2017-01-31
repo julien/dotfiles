@@ -322,21 +322,6 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-e">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Spacefm</name>
-        </startupnotify>
-        <command>spacefm</command>
-      </action>
-    </keybind>
-    <!-- Launch scrot when Print is pressed -->
-    <!-- <keybind key="Print"> -->
-    <!--   <action name="Execute"> -->
-    <!--     <command>scrot</command> -->
-    <!--   </action> -->
-    <!-- </keybind> -->
     <!-- my entries -->
     <keybind key="C-A-t">
       <action name="Execute">
@@ -352,7 +337,7 @@
     <!-- screenshot -->
     <keybind key="A-F3">
       <action name="Execute">
-        <command>scrot</command>
+        <command>scrot -d 3</command>
       </action>
     </keybind>
     <!-- volume control -->

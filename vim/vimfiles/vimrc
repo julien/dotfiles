@@ -6,7 +6,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-Plug 'fatih/vim-go', { 'for': 'go' }
+" Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
 Plug 'kien/ctrlp.vim'
@@ -18,7 +18,7 @@ filetype plugin indent on
 let mapleader = "\<space>"
 
 set autoread hidden
-set expandtab shiftwidth=4 tabstop=4 backspace=indent,eol,start
+set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
@@ -43,22 +43,22 @@ inoremap jj <esc>
 vn < <gv
 vn > >gv
 nm <silent> <leader>b :ls<cr>:e #
+nn <silent> <leader>e :Explore<cr>
 nn <silent> <leader>q :call wipeout#Wipeout()<cr>
 noremap  <F1> :set hls!<cr>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<cr>
 nn <F3> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
 
-
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 " enter automatically into the files directory
-" au BufEnter * silent! lcd %:p:h
+au BufEnter * silent! lcd %:p:h
 " this is supposed to fix html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
 
 au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
-au FileType javascript setlocal noexpandtab tabstop=2 shiftwidth=2
+" au FileType javascript setlocal noexpandtab tabstop=2 shiftwidth=2
 au FileType go setlocal noexpandtab shiftwidth=8 tabstop=8
 
 let g:netrw_banner       = 0
@@ -71,15 +71,18 @@ let g:netrw_keepdir      = 1
 let g:netrw_list_hide    = '*.db,desktop.ini,\$Recycle\.Bin,NTUSER\.*,\.DS_Store,\.\/$'
 let g:netrw_winsize      = 24
 
-let g:go_fmt_autosave =                        1
-let g:go_fmt_command =                         "goimports"
-let g:go_highlight_array_whitespace_error =    0
-let g:go_highlight_space_tab_error =           0
-let g:go_highlight_trailing_whitespace_error = 0
-
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|svn'
+let g:ctrlp_custom_ignore = 'node_modules\|obj\|DS_Store\|git\|svn'
 let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" let g:go_fmt_autosave =                        1
+" let g:go_fmt_command =                         "goimports"
+" let g:go_highlight_array_whitespace_error =    0
+" let g:go_highlight_space_tab_error =           0
+" let g:go_highlight_trailing_whitespace_error = 0
+
+let g:plug_window = "new"
+
 
 colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
