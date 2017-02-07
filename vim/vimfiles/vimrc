@@ -6,11 +6,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-" Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'duganchen/vim-soy', { 'for': 'soy' }
-Plug 'kien/ctrlp.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'fatih/vim-go', { 'for': 'go' }
 call plug#end()
 
 syntax on
@@ -58,8 +55,7 @@ au BufEnter * silent! lcd %:p:h
 autocmd BufEnter *.html :syntax sync fromstart
 
 au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
-" au FileType javascript setlocal noexpandtab tabstop=2 shiftwidth=2
-au FileType go setlocal noexpandtab shiftwidth=8 tabstop=8
+au FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
@@ -71,18 +67,14 @@ let g:netrw_keepdir      = 1
 let g:netrw_list_hide    = '*.db,desktop.ini,\$Recycle\.Bin,NTUSER\.*,\.DS_Store,\.\/$'
 let g:netrw_winsize      = 24
 
-let g:ctrlp_custom_ignore = 'node_modules\|obj\|DS_Store\|git\|svn'
-let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" let g:go_fmt_autosave =                        1
-" let g:go_fmt_command =                         "goimports"
-" let g:go_highlight_array_whitespace_error =    0
-" let g:go_highlight_space_tab_error =           0
-" let g:go_highlight_trailing_whitespace_error = 0
+let g:go_fmt_autosave =                        1
+let g:go_fmt_command =                         "goimports"
+let g:go_highlight_array_whitespace_error =    0
+let g:go_highlight_space_tab_error =           0
+let g:go_highlight_trailing_whitespace_error = 0
 
 let g:plug_window = "new"
-
 
 colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
