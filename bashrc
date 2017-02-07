@@ -6,31 +6,26 @@ case "$OSTYPE" in
   darwin*)
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
-    alias ls="ls -a"
-
-    export LR_HOME="$HOME/Documents/work/portal"
-
-    alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
-    alias gradlew="$LR_HOME/liferay-portal/gradlew"
-    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
-    alias lspkgs="pkgutil --pkgs"
-    alias project_generator="/Users/jc/Documents/of/projectGenerator-osx/projectGenerator.app/Contents/MacOS/Electron"
-
-    # alias rm_nodemodules="find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' '+'"
-    rm_nodenodules() {
+    rm_nodemodules() {
       git ls-files modules | grep -F package.json | xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
-    alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-    alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-
-
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
-
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
+    export LR_HOME="$HOME/Documents/work/portal"
+
+    alias ls="ls -a"
+    alias gradlew="$LR_HOME/liferay-portal/gradlew"
+    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
+
+    alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
+    alias lspkgs="pkgutil --pkgs"
+    alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+    alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     ;;
+
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
 
@@ -56,9 +51,16 @@ if [  -f $HOME/.git-prompt.sh ]; then
   export PS1='\W$(__git_ps1) $ '
 fi
 
+# osx has a function defined in /etc/bashrc
+if ! [ -n "$(type -t update_terminal_cwd)" ]; then
+  update_terminal_cwd() {
+    :
+  }
+fi
+
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/of/apps"
-# export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
+export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
@@ -81,7 +83,7 @@ export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:/usr/local/go/bin"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Adding autocomplete for 'we'
 [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
