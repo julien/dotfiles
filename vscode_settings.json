@@ -1,53 +1,54 @@
 // Place your settings in this file to overwrite the default settings
 {
-	"css.validate": false,
+  "css.validate": false,
 
-	"diffEditor.renderIndicators": false,
+  "diffEditor.renderIndicators": false,
 
-	"editor.detectIndentation": true,
-	"editor.insertSpaces": false,
-	// "editor.fontFamily": "'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
-	"editor.fontFamily": "Input",
-	"editor.fontSize": 14,
-	// "editor.folding": false,
-	"editor.renderLineHighlight": "none",
-	"editor.renderWhitespace": "all",
-	"editor.tabSize": 2,
-	"editor.wordWrap": false,
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.fontFamily": "Input",
+  "editor.fontSize": 14,
+  "editor.folding": false,
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.wordWrap": false,
 
-	"explorer.openEditors.visible": 0,
+  "explorer.openEditors.visible": 0,
 
-	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/.DS_Store": true
-	},
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/.dropbox": true
+  },
 
-	"files.trimTrailingWhitespace": true,
+  "files.trimTrailingWhitespace": true,
 
-	// "git.enabled": false,
-	// "git.autofetch": false,
+  // "git.enabled": false,
+  // "git.autofetch": false,
 
-	"less.validate": false,
+  "less.validate": false,
 
-	"php.validate.enable": false,
+  "php.validate.enable": false,
 
-	"scss.validate": false,
+  "scss.validate": false,
 
-	"telemetry.enableTelemetry": false,
+  "telemetry.enableTelemetry": false,
 
-	"terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-	"terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 12,
 
-	"typescript.validate.enable": false,
+  "typescript.validate.enable": false,
 
-	"vim.easymotion": true,
-	"vim.leader": " ",
+  "vim.easymotion": true,
+  "vim.leader": " ",
 
-	"window.reopenFolders": "none",
+  "window.reopenFolders": "none",
 
-	"workbench.editor.showIcons": false,
-	"workbench.activityBar.visible": false,
-	"workbench.statusBar.visible": true
+  "workbench.editor.showIcons": false,
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": true,
+  "workbench.welcome.enabled": false
 }
