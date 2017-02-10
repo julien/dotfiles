@@ -10,11 +10,14 @@
   "editor.fontSize": 14,
   "editor.folding": false,
   "editor.renderLineHighlight": "none",
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "none",
   "editor.tabSize": 2,
   "editor.wordWrap": false,
 
   "explorer.openEditors.visible": 0,
+
+
+  "extensions.autoUpdate": true,
 
   "files.exclude": {
     "**/.git": true,
