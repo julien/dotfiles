@@ -20,8 +20,12 @@ case "$OSTYPE" in
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
 
+    alias brewlist="brew uses --installed $1"
+    alias brewpurge="brew cleanup -s --force"
+
     alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
     alias lspkgs="pkgutil --pkgs"
+    alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     ;;
