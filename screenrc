@@ -1,4 +1,4 @@
-
+hardstatus on
 startup_message off
 vbell off
 term screen-256color

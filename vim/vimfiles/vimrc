@@ -20,6 +20,7 @@ set autoread hidden
 set t_Co=256
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
+set background=dark
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
 set number ls=2
@@ -49,6 +50,7 @@ noremap  <F1> :set hls!<cr>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<cr>
 nn <F3> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
+nn <F4> :set nonu!<cr>
 
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
@@ -56,6 +58,9 @@ au BufWritePre * :%s/\s\+$//e
 au BufEnter * silent! lcd %:p:h
 " this is supposed to fix html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
+au BufEnter *.glsl,*.frag,*.vert :setlocal ft=c
+au BufEnter *.soy setlocal ft=jsp
+au BufEnter *.ts setlocal ft=javascript
 
 au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
 au FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
@@ -79,7 +84,7 @@ let g:go_highlight_space_tab_error =           0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:plug_window = "new"
 
-colo jellybeans
+colo paramount
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
