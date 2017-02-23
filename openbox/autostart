@@ -19,5 +19,8 @@ xsetroot -solid black
 # start xscreensaver
 xscreensaver -no-splash &
 
+# start conky after a slight delay
+# (sleep 6s && conky&)
+
 # start dropbox after a slight delay
 # (sleep 6s && dropbox start)

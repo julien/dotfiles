@@ -24,6 +24,10 @@ XTerm*boldMode:          false
 XTerm*colorBDMode:       true
 XTerm*colorBD:           rgb:fc/fc/fc
 
+xterm*VT100.Translations: #override \
+  Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
 *cursorColor:            #98d1ce
 *color0:                 #393939
 *color8:                 #535551

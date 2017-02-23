@@ -92,3 +92,8 @@ export NVM_DIR="$HOME/.nvm"
 # Adding autocomplete for 'we'
 [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
 
+# Extra env variables
+[ -f ~/.env.sh ] && source ~/.env.sh
+
+
+
