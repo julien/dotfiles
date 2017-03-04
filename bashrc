@@ -19,12 +19,14 @@ case "$OSTYPE" in
     alias ls="ls -a"
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
+    alias lrportal-ee="$HOME/Documents/work/portal-ee/bundles/tomcat-8.0.32/bin/catalina.sh run"
 
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
 
     alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
     alias lspkgs="pkgutil --pkgs"
+    alias sceen="/usr/local/Cellar/screen/4.5.0/bin/screen"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
@@ -83,6 +85,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
+export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:/usr/local/go/bin"
 
