@@ -1,13 +1,19 @@
-hardstatus on
 startup_message off
 vbell off
-term screen-256color
+
+# huge scrollback buffer
+defscrollback 5000
 
 # colors
 attrcolor b ".I"
+term screen-256color-bce
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
 defbce "on"
-
 # scroll with mouse
-defscrollback 5000
 termcapinfo xterm* ti@:te@
+
+
+# status
+# hardstatus alwayslastline "%c %{= K} %w"
+hardstatus alwayslastline "%{= K} %w %-6=%c"
+
