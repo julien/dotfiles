@@ -25,6 +25,7 @@ case "$OSTYPE" in
     alias brewpurge="brew cleanup -s --force"
 
     alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
+    alias ip="ipconfig getifaddr en0"
     alias lspkgs="pkgutil --pkgs"
     alias sceen="/usr/local/Cellar/screen/4.5.0/bin/screen"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -43,7 +44,9 @@ case "$OSTYPE" in
     ;;
 esac
 
+alias http="pyhon -m SimpleHTTPServer $1"
 alias npmi='npm install --cache-min Infinity'
+alias stat="stat -c '%n %s' $1"
 
 # enable ctrl-s
 stty -ixon
@@ -69,6 +72,8 @@ export CDPATH="$CDPATH:$HOME/Documents/of/apps"
 export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
+export CDPATH="$CDPATH:$HOME/Dropbox/Documents/processing"
+
 
 export CLICOLOR=1
 export EDITOR="vim"
@@ -86,7 +91,9 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/processing"
+export PATH="$PATH:$HOME/Dropbox/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:/opt/firefox"
 export PATH="$PATH:/usr/local/go/bin"
 
 export NVM_DIR="$HOME/.nvm"
@@ -98,5 +105,6 @@ export NVM_DIR="$HOME/.nvm"
 # Extra env variables
 [ -f ~/.env.sh ] && source ~/.env.sh
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
