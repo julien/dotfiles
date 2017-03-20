@@ -8,6 +8,7 @@ XTerm*background:        rgb:00/00/00
 XTerm*foreground:        rgb:a8/a8/a8
 XTerm*geometry:          100x50
 
+XTerm*allowBoldFonts:    false
 !XTerm*faceName:          Monospace:size=11:antialias=true
 XTerm*faceName:          Input:size=11:antialias=true
 
