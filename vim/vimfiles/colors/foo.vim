@@ -51,7 +51,10 @@ if !exists('*s:h')
   endfunction
 endif
 
-call s:h('Normal',        {'bg': s:bg, 'fg': s:norm})
+call s:h('Normal',        {'bg': s:black})
+hi Normal ctermbg=NONE
+hi nonText ctermbg=NONE
+
 call s:h('Cursor',        {'bg': s:purple, 'fg': s:norm })
 call s:h('Comment',       {'fg': s:bg_subtle, 'gui': 'italic'})
 
@@ -112,8 +115,8 @@ call s:h('LineNr',        {'fg': s:bg_subtle})
 call s:h('CursorLineNr',  {'fg': s:purple, 'bg': s:bg_very_subtle})
 call s:h('Question',      {'fg': s:medium_gray})
 
-call s:h('StatusLine',    {'bg': s:black})
-call s:h('StatusLineNC',  {'bg': s:black, 'fg': s:medium_gray})
+call s:h('StatusLine',    {'bg': s:bg_subtle})
+call s:h('StatusLineNC',  {'bg': s:black, 'fg': s:purple})
 
 call s:h('VertSplit',     {'bg': s:bg, 'fg': s:bg_very_subtle, 'style': 'NONE'})
 

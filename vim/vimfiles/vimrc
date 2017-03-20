@@ -5,11 +5,12 @@ Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
-Plug 'kien/ctrlp.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
+" Plug 'kien/ctrlp.vim'
+" Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'sophacles/vim-processing', { 'for': 'processing' }
 call plug#end()
 
 syntax on
@@ -72,8 +73,8 @@ let g:netrw_fastbrowse   = 2
 let g:netrw_keepdir      = 1
 let g:netrw_list_hide    = '*.db,desktop.ini,\$Recycle\.Bin,NTUSER\.*,\.DS_Store,\.\/$'
 let g:netrw_winsize      = 24
-let g:ctrlp_custom_ignore = 'node_modules\|obj\|DS_Store\|git\|svn'
-let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
+" let g:ctrlp_custom_ignore = 'node_modules\|obj\|DS_Store\|git\|svn'
+" let g:ctrlp_match_func = {'match': 'pymatcher#PyMatch'}
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:go_fmt_autosave =                        1
 let g:go_fmt_command =                         "goimports"
