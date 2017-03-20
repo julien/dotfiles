@@ -12,9 +12,10 @@ xset r rate 300 50
 
 # set a background color
 xsetroot -solid black
+# xsetroot -solid #028482
 
 # set a wallpaper
-# feh --bg-fill ~/Pictures/Le5tHO1.png
+# feh --bg-fill ~/Pictures/.png
 
 # start xscreensaver
 xscreensaver -no-splash &
