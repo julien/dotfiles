@@ -51,9 +51,9 @@ if !exists('*s:h')
   endfunction
 endif
 
-call s:h('Normal',        {'bg': s:black})
-hi Normal ctermbg=NONE
-hi nonText ctermbg=NONE
+call s:h('Normal',        {'bg': s:black, 'fg': s:norm})
+" hi Normal ctermbg=NONE
+" hi nonText ctermbg=NONE
 
 call s:h('Cursor',        {'bg': s:purple, 'fg': s:norm })
 call s:h('Comment',       {'fg': s:bg_subtle, 'gui': 'italic'})
