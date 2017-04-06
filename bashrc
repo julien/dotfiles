@@ -10,15 +10,17 @@ case "$OSTYPE" in
       git ls-files modules | grep -F package.json | xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
+    alias ls="ls -ahC"
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
     export LR_HOME="$HOME/Documents/work/portal"
 
-    alias ls="ls -a"
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
+
+    alias gradlew-ee="$HOME/Documents/work/portal-ee/liferay-portal-ee/gradlew"
     alias lrportal-ee="$HOME/Documents/work/portal-ee/bundles/tomcat-8.0.32/bin/catalina.sh run"
 
     alias brewlist="brew uses --installed $1"
@@ -36,14 +38,15 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
 
-    alias ls="ls -a --color"
     alias open="xdg-open"
+    alias ls="ls -ahc --color"
     ;;
 
   msys*)
     ;;
 esac
 
+alias find_big_files="du -hsx * | sort -r | head -10"
 alias http="pyhon -m SimpleHTTPServer $1"
 alias npmi='npm install --cache-min Infinity'
 alias stat="stat -c '%n %s' $1"
@@ -74,7 +77,6 @@ export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents/processing"
 
-
 export CLICOLOR=1
 export EDITOR="vim"
 
@@ -86,6 +88,15 @@ export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
 shopt -s cmdhist
 export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
+
+export EMSDK="$HOME/Documents/emsdk"
+export EM_CONFIG="$HOME/.emscripten"
+export BINARYEN_ROOT="$HOME/Documents/emsdk/clang/e1.37.9_64bit/binaryen"
+export EMSCRIPTEN="$HOME/Documents/emsdk/emscripten/1.37.9"
+
+export PATH="$PATH:$HOME/Documents/emsdk/clang/e1.37.9_64bit"
+export PATH="$PATH:$HOME/Documents/emsdk/node/4.1.1_64bit/bin"
+export PATH="$PATH:$HOME/Documents/emsdk/emscripten/1.37.9"
 
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:/Library/TeX/texbin"
@@ -99,12 +110,10 @@ export PATH="$PATH:/usr/local/go/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+
 # Adding autocomplete for 'we'
 [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
 
 # Extra env variables
 [ -f ~/.env.sh ] && source ~/.env.sh
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 
