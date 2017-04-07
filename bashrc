@@ -98,6 +98,8 @@ export PATH="$PATH:$HOME/Documents/emsdk/clang/e1.37.9_64bit"
 export PATH="$PATH:$HOME/Documents/emsdk/node/4.1.1_64bit/bin"
 export PATH="$PATH:$HOME/Documents/emsdk/emscripten/1.37.9"
 
+export PATH="$PATH:$HOME/Library/PackageManager/bin"
+
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
