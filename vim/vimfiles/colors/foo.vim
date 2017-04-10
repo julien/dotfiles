@@ -116,7 +116,8 @@ call s:h('CursorLineNr',  {'fg': s:purple, 'bg': s:bg_very_subtle})
 call s:h('Question',      {'fg': s:medium_gray})
 
 call s:h('StatusLine',    {'bg': s:bg_subtle})
-call s:h('StatusLineNC',  {'bg': s:black, 'fg': s:purple})
+call s:h('StatusLineNC',    {'bg': s:bg_subtle})
+" call s:h('StatusLineNC',  {'bg': s:black, 'fg': s:purple})
 
 call s:h('VertSplit',     {'bg': s:bg, 'fg': s:bg_very_subtle, 'style': 'NONE'})
 
