@@ -10,7 +10,8 @@ case "$OSTYPE" in
       git ls-files modules | grep -F package.json | xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
-    alias ls="ls -ahC"
+    alias ls="ls -1a"
+
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
     export JAVA_HOME=$(/usr/libexec/java_home)
@@ -39,7 +40,7 @@ case "$OSTYPE" in
     [ -f /etc/bash_completion ] && . /etc/bash_completion
 
     alias open="xdg-open"
-    alias ls="ls -ahc --color"
+    alias ls="ls -1a --color"
     ;;
 
   msys*)
@@ -50,6 +51,10 @@ alias find_big_files="du -hsx * | sort -r | head -10"
 alias http="pyhon -m SimpleHTTPServer $1"
 alias npmi='npm install --cache-min Infinity'
 alias stat="stat -c '%n %s' $1"
+
+flac2mp3() {
+  find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 -vsync 2 {}.mp3 \;
+}
 
 # enable ctrl-s
 stty -ixon
