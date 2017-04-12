@@ -41,6 +41,10 @@ case "$OSTYPE" in
 
     alias open="xdg-open"
     alias ls="ls -1a --color"
+
+    flac2mp3() {
+      find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 -vsync 2 {}.mp3 \;
+    }
     ;;
 
   msys*)
@@ -50,11 +54,6 @@ esac
 alias find_big_files="du -hsx * | sort -r | head -10"
 alias http="pyhon -m SimpleHTTPServer $1"
 alias npmi='npm install --cache-min Infinity'
-alias stat="stat -c '%n %s' $1"
-
-flac2mp3() {
-  find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 -vsync 2 {}.mp3 \;
-}
 
 # enable ctrl-s
 stty -ixon
@@ -116,7 +115,6 @@ export PATH="$PATH:/usr/local/go/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 
 # Adding autocomplete for 'we'
 [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
