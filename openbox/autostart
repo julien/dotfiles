@@ -13,6 +13,7 @@ xset r rate 300 50
 # set a background color
 xsetroot -solid black
 # xsetroot -solid #028482
+# xsetroot -solid "#028490"
 
 # set a wallpaper
 # feh --bg-fill ~/Pictures/.png
