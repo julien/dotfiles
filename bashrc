@@ -10,7 +10,7 @@ case "$OSTYPE" in
       git ls-files modules | grep -F package.json | xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
-    alias ls="ls -1a"
+    alias ls="ls -ahc"
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
@@ -20,7 +20,6 @@ case "$OSTYPE" in
 
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
-
     alias gradlew-ee="$HOME/Documents/work/portal-ee/liferay-portal-ee/gradlew"
     alias lrportal-ee="$HOME/Documents/work/portal-ee/bundles/tomcat-8.0.32/bin/catalina.sh run"
 
@@ -35,18 +34,11 @@ case "$OSTYPE" in
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     ;;
-
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
-
     alias open="xdg-open"
-    alias ls="ls -1a --color"
-
-    flac2mp3() {
-      find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 -vsync 2 {}.mp3 \;
-    }
+    alias ls="ls -ahC --color"
     ;;
-
   msys*)
     ;;
 esac
@@ -98,27 +90,21 @@ export EM_CONFIG="$HOME/.emscripten"
 export BINARYEN_ROOT="$HOME/Documents/emsdk/clang/e1.37.9_64bit/binaryen"
 export EMSCRIPTEN="$HOME/Documents/emsdk/emscripten/1.37.9"
 
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/emsdk/clang/e1.37.9_64bit"
 export PATH="$PATH:$HOME/Documents/emsdk/node/4.1.1_64bit/bin"
 export PATH="$PATH:$HOME/Documents/emsdk/emscripten/1.37.9"
-
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
-
-export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:$HOME/Dropbox/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:/opt/firefox"
 export PATH="$PATH:/usr/local/go/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# Adding autocomplete for 'we'
 [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
-
-# Extra env variables
 [ -f ~/.env.sh ] && source ~/.env.sh
 
