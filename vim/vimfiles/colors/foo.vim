@@ -37,6 +37,7 @@ let s:bg_very_subtle  = s:subtle_black
 let s:norm            = s:lighter_gray
 let s:norm_subtle     = s:medium_gray
 
+
 " https://github.com/noahfrederick/vim-hemisu/
 if !exists('*s:h')
   function! s:h(group, style)

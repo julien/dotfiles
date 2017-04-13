@@ -21,7 +21,7 @@ set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set number ls=2
+set nonumber ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
 set lazyredraw ttyfast ttyscroll=3
@@ -32,6 +32,8 @@ set nowritebackup noswapfile viminfo="NONE"
 set nostartofline
 set nowrap
 set nofoldenable
+set statusline=[%n]\ %F\ %=%-10.(%l,%c%V%)\ %P
+" set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 runtime macros/matchit.vim
 
@@ -50,7 +52,6 @@ set wildignore+=node_modules/*,bower_components/*
 nnoremap <leader>p :e **/*
 nnoremap <leader>v :vsplit **/*
 nnoremap <leader>s :split **/*
-
 
 nn <silent> <leader>q :call wipeout#Wipeout()<cr>
 noremap  <F1> :set hls!<cr>
@@ -92,6 +93,7 @@ let g:go_highlight_trailing_whitespace_error = 0
 let g:plug_window = "new"
 
 colo foo
+" colo distinguished
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
