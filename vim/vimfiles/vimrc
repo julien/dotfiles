@@ -33,7 +33,6 @@ set nostartofline
 set nowrap
 set nofoldenable
 set statusline=[%n]\ %F\ %=%-10.(%l,%c%V%)\ %P
-" set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 runtime macros/matchit.vim
 
@@ -50,8 +49,6 @@ set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
 set wildignore+=node_modules/*,bower_components/*
 
 nnoremap <leader>p :e **/*
-nnoremap <leader>v :vsplit **/*
-nnoremap <leader>s :split **/*
 
 nn <silent> <leader>q :call wipeout#Wipeout()<cr>
 noremap  <F1> :set hls!<cr>
