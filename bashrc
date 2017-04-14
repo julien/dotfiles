@@ -26,13 +26,10 @@ case "$OSTYPE" in
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
 
-    alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
     alias ip="ipconfig getifaddr en0"
     alias lspkgs="pkgutil --pkgs"
     alias sceen="/usr/local/Cellar/screen/4.5.0/bin/screen"
-    alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-    alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     ;;
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
@@ -44,8 +41,7 @@ case "$OSTYPE" in
 esac
 
 alias find_big_files="du -hsx * | sort -r | head -10"
-alias http="pyhon -m SimpleHTTPServer $1"
-alias npmi='npm install --cache-min Infinity'
+alias npmi='npm i --cache-min Infinity'
 
 # enable ctrl-s
 stty -ixon
@@ -98,7 +94,6 @@ export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/processing"
-export PATH="$PATH:$HOME/Dropbox/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:/usr/local/go/bin"
 
