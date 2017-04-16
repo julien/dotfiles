@@ -10,7 +10,7 @@ case "$OSTYPE" in
       git ls-files modules | grep -F package.json | xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
-    alias ls="ls -ahc"
+    alias ls="ls -1a"
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
@@ -34,7 +34,7 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -ahC --color"
+    alias ls="ls -1a --color"
     ;;
   msys*)
     ;;
@@ -81,18 +81,11 @@ shopt -s histappend
 shopt -s cmdhist
 export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
 
-export EMSDK="$HOME/Documents/emsdk"
-export EM_CONFIG="$HOME/.emscripten"
-export BINARYEN_ROOT="$HOME/Documents/emsdk/clang/e1.37.9_64bit/binaryen"
-export EMSCRIPTEN="$HOME/Documents/emsdk/emscripten/1.37.9"
-
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
-export PATH="$PATH:$HOME/Documents/emsdk/clang/e1.37.9_64bit"
-export PATH="$PATH:$HOME/Documents/emsdk/node/4.1.1_64bit/bin"
-export PATH="$PATH:$HOME/Documents/emsdk/emscripten/1.37.9"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
+export PATH="$PATH:$HOME/Documents/nvim/bin"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:/usr/local/go/bin"
