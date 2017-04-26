@@ -21,7 +21,7 @@ set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set nonumber ls=2
+set number ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
 set lazyredraw ttyfast ttyscroll=3
@@ -89,9 +89,7 @@ let g:go_highlight_space_tab_error =           0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:plug_window = "new"
 
-" colo foo
-
-colo aerique-dark
+colo foo
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
