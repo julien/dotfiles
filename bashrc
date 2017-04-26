@@ -10,7 +10,7 @@ case "$OSTYPE" in
       git ls-files modules | grep -F package.json | xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
-    alias ls="ls -1a"
+    alias ls="ls -ahC"
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
@@ -28,13 +28,14 @@ case "$OSTYPE" in
 
     alias ip="ipconfig getifaddr en0"
     alias lspkgs="pkgutil --pkgs"
-    alias sceen="/usr/local/Cellar/screen/4.5.0/bin/screen"
+    alias screen="/usr/local/Cellar/screen/4.5.1/bin/screen"
+    alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     ;;
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -1a --color"
+    alias ls="ls -ahC --color"
     ;;
   msys*)
     ;;
@@ -42,6 +43,14 @@ esac
 
 alias find_big_files="du -hsx * | sort -r | head -10"
 alias npmi='npm i --cache-min Infinity'
+
+_rm_dirs() {
+  if [ -z "$1" ]; then
+    return 1
+  fi
+
+  find . -name "$1" -type d -exec rm -rf '{}' +
+}
 
 # enable ctrl-s
 stty -ixon
@@ -84,6 +93,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:/Library/TeX/texbin"
+export PATH="$PATH:$HOME/Documents/Godot"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/nvim/bin"
 export PATH="$PATH:$HOME/Documents/processing"
