@@ -7,10 +7,11 @@ case "$OSTYPE" in
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
     rm_nodemodules() {
-      git ls-files modules | grep -F package.json | xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
+      git ls-files modules | grep -F package.json | \
+        xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
-    alias ls="ls -ahC"
+    alias ls="ls -a1"
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
@@ -22,10 +23,8 @@ case "$OSTYPE" in
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
     alias gradlew-ee="$HOME/Documents/work/portal-ee/liferay-portal-ee/gradlew"
     alias lrportal-ee="$HOME/Documents/work/portal-ee/bundles/tomcat-8.0.32/bin/catalina.sh run"
-
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
-
     alias ip="ipconfig getifaddr en0"
     alias lspkgs="pkgutil --pkgs"
     alias screen="/usr/local/Cellar/screen/4.5.1/bin/screen"
@@ -35,7 +34,7 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -ahC --color"
+    alias ls="ls -a1 --color"
     ;;
   msys*)
     ;;
@@ -44,11 +43,10 @@ esac
 alias find_big_files="du -hsx * | sort -r | head -10"
 alias npmi='npm i --cache-min Infinity'
 
-_rm_dirs() {
+rm_dirs() {
   if [ -z "$1" ]; then
-    return 1
+    echo aborting; return 1
   fi
-
   find . -name "$1" -type d -exec rm -rf '{}' +
 }
 
@@ -76,7 +74,6 @@ export CDPATH="$CDPATH:$HOME/Documents/of/apps"
 export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
-export CDPATH="$CDPATH:$HOME/Dropbox/Documents/processing"
 
 export CLICOLOR=1
 export EDITOR="vim"
@@ -93,9 +90,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:/Library/TeX/texbin"
-export PATH="$PATH:$HOME/Documents/Godot"
 export PATH="$PATH:$HOME/Documents/bin"
-export PATH="$PATH:$HOME/Documents/nvim/bin"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:/usr/local/go/bin"
