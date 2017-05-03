@@ -29,3 +29,19 @@ xterm*VT100.Translations: #override \
   Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 
+*.color0: #4E4E4E
+*.color8: #555555
+*.color1: #FF6C60
+*.color9: #FF0000
+*.color2: #A8FF60
+*.color10: #00FF00
+*.color3: #FFFFB6
+*.color11: #FFFF00
+*.color4: #96CBFF
+*.color12: #0000FF
+*.color5: #FF73FF
+*.color13: #FF00FF
+*.color6: #9DFFFF
+*.color14: #00FFFF
+*.color7: #EEEEEE
+*.color15: #FFFFFF
