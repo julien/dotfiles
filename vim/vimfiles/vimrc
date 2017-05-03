@@ -10,6 +10,7 @@ Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 call plug#end()
 
 syntax on
@@ -24,7 +25,7 @@ set mouse=a mousemodel=extend
 set number ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
-set lazyredraw ttyfast ttyscroll=3
+set lazyredraw ttyfast ttyscroll=3 so=4
 set wildmenu wildmode=longest,list,full
 set path+=**
 set noerrorbells vb t_vb=""
@@ -65,10 +66,10 @@ au BufEnter * silent! lcd %:p:h
 autocmd BufEnter *.html :syntax sync fromstart
 au BufEnter *.glsl,*.frag,*.vert :setlocal ft=c
 au BufEnter *.soy setlocal ft=jsp
-au BufEnter *.ts setlocal ft=javascript
+"au BufEnter *.ts setlocal ft=javascript
 
 au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
-au FileType go setlocal noexpandtab shiftwidth=4 tabstop=4
+au FileType go,cpp setlocal noexpandtab shiftwidth=4 tabstop=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0

@@ -1,10 +1,8 @@
 syntax on
 filetype plugin indent on
 let mapleader = "<\space>"
-set nocp paste acd is scs nu hid ssl showmatch wmnu autoread
-set sw=4 ch=4
-set noerrorbells visualbell t_vb=""
-set wim=longest,list,full
-set mouse=a mousemodel=extend
-runtime macros/matchit.vim
+set acd autoread hid is nu scs ssl nocp
+set sm sw=4 wmnu wim=longest,list,full
+set noerrorbells visualbell t_vb="" mouse=a
+set runtime macros/matchit.vim
 let g:netrw_cursorline=0
