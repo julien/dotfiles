@@ -11,7 +11,7 @@ case "$OSTYPE" in
         xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
     }
 
-    alias ls="ls -a1"
+    alias ls="ls -Uaf1"
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
