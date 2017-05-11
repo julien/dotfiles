@@ -6,25 +6,20 @@ case "$OSTYPE" in
   darwin*)
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
-    rm_nodemodules() {
-      git ls-files modules | grep -F package.json | \
-        xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
-    }
-
-    alias ls="ls -Uaf1"
+    [ -f $(brew --prefix)/etc/bash_completion/git-completion.bash ] &&
+      . $(brew --prefix)/etc/bash_completion/git-completion.bash
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
-    export LR_HOME="$HOME/Documents/work/portal"
 
-    alias gradlew="$LR_HOME/liferay-portal/gradlew"
-    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
-    alias gradlew-ee="$HOME/Documents/work/portal-ee/liferay-portal-ee/gradlew"
-    alias lrportal-ee="$HOME/Documents/work/portal-ee/bundles/tomcat-8.0.32/bin/catalina.sh run"
+    export HOMEBREW_GITHUB_API_TOKEN="741c8dbf38fa6dc05508702771e8e29e028ebd31"
+
+    alias ls="ls -Uf"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
+    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias ip="ipconfig getifaddr en0"
     alias lspkgs="pkgutil --pkgs"
     alias screen="/usr/local/Cellar/screen/4.5.1/bin/screen"
@@ -34,7 +29,7 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -a1 --color"
+    alias ls="ls -f --color"
     ;;
   msys*)
     ;;
@@ -43,11 +38,9 @@ esac
 alias find_big_files="du -hsx * | sort -r | head -10"
 alias npmi='npm i --cache-min Infinity'
 
-rm_dirs() {
-  if [ -z "$1" ]; then
-    echo aborting; return 1
-  fi
-  find . -name "$1" -type d -exec rm -rf '{}' +
+rm_nodemodules() {
+  git ls-files modules | grep -F package.json | \
+    xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
 }
 
 # enable ctrl-s
@@ -99,5 +92,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
-[ -f ~/.env.sh ] && source ~/.env.sh
 
