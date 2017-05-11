@@ -1,16 +1,18 @@
 " execute pathogen#infect()
 call plug#begin()
-Plug 'mileszs/ack.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
+Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
-Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'sophacles/vim-processing', { 'for': 'processing' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'sophacles/vim-processing', { 'for': 'processing' }
+Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
+
 call plug#end()
 
 syntax on
@@ -25,7 +27,7 @@ set mouse=a mousemodel=extend
 set number ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
-set lazyredraw ttyfast ttyscroll=3 so=4
+set lazyredraw ttyfast ttyscroll=3 so=2
 set wildmenu wildmode=longest,list,full
 set path+=**
 set noerrorbells vb t_vb=""
@@ -69,7 +71,7 @@ au BufEnter *.soy setlocal ft=jsp
 "au BufEnter *.ts setlocal ft=javascript
 
 au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
-au FileType go,cpp setlocal noexpandtab shiftwidth=4 tabstop=4
+au FileType go,cpp,java setlocal noexpandtab shiftwidth=4 tabstop=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
@@ -90,7 +92,7 @@ let g:go_highlight_space_tab_error =           0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:plug_window = "new"
 
-colo ir_black
+colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
