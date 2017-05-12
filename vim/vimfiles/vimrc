@@ -6,13 +6,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-
 call plug#end()
 
 syntax on
@@ -46,11 +43,9 @@ inoremap jj <esc>
 vn < <gv
 vn > >gv
 nm <silent> <leader>b :ls<cr>:e #
-nn <silent> <leader>e :Explore<cr>
 
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
 set wildignore+=node_modules/*,bower_components/*
-" nnoremap <leader>p :e **/*
 nnoremap <leader>p :e<space>
 
 nn <silent> <leader>q :call wipeout#Wipeout()<cr>
@@ -66,12 +61,13 @@ au BufWritePre * :%s/\s\+$//e
 au BufEnter * silent! lcd %:p:h
 " this is supposed to fix html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
+
 au BufEnter *.glsl,*.frag,*.vert :setlocal ft=c
 au BufEnter *.soy setlocal ft=jsp
-"au BufEnter *.ts setlocal ft=javascript
+au BufEnter *.ts setlocal ft=javascript
 
-au FileType css,html,json,ruby,sh,vim setlocal expandtab tabstop=2 shiftwidth=2
-au FileType go,cpp,java setlocal noexpandtab shiftwidth=4 tabstop=4
+au FileType css,html,json,ruby,sh,vim setlocal et ts=2 sw=2
+au FileType go,cpp,java setlocal noet sw=4 ts=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
