@@ -14,7 +14,6 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
 
-    export HOMEBREW_GITHUB_API_TOKEN="741c8dbf38fa6dc05508702771e8e29e028ebd31"
 
     alias ls="ls -Uf"
     alias brewlist="brew uses --installed $1"
