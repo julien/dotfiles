@@ -1,6 +1,5 @@
 " execute pathogen#infect()
 call plug#begin()
-Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
@@ -8,7 +7,6 @@ Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'sophacles/vim-processing', { 'for': 'processing' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 call plug#end()
 

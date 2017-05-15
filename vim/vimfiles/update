@@ -1,5 +1,0 @@
-#!/bin/bash
-find * -type d -a -name .git | while read f
-do
-    (cd ${f%/.git}; git checkout .;git pull)
-done
