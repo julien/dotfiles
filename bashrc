@@ -14,11 +14,9 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
 
-
-    alias ls="ls -Uf"
+    alias ls="ls -1a"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
-    alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
     alias ip="ipconfig getifaddr en0"
     alias lspkgs="pkgutil --pkgs"
     alias screen="/usr/local/Cellar/screen/4.5.1/bin/screen"
@@ -28,7 +26,7 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -f --color"
+    alias ls="ls -1a --color"
     ;;
   msys*)
     ;;
@@ -37,10 +35,6 @@ esac
 alias find_big_files="du -hsx * | sort -r | head -10"
 alias npmi='npm i --cache-min Infinity'
 
-rm_nodemodules() {
-  git ls-files modules | grep -F package.json | \
-    xargs -I {} dirname {} | xargs -I {} rm -rf {}/node_modules
-}
 
 # enable ctrl-s
 stty -ixon
