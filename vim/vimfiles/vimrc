@@ -1,11 +1,10 @@
-" execute pathogen#infect()
 call plug#begin()
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
-Plug 'fatih/vim-go', { 'for': 'go' }
+" Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 call plug#end()
@@ -79,14 +78,15 @@ let g:netrw_liststyle     = 0 " 0: thin, 1: long, 2: wide, 3: tree
 let g:netrw_winsize      = 24
 let g:netrw_menu         = 0
 
-let g:go_fmt_autosave =                        1
-let g:go_fmt_command =                         "goimports"
-let g:go_highlight_array_whitespace_error =    0
-let g:go_highlight_space_tab_error =           0
-let g:go_highlight_trailing_whitespace_error = 0
+" let g:go_fmt_autosave =                        1
+" let g:go_fmt_command =                         "goimports"
+" let g:go_highlight_array_whitespace_error =    0
+" let g:go_highlight_space_tab_error =           0
+" let g:go_highlight_trailing_whitespace_error = 0
+
 let g:plug_window = "new"
 
-colo jellybeans
+colo jellybeans " murphy,pablo,torte
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
