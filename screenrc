@@ -2,24 +2,24 @@ startup_message off
 vbell off
 
 # huge scrollback buffer
-defscrollback 50000
+defscrollback 500000
 
 # colors
 attrcolor b ".I"
 term screen-256color-bce
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
 defbce "on"
+
 # scroll with mouse
 termcapinfo xterm* ti@:te@
 
+# status
+hardstatus alwayslastline "%{= K} %w %-6=%c"
+
+msgminwait 0
+msgwait 0
+
 # for ctrl right and left arrows
-bindkey ^[[1;5A prev
-bindkey ^[[1;5B next
 bindkey ^[[1;5D prev
 bindkey ^[[1;5C next
 
-# status
-# hardstatus alwayslastline "%c %{= K} %w"
-hardstatus alwayslastline "%{= K} %w %-6=%c"
-msgminwait 0
-msgwait 0
