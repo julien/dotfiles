@@ -35,7 +35,6 @@ esac
 alias find_big_files="du -hsx * | sort -r | head -10"
 alias npmi='npm i --cache-min Infinity'
 
-
 # enable ctrl-s
 stty -ixon
 
@@ -64,8 +63,9 @@ export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CLICOLOR=1
 export EDITOR="vim"
 
-export GOPATH="$HOME/Documents"
-export GOBIN="$GOPATH/bin"
+# export GOPATH="$HOME/Documents"
+# export GOBIN="$GOPATH/bin"
+# export PATH="$PATH:/usr/local/go/bin"
 
 export HISTCONTROL="ignoreboth:erasedups"
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
@@ -77,12 +77,23 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
+export PATH="$PATH:$HOME/Documents/emsdk"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:/usr/local/go/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-[ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
+# [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
+
+export EMSDK="$HOME/Documents/emsdk"
+export EM_CONFIG="$HOME/.emscripten"
+export BINARYEN_ROOT="$HOME/Documents/emsdk/clang/e1.37.9_64bit/binaryen"
+export EMSCRIPTEN="$HOME/Documents/emsdk/emscripten/1.37.9"
+
+export PATH="$PATH:$HOME/Documents/emsdk"
+export PATH="$PATH:$HOME/Documents/emsdk/clang/e1.37.9_64bit"
+# export PATH="$HOME/Documents/emsdk/node/4.1.1_64bit/bin"
+export PATH="$PATH:$HOME/Documents/emsdk/emscripten/1.37.9"
+
 
