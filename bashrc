@@ -84,16 +84,5 @@ export PATH="$PATH:./node_modules/.bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
-
-export EMSDK="$HOME/Documents/emsdk"
-export EM_CONFIG="$HOME/.emscripten"
-export BINARYEN_ROOT="$HOME/Documents/emsdk/clang/e1.37.9_64bit/binaryen"
-export EMSCRIPTEN="$HOME/Documents/emsdk/emscripten/1.37.9"
-
-export PATH="$PATH:$HOME/Documents/emsdk"
-export PATH="$PATH:$HOME/Documents/emsdk/clang/e1.37.9_64bit"
-# export PATH="$HOME/Documents/emsdk/node/4.1.1_64bit/bin"
-export PATH="$PATH:$HOME/Documents/emsdk/emscripten/1.37.9"
 
 
