@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Redirect $HOME/.xsession-errors to /dev/null.
+# BJEM 11 January 2012
+
+XSESSION_ERRFILE=$HOME/.xsession-errors
+
+# This does not seem to work for a regular file,
+# i.e. if you want to symlink $HOME/.xsession-errors
+# to another file.  I do not know why.
+XSESSION_ERRFILE_FINAL=/dev/null
+
+# Creates target file if it does not exist.
+touch "$XSESSION_ERRFILE_FINAL"
+
+# Link .xsession-errors file to the desired target
+# no matter what.
+ln -sf "$XSESSION_ERRFILE_FINAL" "$XSESSION_ERRFILE"
+
