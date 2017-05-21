@@ -63,6 +63,8 @@ au BufEnter *.glsl,*.frag,*.vert :setlocal ft=c
 au BufEnter *.soy setlocal ft=jsp
 au BufEnter *.ts setlocal ft=javascript
 
+au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
+
 au FileType css,html,json,ruby,sh,vim setlocal et ts=2 sw=2
 au FileType go,cpp,java setlocal noet sw=4 ts=4
 
