@@ -341,12 +341,12 @@
       </action>
     </keybind>
     <!-- volume control -->
-    <keybind key="A-F10">
+    <keybind key="A-F12">
       <action name="Execute">
         <command>amixer set Master 5%+ unmute</command>
       </action>
     </keybind>
-    <keybind key="A-F9">
+    <keybind key="A-F11">
       <action name="Execute">
         <command>amixer set Master 5%- unmute</command>
       </action>
