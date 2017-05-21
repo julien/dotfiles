@@ -35,8 +35,7 @@ esac
 alias find_big_files="du -hsx * | sort -r | head -10"
 alias npmi='npm i --cache-min Infinity'
 
-# enable ctrl-s
-stty -ixon
+# enable ctrl-s stty -ixon
 
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
@@ -83,6 +82,4 @@ export PATH="$PATH:./node_modules/.bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-
 
