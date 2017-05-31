@@ -6,3 +6,6 @@
 .vscode
 Thumbs.db
 ehthumbs.db
+a.out
+*.log
+
