@@ -13,6 +13,7 @@ case "$OSTYPE" in
     export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m -XX:-UseGCOverheadLimit"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
+    export LR_HOME="$HOME/Documents/work/portal"
 
     alias ls="ls -1a"
     alias brewlist="brew uses --installed $1"
@@ -33,7 +34,15 @@ case "$OSTYPE" in
 esac
 
 alias find_big_files="du -hsx * | sort -r | head -10"
+alias http="python -m SimpleHTTPServer $1"
 alias npmi='npm i --cache-min Infinity'
+
+rm_dirs() {
+  if [ -z "$1" ]; then
+    echo aborting; return 1
+  fi
+  find . -name "$1" -type d -prune -exec rm -rf '{}' +
+}
 
 # enable ctrl-s stty -ixon
 
@@ -41,9 +50,9 @@ alias npmi='npm i --cache-min Infinity'
 IGNOREEOF=100
 
 export PS1='\W $ '
-if [  -f $HOME/.git-prompt.sh ]; then
-  . $HOME/.git-prompt.sh
-  export PS1='\W$(__git_ps1) $ '
+if [  -f $HOME/.git-ps1.sh ]; then
+  . $HOME/.git-ps1.sh
+  export PS1='\W$(__git_ps2) $ '
 fi
 
 # osx has a function defined in /etc/bashrc
@@ -79,6 +88,7 @@ export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/emsdk"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
