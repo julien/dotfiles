@@ -6,8 +6,10 @@ Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
 " Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mitermayer/vim-prettier', { 'for': 'javascript' }
 " Plug 'sbdchd/neoformat'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
+Plug 'duganchen/vim-soy', { 'for': 'soy' }
 call plug#end()
 
 syntax on
@@ -40,7 +42,7 @@ nn k gk
 inoremap jj <esc>
 vn < <gv
 vn > >gv
-nm <silent> <leader>b :ls<cr>:e #
+" nm <silent> <leader>b :ls<cr>:e #
 
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
 set wildignore+=node_modules/*,bower_components/*
@@ -61,11 +63,10 @@ au BufEnter * silent! lcd %:p:h
 autocmd BufEnter *.html :syntax sync fromstart
 
 au BufEnter *.glsl,*.frag,*.vert :setlocal ft=c
-au BufEnter *.soy setlocal ft=jsp
 au BufEnter *.ts setlocal ft=javascript
 
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
-" autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.js PrettierAsync
 
 au FileType css,html,json,ruby,sh,vim setlocal et ts=2 sw=2
 au FileType go,cpp,java setlocal noet sw=4 ts=4
