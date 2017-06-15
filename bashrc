@@ -16,8 +16,10 @@ case "$OSTYPE" in
     export LR_HOME="$HOME/Documents/work/portal"
 
     alias ls="ls -1a"
+
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
+    alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias ip="ipconfig getifaddr en0"
     alias lspkgs="pkgutil --pkgs"
     alias screen="/usr/local/Cellar/screen/4.5.1/bin/screen"
@@ -78,8 +80,8 @@ export EDITOR="vim"
 
 export HISTCONTROL="ignoreboth:erasedups"
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
-# shopt -s histappend
-# shopt -s cmdhist
+shopt -s histappend
+shopt -s cmdhist
 # export PROMPT_COMMAND="history -a; history -c; history -r;$PROMPT_COMMAND"
 
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
@@ -104,4 +106,7 @@ export EMSDK="$HOME/Documents/emsdk"
 export EM_CONFIG="$HOME/.emscripten"
 export EMSCRIPTEN="$HOME/Documents/emsdk/emscripten/incoming"
 export BINARYEN_ROOT="$HOME/Documents/emsdk/binaryen/master_64bit_binaryen"
+
+
+[ -s "$HOME/Documents/bin/z/z.sh" ] && . "$HOME/Documents/bin/z/z.sh"
 
