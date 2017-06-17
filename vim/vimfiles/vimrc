@@ -4,10 +4,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
 Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
-" Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mitermayer/vim-prettier', { 'for': 'javascript' }
-" Plug 'sbdchd/neoformat'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
 call plug#end()
@@ -52,8 +49,7 @@ nn <silent> <leader>q :call wipeout#Wipeout()<cr>
 noremap  <F1> :set hls!<cr>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<cr>
-nn <F3> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
-nn <F4> :set nonu!<cr>
+nn <F3> :set nonu!<cr>
 
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
@@ -61,14 +57,7 @@ au BufWritePre * :%s/\s\+$//e
 au BufEnter * silent! lcd %:p:h
 " this is supposed to fix html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
-
-au BufEnter *.glsl,*.frag,*.vert :setlocal ft=c
-au BufEnter *.ts setlocal ft=javascript
-
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
-" autocmd BufWritePre *.js PrettierAsync
-
-au FileType css,html,json,ruby,sh,vim setlocal et ts=2 sw=2
 au FileType go,cpp,java setlocal noet sw=4 ts=4
 
 let g:netrw_banner       = 0
@@ -82,12 +71,6 @@ let g:netrw_list_hide    = '*.db,desktop.ini,\$Recycle\.Bin,NTUSER\.*,\.DS_Store
 let g:netrw_liststyle     = 0 " 0: thin, 1: long, 2: wide, 3: tree
 let g:netrw_winsize      = 24
 let g:netrw_menu         = 0
-
-" let g:go_fmt_autosave =                        1
-" let g:go_fmt_command =                         "goimports"
-" let g:go_highlight_array_whitespace_error =    0
-" let g:go_highlight_space_tab_error =           0
-" let g:go_highlight_trailing_whitespace_error = 0
 
 let g:plug_window = "new"
 
