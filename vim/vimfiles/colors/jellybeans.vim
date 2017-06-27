@@ -70,7 +70,8 @@ endif
 " - g:jellybeans_use_term_italics
 
 if !exists("g:jellybeans_background_color")
-  let g:jellybeans_background_color = "151515"
+  " let g:jellybeans_background_color = "151515"
+  let g:jellybeans_background_color = "000000"
 end
 
 if !exists("g:jellybeans_use_lowcolor_black") || g:jellybeans_use_lowcolor_black

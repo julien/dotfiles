@@ -18,7 +18,7 @@ set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set number ls=2
+set nonumber ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
 set lazyredraw ttyfast ttyscroll=3 so=2
@@ -36,21 +36,24 @@ runtime macros/matchit.vim
 """ mappings
 nn j gj
 nn k gk
-inoremap jj <esc>
+inoremap ii <esc>
 vn < <gv
 vn > >gv
-" nm <silent> <leader>b :ls<cr>:e #
+nm <silent> <leader>b :ls<cr>:e #
 
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
-set wildignore+=node_modules/*,bower_components/*
-nnoremap <leader>p :e<space>
-
-nn <silent> <leader>q :call wipeout#Wipeout()<cr>
 noremap  <F1> :set hls!<cr>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<cr>
 nn <F3> :set nonu!<cr>
+nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
 
+nn <silent> <leader>q :call wipeout#Wipeout()<cr>
+
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
+set wildignore+=node_modules/*,bower_components/*
+nn <leader>p :e<space>
+
+" autocommands
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 " enter automatically into the files directory
@@ -58,23 +61,23 @@ au BufEnter * silent! lcd %:p:h
 " this is supposed to fix html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
-au FileType go,cpp,java setlocal noet sw=4 ts=4
+au FileType go,c,cpp,java setlocal noet sw=4 ts=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
 let g:netrw_cursor       = 0
 let g:netrw_cursorline   = 0
 let g:netrw_dirhistmax   = 0
-let g:netrw_fastbrowse   = 2
+let g:netrw_fastbrowse   = 1
 let g:netrw_keepdir      = 1
 let g:netrw_list_hide    = '*.db,desktop.ini,\$Recycle\.Bin,NTUSER\.*,\.DS_Store,\.\/$'
-let g:netrw_liststyle     = 0 " 0: thin, 1: long, 2: wide, 3: tree
-let g:netrw_winsize      = 24
+let g:netrw_liststyle    = 0
 let g:netrw_menu         = 0
+let g:netrw_winsize      = 24
 
 let g:plug_window = "new"
 
-colo jellybeans " murphy,pablo,torte
+colo less
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
