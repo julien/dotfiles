@@ -21,7 +21,9 @@ case "$OSTYPE" in
     alias brewpurge="brew cleanup -s --force"
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias ip="ipconfig getifaddr en0"
+    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
     alias lspkgs="pkgutil --pkgs"
+
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     ;;
@@ -68,6 +70,10 @@ export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
+# export GOPATH="$HOME/Documents"
+# export GOBIN="$GOPATH/bin"
+# export PATH="$PATH:/usr/local/go/bin"
+
 export CLICOLOR=1
 export EDITOR="vim"
 
@@ -84,6 +90,9 @@ export PATH="$PATH:$HOME/Documents/emsdk/emscripten/incoming"
 export PATH="$PATH:$HOME/Documents/gradle/bin"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
+
+bind '"\e[A":history-search-backward'
+bind '"\e[A":history-search-backward'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
