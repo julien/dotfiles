@@ -11,17 +11,17 @@ call plug#end()
 
 syntax on
 filetype plugin indent on
-let mapleader = "\<space>"
+let mapleader = "\<Space>"
 
 set autoread hidden t_Co=256
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set nonumber ls=2
+set number ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
-set lazyredraw ttyfast ttyscroll=3 so=2
+set lazyredraw ttyfast so=2 ttyscroll=3
 set wildmenu wildmode=longest,list,full
 set path+=**
 set noerrorbells vb t_vb=""
@@ -36,32 +36,31 @@ runtime macros/matchit.vim
 """ mappings
 nn j gj
 nn k gk
-inoremap ii <esc>
 vn < <gv
 vn > >gv
-nm <silent> <leader>b :ls<cr>:e #
+nm <silent> <leader>b :ls<CR>:e #
 
-noremap  <F1> :set hls!<cr>
+noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
-nn <F2> :set invlist!<cr>
-nn <F3> :set nonu!<cr>
-nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<cr>
+nn <F2> :set invlist!<CR>
+nn <F3> :set nonu!<CR>
+nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<CR>
 
-nn <silent> <leader>q :call wipeout#Wipeout()<cr>
+nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
-set wildignore+=node_modules/*,bower_components/*
-nn <leader>p :e<space>
+set wildignore+=.git/*,.gradle/*,node_modules/*,bower_components/*
+nn <C-p> :e<Space>
 
 " autocommands
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 " enter automatically into the files directory
 au BufEnter * silent! lcd %:p:h
-" this is supposed to fix html syntax highlighting
+" for html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
-au FileType go,c,cpp,java setlocal noet sw=4 ts=4
+au FileType *.go,c,cpp,java setlocal noet sw=4 ts=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
@@ -77,7 +76,7 @@ let g:netrw_winsize      = 24
 
 let g:plug_window = "new"
 
-colo less
+colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
