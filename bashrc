@@ -21,7 +21,7 @@ case "$OSTYPE" in
     alias brewpurge="brew cleanup -s --force"
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias ip="ipconfig getifaddr en0"
-    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh run"
+    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh jpda run"
     alias lspkgs="pkgutil --pkgs"
 
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -87,8 +87,6 @@ export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/emsdk"
 export PATH="$PATH:$HOME/Documents/emsdk/emscripten/incoming"
-export PATH="$PATH:$HOME/Documents/gradle/bin"
-export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 
 bind '"\e[A":history-search-backward'
@@ -100,3 +98,5 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+export PATH="$PATH:/Users/jc/Library/PackageManager/bin"
