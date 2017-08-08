@@ -19,6 +19,7 @@ case "$OSTYPE" in
 
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
+    alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias ip="ipconfig getifaddr en0"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh jpda run"
