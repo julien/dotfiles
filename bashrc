@@ -15,11 +15,13 @@ case "$OSTYPE" in
     export JAVA_OPTS="-Xmx2048m"
     export LR_HOME="$HOME/Documents/work/portal"
 
+    export CLASSPATH="$CLASSPATH:$LR_HOME/bundles/tomcat-8.0.32/lib/servlet-api.jar"
+
     alias ls="ls -1a"
 
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
-    alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222"
+    alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     alias gradlew="$LR_HOME/liferay-portal/gradlew"
     alias ip="ipconfig getifaddr en0"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh jpda run"
@@ -101,3 +103,4 @@ export NVM_DIR="$HOME/.nvm"
 
 
 export PATH="$PATH:/Users/jc/Library/PackageManager/bin"
+
