@@ -60,7 +60,7 @@ au BufEnter * silent! lcd %:p:h
 " for html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
-au FileType *.go,c,cpp,groovy,java setlocal noet sw=4 ts=4
+au FileType *.go,c,cpp,groovy,java,jsp setlocal noet sw=4 ts=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
@@ -76,7 +76,7 @@ let g:netrw_winsize      = 24
 
 let g:plug_window = "new"
 
-colo jellybeans
+colo foo
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
