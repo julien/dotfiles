@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'justinmk/vim-sneak'
-Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
@@ -39,20 +38,16 @@ nn k gk
 vn < <gv
 vn > >gv
 nm <silent> <leader>b :ls<CR>:e #
-
 noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<CR>
-nn <F3> :set nonu!<CR>
-nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<CR>
-
 nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
 set wildignore+=.git/*,.gradle/*,node_modules/*,bower_components/*
 nn <C-p> :e<Space>
+nn <silent> <leader>x :Explore<CR>
 
-" autocommands
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 " enter automatically into the files directory
@@ -76,7 +71,7 @@ let g:netrw_winsize      = 24
 
 let g:plug_window = "new"
 
-colo foo
+colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
