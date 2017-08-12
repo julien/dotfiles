@@ -90,6 +90,7 @@ export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/emsdk"
 export PATH="$PATH:$HOME/Documents/emsdk/emscripten/incoming"
+export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
 bind '"\e[A":history-search-backward'
@@ -100,7 +101,4 @@ export NVM_DIR="$HOME/.nvm"
 
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-export PATH="$PATH:/Users/jc/Library/PackageManager/bin"
 
