@@ -17,7 +17,7 @@ set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set number ls=2
+set nonumber ls=2
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
 set lazyredraw ttyfast so=2 ttyscroll=3
@@ -41,6 +41,8 @@ nm <silent> <leader>b :ls<CR>:e #
 noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<CR>
+nn <F3> :set nonu!<CR>
+nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<CR>
 nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
