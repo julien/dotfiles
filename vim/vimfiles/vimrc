@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'ervandew/supertab'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+Plug 'wincent/command-t'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
