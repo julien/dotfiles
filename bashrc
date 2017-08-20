@@ -26,7 +26,6 @@ case "$OSTYPE" in
     alias ip="ipconfig getifaddr en0"
     alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh jpda run"
     alias lspkgs="pkgutil --pkgs"
-
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     ;;
@@ -85,11 +84,9 @@ export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
 shopt -s cmdhist
 
-export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:/Library/TeX/texbin"
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
-export PATH="$PATH:$HOME/Documents/emsdk"
-export PATH="$PATH:$HOME/Documents/emsdk/emscripten/incoming"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
