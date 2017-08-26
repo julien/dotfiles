@@ -1,10 +1,7 @@
 call plug#begin()
 Plug 'ervandew/supertab'
-" Plug 'jiangmiao/auto-pairs'
-Plug 'wincent/command-t'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
 call plug#end()
@@ -18,20 +15,23 @@ set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set nonumber ls=2
+set nonumber ls=0
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
-set lazyredraw ttyfast so=2 ttyscroll=3
+set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
+set noshowmatch nocursorline nocursorcolumn
 set wildmenu wildmode=longest,list,full
-set path+=**
+" set path+=**
 set noerrorbells vb t_vb=""
 set nowritebackup noswapfile viminfo="NONE"
 set nostartofline
 set nowrap
 set nofoldenable
-set statusline=[%n]\ %F\ %=%-10.(%l,%c%V%)\ %P
+" set statusline=[%n]\ %F\ %=%-10.(%l,%c%V%)\ %P
+set statusline=%F
 
-runtime macros/matchit.vim
+let loaded_matchparen=1
+let html_no_rendering=1
 
 """ mappings
 nn j gj
@@ -72,11 +72,9 @@ let g:netrw_liststyle    = 0
 let g:netrw_menu         = 0
 let g:netrw_winsize      = 24
 
-let g:plug_window = "new"
-
-colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
+  colo jellybeans
   set go=""
   if has("mac")
       set guifont=Menlo:h14
