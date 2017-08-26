@@ -72,10 +72,6 @@ export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
-# export GOPATH="$HOME/Documents"
-# export GOBIN="$GOPATH/bin"
-# export PATH="$PATH:/usr/local/go/bin"
-
 export CLICOLOR=1
 export EDITOR="vim"
 
