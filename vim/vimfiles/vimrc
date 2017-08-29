@@ -21,17 +21,19 @@ set shortmess=atIc
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set noshowmatch nocursorline nocursorcolumn
 set wildmenu wildmode=longest,list,full
-" set path+=**
 set noerrorbells vb t_vb=""
 set nowritebackup noswapfile viminfo="NONE"
 set nostartofline
 set nowrap
-set nofoldenable
-" set statusline=[%n]\ %F\ %=%-10.(%l,%c%V%)\ %P
+set nofoldenable bg=dark
 set statusline=%F
 
 let loaded_matchparen=1
 let html_no_rendering=1
+
+set path+=**
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
+set wildignore+=.git/*,.gradle/*,node_modules/*,bower_components/*
 
 """ mappings
 nn j gj
@@ -46,8 +48,6 @@ nn <F3> :set nonu!<CR>
 nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<CR>
 nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
-set wildignore+=.git/*,.gradle/*,node_modules/*,bower_components/*
 nn <C-p> :e<Space>
 nn <silent> <leader>x :Explore<CR>
 
@@ -58,7 +58,7 @@ au BufEnter * silent! lcd %:p:h
 " for html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
-au FileType *.go,c,cpp,groovy,java,jsp setlocal noet sw=4 ts=4
+au FileType *.go,c,cpp,groovy,java,jsp,lua,python setlocal noet sw=4 ts=4
 
 let g:netrw_banner       = 0
 let g:netrw_browse_split = 0
