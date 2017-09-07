@@ -10,21 +10,18 @@ case "$OSTYPE" in
       . $(brew --prefix)/etc/bash_completion/git-completion.bash
 
     export ANT_HOME=/usr/share/ant
-    export ANT_OPTS="-Xmx2048m -XX:-UseGCOverheadLimit"
+    export ANT_OPTS="-Xmx4096m -Xms4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
-    export JAVA_OPTS="-Xmx2048m"
-    export LR_HOME="$HOME/Documents/work/portal"
+    export JAVA_OPTS="-Xmx4096m -Xms4096m"
+    export CLASSPATH="$CLASSPATH:$HOME/Documents/work/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
 
-    export CLASSPATH="$CLASSPATH:$LR_HOME/bundles/tomcat-8.0.32/lib/servlet-api.jar"
-
-    alias ls="ls -1a"
-
+    alias ls="ls -a"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-    alias gradlew="$LR_HOME/liferay-portal/gradlew"
+    alias gradlew="$HOME/Documents/work/portal/liferay-portal/gradlew"
+    alias gradlewee="$HOME/Documents/work/portal-ee/liferay-portal-ee/gradlew"
     alias ip="ipconfig getifaddr en0"
-    alias lrportal="$LR_HOME/bundles/tomcat-8.0.32/bin/catalina.sh jpda run"
     alias lspkgs="pkgutil --pkgs"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
@@ -32,7 +29,7 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -1a --color"
+    alias ls="ls -a --color"
     ;;
   msys*)
     ;;
@@ -53,10 +50,10 @@ rm_dirs() {
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
 
-export PS1='\W $ '
+export PS1='\W \$ '
 if [  -f $HOME/.git-ps1.sh ]; then
   . $HOME/.git-ps1.sh
-  export PS1='\W$(__git_ps2) $ '
+  export PS1='\W$(__git_ps2) \$ '
 fi
 
 # osx has a function defined in /etc/bashrc
@@ -68,14 +65,13 @@ fi
 
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/of/apps"
-export CDPATH="$CDPATH:$HOME/Documents/src/github.com"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
 export CLICOLOR=1
 export EDITOR="vim"
 
-export HISTCONTROL="ignoreboth:erasedups"
+export HISTCONTROL="ignoredups:erasedups"
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
 shopt -s cmdhist
@@ -91,7 +87,6 @@ bind '"\e[A":history-search-backward'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
