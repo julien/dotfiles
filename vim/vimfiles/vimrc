@@ -15,7 +15,7 @@ set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set nonumber ls=0
+set number ls=0
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
@@ -72,9 +72,9 @@ let g:netrw_liststyle    = 0
 let g:netrw_menu         = 0
 let g:netrw_winsize      = 24
 
+colo jellybeans
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
-  colo jellybeans
   set go=""
   if has("mac")
       set guifont=Menlo:h14
