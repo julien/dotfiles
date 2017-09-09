@@ -19,10 +19,9 @@ case "$OSTYPE" in
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-    alias gradlew="$HOME/Documents/work/portal/liferay-portal/gradlew"
+    alias gradlewce="$HOME/Documents/work/portal/liferay-portal/gradlew"
     alias gradlewee="$HOME/Documents/work/portal-ee/liferay-portal-ee/gradlew"
-    alias ip="ipconfig getifaddr en0"
-    alias lspkgs="pkgutil --pkgs"
+    alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     ;;
@@ -46,7 +45,6 @@ rm_dirs() {
   find . -name "$1" -type d -prune -exec rm -rf '{}' +
 }
 
-# enable ctrl-s stty -ixon
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
 
@@ -71,22 +69,23 @@ export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CLICOLOR=1
 export EDITOR="vim"
 
-export HISTCONTROL="ignoredups:erasedups"
+export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
 shopt -s cmdhist
+bind '"\e[A":history-search-backward'
+bind '"\e[A":history-search-backward'
 
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
+export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
-bind '"\e[A":history-search-backward'
-bind '"\e[A":history-search-backward'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f ~/.fzf.bash ] && . ~/.fzf.bash && \
+  export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD ||     \
+    find . -path "*/\.*" -prune -o -type f -print -o -type l -print | \
+    sed s/^..//) 2> /dev/null' && \
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
