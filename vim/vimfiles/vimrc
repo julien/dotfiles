@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'ervandew/supertab'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
@@ -40,6 +41,7 @@ nn j gj
 nn k gk
 vn < <gv
 vn > >gv
+inoremap jk <ESC>
 nm <silent> <leader>b :ls<CR>:e #
 noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
@@ -48,7 +50,8 @@ nn <F3> :set nonu!<CR>
 nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<CR>
 nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
-nn <C-p> :e<Space>
+nn <C-e> :e<Space>
+nn <C-t> :FZF<CR>
 nn <silent> <leader>x :Explore<CR>
 
 " strip trailing whitespace on save
