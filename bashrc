@@ -11,17 +11,14 @@ case "$OSTYPE" in
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx4096m -Xms4096m"
+    export CLASSPATH="$CLASSPATH:$HOME/Documents/work/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
-    export CLASSPATH="$CLASSPATH:$HOME/Documents/work/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
 
     alias ls="ls -a"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-    alias gradlewce="$HOME/Documents/work/portal/liferay-portal/gradlew"
-    alias gradlewee="$HOME/Documents/work/portal-ee/liferay-portal-ee/gradlew"
-    alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     ;;
@@ -30,17 +27,13 @@ case "$OSTYPE" in
     alias open="xdg-open"
     alias ls="ls -a --color"
     ;;
-  msys*)
-    ;;
 esac
 
-alias find_big_files="du -hsx * | sort -r | head -10"
 alias http="python -m SimpleHTTPServer $1"
-alias npmi='npm i --cache-min Infinity'
 
 rm_dirs() {
   if [ -z "$1" ]; then
-    echo aborting; return 1
+    echo no directory specified.\naborting; return 1
   fi
   find . -name "$1" -type d -prune -exec rm -rf '{}' +
 }
@@ -83,9 +76,11 @@ export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
-[ -f ~/.fzf.bash ] && . ~/.fzf.bash && \
-  export FZF_DEFAULT_COMMAND='(git ls-tree -r --name-only HEAD ||     \
-    find . -path "*/\.*" -prune -o -type f -print -o -type l -print | \
-    sed s/^..//) 2> /dev/null' && \
-  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+[ -f ~/.fzf.bash ] && . ~/.fzf.bash
+export FZF_IGNORED="!{.git,.gradle,.npm,bin,build,classes,node_modules}/*"
+export FZF_DEFAULT_COMMAND='rg \
+  --files --no-ignore --hidden \
+  --follow -g $FZF_IGNORED 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+bind -x '"\C-p": vim $(fzf);'
 
