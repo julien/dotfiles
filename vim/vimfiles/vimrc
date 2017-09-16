@@ -4,6 +4,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
+Plug 'sbdchd/neoformat', { 'for': 'javascript' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
 call plug#end()
 
@@ -16,7 +17,7 @@ set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set smartcase incsearch
 set guicursor=n:blinkon0
 set mouse=a mousemodel=extend
-set number ls=0
+set nonumber ls=0
 set omnifunc=syntaxcomplete#Complete
 set shortmess=atIc
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
@@ -60,6 +61,7 @@ au BufWritePre * :%s/\s\+$//e
 au BufEnter * silent! lcd %:p:h
 " for html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
+" autocmd BufWritePre *.js Neoformat
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,lua,python setlocal noet sw=4 ts=4
 
