@@ -38,13 +38,9 @@ ehthumbs.db
 Thumbs.db
 
 
-# My additions #
-################
-
-**bin**
-**bower_components**
-**classes**
-**node_modules**
+bin/
+classes/
+node_modules/
 .gradle
 .idea
 .vscode

@@ -27,9 +27,7 @@
   fi = !git ls-files | grep -i
   gr = grep -Ii
   lf = log --pretty=format:'%C(yellow)%h%C(red)%d %C(reset)%s%C(blue) [%cn]' --decorate --numstat
-  s = status -vsb
-
-  # show specified stash changes, usage: git shs 3
+  s = status -sb
   shs = !sh -c 'git stash show -p stash@{$0}'
   # show un merged
   sm = diff --name-status --diff-filter=U
