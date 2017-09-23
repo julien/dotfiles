@@ -15,7 +15,7 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
 
-    alias ls="ls -a"
+    alias ls="ls -1"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
@@ -25,7 +25,7 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -a --color"
+    alias ls="ls -1a --color"
     ;;
 esac
 
@@ -69,18 +69,9 @@ shopt -s cmdhist
 bind '"\e[A":history-search-backward'
 bind '"\e[A":history-search-backward'
 
-export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
-
-[ -f ~/.fzf.bash ] && . ~/.fzf.bash
-export FZF_IGNORED="!{.git,.gradle,.npm,bin,build,classes,node_modules}/*"
-export FZF_DEFAULT_COMMAND='rg \
-  --files --no-ignore --hidden \
-  --follow -g $FZF_IGNORED 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-bind -x '"\C-p": vim $(fzf);'
 
