@@ -71,7 +71,7 @@ let g:netrw_menu         = 0
 let g:netrw_winsize      = 24
 
 " colo jellybeans
-color vividchalk
+color space-vim-dark
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
