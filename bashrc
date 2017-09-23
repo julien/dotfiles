@@ -5,9 +5,7 @@ export FIGNORE="$FIGNORE:DS_Store"
 case "$OSTYPE" in
   darwin*)
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
-
-    [ -f $(brew --prefix)/etc/bash_completion/git-completion.bash ] &&
-      . $(brew --prefix)/etc/bash_completion/git-completion.bash
+    [ -f $(brew --prefix)/etc/bash_completion/git-completion.bash ] && . $(brew --prefix)/etc/bash_completion/git-completion.bash
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx4096m -Xms4096m"
@@ -32,9 +30,7 @@ esac
 alias http="python -m SimpleHTTPServer $1"
 
 rm_dirs() {
-  if [ -z "$1" ]; then
-    echo no directory specified.\naborting; return 1
-  fi
+  if [ -z "$1" ]; then echo no directory specified.\naborting; return 1; fi
   find . -name "$1" -type d -prune -exec rm -rf '{}' +
 }
 
