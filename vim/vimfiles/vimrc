@@ -1,15 +1,15 @@
 call plug#begin()
 Plug 'ervandew/supertab'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-Plug 'sbdchd/neoformat', { 'for': 'javascript' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
 call plug#end()
 
 syntax on
 filetype plugin indent on
+let html_no_rendering=1
+let loaded_matchparen=1
 let mapleader = "\<Space>"
 
 set autoread hidden t_Co=256
@@ -29,13 +29,9 @@ set nostartofline
 set nowrap
 set nofoldenable bg=dark
 set statusline=%F
-
-let loaded_matchparen=1
-let html_no_rendering=1
-
 set path+=**
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
-set wildignore+=.git/*,.gradle/*,node_modules/*,bower_components/*
+set wildignore+=.git/*,.gradle/*,node_modules/*
 
 """ mappings
 nn j gj
@@ -48,11 +44,9 @@ noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
-nn <F4> :if exists("g:syntax_on")<bar>syntax off<bar>else<bar>syntax enable<bar>endif<CR>
 nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
 nn <C-e> :e<Space>
-nn <C-t> :FZF<CR>
 nn <silent> <leader>x :Explore<CR>
 
 " strip trailing whitespace on save
@@ -61,7 +55,6 @@ au BufWritePre * :%s/\s\+$//e
 au BufEnter * silent! lcd %:p:h
 " for html syntax highlighting
 autocmd BufEnter *.html :syntax sync fromstart
-" autocmd BufWritePre *.js Neoformat
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,lua,python setlocal noet sw=4 ts=4
 
