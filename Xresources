@@ -6,10 +6,9 @@ Xft.hintstyle: hintfull
 
 XTerm*background:        rgb:00/00/00
 XTerm*foreground:        rgb:a8/a8/a8
-XTerm*geometry:          100x50
+XTerm*geometry:          80x40
 
-XTerm*allowBoldFonts:    true
-!XTerm*faceName:          Monospace:size=12:antialias=true
+XTerm*allowBoldFonts:    false
 XTerm*faceName:          Input:size=12:antialias=true
 
 XTerm*loginShell:        true
@@ -24,9 +23,6 @@ XTerm*boldMode:          false
 XTerm*colorBDMode:       true
 XTerm*colorBD:           rgb:fc/fc/fc
 
-xterm*VT100.Translations: #override \
-  Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-  Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 
 ! black
 color0: #1c1c1c
