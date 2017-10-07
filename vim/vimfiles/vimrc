@@ -12,26 +12,25 @@ let html_no_rendering=1
 let loaded_matchparen=1
 let mapleader = "\<Space>"
 
-set autoread hidden t_Co=256
+set autoread hidden t_Co=256 bg=dark
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
-set smartcase incsearch
 set guicursor=n:blinkon0
-set mouse=a mousemodel=extend
-set nonumber ls=0
-set omnifunc=syntaxcomplete#Complete
-set shortmess=atIc
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
-set noshowmatch nocursorline nocursorcolumn
-set wildmenu wildmode=longest,list,full
-set noerrorbells vb t_vb=""
-set nowritebackup noswapfile viminfo="NONE"
-set nostartofline
-set nowrap
-set nofoldenable bg=dark
-set statusline=%F
+set mouse=a mousemodel=extend
+set number ls=0
+set omnifunc=syntaxcomplete#Complete
 set path+=**
+set shortmess=atIc
+set smartcase incsearch
+set statusline=%F
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
 set wildignore+=.git/*,.gradle/*,node_modules/*
+set wildmenu
+
+set noshowmatch nocursorline nocursorcolumn
+set noerrorbells vb t_vb=""
+set nowritebackup noswapfile viminfo="NONE"
+set nostartofline nowrap nofoldenable
 
 """ mappings
 nn j gj
@@ -70,8 +69,7 @@ let g:netrw_liststyle    = 0
 let g:netrw_menu         = 0
 let g:netrw_winsize      = 24
 
-" colo jellybeans
-color space-vim-dark
+colo codedark
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
