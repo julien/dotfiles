@@ -25,8 +25,7 @@ set smartcase incsearch
 set statusline=%F
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
 set wildignore+=.git/*,.gradle/*,node_modules/*
-set wildmenu
-
+set wildmenu wildmode=longest,list,full
 set noshowmatch nocursorline nocursorcolumn
 set noerrorbells vb t_vb=""
 set nowritebackup noswapfile viminfo="NONE"
@@ -38,36 +37,27 @@ nn k gk
 vn < <gv
 vn > >gv
 inoremap jk <ESC>
-nm <silent> <leader>b :ls<CR>:e #
 noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
-nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
-nn <C-e> :e<Space>
-nn <silent> <leader>x :Explore<CR>
+nm <silent> <leader>b :ls<CR>:e #
+nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
-" enter automatically into the files directory
-au BufEnter * silent! lcd %:p:h
 " for html syntax highlighting
-autocmd BufEnter *.html :syntax sync fromstart
+au BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,lua,python setlocal noet sw=4 ts=4
 
-let g:netrw_banner       = 0
-let g:netrw_browse_split = 0
-let g:netrw_cursor       = 0
-let g:netrw_cursorline   = 0
-let g:netrw_dirhistmax   = 0
-let g:netrw_fastbrowse   = 1
-let g:netrw_keepdir      = 1
-let g:netrw_list_hide    = '*.db,desktop.ini,\$Recycle\.Bin,NTUSER\.*,\.DS_Store,\.\/$'
-let g:netrw_liststyle    = 0
-let g:netrw_menu         = 0
-let g:netrw_winsize      = 24
+let g:netrw_banner     = 0
+let g:netrw_cursor     = 0
+let g:netrw_dirhistmax = 0
+let g:netrw_list_hide  = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
+let g:netrw_winsize    = 24
+let g:plug_window = "new"
 
 colo codedark
 au! GuiEnter * silent set visualbell t_vb=""
@@ -78,7 +68,6 @@ if has("gui_running")
   elseif has("unix")
       set guifont=Input\ 11
   elseif has("win32")
-    set columns=120 lines=45
-    set guifont=Consolas:h12
+    set guifont=Consolas:h11
   endif
 endif
