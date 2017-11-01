@@ -51,7 +51,6 @@ if ! [ -n "$(type -t update_terminal_cwd)" ]; then
 fi
 
 export CDPATH="./:$HOME/Documents"
-export CDPATH="$CDPATH:$HOME/Documents/of/apps"
 export CDPATH="$CDPATH:$HOME/Documents/work"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
