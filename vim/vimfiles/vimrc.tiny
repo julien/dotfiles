@@ -1,8 +1,11 @@
 set nocp
-syntax off
 filetype plugin indent on
-set backspace=indent,eol,start expandtab lazyredraw scrolljump=8 shiftwidth=4 tabstop=4 ttyfast ttyscroll=3 
-set noerrorbells vb t_vb="" noswapfile nowritebackup viminfo="NONE" 
+set expandtab shiftwidth=4 tabstop=4 
+set backspace=indent,eol,start 
+set ru wildmenu wildmode=longest,list 
+set lazyredraw scrolljump=8 ttyfast ttyscroll=3 
+set noerrorbells vb t_vb="" 
+set noswapfile nowritebackup viminfo="NONE" 
 let g:netrw_banner     = 0
 let g:netrw_cursor     = 0
 let g:netrw_dirhistmax = 0
