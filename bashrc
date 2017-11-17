@@ -1,11 +1,12 @@
 # vim set ft=config
 export FIGNORE="$FIGNORE:DS_Store"
 
-# OS specific things
 case "$OSTYPE" in
   darwin*)
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
-    [ -f $(brew --prefix)/etc/bash_completion/git-completion.bash ] && . $(brew --prefix)/etc/bash_completion/git-completion.bash
+
+    [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ] &&
+      . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx4096m -Xms4096m"
