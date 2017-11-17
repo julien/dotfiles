@@ -1,7 +1,7 @@
 # vim: ft=gitconfig
 [user]
-  name = Julien C
-  email = jcastelain@gmail.com
+  name = Julien Castelain
+  email = julien.castelain@liferay.com
   logallrefupdates = true
 
 [core]
