@@ -18,11 +18,10 @@ let mapleader = "\<Space>"
 
 set autoread hidden t_Co=256 bg=dark
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
-set guicursor=n:blinkon0
+set guicursor=n:blinkon0 number ls=0
 set colorcolumn="" synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set mouse=a mousemodel=extend
-set number ls=0
 set omnifunc=syntaxcomplete#Complete
 set path+=**
 set shortmess=atIc
@@ -46,13 +45,11 @@ noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
-
 nm <silent> <leader>b :ls<CR>:e #
 nn <silent> <leader>q :call wipeout#Wipeout()<CR>
 
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
-" for html syntax highlighting
 au BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,lua,python setlocal noet sw=4 ts=4
@@ -62,14 +59,12 @@ let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
 let g:netrw_winsize = 24
-let g:plug_window = "new"
-
-let g:ale_fix_on_save = 1
-set grepprg=rg\ --vimgrep
-nm <silent> <C-t> :FZF<CR>
 
 let g:EditorConfig_max_line_indicator = "none"
-
+let g:ale_fix_on_save = 1
+let g:plug_window = "new"
+set grepprg=rg\ --vimgrep
+nm <silent> <C-t> :FZF<CR>
 
 colo codedark
 au! GuiEnter * silent set visualbell t_vb=""
