@@ -72,3 +72,8 @@ export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
+if [ -d $HOME/.cargo ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
