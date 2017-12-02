@@ -2,8 +2,12 @@ call plug#begin()
 Plug 'ervandew/supertab'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'duganchen/vim-soy', { 'for': 'soy' }
+Plug 'w0rp/ale', { 'for': 'javascript' }
+
 call plug#end()
 
 syntax on
@@ -15,6 +19,7 @@ let mapleader = "\<Space>"
 set autoread hidden t_Co=256 bg=dark
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set guicursor=n:blinkon0
+set colorcolumn="" synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set mouse=a mousemodel=extend
 set number ls=0
@@ -52,12 +57,19 @@ au BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,lua,python setlocal noet sw=4 ts=4
 
-let g:netrw_banner     = 0
-let g:netrw_cursor     = 0
+let g:netrw_banner = 0
+let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
-let g:netrw_list_hide  = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
-let g:netrw_winsize    = 24
+let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
+let g:netrw_winsize = 24
 let g:plug_window = "new"
+
+let g:ale_fix_on_save = 1
+set grepprg=rg\ --vimgrep
+nm <silent> <C-t> :FZF<CR>
+
+let g:EditorConfig_max_line_indicator = "none"
+
 
 colo codedark
 au! GuiEnter * silent set visualbell t_vb=""
