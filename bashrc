@@ -66,14 +66,13 @@ shopt -s cmdhist
 bind '"\e[A":history-search-backward'
 bind '"\e[A":history-search-backward'
 
+export LANG=en_US.UTF-8
+export LC_TIME=en_US.UTF-8
+
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
-
-if [ -d $HOME/.cargo ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
-fi
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
