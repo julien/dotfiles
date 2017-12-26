@@ -1,5 +1,5 @@
 call plug#begin()
-" Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -12,7 +12,7 @@ call plug#end()
 syntax on
 filetype plugin indent on
 let html_no_rendering=1
-let loaded_matchparen=1
+" let loaded_matchparen=1
 let mapleader = "\<Space>"
 
 set autoread hidden t_Co=256 bg=dark
@@ -51,22 +51,24 @@ nm <silent> <C-t> :FZF<CR>
 
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
-au BufEnter *.html :syntax sync fromstart
+au BufEnter *.glsl :setlocal ft=c
+" au BufEnter *.html :syntax sync fromstart
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,lua,python setlocal noet sw=4 ts=4
-au FileType *.glsl setlocal ft=c
+au FileType * setlocal formatoptions-=cro
+au FileType html setlocal syntax=OFF
 
 " plugin settings
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
-let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
+let g:netrw_list_hide = "\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*"
 let g:netrw_winsize = 24
 let g:EditorConfig_max_line_indicator = "none"
 let g:ale_fix_on_save = 1
-let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_text_changed = "never"
 let g:ale_lint_on_enter = 0
-let g:ale_linters = { 'javascript': ['eslint'], }
+let g:ale_linters = { "javascript": ["eslint"], }
 let g:plug_window = "new"
 
 colo codedark
