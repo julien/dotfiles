@@ -19,7 +19,7 @@ case "$OSTYPE" in
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-    alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+    alias gradlew="$HOME/Documents/work/portal/liferay-portal/gradlew"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     ;;
   linux*)
