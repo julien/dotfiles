@@ -26,7 +26,7 @@
   edit = !vim `git ls-files -m` -p
   fi = !git ls-files | grep -i
   gr = grep -Ii
-  lf = log --pretty=format:'%C(yellow)%h%C(red)%d %C(reset)%s%C(blue) [%cn]' --decorate --numstat
+  lf = log --pretty=format:'%C(green)%h%C(cyan)%d %C(reset)%s%C(white) [%cn]' --decorate --numstat
   s = status -sb
   shs = !sh -c 'git stash show -p stash@{$0}'
   # show un merged
