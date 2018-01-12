@@ -7,17 +7,15 @@ __git_ps2() {
     exit;
   fi
 
-  # local branch="$(git rev-parse --abbrev-ref HEAD)" || branch="unnamed branch"
-
   local branch=""
-  if git rev-parse --abbrev-ref HEAD &>/dev/null; then
-    branch="$(git rev-parse --abbrev-ref HEAD)"
+  if git symbolic-ref --short HEAD &>/dev/null; then
+    branch="$(git symbolic-ref --short HEAD)"
   else
     return 0;
     exit;
   fi
 
-  local gitstring=" [$branch]"
+  local gitstring=" ($branch)"
 
   printf -- "%s" "$gitstring"
 }
