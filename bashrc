@@ -30,6 +30,7 @@ case "$OSTYPE" in
 esac
 
 alias http="python -m SimpleHTTPServer $1"
+alias npmi="npm i --cache-min Infinity"
 
 rm_dirs() {
   if [ -z "$1" ]; then echo no directory specified.\naborting; return 1; fi
