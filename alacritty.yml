@@ -75,7 +75,7 @@ font:
     # Style can be specified to pick a specific face.
     # style: Bold
     family: Input
-    style: Regular
+    style: Bold
 
   # The italic font face
   italic:
