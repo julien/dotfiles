@@ -5,7 +5,6 @@ Plug 'tomtom/tcomment_vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-" Plug 'duganchen/vim-soy', { 'for': 'soy' }
 Plug 'w0rp/ale', { 'for': 'javascript' }
 call plug#end()
 
@@ -40,7 +39,6 @@ nn j gj
 nn k gk
 vn < <gv
 vn > >gv
-inoremap ii <ESC>
 noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<CR>
