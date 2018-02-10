@@ -9,6 +9,7 @@
   quotepath = false
   precomposeUnicode = true
   filemode = false
+	excludesfile = /Users/jc/.gitignore
 
 [color]
   diff = true
