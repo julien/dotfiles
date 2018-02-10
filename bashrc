@@ -14,18 +14,19 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
 
-    alias ls="ls -1a"
+    alias ls="ls -Ca"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     alias gradlew="$HOME/Documents/work/portal/liferay-portal/gradlew"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+    alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
     ;;
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -1a --color"
+    alias ls="ls -Ca --color"
     ;;
 esac
 
@@ -76,6 +77,5 @@ export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
-[ -d "$HOME/.cargo" ] && export PATH="$PATH:$HOME/.cargo/bin"
-
 export FZF_DEFAULT_COMMAND='rg --files --glob "!.git/*"'
+
