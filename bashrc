@@ -33,10 +33,7 @@ esac
 alias http="python -m SimpleHTTPServer $1"
 alias npmi="npm i --cache-min Infinity"
 
-rm_dirs() {
-  if [ -z "$1" ]; then echo no directory specified.\naborting; return 1; fi
-  find . -name "$1" -type d -prune -exec rm -rf '{}' +
-}
+GDK_DPI_SCALE=1.4
 
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
@@ -48,11 +45,11 @@ if [  -f $HOME/.git-ps1.sh ]; then
 fi
 
 # osx has a function defined in /etc/bashrc
-if ! [ -n "$(type -t update_terminal_cwd)" ]; then
-  update_terminal_cwd() {
-    :
-  }
-fi
+# if ! [ -n "$(type -t update_terminal_cwd)" ]; then
+#   update_terminal_cwd() {
+#     :
+#   }
+# fi
 
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/work"
