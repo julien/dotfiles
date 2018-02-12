@@ -1,31 +1,24 @@
 Xft.dpi:       92
-Xft.antialias: 1
-Xft.hinting:   1
+Xft.antialias: true
+Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
 
-XTerm*geometry:        90x40
-
-! XTerm*allowBoldFonts: false
 XTerm*allowBoldFonts:  true
-XTerm*faceName:        Input:size=11.5:antialias=true
+XTerm*faceName:        Input:size=11:antialias=true
 
 XTerm*loginShell:      true
 XTerm*saveLines:       20000
-XTerm*charClass:       33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 XTerm*termName:        xterm-256color
 XTerm*locale:          true
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput:   false
 XTerm*scrollTtyOutput: true
 XTerm*boldMode:        true
-! XTerm*boldMode:       false
-! XTerm*colorBDMode:    true
-! XTerm*colorBD:        rgb:fc/fc/fc
 
 XTerm*foreground:      #a8a8a8
 XTerm*background:      #000000
-
 XTerm*color0:          #000000
 XTerm*color1:          #cc0000
 XTerm*color2:          #4e9a06
@@ -42,3 +35,4 @@ XTerm*color12:         #729fcf
 XTerm*color13:         #ad7fa8
 XTerm*color14:         #00f5e9
 XTerm*color15:         #eeeeec
+
