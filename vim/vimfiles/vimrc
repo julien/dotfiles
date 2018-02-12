@@ -17,7 +17,7 @@ let mapleader="\<Space>"
 set autoread hidden t_Co=256 bg=dark
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set grepprg=rg\ --vimgrep
-set guicursor+=a:blinkon0 ls=0 number
+set guicursor+=a:blinkon0 ls=0 nonumber ru
 set colorcolumn="" synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set mouse=a mousemodel=extend
@@ -70,7 +70,7 @@ let g:ale_lint_on_enter=0
 let g:ale_linters ={ 'javascript': ['eslint'], }
 let g:plug_window='new'
 
-colo ir_black
+colo gotham256
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
