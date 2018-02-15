@@ -69,7 +69,7 @@ let g:ale_lint_on_enter=0
 let g:ale_linters ={ 'java': [''], 'javascript': ['eslint'] }
 let g:plug_window='new'
 
-colo ir_black
+colo space
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
