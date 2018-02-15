@@ -14,7 +14,7 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
 
-    alias ls="ls -Ca"
+    alias ls="ls -a"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
@@ -45,11 +45,11 @@ if [  -f $HOME/.git-ps1.sh ]; then
 fi
 
 # osx has a function defined in /etc/bashrc
-# if ! [ -n "$(type -t update_terminal_cwd)" ]; then
-#   update_terminal_cwd() {
-#     :
-#   }
-# fi
+if ! [ -n "$(type -t update_terminal_cwd)" ]; then
+  update_terminal_cwd() {
+    :
+  }
+fi
 
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/work"
@@ -74,5 +74,6 @@ export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
+export NODE_REPL_HISTORY=""
 export FZF_DEFAULT_COMMAND='rg --files --glob "!.git/*"'
 
