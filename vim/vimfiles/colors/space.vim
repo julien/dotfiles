@@ -13,6 +13,8 @@
 
 "     http://denis.mit-license.org      "
 
+" changed by me ;)
+
 
 set background=dark
 
@@ -23,10 +25,10 @@ endif
 set t_Co=256
 let g:colors_name = "space"
 
-hi Normal guifg=#e0e0e0 guibg=#151321 guisp=#151321 gui=NONE ctermfg=254 ctermbg=0 cterm=NONE
+hi Normal guifg=#e0e0e0 guibg=#000000 guisp=#151321 gui=NONE ctermfg=254 ctermbg=0
 hi htmlarg gui=italic
 hi CursorLineNr guifg=#ffc363 guibg=NONE guisp=NONE gui=NONE ctermfg=NONE ctermbg=239 cterm=NONE
-hi IncSearch guifg=#000000 guibg=#ffe8a1 guisp=#ffe8a1 gui=NONE ctermfg=NONE ctermbg=229 cterm=NONE
+hi IncSearch guifg=#000000 guibg=#ffe8a1 guisp=#ffe8a1 gui=NONE ctermfg=NONE ctermbg=8 cterm=NONE
 hi SpecialComment guifg=#9c9c9c guibg=NONE guisp=NONE gui=italic ctermfg=247 ctermbg=NONE cterm=NONE
 hi Title guifg=#f8f8f2 guibg=NONE guisp=NONE gui=bold ctermfg=230 ctermbg=NONE cterm=bold
 hi Folded guifg=#abf5e8 guibg=#13111f guisp=#13111f gui=NONE ctermfg=159 ctermbg=234 cterm=NONE
@@ -34,7 +36,7 @@ hi PreCondit guifg=#bd57e5 guibg=NONE guisp=NONE gui=NONE ctermfg=134 ctermbg=NO
 hi Include guifg=#bd57e5 guibg=NONE guisp=NONE gui=NONE ctermfg=134 ctermbg=NONE cterm=NONE
 hi Float guifg=#ffc263 guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
 hi StatusLineNC guifg=#f8f8f2 guibg=#64666d guisp=#64666d gui=NONE ctermfg=230 ctermbg=242 cterm=NONE
-hi NonText guifg=#525252 guibg=#151321 guisp=#151321 gui=NONE ctermfg=239 ctermbg=234 cterm=NONE
+hi NonText guifg=#525252 guibg=#000000 guisp=#151321 gui=NONE ctermfg=239 ctermbg=0 cterm=NONE
 hi DiffText guifg=#f8f8f2 guibg=#204a87 guisp=#204a87 gui=bold ctermfg=230 ctermbg=24 cterm=bold
 hi ErrorMsg guifg=#f8f8f0 guibg=#bd57e5 guisp=#bd57e5 gui=NONE ctermfg=230 ctermbg=134 cterm=NONE
 hi Debug guifg=#f8f8f2 guibg=NONE guisp=NONE gui=NONE ctermfg=230 ctermbg=NONE cterm=NONE
@@ -49,7 +51,7 @@ hi LineNr guifg=#525252 guibg=#151321 guisp=#151321 gui=NONE ctermfg=239 ctermbg
 hi StatusLine guifg=#f8f8f2 guibg=#64666d guisp=#64666d gui=bold ctermfg=230 ctermbg=242 cterm=bold
 hi Label guifg=#6fd1f2 guibg=NONE guisp=NONE gui=NONE ctermfg=117 ctermbg=NONE cterm=NONE
 hi PMenuSel guifg=#ffffff guibg=#212121 guisp=#212121 gui=NONE ctermfg=15 ctermbg=234 cterm=NONE
-hi Search guifg=#000000 guibg=#ffe8a1 guisp=#ffe8a1 gui=NONE ctermfg=NONE ctermbg=229 cterm=NONE
+hi Search guifg=#666666 guibg=#cccccc guisp=NONE gui=NONE ctermfg=NONE ctermbg=8 cterm=NONE
 hi Delimiter guifg=#f8f8f2 guibg=NONE guisp=NONE gui=NONE ctermfg=230 ctermbg=NONE cterm=NONE
 hi Statement guifg=#d66ef0 guibg=NONE guisp=NONE gui=NONE ctermfg=177 ctermbg=NONE cterm=NONE
 hi Comment guifg=#9c9c9c guibg=NONE guisp=NONE gui=italic ctermfg=247 ctermbg=NONE cterm=bold
