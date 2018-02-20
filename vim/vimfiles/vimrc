@@ -50,17 +50,14 @@ nm <silent> <C-t> :FZF<CR>
 " strip trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
-au BufNewFile *.p8 silent! 0r $HOME/.vim/templates/tpl.p8
 au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
 au FileType * setlocal formatoptions-=cro
-au BufRead,BufNewFile *.p8 setlocal et sw=1 ts=1 ft=lua
 " au FileType html setlocal syntax=OFF
 
 " plugin settings
 let g:netrw_banner=0
 let g:netrw_cursor=0
 let g:netrw_dirhistmax=0
-let g:netrw_liststyle=3
 let g:netrw_list_hide='\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
 let g:netrw_winsize=24
 let g:EditorConfig_max_line_indicator='none'
