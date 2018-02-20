@@ -58,6 +58,8 @@ export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CLICOLOR=1
 export EDITOR="vim"
 
+
+
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
@@ -67,6 +69,7 @@ bind '"\e[A":history-search-backward'
 
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
+export LESSHISTFILE=-
 
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
