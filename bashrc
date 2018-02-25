@@ -10,7 +10,7 @@ case "$OSTYPE" in
 
     export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx4096m -Xms4096m"
-    export CLASSPATH="$CLASSPATH:$HOME/Documents/work/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
+    export CLASSPATH="$CLASSPATH:$HOME/Documents/src/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
 
@@ -19,7 +19,7 @@ case "$OSTYPE" in
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-    alias gradlew="$HOME/Documents/work/portal/liferay-portal/gradlew"
+    alias gradlew="$HOME/Documents/src/portal/liferay-portal/gradlew"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
     ;;
@@ -52,7 +52,7 @@ if ! [ -n "$(type -t update_terminal_cwd)" ]; then
 fi
 
 export CDPATH="./:$HOME/Documents"
-export CDPATH="$CDPATH:$HOME/Documents/work"
+export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 
 export CLICOLOR=1
