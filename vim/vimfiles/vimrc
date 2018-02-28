@@ -13,7 +13,7 @@ let html_no_rendering=1
 " let loaded_matchparen=1
 let mapleader="\<Space>"
 
-set autoread hidden t_Co=256 bg=dark
+set autoread hidden t_Co=256 bg=dark noeol
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set grepprg=rg\ --vimgrep
 set guicursor+=a:blinkon0 ls=0 number noru
