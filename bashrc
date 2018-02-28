@@ -14,7 +14,7 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
 
-    alias ls="ls -a"
+    alias ls="ls -Ca"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
@@ -26,7 +26,7 @@ case "$OSTYPE" in
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias open="xdg-open"
-    alias ls="ls -Ca --color"
+    alias ls="ls -a --color"
     ;;
 esac
 
@@ -54,19 +54,14 @@ fi
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
-
 export CLICOLOR=1
 export EDITOR="vim"
-
-
-
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
 shopt -s cmdhist
 bind '"\e[A":history-search-backward'
 bind '"\e[A":history-search-backward'
-
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export LESSHISTFILE=-
