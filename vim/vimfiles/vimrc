@@ -13,10 +13,10 @@ let html_no_rendering=1
 " let loaded_matchparen=1
 let mapleader="\<Space>"
 
-set autoread hidden t_Co=256 bg=dark noeol
+set autoread hidden t_Co=256 bg=dark
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set grepprg=rg\ --vimgrep
-set guicursor+=a:blinkon0 ls=0 number noru
+set guicursor+=a:blinkon0 ls=0 number
 set colorcolumn="" synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set mouse=a mousemodel=extend
@@ -31,7 +31,7 @@ set wildmenu wildmode=longest,list,full
 set noshowmatch nocursorline nocursorcolumn
 set noerrorbells vb t_vb=""
 set nowritebackup noswapfile viminfo="NONE"
-set nostartofline nowrap nofoldenable
+set noendofline nostartofline nowrap nofoldenable
 
 """ mappings
 nn j gj
@@ -51,7 +51,7 @@ nm <silent> <C-t> :FZF<CR>
 au BufWritePre * :%s/\s\+$//e
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
-au FileType javascript setlocal et sw=2 ts=2
+au FileType javascript setlocal noet sw=2 ts=2
 au FileType * setlocal formatoptions-=cro
 " au FileType html setlocal syntax=OFF
 
