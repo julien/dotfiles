@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # disable window animations
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
 
@@ -15,18 +13,6 @@ sudo defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui 
 # disable/enable spotlight indexing
 sudo mdutil -a -i off
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-
-# disable spotlight menu
-# sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search;
-
-# update
-# disable spotlight
-# cd /System/Library/CoreServices/Spotlight.app/Contents/MacOS
-# sudo cp Spotlight Spotlight.bak
-# sudo perl -pi -e 's|(\x00\x00\x00\x00\x00\x00\x47\x40\x00\x00\x00\x00\x00\x00)\x42\x40(\x00\x00\x80\x3f\x00\x00\x70\x42)|$1\x00\x00$2|sg' Spotlight
-# cmp -l Spotlight Spotlight.bak
-# sudo codesign -f -s - Spotlight
-# sudo killall Spotlight
 
 # font smoothing (1-3)
 defaults -currentHost write -globalDomain AppleFontSmoothing -int 1
@@ -60,11 +46,18 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 # disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# remove the animation when hiding/showing the Dock (actually, make it fast. If you want to remove, use 0)
+# remove the animation when hiding/showing the dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 # prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+# disable spotlight
+# cd /System/Library/CoreServices/Spotlight.app/Contents/MacOS
+# sudo cp Spotlight Spotlight.bak
+# sudo perl -pi -e 's|(\x00\x00\x00\x00\x00\x00\x47\x40\x00\x00\x00\x00\x00\x00)\x42\x40(\x00\x00\x80\x3f\x00\x00\x70\x42)|$1\x00\x00$2|sg' Spotlight
+# cmp -l Spotlight Spotlight.bak
+# sudo codesign -f -s - Spotlight
+# sudo killall Spotlight
 
 # kill affected applications
 for app in Finder Dock NotificationCenter SystemUIServer; do killall "$app" > /dev/null 2>&1; done
