@@ -1,42 +1,42 @@
 # vim: ft=gitconfig
 [user]
-  name = Julien Castelain
-  email = julien.castelain@liferay.com
-  logallrefupdates = true
+	name = Julien Castelain
+	email = julien.castelain@liferay.com
+	logallrefupdates = true
 
 [core]
-  safecrlf = false
-  quotepath = false
-  precomposeUnicode = true
-  filemode = false
+	safecrlf = false
+	quotepath = false
+	precomposeUnicode = true
+	filemode = false
 	excludesfile = /Users/jc/.gitignore
 
 [color]
-  diff = true
+	diff = true
 
 [diff]
-  tool = vimdiff
+	tool = vimdiff
 
 [difftool "vimdiff"]
-  cmd = vim -f -d \"$LOCAL\" \"$REMOTE\"
+	cmd = vim -f -d \"$LOCAL\" \"$REMOTE\"
 
 [merge]
-  tool = vimdiff
+	tool = vimdiff
 
 [alias]
-  edit = !vim `git ls-files -m` -p
-  fi = !git ls-files | grep -i
-  gr = grep -Ii
-  lf = log --pretty=format:'%C(green)%h%C(cyan)%d %C(reset)%s%C(white) [%cn]' --decorate --numstat
-  s = status -sb
-  # rename a stah
+	edit = !vim `git ls-files -m` -p
+	fi = !git ls-files | grep -i
+	gr = grep -Ii
+	lf = log --pretty=format:'%C(green)%h%C(cyan)%d %C(reset)%s%C(white) [%cn]' --decorate --numstat
+	s = status -sb
+	# rename a stah
 	shr = "!_() { rev=$(git rev-parse $1) && git stash drop $1 || exit 1 ; git stash store -m \"$2\" $rev; }; _"
-  shs = !sh -c 'git stash show -p stash@{$0}'
-  # show unmerged
-  sm = diff --name-status --diff-filter=U
+	shs = !sh -c 'git stash show -p stash@{$0}'
+	# show unmerged
+	sm = diff --name-status --diff-filter=U
 
 [http]
-  sslVerify = false
+	sslVerify = false
 
 [push]
-  default = simple
+	default = simple
