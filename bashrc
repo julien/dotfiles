@@ -13,12 +13,10 @@ case "$OSTYPE" in
     export CLASSPATH="$CLASSPATH:$HOME/Documents/src/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
-
     alias ls="ls -Ca"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-    alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
     alias gradlew="$HOME/Documents/src/portal/liferay-portal/gradlew"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
@@ -32,9 +30,6 @@ esac
 
 alias http="python -m SimpleHTTPServer $1"
 alias npmi="npm i --cache-min Infinity"
-
-GDK_DPI_SCALE=1.4
-
 # shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
 
@@ -56,6 +51,7 @@ export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CLICOLOR=1
 export EDITOR="vim"
+export FZF_DEFAULT_COMMAND='rg --files --glob "!.git/*"'
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
@@ -65,13 +61,10 @@ bind '"\e[A":history-search-backward'
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export LESSHISTFILE=-
-
+export NODE_REPL_HISTORY=""
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
-
-export NODE_REPL_HISTORY=""
-export FZF_DEFAULT_COMMAND='rg --files --glob "!.git/*"'
 
