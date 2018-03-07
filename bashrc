@@ -3,6 +3,7 @@ export FIGNORE="$FIGNORE:DS_Store"
 
 case "$OSTYPE" in
   darwin*)
+    # this is slow
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
     [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ] &&
@@ -40,11 +41,11 @@ if [  -f $HOME/.git-ps1.sh ]; then
 fi
 
 # osx has a function defined in /etc/bashrc
-if ! [ -n "$(type -t update_terminal_cwd)" ]; then
-  update_terminal_cwd() {
-    :
-  }
-fi
+# if ! [ -n "$(type -t update_terminal_cwd)" ]; then
+#   update_terminal_cwd() {
+#     :
+#   }
+# fi
 
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/src"
