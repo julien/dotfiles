@@ -8,7 +8,6 @@ Xft.lcdfilter: lcddefault
 XTerm*allowBoldFonts:  true
 XTerm*faceName:        Input:size=11:antialias=true
 XTerm*geometry:        90x40
-
 XTerm*loginShell:      true
 XTerm*saveLines:       20000
 XTerm*termName:        xterm-256color
