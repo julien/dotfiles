@@ -1,5 +1,4 @@
 call plug#begin()
-" Plug 'ervandew/supertab'
 Plug 'justinmk/vim-sneak'
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
