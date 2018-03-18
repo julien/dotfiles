@@ -19,7 +19,4 @@ hardstatus alwayslastline "%{= K} %w %-6=%c"
 msgminwait 0
 msgwait 0
 
-# for ctrl right and left arrows
-bindkey ^[[1;5D prev
-bindkey ^[[1;5C next
 
