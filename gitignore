@@ -1,0 +1,15 @@
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+bin/
+classes/
+node_modules/
+.gradle
+.idea
+.vscode
+
