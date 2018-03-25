@@ -40,13 +40,6 @@ if [  -f $HOME/.git-ps1.sh ]; then
   export PS1='\W$(__git_ps2) \$ '
 fi
 
-# osx has a function defined in /etc/bashrc
-# if ! [ -n "$(type -t update_terminal_cwd)" ]; then
-#   update_terminal_cwd() {
-#     :
-#   }
-# fi
-
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
