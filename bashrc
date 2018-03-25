@@ -3,7 +3,6 @@ export FIGNORE="$FIGNORE:DS_Store"
 
 case "$OSTYPE" in
   darwin*)
-    # this is slow
     [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
     [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ] &&
