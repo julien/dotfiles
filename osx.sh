@@ -51,13 +51,14 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 
 # prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
 # disable spotlight
-# cd /System/Library/CoreServices/Spotlight.app/Contents/MacOS
-# sudo cp Spotlight Spotlight.bak
-# sudo perl -pi -e 's|(\x00\x00\x00\x00\x00\x00\x47\x40\x00\x00\x00\x00\x00\x00)\x42\x40(\x00\x00\x80\x3f\x00\x00\x70\x42)|$1\x00\x00$2|sg' Spotlight
-# cmp -l Spotlight Spotlight.bak
-# sudo codesign -f -s - Spotlight
-# sudo killall Spotlight
+cd /System/Library/CoreServices/Spotlight.app/Contents/MacOS
+sudo cp Spotlight Spotlight.bak
+sudo perl -pi -e 's|(\x00\x00\x00\x00\x00\x00\x47\x40\x00\x00\x00\x00\x00\x00)\x42\x40(\x00\x00\x80\x3f\x00\x00\x70\x42)|$1\x00\x00$2|sg' Spotlight
+cmp -l Spotlight Spotlight.bak
+sudo codesign -f -s - Spotlight
+sudo killall Spotlight
 
 # kill affected applications
 for app in Finder Dock NotificationCenter SystemUIServer; do killall "$app" > /dev/null 2>&1; done
