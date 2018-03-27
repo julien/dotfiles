@@ -58,6 +58,8 @@ export NODE_REPL_HISTORY=""
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
+export PATH="$PATH:$HOME/Documents/processing/"
+export PATH="$PATH:$HOME/Documents/processing/java/bin"
 export PATH="$PATH:$HOME/Library/PackageManager/bin"
 export PATH="$PATH:./node_modules/.bin"
 
