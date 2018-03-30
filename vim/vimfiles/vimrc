@@ -15,7 +15,7 @@ let mapleader="\<Space>"
 set autoread hidden t_Co=256 bg=dark
 set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
 set grepprg=rg\ --vimgrep
-set guicursor+=a:blinkon0 ls=2 nonumber
+set guicursor+=a:blinkon0 ls=0 number
 set colorcolumn="" synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set mouse=a mousemodel=extend
