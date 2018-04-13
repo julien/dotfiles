@@ -17,6 +17,7 @@ XTerm*eightBitInput:   false
 XTerm*scrollTtyOutput: true
 XTerm*boldMode:        true
 
+! tango
 XTerm*foreground:      #a8a8a8
 XTerm*background:      #000000
 XTerm*color0:          #000000
@@ -35,4 +36,5 @@ XTerm*color12:         #729fcf
 XTerm*color13:         #ad7fa8
 XTerm*color14:         #00f5e9
 XTerm*color15:         #eeeeec
+
 
