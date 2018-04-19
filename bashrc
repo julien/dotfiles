@@ -13,7 +13,7 @@ case "$OSTYPE" in
     export CLASSPATH="$CLASSPATH:$HOME/Documents/src/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m -Xms4096m"
-    alias ls="ls -Ca"
+    alias ls="ls -a"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
