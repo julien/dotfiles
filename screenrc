@@ -14,7 +14,8 @@ defbce "on"
 termcapinfo xterm* ti@:te@
 
 # status
-hardstatus alwayslastline "%{= K} %w %-6=%c"
+# hardstatus alwayslastline "%{= K} %w %-6=%c"
+hardstatus alwayslastline "%{= K} %w "
 
 msgminwait 0
 msgwait 0
