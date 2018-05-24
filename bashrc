@@ -9,10 +9,9 @@ case "$OSTYPE" in
       . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
     export ANT_HOME=/usr/share/ant
-    export ANT_OPTS="-Xmx4096m -Xms4096m"
-    export CLASSPATH="$CLASSPATH:$HOME/Documents/src/portal/bundles/tomcat-8.0.32/lib/servlet-api.jar"
+    export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
-    export JAVA_OPTS="-Xmx4096m -Xms4096m"
+    export JAVA_OPTS="-Xmx4096m"
     alias ls="ls -a"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
