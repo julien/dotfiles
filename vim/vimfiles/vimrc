@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'w0rp/ale', { 'for': 'javascript' }
@@ -7,29 +7,25 @@ call plug#end()
 
 syntax on
 filetype plugin indent on
-let html_no_rendering=1
-" let loaded_matchparen=1
 let mapleader="\<Space>"
 
-set autoread hidden t_Co=256 bg=dark
-set expandtab shiftwidth=2 tabstop=2 backspace=indent,eol,start
+set autoread hidden
+set expandtab shiftwidth=2 tabstop=2
+set backspace=indent,eol,start
 set grepprg=rg\ --vimgrep
-set guicursor+=a:blinkon0 ls=0 number
-set colorcolumn="" synmaxcol=200
+set guicursor+=a:blinkon0
+set ls=0 number synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
-set mouse=a mousemodel=extend
+set mouse=a
 set omnifunc=syntaxcomplete#Complete
 set path+=**
-set shortmess=atIc
 set ignorecase incsearch
-set statusline=%F%=%l:%c
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.icov,*.pdf
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
-set noshowmatch nocursorline nocursorcolumn
+set noshowmatch nocursorline
 set noerrorbells vb t_vb=""
-set nowritebackup noswapfile viminfo="NONE"
-set noendofline nostartofline nowrap nofoldenable
+set nowritebackup noswapfile viminfo="NONE" " try set dir=/tmp
+set noendofline nostartofline nowrap
 
 """ mappings
 nn j gj
@@ -40,8 +36,6 @@ noremap  <F1> :set hls!<CR>
 inoremap <F1> <nop>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
-nn <leader>e :Explore<CR>
-nm <silent> <leader>b :ls<CR>:e #
 nn <silent> <leader>q :bufdo bd!<CR>
 nm <silent> <C-t> :FZF<CR>
 
@@ -49,17 +43,15 @@ nm <silent> <C-t> :FZF<CR>
 au BufWritePre * :%s/\s\+$//e
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
-au FileType javascript setlocal noet sw=2 ts=2
+au FileType javascript setlocal noet
 au FileType * setlocal formatoptions-=cro
-" au FileType html setlocal syntax=OFF
 
 " plugin settings
-let g:netrw_banner=0
-let g:netrw_cursor=0
-let g:netrw_dirhistmax=0
-let g:netrw_list_hide='\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
-let g:netrw_winsize=24
-let g:EditorConfig_max_line_indicator='none'
+let g:netrw_banner = 0
+let g:netrw_cursor = 0
+let g:netrw_dirhistmax = 0
+let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
+
 let g:ale_fix_on_save=1
 let g:ale_lint_on_text_changed='never'
 let g:ale_lint_on_enter=0
@@ -73,7 +65,7 @@ if has("gui_running")
   if has("mac")
       set guifont=Menlo:h14
   elseif has("unix")
-      set guifont=Input\ 11
+      set guifont=Menlo\ 11
   elseif has("win32")
     set guifont=Consolas:h13
   endif
