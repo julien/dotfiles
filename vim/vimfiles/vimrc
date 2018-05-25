@@ -10,6 +10,7 @@ filetype plugin indent on
 let mapleader="\<Space>"
 
 set autoread hidden
+set bg=dark
 set expandtab shiftwidth=2 tabstop=2
 set backspace=indent,eol,start
 set grepprg=rg\ --vimgrep
@@ -24,7 +25,7 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 set noshowmatch nocursorline
 set noerrorbells vb t_vb=""
-set nowritebackup noswapfile viminfo="NONE" " try set dir=/tmp
+set dir=/tmp
 set noendofline nostartofline nowrap
 
 """ mappings
@@ -39,26 +40,23 @@ nn <F3> :set nonu!<CR>
 nn <silent> <leader>q :bufdo bd!<CR>
 nm <silent> <C-t> :FZF<CR>
 
-" strip trailing whitespace on save
-au BufWritePre * :%s/\s\+$//e
+au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
 au FileType javascript setlocal noet
 au FileType * setlocal formatoptions-=cro
 
-" plugin settings
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_linters = { 'java': [''], 'javascript': ['eslint'] }
+let g:plug_window = 'new'
 
-let g:ale_fix_on_save=1
-let g:ale_lint_on_text_changed='never'
-let g:ale_lint_on_enter=0
-let g:ale_linters ={ 'java': [''], 'javascript': ['eslint'] }
-let g:plug_window='new'
-
-colo space
+colo ir_black
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
