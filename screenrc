@@ -1,23 +1,16 @@
 startup_message off
 vbell off
-
 # huge scrollback buffer
 defscrollback 500000
-
 # colors
 attrcolor b ".I"
 term screen-256color-bce
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
 defbce "on"
-
 # scroll with mouse
 termcapinfo xterm* ti@:te@
-
 # status
-# hardstatus alwayslastline "%{= K} %w %-6=%c"
 hardstatus alwayslastline "%{= K} %w "
-
+# remove useless startup messages
 msgminwait 0
 msgwait 0
-
-
