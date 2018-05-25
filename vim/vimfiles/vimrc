@@ -43,7 +43,7 @@ nm <silent> <C-t> :FZF<CR>
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au BufNewFile *.html silent! 0r $HOME/.vim/templates/tpl.html
 au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
-au FileType javascript setlocal noet
+au FileType javascript setlocal noet sw=2 ts=2
 au FileType * setlocal formatoptions-=cro
 
 let g:netrw_banner = 0
@@ -56,7 +56,7 @@ let g:ale_lint_on_enter = 0
 let g:ale_linters = { 'java': [''], 'javascript': ['eslint'] }
 let g:plug_window = 'new'
 
-colo ir_black
+colo space
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
