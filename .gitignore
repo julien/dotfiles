@@ -1,14 +1,9 @@
-# if ever I edit this on macOS
-.DS_Store
-
+*.old
 *.txt
-
+*vscode*
+.DS_Store
 emacs.d/auto-save-list/**
 emacs.d/elpa/**
 emacs.d/timelog
-
-vim/vimfiles/bunde/**
-vim/vimfiles/plugged/**
 vim/vimfiles/.netrwhist
-
-*vscode*
+vim/vimfiles/plugged/**
