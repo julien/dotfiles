@@ -26,13 +26,12 @@ set noshowmatch nocursorline noruler
 set noerrorbells vb t_vb=""
 set nostartofline nowrap
 
-""" mappings
 nn j gj
 nn k gk
 vn < <gv
 vn > >gv
-noremap  <F1> :set hls!<CR>
-inoremap <F1> <nop>
+nn <F1> :set hls!<CR>
+im <F1> <nop>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
 nn <silent> <leader>q :bufdo bd!<CR>
