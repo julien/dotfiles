@@ -12,24 +12,22 @@ case "$OSTYPE" in
     export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m"
-    alias ls="ls -a"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
-    alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     alias gradlew="$HOME/Documents/src/portal/liferay-portal/gradlew"
+    alias ls="ls -a"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
     ;;
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
-    alias open="xdg-open"
     alias ls="ls -a --color"
+    alias open="xdg-open"
     ;;
 esac
 
 alias http="python -m SimpleHTTPServer $1"
 alias npmi="npm i --cache-min Infinity"
-# shell only exists after the 100th consecutive Ctrl-d
 IGNOREEOF=100
 
 export PS1='\W \$ '
