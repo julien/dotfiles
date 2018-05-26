@@ -16,7 +16,7 @@ set dir=/tmp
 set grepprg=rg\ --vimgrep
 set guicursor+=a:blinkon0
 set ignorecase incsearch
-set ls=0 number synmaxcol=200
+set number synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set mouse=a
 set path+=**
