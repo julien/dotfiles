@@ -9,24 +9,22 @@ syntax on
 filetype plugin indent on
 let mapleader="\<Space>"
 
-set autoread hidden
-set bg=dark
-set expandtab shiftwidth=2 tabstop=2
+set autoread hidden bg=dark
 set backspace=indent,eol,start
+set expandtab shiftwidth=2 tabstop=2
+set dir=/tmp
 set grepprg=rg\ --vimgrep
 set guicursor+=a:blinkon0
+set ignorecase incsearch
 set ls=0 number synmaxcol=200
 set lazyredraw ttyfast so=2 ttyscroll=3 scrolljump=8
 set mouse=a
-set omnifunc=syntaxcomplete#Complete
 set path+=**
-set ignorecase incsearch
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
-set noshowmatch nocursorline
+set noshowmatch nocursorline noruler
 set noerrorbells vb t_vb=""
-set dir=/tmp
-set noendofline nostartofline nowrap
+set nostartofline nowrap
 
 """ mappings
 nn j gj
