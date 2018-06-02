@@ -15,13 +15,13 @@ case "$OSTYPE" in
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s --force"
     alias gradlew="$HOME/Documents/src/portal/liferay-portal/gradlew"
-    alias ls="ls -a"
+    alias ls="ls -1a"
     alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
     alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
     ;;
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
-    alias ls="ls -a --color"
+    alias ls="ls -1a --color"
     alias open="xdg-open"
     ;;
 esac
