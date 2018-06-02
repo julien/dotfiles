@@ -47,8 +47,6 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
 shopt -s histappend
 shopt -s cmdhist
-bind '"\e[A":history-search-backward'
-bind '"\e[A":history-search-backward'
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export LESSHISTFILE=-
