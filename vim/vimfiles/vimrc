@@ -54,14 +54,14 @@ let g:ale_linters = { 'java': [''], 'javascript': [''] }
 let g:ale_linters_explicit = 1
 let g:plug_window = 'new'
 
-colo space
+colo gotham256
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
   if has("mac")
       set guifont=Menlo:h14
   elseif has("unix")
-      set guifont=Menlo\ 11
+      set guifont=Monaco\ 11
   elseif has("win32")
     set guifont=Consolas:h13
   endif
