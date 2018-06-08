@@ -24,7 +24,7 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 set noshowmatch nocursorline noruler
 set noerrorbells vb t_vb=""
-set nostartofline nowrap
+set nofixendofline nostartofline nowrap
 
 im <F1> <nop>
 nn j gj
@@ -32,6 +32,8 @@ nn k gk
 nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
+nn <silent> <leader>e :Explore<CR>
+nn <silent> <leader>l :Lexplore<CR>
 nn <silent> <leader>q :bufdo bd!<CR>
 nm <silent> <C-t> :FZF<CR>
 vn < <gv
@@ -47,6 +49,7 @@ let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
+let g:netrw_winsize=20
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
