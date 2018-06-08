@@ -19,25 +19,12 @@
 *.color14:    #00f5e9
 *.color15:    #eeeeec
 
-! UXTerm
-UXTerm*allowBoldFonts: true
-UXTerm*boldMode: true
-UXTerm*eightBitInput: false
-! UXTerm*faceName: Input:size=11:antialias=true
-UXTerm*faceName: FiraMono:size=12:antialias=true
-UXTerm*geometry: 90x40
-UXTerm*locale: true
-UXTerm*loginShell: true
-UXTerm*metaSendsEscape: true
-UXTerm*saveLines: 20000
-UXTerm*scrollTtyOutput: true
-UXTerm*termName: UXTerm-256color
 ! XTerm
 XTerm*allowBoldFonts: true
 XTerm*boldMode: true
 XTerm*eightBitInput: false
-! XTerm*faceName: Input:size=11:antialias=true
-XTerm*faceName: FiraMono:size=12:antialias=true
+XTerm*faceName: Input:size=11:antialias=true
+! XTerm*faceName: Menlo:size=11:antialias=true
 XTerm*geometry: 90x40
 XTerm*locale: true
 XTerm*loginShell: true
