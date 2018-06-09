@@ -50,10 +50,8 @@ shopt -s histappend
 shopt -s cmdhist
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
-export LESSHISTFILE=-
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR="NO_COLOR"
-export NODE_REPL_HISTORY=""
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
