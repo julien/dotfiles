@@ -15,7 +15,7 @@ __git_ps2() {
     exit;
   fi
 
-  local gitstring=" [$branch]"
+  local gitstring=" ($branch)"
 
   printf -- "%s" "$gitstring"
 }
