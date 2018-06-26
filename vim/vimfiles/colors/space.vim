@@ -39,7 +39,7 @@ hi DiffAdd guifg=#f8f8f2 guibg=#468410 guisp=#468410 gui=bold ctermfg=230 ctermb
 hi DiffChange guifg=#f8f8f2 guibg=#243a5f guisp=#243a5f gui=NONE ctermfg=230 ctermbg=17 cterm=NONE
 hi DiffDelete guifg=#8b080b guibg=NONE guisp=NONE gui=NONE ctermfg=88 ctermbg=NONE cterm=NONE
 hi DiffText guifg=#f8f8f2 guibg=#204a87 guisp=#204a87 gui=bold ctermfg=230 ctermbg=24 cterm=bold
-hi Directory guifg=#ffc263 guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
+" hi Directory guifg=#ffc263 guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
 hi ErrorMsg guifg=#f8f8f0 guibg=#bd57e5 guisp=#bd57e5 gui=NONE ctermfg=230 ctermbg=134 cterm=NONE
 hi Float guifg=#ffc263 guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
 hi Folded guifg=#abf5e8 guibg=#13111f guisp=#13111f gui=NONE ctermfg=159 ctermbg=234 cterm=NONE
@@ -53,7 +53,7 @@ hi LineNr guifg=#525252 guibg=#000000 guisp=#151321 gui=NONE ctermfg=239 ctermbg
 hi Macro guifg=#bd57e5 guibg=NONE guisp=NONE gui=NONE ctermfg=134 ctermbg=NONE cterm=NONE
 hi MatchParen guifg=#99ffce guibg=NONE guisp=NONE gui=NONE ctermfg=122 ctermbg=NONE cterm=NONE
 hi NonText guifg=#525252 guibg=#000000 guisp=#151321 gui=NONE ctermfg=239 ctermbg=0 cterm=NONE
-hi Normal guifg=#e0e0e0 guibg=#000000 guisp=#151321 gui=NONE ctermfg=254 ctermbg=0
+hi Normal guifg=#e0e0e0 guibg=Black guisp=#151321 gui=NONE ctermfg=254 ctermbg=0
 hi Number guifg=#ffc663 guibg=NONE guisp=NONE gui=NONE ctermfg=68 ctermbg=NONE cterm=NONE
 hi Operator guifg=#99d3ff guibg=NONE guisp=NONE gui=NONE ctermfg=117 ctermbg=NONE cterm=NONE
 hi PMenu guifg=#e0e0e0 guibg=#363636 guisp=#363636 gui=NONE ctermfg=254 ctermbg=237 cterm=NONE
