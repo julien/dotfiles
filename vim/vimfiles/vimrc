@@ -17,8 +17,7 @@ set grepprg=rg\ --vimgrep
 set guicursor+=a:blinkon0
 set ignorecase incsearch
 set nonumber synmaxcol=200
-set lazyredraw ttyfast so=2 scrolljump=8
-" ttyscroll=3
+set lazyredraw ttyfast so=2 scrolljump=8 " ttyscroll=3
 set mouse=a
 set path+=**
 set wildignore+=.git/*,.gradle/*,node_modules/*
@@ -57,12 +56,10 @@ let g:netrw_winsize = 25
 " let g:ale_linters = { 'java': [''], 'javascript': [''] }
 " let g:ale_linters_explicit = 1
 
-colo space
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
   if has("mac")
-      colo macvim
       set guifont=Menlo:h14
   elseif has("unix")
       set guifont=Menlo\ 11
