@@ -8,7 +8,6 @@ case "$OSTYPE" in
     [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ] &&
       . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
-    export ANT_HOME=/usr/share/ant
     export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m"
