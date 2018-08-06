@@ -15,8 +15,8 @@ case "$OSTYPE" in
     alias brewpurge="brew cleanup -s --force"
     alias gradlew="$HOME/Documents/src/portal/liferay-portal/gradlew"
     alias ls="ls -a"
-    alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-    alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
+    alias vim="/Applications/MacVim.app/Contents/bin/mvim -v $*"
+    alias vimdiff="/Applications/MacVim.app/Contents/bin/mvimdiff -v $*"
     ;;
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
