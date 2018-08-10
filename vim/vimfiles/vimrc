@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-" Plug 'w0rp/ale', { 'for': 'javascript' }
 call plug#end()
 
 syntax on
@@ -50,11 +49,6 @@ let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
 let g:netrw_winsize = 25
-" let g:ale_fix_on_save = 1
-" let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_on_enter = 0
-" let g:ale_linters = { 'java': [''], 'javascript': [''] }
-" let g:ale_linters_explicit = 1
 
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
