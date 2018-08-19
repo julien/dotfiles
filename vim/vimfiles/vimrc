@@ -19,6 +19,7 @@ set nonumber synmaxcol=200
 set lazyredraw ttyfast so=2 scrolljump=8 " ttyscroll=3
 set mouse=a
 set path+=**
+set t_Co=256
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 set noshowmatch nocursorline ruler
