@@ -22,7 +22,7 @@ set path+=**
 set t_Co=256
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
-set noshowmatch nocursorline ruler
+set noeol noshowmatch nocursorline ruler
 set noerrorbells vb t_vb=""
 set nofixendofline nostartofline nowrap
 
