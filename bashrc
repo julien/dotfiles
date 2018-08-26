@@ -12,7 +12,7 @@ case "$OSTYPE" in
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m"
     alias brewlist="brew uses --installed $1"
-    alias brewpurge="brew cleanup -s --force"
+    alias brewpurge="brew cleanup -s"
     alias gradlew="$HOME/Documents/src/portal/liferay-portal/gradlew"
     alias ls="ls -a"
     alias vim="/Applications/MacVim.app/Contents/bin/vim"
@@ -25,14 +25,13 @@ case "$OSTYPE" in
     ;;
 esac
 
-alias http="python -m SimpleHTTPServer $1"
 alias npmi="npm i --cache-min Infinity"
 IGNOREEOF=100
 
 export PS1='\W \$ '
 if [  -f $HOME/.git-ps1.sh ]; then
   . $HOME/.git-ps1.sh
-  export PS1='\W$(__git_ps2) \$ '
+  export PS1='\W $(__git_ps2) \$ '
 fi
 
 export CDPATH="./:$HOME/Documents"
