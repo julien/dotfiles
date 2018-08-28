@@ -3,8 +3,6 @@ export FIGNORE="$FIGNORE:DS_Store"
 
 case "$OSTYPE" in
   darwin*)
-    [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
-
     [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ] &&
       . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
@@ -31,7 +29,7 @@ IGNOREEOF=100
 export PS1='\W\$ '
 if [  -f $HOME/.git-ps1.sh ]; then
   . $HOME/.git-ps1.sh
-  export PS1='\W[$(__git_ps2)]\$ '
+  export PS1='\W$(__git_ps2)\$ '
 fi
 
 export CDPATH="./:$HOME/Documents"
