@@ -15,11 +15,7 @@ __git_ps2() {
     exit;
   fi
 
-  if ! git diff --quiet &>/dev/null; then
-    branch="$branch*"
-  fi
-
-  local gitstring="$branch"
+  local gitstring="[$branch]"
 
   printf -- "%s" "$gitstring"
 }
