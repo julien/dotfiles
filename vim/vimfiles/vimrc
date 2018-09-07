@@ -8,8 +8,8 @@ syntax on
 filetype plugin indent on
 let mapleader="\<Space>"
 
-set autoread hidden bg=dark
-set backspace=indent,eol,start
+set autoread hidden
+set backspace=indent,eol,start bg=dark
 set expandtab shiftwidth=2 tabstop=2
 set dir=/tmp
 set grepprg=rg\ --vimgrep
