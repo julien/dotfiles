@@ -3,8 +3,8 @@ export FIGNORE="$FIGNORE:DS_Store"
 
 case "$OSTYPE" in
   darwin*)
-    [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ] &&
-      . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+    [ -f /usr/local/etc/bash_completion.d/git-completion.bash ] &&
+      . /usr/local/etc/bash_completion.d/git-completion.bash
 
     export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
