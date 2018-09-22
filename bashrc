@@ -1,4 +1,3 @@
-# vim set ft=config
 export FIGNORE="$FIGNORE:DS_Store"
 
 case "$OSTYPE" in
@@ -6,7 +5,6 @@ case "$OSTYPE" in
     [ -f /usr/local/etc/bash_completion.d/git-completion.bash ] &&
       . /usr/local/etc/bash_completion.d/git-completion.bash
 
-    export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m"
     alias brewlist="brew uses --installed $1"
@@ -35,15 +33,11 @@ fi
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
-export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export FZF_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='--color=bw'
 export HISTCONTROL=ignoredups
-export HISTIGNORE="&:[]*:exit:ls:bg:fg:history"
-shopt -s histappend
-shopt -s cmdhist
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
