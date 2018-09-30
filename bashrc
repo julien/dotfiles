@@ -5,6 +5,7 @@ case "$OSTYPE" in
     [ -f /usr/local/etc/bash_completion.d/git-completion.bash ] &&
       . /usr/local/etc/bash_completion.d/git-completion.bash
 
+    export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m"
     alias brewlist="brew uses --installed $1"
@@ -22,6 +23,7 @@ case "$OSTYPE" in
 esac
 
 alias npmi="npm i --cache-min Infinity"
+alias processing-run="processing-java --sketch=`pwd` --run --force"
 IGNOREEOF=100
 
 export PS1='\W\$ '
@@ -33,6 +35,7 @@ fi
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
+export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export FZF_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
