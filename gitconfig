@@ -4,6 +4,14 @@
   email = julien.castelain@liferay.com
   logallrefupdates = true
 
+[alias]
+  edit = !vim `git ls-files -m` -p
+  fi = !git ls-files | grep -i
+  gr = grep -Ii
+  lf = log --decorate --numstat
+  s = status -sb
+  sm = diff --name-status --diff-filter=U # show unmerged
+
 [core]
   excludesfile = /Users/jc/.gitignore
   filemode = false
@@ -20,22 +28,15 @@
 [difftool "vimdiff"]
   cmd = vim -f -d \"$LOCAL\" \"$REMOTE\"
 
-[merge]
-  tool = vimdiff
-
-[alias]
-  edit = !vim `git ls-files -m` -p
-  fi = !git ls-files | grep -i
-  gr = grep -Ii
-  lf = log --decorate --numstat
-  s = status -sb
-  sm = diff --name-status --diff-filter=U # show unmerged
-
 [http]
   sslVerify = false
 
-[push]
-  default = simple
+[merge]
+  tool = vimdiff
+
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
+
+[push]
+  default = simple
