@@ -21,10 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-[ -f $HOME/Documents/bin/z.sh ] &&
-  . $HOME/Documents/bin/z.sh
+[ -f "$HOME/Documents/bin/z.sh" ] &&
+  . "$HOME/Documents/bin/z.sh"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
