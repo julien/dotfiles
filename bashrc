@@ -23,7 +23,11 @@ case "$OSTYPE" in
 esac
 
 alias npmi="npm i --cache-min Infinity"
-alias processing-run="processing-java --sketch=`pwd` --run --force"
+
+runprocessing() {
+  processing-java --sketch=`pwd` --run --force
+}
+
 IGNOREEOF=100
 
 export PS1='\W\$ '
