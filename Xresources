@@ -5,7 +5,8 @@
 XTerm*allowBoldFonts: true
 XTerm*boldMode: true
 XTerm*eightBitInput: false
-XTerm*faceName: Input:size=11:antialias=true
+! XTerm*faceName: Input:size=11:antialias=true
+XTerm*faceName: DejaVuSansMonoBook:size=11:antialias=true
 XTerm*geometry: 90x40
 XTerm*locale: true
 XTerm*loginShell: true
