@@ -9,7 +9,8 @@ filetype plugin indent on
 let mapleader="\<Space>"
 
 set autoread hidden
-set backspace=indent,eol,start bg=dark
+set bg=dark
+set backspace=indent,eol,start
 set expandtab shiftwidth=2 tabstop=2
 set dir=/tmp
 set grepprg=rg\ --vimgrep
@@ -51,14 +52,13 @@ let g:netrw_dirhistmax = 0
 let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
 let g:netrw_winsize = 25
 
+colo gotham256
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
   if has("mac")
       set guifont=Menlo:h14
   elseif has("unix")
-      set guifont=Menlo\ 11
-  elseif has("win32")
-    set guifont=Consolas:h13
+    set guifont=Deja\ Vu\ Sans\ Mono\ Book\ 11
   endif
 endif
