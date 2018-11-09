@@ -56,4 +56,3 @@ export PATH="$PATH:$HOME/Documents/platform-tools"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
-
