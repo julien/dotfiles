@@ -59,6 +59,6 @@ if has("gui_running")
   if has("mac")
       set guifont=Menlo:h14
   elseif has("unix")
-    set guifont=Deja\ Vu\ Sans\ Mono\ Book\ 11
+    set guifont=Monospace\ 12
   endif
 endif
