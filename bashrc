@@ -31,11 +31,6 @@ runprocessing() {
 IGNOREEOF=100
 
 export PS1='\W\$ '
-# not really sure if I need a prompt showing me the git branch I'm on ...
-# if [  -f $HOME/.git-ps1.sh ]; then
-#   . $HOME/.git-ps1.sh
-#   export PS1='\W$(__git_ps2)\$ '
-# fi
 
 export CDPATH="./:$HOME/Documents"
 export CDPATH="$CDPATH:$HOME/Documents/src"
