@@ -47,9 +47,6 @@ au FileType * setlocal formatoptions-=cro
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
-let g:netrw_dirhistmax = 0
-let g:netrw_list_hide = '\$Recycle.Bin,\.DS_Store,\.\/$,\.DAT*,\.LOG*'
-let g:netrw_winsize = 25
 
 colo wombat256
 au! GuiEnter * silent set visualbell t_vb=""
