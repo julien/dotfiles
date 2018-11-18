@@ -10,7 +10,6 @@ case "$OSTYPE" in
     export JAVA_OPTS="-Xmx4096m"
     alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s"
-    alias gradlew="$HOME/Documents/src/portal/liferay-portal/gradlew"
     alias ls="ls -a"
     alias vim="/Applications/MacVim.app/Contents/bin/vim"
     alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
