@@ -1,5 +1,4 @@
-*foreground: #a8a8a8
-*background: #000000
+! vim: set filetype=xdefaults :
 ! Xft
 Xft.antialias: true
 Xft.dpi:       92
@@ -8,6 +7,8 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 Xft.rgba:      rgb
 
+*foreground: #a8a8a8
+*background: #000000
 
 ! XTerm
 XTerm*allowBoldFonts: true
@@ -21,29 +22,3 @@ XTerm*metaSendsEscape: true
 XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
-
-! black
-XTerm*color0: #000000
-XTerm*color8: #000000
-! red
-XTerm*color1: #b63b3b
-XTerm*color9: #9f3a3a
-! green
-XTerm*color2:  #8c9440
-XTerm*color10: #b5bd68
-! yellow
-XTerm*color3:  #de935f
-XTerm*color11: #f0c674
-! blue
-XTerm*color4:  #5f819d
-XTerm*color12: #81a2be
-! magenta
-XTerm*color5:  #85678f
-XTerm*color13: #b294bb
-! cyan
-XTerm*color6:  #5e8d87
-XTerm*color14: #8abeb7
-! white
-XTerm*color7:  #707880
-XTerm*color15: #c5c8c6
-
