@@ -21,8 +21,6 @@ case "$OSTYPE" in
     ;;
 esac
 
-alias npmi="npm i --cache-min Infinity"
-
 runprocessing() {
   processing-java --sketch=`pwd` --run --force
 }
@@ -31,7 +29,7 @@ IGNOREEOF=100
 
 export PS1='\W\$ '
 
-export CDPATH="./:$HOME/Documents"
+export CDPATH="$CDPATH:./"
 export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CLICOLOR=1
@@ -47,7 +45,6 @@ export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
-export PATH="$PATH:$HOME/Documents/platform-tools"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
