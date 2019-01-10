@@ -1,7 +1,8 @@
 call plug#begin()
-Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 call plug#end()
 
 syntax on
@@ -38,6 +39,9 @@ nn <silent> <leader>w :w<CR>
 nm <silent> <C-t> :FZF<CR>
 vn < <gv
 vn > >gv
+
+set wildcharm=<C-z>
+nnoremap <leader>t :e **/*<C-z><S-Tab>
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
