@@ -4,17 +4,18 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'w0rp/ale', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-
 call plug#end()
 
 syntax on
 filetype plugin indent on
 let mapleader="\<Space>"
 
-set autoread hidden
+set autoread
+set hidden
 set bg=dark
 set backspace=indent,eol,start
-set expandtab shiftwidth=2 tabstop=2
+set expandtab
+set shiftwidth=2 tabstop=2
 set dir=/tmp
 set grepprg=rg\ --vimgrep
 set guicursor+=a:blinkon0
@@ -23,7 +24,7 @@ set nonumber synmaxcol=200
 set lazyredraw ttyfast so=2 scrolljump=8 " ttyscroll=3
 set mouse=a
 set path+=**
-set t_Co=256
+" set t_Co=256
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 set noeol noshowmatch nocursorline ruler
@@ -31,6 +32,7 @@ set noerrorbells vb t_vb=""
 set nofixendofline nostartofline nowrap
 
 im <F1> <Nop>
+im jj <ESC>
 nn j gj
 nn k gk
 nn <F1> :set hls!<CR>
@@ -40,6 +42,7 @@ nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bd!<CR>
 nn <silent> <leader>w :w<CR>
 nm <silent> <C-t> :FZF<CR>
+nm <silent> <C-p> :pc<CR>
 vn < <gv
 vn > >gv
 
@@ -48,7 +51,6 @@ au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
-let g:netrw_liststyle = 3
 let g:netrw_preview = 1
 let g:netrw_winsize = 30
 
@@ -66,8 +68,5 @@ if has("gui_running")
     set guifont=Menlo:h14
   elseif has("unix")
     set guifont=Input\ 11
-  elseif has("win32")
-    set guifont=Consolas:h12
-    set noswapfile
   endif
 endif
