@@ -18,13 +18,11 @@ set expandtab
 set shiftwidth=2 tabstop=2
 set dir=/tmp
 set grepprg=rg\ --vimgrep
-set guicursor+=a:blinkon0
 set incsearch ignorecase smartcase
 set nonumber synmaxcol=200
 set lazyredraw ttyfast so=2 scrolljump=8 " ttyscroll=3
 set mouse=a
 set path+=**
-" set t_Co=256
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 set noeol noshowmatch nocursorline ruler
@@ -52,18 +50,19 @@ au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_preview = 1
-let g:netrw_winsize = 30
+let g:netrw_winsize = 25
 
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
-let g:ale_linters = { 'java': [''], 'javascript': [''] }
+let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_linters_explicit = 1
 
 colo wombat256
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
+  set guicursor+=a:blinkon0
   if has("mac")
     set guifont=Menlo:h14
   elseif has("unix")
