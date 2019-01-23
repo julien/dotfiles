@@ -45,7 +45,6 @@ export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
-export PATH="$PATH:$HOME/Documents/nvim/bin"
 export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
