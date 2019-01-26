@@ -19,7 +19,7 @@ set shiftwidth=2 tabstop=2
 set dir=/tmp
 set grepprg=rg\ --vimgrep
 set incsearch ignorecase smartcase
-set nonumber synmaxcol=200
+set nonumber synmaxcol=200 textwidth=80
 set lazyredraw ttyfast so=2 scrolljump=8 " ttyscroll=3
 set mouse=a
 set path+=**
@@ -33,6 +33,8 @@ im <F1> <Nop>
 im jj <ESC>
 nn j gj
 nn k gk
+nn <C-tab> :tabn<CR>
+nn <C-S-tab> :tabp<CR>
 nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
@@ -51,6 +53,7 @@ let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_preview = 1
 let g:netrw_winsize = 25
+let g:netrw_chgwin = 1
 
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
