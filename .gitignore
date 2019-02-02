@@ -5,5 +5,4 @@
 emacs.d/auto-save-list/**
 emacs.d/elpa/**
 emacs.d/timelog
-**.netrwhist
 vim/vimfiles/plugged/**
