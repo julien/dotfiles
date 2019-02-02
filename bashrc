@@ -35,8 +35,6 @@ export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export FZF_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
-export FZF_DEFAULT_OPTS='--color=bw'
 export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
