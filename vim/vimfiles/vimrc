@@ -1,5 +1,4 @@
 call plug#begin()
-Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 " Plug 'w0rp/ale', { 'for': 'javascript, typescript' }
@@ -12,7 +11,6 @@ let mapleader="\<Space>"
 
 set autoread
 set backspace=indent,eol,start
-set bg=dark
 set dir=/tmp
 set expandtab
 set grepprg=rg\ --vimgrep
@@ -24,8 +22,9 @@ set laststatus=0
 set mouse=a
 set nocursorline
 set noeol
-set noerrorbells vb t_vb=""
+set noerrorbells visualbell t_vb=""
 set nonumber
+set nostartofline
 set nowrap
 set path+=**
 set ruler
@@ -44,7 +43,6 @@ nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bd!<CR>
-nm <silent> <C-t> :FZF<CR>
 nm <silent> <C-p> :pc<CR>
 vn < <gv
 vn > >gv
@@ -54,14 +52,29 @@ au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
+let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
+
+function! FzyCommand(choice_command, vim_command)
+  try
+    let output = system(a:choice_command . " | fzy ")
+  catch /Vim:Interrupt/
+    " Swallow errors from ^C, allow redraw! below
+  endtry
+  redraw!
+  if v:shell_error == 0 && !empty(output)
+    exec a:vim_command . ' ' . output
+  endif
+endfunction
+
+nn <C-p> :call FzyCommand("rg --color=never --files -g ''", ":e")<cr>
 
 " let g:ale_fix_on_save = 1
 " let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_enter = 0
 " let g:ale_linters = {'javascript': ['eslint']}
 
-colo wombat256
+colo synthetic
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
