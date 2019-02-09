@@ -42,6 +42,8 @@ nn k gk
 nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
+nn <C-S-Left> :bp<CR>
+nn <C-S-Right> :bn<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bd!<CR>
 nm <silent> <C-t> :FZF<CR>
