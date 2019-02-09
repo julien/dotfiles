@@ -21,6 +21,8 @@ case "$OSTYPE" in
     ;;
 esac
 
+alias rm="rm -i"
+
 runprocessing() {
   processing-java --sketch=`pwd` --run --force
 }
