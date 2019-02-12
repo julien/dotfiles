@@ -21,7 +21,6 @@
 
 [color]
 	diff = true
-	ui = false
 
 [diff]
 	tool = vimdiff
