@@ -64,6 +64,7 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
+let NERDTreeChDirMode = 2
 let NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrowExpandable =  "+"		 " use normal ascii
 let g:NERDTreeDirArrowCollapsible = "~"
