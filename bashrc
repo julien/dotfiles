@@ -45,4 +45,3 @@ export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
