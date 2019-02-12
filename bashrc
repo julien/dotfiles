@@ -21,12 +21,6 @@ case "$OSTYPE" in
     ;;
 esac
 
-alias rm="rm -i"
-
-runprocessing() {
-  processing-java --sketch=`pwd` --run --force
-}
-
 IGNOREEOF=100
 
 export PS1='\W\$ '
@@ -48,7 +42,6 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.deno/bin"
 export PATH="$PATH:$HOME/Documents/bin"
 export PATH="$PATH:$HOME/Documents/node/bin"
-export PATH="$PATH:$HOME/Documents/processing"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
