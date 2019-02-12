@@ -1,6 +1,7 @@
 " let g:ale_completion_enabled = 1
 call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
 Plug 'w0rp/ale', { 'for': ['javascript', 'typescript'] }
@@ -45,6 +46,7 @@ nn <F3> :set nonu!<CR>
 nn <C-S-Left> :bp<CR>
 nn <C-S-Right> :bn<CR>
 nn <silent> <leader>e :Explore<CR>
+nn <silent> <leader>p :NERDTreeToggle<CR>
 nn <silent> <leader>q :%bd!<CR>
 nm <silent> <C-t> :FZF<CR>
 nm <silent> <C-S-p> :pc<CR>
@@ -61,6 +63,12 @@ let g:netrw_preview = 1
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+
+let NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrowExpandable =  "+"		 " use normal ascii
+let g:NERDTreeDirArrowCollapsible = "~"
+
+
 
 colo wombat256
 au! GuiEnter * silent set visualbell t_vb=""
