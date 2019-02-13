@@ -62,7 +62,7 @@ let g:netrw_liststyle = 3
 let g:netrw_preview = 1
 let g:ale_linters_explicit = 1
 
-colo xoria256
+colo wombat256
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
