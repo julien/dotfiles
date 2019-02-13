@@ -27,6 +27,7 @@ set noeol
 set noerrorbells visualbell t_vb=""
 set nonumber
 set nostartofline
+set noswapfile
 set nowrap
 set path+=**
 set ruler
@@ -69,9 +70,7 @@ let NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrowExpandable =  "+"		 " use normal ascii
 let g:NERDTreeDirArrowCollapsible = "~"
 
-
-
-colo wombat256
+colo xoria256
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
