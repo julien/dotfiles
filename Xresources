@@ -23,3 +23,22 @@ XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
 
+
+! Tango color scheme
+XTerm*cursorColor: #8ae234
+XTerm*color0: #000000
+XTerm*color8: #888A85
+XTerm*color1: #cc0000
+XTerm*color9: #ef2929
+XTerm*color2: #4e9a06
+XTerm*color10: #8ae234
+XTerm*color3: #edd400
+XTerm*color11: #fce94f
+XTerm*color4: #3465a4
+XTerm*color12: #729fcf
+XTerm*color5: #92659a
+XTerm*color13: #c19fbe
+XTerm*color6: #07c7ca
+XTerm*color14: #63e9e9
+XTerm*color7: #d3d7cf
+XTerm*color15: #eeeeec
