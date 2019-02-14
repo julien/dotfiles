@@ -1,10 +1,12 @@
-let g:ale_completion_enabled = 1
 call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-Plug 'w0rp/ale', { 'for': ['javascript', 'typescript'] }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
 call plug#end()
 
 filetype plugin indent on
@@ -58,9 +60,14 @@ au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
-let g:netrw_liststyle = 3
 let g:netrw_preview = 1
-let g:ale_linters_explicit = 1
+let g:netrw_winsize = 25
+
+let g:LanguageClient_serverCommands = {
+\ 'javascript': ['javascript-typescript-stdio'],
+\ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
 colo wombat256
 au! GuiEnter * silent set visualbell t_vb=""
