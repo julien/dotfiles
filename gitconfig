@@ -8,6 +8,7 @@
 	edit = !vim `git ls-files -m` -p
 	fi = !git ls-files | grep -i
 	gr = grep -Ii
+	l  = log --decorate --graph --oneline
 	lf = log --decorate --numstat
 	s = status -sb
 	sm = diff --name-status --diff-filter=U # show unmerged
