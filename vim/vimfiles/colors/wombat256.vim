@@ -6,7 +6,6 @@
 "   David Liang (bmdavll@gmail.com)
 " based on version by
 "   Danila Bespalov (danila.bespalov@gmail.com)
-
 set background=dark
 
 if version > 580
@@ -45,7 +44,6 @@ hi DiffDelete ctermfg=234 ctermbg=60 cterm=none guifg=#242424 guibg=#3e3969 gui=
 hi DiffText ctermbg=53 cterm=none guibg=#73186e gui=none
 hi DiffChange ctermbg=237 guibg=#382a37
 hi diffRemoved ctermfg=7 ctermbg=1
-
 hi Keyword ctermfg=111 cterm=none guifg=#88b8f6 gui=none
 hi Statement ctermfg=111 cterm=none guifg=#88b8f6 gui=none
 hi Constant ctermfg=173 cterm=none guifg=#e5786d gui=none
@@ -58,7 +56,5 @@ hi Special ctermfg=229 cterm=none guifg=#eadead gui=none
 hi String ctermfg=113 cterm=none guifg=#95e454 gui=italic
 hi Comment ctermfg=246 cterm=none guifg=#9c998e gui=italic
 hi Todo ctermfg=101 cterm=none guifg=#857b6f gui=italic
-
 hi! link FoldColumn Folded
 hi! link CursorColumn CursorLine
-" hi! link NonText LineNr
