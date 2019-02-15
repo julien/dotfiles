@@ -5,4 +5,5 @@
 emacs.d/auto-save-list/**
 emacs.d/elpa/**
 emacs.d/timelog
+vim/vimfiles/pack/**
 vim/vimfiles/plugged/**
