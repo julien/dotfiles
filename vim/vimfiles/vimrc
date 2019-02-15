@@ -1,13 +1,4 @@
-call plug#begin()
-Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
-Plug 'tpope/vim-commentary'
-Plug 'vim-scripts/HTML-AutoCloseTag', { 'for': 'html' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-Plug 'autozimu/LanguageClient-neovim', {
-      \ 'branch': 'next',
-      \ 'do': 'bash install.sh',
-      \ }
-call plug#end()
+set rtp+=~/.fzf
 
 filetype plugin indent on
 syntax on
@@ -45,8 +36,6 @@ nn k gk
 nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
-nn <C-S-Left> :bp<CR>
-nn <C-S-Right> :bn<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bd!<CR>
 nm <silent> <C-t> :FZF<CR>
@@ -65,9 +54,10 @@ let g:netrw_winsize = 25
 
 let g:LanguageClient_serverCommands = {
 \ 'javascript': ['javascript-typescript-stdio'],
+\ 'typescript': ['javascript-typescript-stdio'],
 \ }
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <leader>c :call LanguageClient_contextMenu()<CR>
 
 colo wombat256
 au! GuiEnter * silent set visualbell t_vb=""
