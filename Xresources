@@ -25,7 +25,7 @@ XTerm*termName: xterm-256color
 
 
 ! Tango color scheme
-XTerm*cursorColor: #8ae234
+XTerm*cursorColor: #5f5f5f
 XTerm*color0: #000000
 XTerm*color8: #888A85
 XTerm*color1: #cc0000
