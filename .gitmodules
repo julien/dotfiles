@@ -1,11 +1,11 @@
 [submodule "vim/vimfiles/pack/bundles/start/vim-commentary"]
-  path = vim/vimfiles/pack/bundles/start/vim-commentary
-  url = https://github.com/tpope/vim-commentary.git
+	path = vim/vimfiles/pack/bundles/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "vim/vimfiles/pack/bundles/start/HTML-AutoCloseTag"]
-  path = vim/vimfiles/pack/bundles/start/HTML-AutoCloseTag
-  url = https://git::@github.com/vim-scripts/HTML-AutoCloseTag.git
+	path = vim/vimfiles/pack/bundles/start/HTML-AutoCloseTag
+	url = https://git::@github.com/vim-scripts/HTML-AutoCloseTag.git
 [submodule "vim/vimfiles/pack/bundles/start/typescript-vim"]
-  path = vim/vimfiles/pack/bundles/start/typescript-vim
-  url = https://github.com/leafgarland/typescript-vim.git
+	path = vim/vimfiles/pack/bundles/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
 
 
