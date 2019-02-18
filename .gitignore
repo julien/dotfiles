@@ -2,4 +2,3 @@
 *.txt
 *vscode*
 .DS_Store
-vim/vimfiles/pack/**
