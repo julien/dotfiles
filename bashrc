@@ -27,7 +27,7 @@ export PS1='\W\$ '
 
 export CDPATH="$CDPATH:./"
 export CDPATH="$CDPATH:$HOME/Documents/src"
-export CDPATH="$CDPATH:$HOME/Dropbox/Documents"
+export CDPATH="$CDPATH:$HOME/Dropbox"
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -44,3 +44,6 @@ export PATH="$PATH:$HOME/Documents/node/bin"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
+
+# Adding autocomplete for 'we'
+[ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
