@@ -7,3 +7,6 @@
 [submodule "vim/pack/bundles/start/vim-commentary"]
 	path = vim/pack/bundles/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/pack/bundles/start/nerdtree"]
+	path = vim/pack/bundles/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
