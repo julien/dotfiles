@@ -14,3 +14,5 @@ hardstatus alwayslastline "%{= K} %w "
 # remove useless startup messages
 msgminwait 0
 msgwait 0
+# window borders
+rendition so =00
