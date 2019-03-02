@@ -8,7 +8,6 @@ let mapleader="\<Space>"
 set autoread
 set backspace=indent,eol,start
 set dir=/tmp
-" set expandtab
 set grepprg=rg\ --vimgrep
 set hidden
 set incsearch
@@ -46,7 +45,6 @@ vn < <gv
 vn > >gv
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
-au FileType *.go,c,cpp,groovy,java,jsp,python setlocal noet sw=4 ts=4
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
