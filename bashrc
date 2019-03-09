@@ -39,6 +39,7 @@ export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
+export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:./node_modules/.bin"
