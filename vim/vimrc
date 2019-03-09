@@ -37,7 +37,6 @@ nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
 nn <silent> <leader>e :Explore<CR>
-nn <silent> <leader>t :NERDTreeToggle<CR>
 nn <silent> <leader>q :%bd!<CR>
 nm <silent> <C-t> :FZF<CR>
 nm <silent> <C-S-p> :pc<CR>
@@ -53,14 +52,10 @@ let g:netrw_preview = 1
 let g:netrw_winsize = 25
 
 let g:LanguageClient_serverCommands = {
+\ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
 \ 'javascript': ['javascript-typescript-stdio'],
 \ 'typescript': ['javascript-typescript-stdio'],
 \ }
-
-let g:NERDTreeDirArrowExpandable = "+"		 " use normal ascii
-let g:NERDTreeDirArrowCollapsible = "~"
-let NERDTreeMinimalUI = 1
-
 nnoremap <leader><leader> :call LanguageClient_contextMenu()<CR>
 
 colo wombat256
