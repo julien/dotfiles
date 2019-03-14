@@ -24,7 +24,6 @@ esac
 IGNOREEOF=100
 
 export PS1='\W\$ '
-
 export CDPATH="$CDPATH:./"
 export CDPATH="$CDPATH:$HOME/Documents/src"
 export CDPATH="$CDPATH:$HOME/Dropbox"
@@ -45,6 +44,5 @@ export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
-
-# Adding autocomplete for 'we'
+[ -f ~/.bashrc.local ] && . ~/.bashrc.local
 [ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
