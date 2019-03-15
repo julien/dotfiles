@@ -8,10 +8,11 @@
 	edit = !vim `git ls-files -m` -p
 	fi = !git ls-files | grep -i
 	gr = grep -Ii
-	l  = log --decorate --graph --oneline
-	lf = log --decorate --numstat
+	l  = log --oneline
+	lf = log --decorate --graph --numstat
 	s = status -sb
 	sm = diff --name-status --diff-filter=U # show unmerged
+
 
 [core]
 	excludesfile = /Users/jc/.gitignore
