@@ -23,10 +23,9 @@ esac
 
 IGNOREEOF=100
 
+CDPATH="$CDPATH:./:$HOME/Documents/src:$HOME/Dropbox"
+
 export PS1='\W\$ '
-export CDPATH="$CDPATH:./"
-export CDPATH="$CDPATH:$HOME/Documents/src"
-export CDPATH="$CDPATH:$HOME/Dropbox"
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
