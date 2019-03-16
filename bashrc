@@ -44,4 +44,3 @@ export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
-[ -f ~/.we_autocomplete ] && source ~/.we_autocomplete
