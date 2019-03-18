@@ -7,22 +7,19 @@ let mapleader="\<Space>"
 
 set autoread
 set backspace=indent,eol,start
-set dir=/tmp
 set grepprg=rg\ --vimgrep
 set hidden
 set incsearch
 set lazyredraw
-set laststatus=0
 set mouse=a
 set nocursorline
 set noeol
 set noerrorbells visualbell t_vb=""
-set nonumber
-set nostartofline
+set number
+" set nostartofline
 set noswapfile
 set nowrap
 set path+=**
-set ruler
 set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
 set synmaxcol=200 ttyfast
