@@ -21,8 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-[ -f "$HOME/Documents/bin/z.sh" ] &&
-  . "$HOME/Documents/bin/z.sh"
+[ -f "$HOME/.local/bin/z.sh" ] &&
+  . "$HOME/.local/bin/z.sh"
 
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
