@@ -16,7 +16,6 @@ set nocursorline
 set noeol
 set noerrorbells visualbell t_vb=""
 set number
-" set nostartofline
 set noswapfile
 set nowrap
 set path+=**
@@ -50,6 +49,7 @@ let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
 let g:netrw_winsize = 25
 
+let g:LanguageClient_diagnosticsList = 'Disabled'
 let g:LanguageClient_serverCommands = {
 \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
 \ 'javascript': ['javascript-typescript-stdio'],
