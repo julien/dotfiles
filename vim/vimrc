@@ -15,9 +15,9 @@ set mouse=a
 set nocursorline
 set noeol
 set noerrorbells visualbell t_vb=""
-set number
 set noswapfile
 set nowrap
+set number
 set path+=**
 set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
@@ -34,7 +34,6 @@ nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bd!<CR>
-nn <leader>l :ls<CR>:b<space>
 nm <silent> <C-t> :FZF<CR>
 nm <silent> <C-S-p> :pc<CR>
 
