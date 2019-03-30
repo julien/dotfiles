@@ -35,6 +35,7 @@
 
 [merge]
 	tool = vimdiff
+	conflictStyle = diff3
 
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
