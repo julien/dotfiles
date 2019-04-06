@@ -42,5 +42,4 @@ export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:./node_modules/.bin"
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && . ~/.fzf.bash
