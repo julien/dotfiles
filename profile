@@ -23,6 +23,4 @@ fi
 
 [ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
 
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
