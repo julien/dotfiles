@@ -23,7 +23,7 @@ esac
 
 IGNOREEOF=100
 
-CDPATH="$CDPATH:./:$HOME/Documents/src:$HOME/Dropbox"
+CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
 export PS1='\W\$ '
 export CLICOLOR=1
@@ -40,6 +40,7 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:$HOME/.rvm/bin"
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
