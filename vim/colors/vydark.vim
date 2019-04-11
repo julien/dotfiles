@@ -59,7 +59,7 @@ hi PreProc       guifg=#88ddcc  gui=none                  ctermfg=114 cterm=none
 hi Special       guifg=#99dd99  gui=bold                  ctermfg=113 cterm=bold
 hi Keyword       guifg=#bbbbbb  gui=none                  ctermfg=250 cterm=none
 
-hi link Function        Normal
+hi link Function        Type
 hi link Character       Constant
 hi link String          Constant
 hi link Boolean         Constant
