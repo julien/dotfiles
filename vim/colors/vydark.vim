@@ -19,7 +19,7 @@ hi Normal        guifg=#bbbbbb  guibg=#282828 						ctermfg=250 ctermbg=233
 hi Title         guifg=white    											 	 	ctermfg=231
 hi Cursor        guibg=white    											 		ctermbg=231
 hi LineNr        guifg=#444455  guibg=#292929					 		ctermfg=237 ctermbg=bg
-hi Visual        guibg=#555555 												 		ctermbg=240
+hi Visual        guibg=#555555 												 		ctermbg=240 ctermfg=182
 hi NonText       guifg=#292929  guibg=#292929          		ctermfg=235	ctermbg=bg
 hi StatusLine    guifg=#bbbbbb  guibg=#353535  gui=none		ctermfg=250 ctermbg=237 cterm=none
 hi StatusLineNC  guifg=#777777  guibg=#353535  gui=none		ctermfg=243 ctermbg=237 cterm=none
@@ -51,12 +51,12 @@ hi Todo          guifg=#8888aa  guibg=#303030  gui=italic ctermfg=103 ctermbg=23
 hi Operator      guifg=#bbbbbb  gui=none                  ctermfg=250 cterm=none
 hi Identifier    guifg=#bbbbbb  gui=none                  ctermfg=250 cterm=none
 hi Statement     guifg=#bbbbbb  gui=none                  ctermfg=250 cterm=none
-hi Type          guifg=#99bbcc  gui=none                  ctermfg=110 cterm=none
-hi Constant      guifg=#88cc99  gui=none                  ctermfg=114 cterm=none
-hi Conditional   guifg=#99bbcc  gui=none                  ctermfg=110 cterm=none
-hi Delimiter     guifg=#99bbdd  gui=none                  ctermfg=110 cterm=none
-hi PreProc       guifg=#88ddcc  gui=none                  ctermfg=114 cterm=none
-hi Special       guifg=#99dd99  gui=bold                  ctermfg=113 cterm=bold
+hi Type          guifg=#99bbcc  gui=none                  ctermfg=103 cterm=none
+hi Constant      guifg=#88cc99  gui=none                  ctermfg=104 cterm=none
+hi Conditional   guifg=#99bbcc  gui=none                  ctermfg=103 cterm=none
+hi Delimiter     guifg=#99bbdd  gui=none                  ctermfg=103 cterm=none
+hi PreProc       guifg=#88ddcc  gui=none                  ctermfg=98 cterm=none
+hi Special       guifg=#99dd99  gui=bold                  ctermfg=98 cterm=bold
 hi Keyword       guifg=#bbbbbb  gui=none                  ctermfg=250 cterm=none
 
 hi link Function        Type
