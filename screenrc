@@ -1,12 +1,23 @@
 startup_message off
-vbell off
-# huge scrollback buffer
 defscrollback 500000
-# colors
-attrcolor b ".I"
-term screen-256color-bce
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
-defbce "on"
+defutf8 on
+
+# support 256 color terminals
+# http://push.cx/2008/256-color-xterms-in-ubuntu
+
+  # terminfo and termcap for nice 256 color terminal
+  # allow bold colors - necessary for some reason
+  attrcolor b ".I"
+
+  # tell screen how to set colors. AB = background, AF=foreground
+  termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+  # erase background with current bg color
+  defbce on
+
+  # set TERM
+  term screen-256color-bce
+
 # scroll with mouse
 termcapinfo xterm* ti@:te@
 # status
@@ -16,3 +27,10 @@ msgminwait 0
 msgwait 0
 # window borders
 rendition so =00
+shelltitle ""
+altscreen on
+vbell off
+defflow off
+autodetach on
+nonblock on
+
