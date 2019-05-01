@@ -16,7 +16,7 @@ case "$OSTYPE" in
     ;;
   linux*)
     [ -f /etc/bash_completion ] && . /etc/bash_completion
-    alias ls="ls -a"
+    alias ls="ls -a --color=auto"
     alias open="xdg-open"
     ;;
 esac
