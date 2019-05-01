@@ -14,7 +14,6 @@ set incsearch
 set lazyredraw
 set mouse=a
 set nocursorline
-set noeol
 set noerrorbells visualbell t_vb=""
 set noswapfile
 set nowrap
@@ -50,6 +49,8 @@ let g:netrw_winsize = 25
 
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
+\ 'c': ['clangd'],
+\ 'cpp': ['clangd'],
 \ 'javascript': ['javascript-typescript-stdio'],
 \ 'typescript': ['javascript-typescript-stdio'],
 \ }
