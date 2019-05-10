@@ -29,6 +29,8 @@ export PS1='\W\$ '
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export FZF_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='--color=bw'
 export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
@@ -37,8 +39,7 @@ export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/node/bin"
-export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
+export PATH="$PATH:$HOME/.vim-plugins/fzf/bin"
 export PATH="$PATH:./node_modules/.bin"
-export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
