@@ -1,5 +1,4 @@
 set rtp+=~/.vim-plugins/LanguageClient-neovim
-" set rtp+=~/.vim-plugins/coc.nvim
 set rtp+=~/.vim-plugins/fzf
 
 filetype plugin indent on
@@ -8,7 +7,7 @@ let mapleader="\<Space>"
 
 set autoread
 set backspace=indent,eol,start
-" set grepprg=rg\ --vimgrep
+set grepprg=rg\ --vimgrep
 set hidden
 set ignorecase
 set incsearch
@@ -20,7 +19,6 @@ set nofixendofline
 set noswapfile
 set nowrap
 set number
-set omnifunc=syntaxcomplete#Complete
 set path+=**
 set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
@@ -53,6 +51,10 @@ let g:netrw_preview = 1
 let g:netrw_winsize = 25
 
 let g:LanguageClient_diagnosticsList = 'Location'
+let g:LanguageClient_rootMarkers = {
+\ 'javascript': ['tsconfig.json', 'package.json'],
+\ 'typescript': ['tsconfig.json', 'package.json'],
+\ }
 let g:LanguageClient_serverCommands = {
 \ 'javascript': ['javascript-typescript-stdio'],
 \ 'typescript': ['javascript-typescript-stdio'],
