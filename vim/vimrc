@@ -1,5 +1,6 @@
 set rtp+=~/.vim-plugins/LanguageClient-neovim
-set rtp+=~/.vim-plugins/fzf
+" set rtp+=~/.vim-plugins/fzf
+set rtp+=~/.vim-plugins/skim
 
 filetype plugin indent on
 syntax on
@@ -7,7 +8,7 @@ let mapleader="\<Space>"
 
 set autoread
 set backspace=indent,eol,start
-set grepprg=rg\ --vimgrep
+" set grepprg=rg\ --vimgrep
 set hidden
 set ignorecase
 set incsearch
@@ -36,7 +37,8 @@ nn <F2> :set invlist!<CR>
 nn <F3> :set nonu!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bd!<CR>
-nm <silent> <C-t> :FZF<CR>
+nm <silent> <C-t> :SK<CR>
+" nm <silent> <C-t> :FZF<CR>
 nm <silent> <C-S-p> :pc<CR>
 
 vn < <gv
@@ -59,7 +61,7 @@ let g:LanguageClient_serverCommands = {
 \ 'javascript': ['javascript-typescript-stdio'],
 \ 'typescript': ['javascript-typescript-stdio'],
 \ }
-nnoremap <leader><leader> :call LanguageClient_contextMenu()<CR>
+nnoremap <leader><leader> :call LanguageClient_contextMenu()<cr>
 
 colo apprentice
 au! GuiEnter * silent set visualbell t_vb=""
