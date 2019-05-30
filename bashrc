@@ -40,6 +40,8 @@ export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:$HOME/.vim-plugins/fzf/bin"
+export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
+export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
