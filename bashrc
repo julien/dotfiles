@@ -38,6 +38,7 @@ export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/llvm/bin"
 export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:$HOME/.vim-plugins/fzf/bin"
 export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
