@@ -25,13 +25,19 @@ IGNOREEOF=100
 
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
+shopt -s cmdhist
+shopt -s histappend
+HISTIGNORE='ls:bg:fg:history'
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+
 export PS1='\W\$ '
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export FZF_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='--color=bw'
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
