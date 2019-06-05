@@ -42,6 +42,7 @@ export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
+export N_PREFIX="$HOME/.local"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/llvm/bin"
