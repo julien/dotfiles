@@ -8,7 +8,6 @@ let mapleader="\<Space>"
 
 set autoread
 set backspace=indent,eol,start
-" set grepprg=rg\ --vimgrep
 set hidden
 set ignorecase
 set incsearch
@@ -54,14 +53,14 @@ let g:netrw_winsize = 25
 
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_rootMarkers = {
-\ 'javascript': ['tsconfig.json', 'package.json'],
+\ 'javascript': ['package.json'],
 \ 'typescript': ['tsconfig.json', 'package.json'],
 \ }
 let g:LanguageClient_serverCommands = {
 \ 'javascript': ['javascript-typescript-stdio'],
 \ 'typescript': ['javascript-typescript-stdio'],
 \ }
-nnoremap <leader><leader> :call LanguageClient_contextMenu()<cr>
+nnoremap <leader><leader> :call LanguageClient_contextMenu()<CR>
 
 colo apprentice
 au! GuiEnter * silent set visualbell t_vb=""
