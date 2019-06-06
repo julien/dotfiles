@@ -14,26 +14,27 @@ setopt EXTENDED_GLOB
 setopt MULTIOS
 setopt CORRECT
 
-# setopt autocd
+setopt autocd
 setopt extendedglob
 
-# Set colors
-autoload colors; colors;
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
-if [ "$DISABLE_LS_COLORS" != "true" ]
-then
-  # Find the option for using colors in ls, depending on the version: Linux or BSD
-  ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -1a'
-fi
+case "$OSTYPE" in
+  darwin*)
+    export ANT_OPTS="-Xmx4096m"
+    export JAVA_HOME=$(/usr/libexec/java_home)
+    export JAVA_OPTS="-Xmx4096m"
+    alias brewlist="brew uses --installed $1"
+    alias brewpurge="brew cleanup -s"
+    alias ls="ls -a"
+    alias vim="/Applications/MacVim.app/Contents/bin/vim"
+    alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
+    ;;
+  linux*)
+    [ -f /etc/bash_completion ] && . /etc/bash_completion
+    alias ls="ls -a --color=auto"
+    alias open="xdg-open"
+    ;;
+esac
 
-HISTFILE=~/.zhistory
-HISTSIZE=SAVEHIST=1000
-setopt incappendhistory
-setopt sharehistory
-setopt extendedhistory
-
-
-# Useful to remember command in history without executing them
 setopt interactivecomments
 
 # Add tab completion to "cd.."
@@ -42,7 +43,7 @@ zstyle ':completion:*' special-dirs true
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
 # ENV vars
-export PS1="%U%C%u [%1j] %% "
+export PS1="%B%1~%b %# "
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
