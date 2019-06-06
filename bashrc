@@ -8,17 +8,19 @@ case "$OSTYPE" in
     export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m"
-    alias brewlist="brew uses --installed $1"
-    alias brewpurge="brew cleanup -s"
-    alias ls="ls -a"
-    alias vim="/Applications/MacVim.app/Contents/bin/vim"
-    alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
-    ;;
-  linux*)
-    [ -f /etc/bash_completion ] && . /etc/bash_completion
-    alias ls="ls -a --color=auto"
-    alias open="xdg-open"
-    ;;
+    function brewlist() {
+      [[ $# -gt 0 ]] && brew uses --installed "$1"
+    }
+  alias brewpurge="brew cleanup -s"
+  alias ls="ls -a"
+  alias vim="/Applications/MacVim.app/Contents/bin/vim"
+  alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
+  ;;
+linux*)
+  [ -f /etc/bash_completion ] && . /etc/bash_completion
+  alias ls="ls -a --color=auto"
+  alias open="xdg-open"
+  ;;
 esac
 
 IGNOREEOF=100
