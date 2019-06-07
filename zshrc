@@ -43,7 +43,7 @@ zstyle ':completion:*' special-dirs true
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
 # ENV vars
-export PS1="%B%1~%b %# "
+export PS1="%1~%b %# "
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
