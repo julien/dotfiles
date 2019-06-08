@@ -7,13 +7,6 @@ autoload -U promptinit
 promptinit
 prompt off
 
-setopt AUTO_CD
-setopt NO_BEEP
-setopt EXTENDED_GLOB
-
-setopt MULTIOS
-setopt CORRECT
-
 setopt autocd
 setopt extendedglob
 
