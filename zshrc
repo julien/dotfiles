@@ -15,7 +15,6 @@ case "$OSTYPE" in
     export ANT_OPTS="-Xmx4096m"
     export JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_OPTS="-Xmx4096m"
-    alias brewlist="brew uses --installed $1"
     alias brewpurge="brew cleanup -s"
     alias ls="ls -a"
     alias vim="/Applications/MacVim.app/Contents/bin/vim"
@@ -36,7 +35,7 @@ zstyle ':completion:*' special-dirs true
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
 # ENV vars
-export PS1="%1~%b %# "
+export PS1="%1~%b%# "
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -47,7 +46,6 @@ export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
-export N_PREFIX="$HOME/.local"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/llvm/bin"
