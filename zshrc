@@ -51,3 +51,5 @@ export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
+
+[ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
