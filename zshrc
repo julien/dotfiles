@@ -9,6 +9,10 @@ prompt off
 
 setopt autocd
 setopt extendedglob
+setopt interactivecomments
+
+# Add tab completion to "cd.."
+zstyle ':completion:*' special-dirs true
 
 case "$OSTYPE" in
   darwin*)
@@ -27,14 +31,8 @@ case "$OSTYPE" in
     ;;
 esac
 
-setopt interactivecomments
-
-# Add tab completion to "cd.."
-zstyle ':completion:*' special-dirs true
-
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
-# ENV vars
 export PS1="%1~%b%# "
 export CLICOLOR=1
 export VISUAL=vim
