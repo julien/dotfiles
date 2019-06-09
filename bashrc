@@ -1,4 +1,10 @@
 export FIGNORE="$FIGNORE:DS_Store"
+shopt -s cmdhist
+shopt -s histappend
+HISTIGNORE='ls:bg:fg:history'
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+IGNOREEOF=100
 
 case "$OSTYPE" in
 	darwin*)
@@ -20,15 +26,7 @@ case "$OSTYPE" in
 		;;
 esac
 
-IGNOREEOF=100
-
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
-
-shopt -s cmdhist
-shopt -s histappend
-HISTIGNORE='ls:bg:fg:history'
-HISTFILESIZE=1000000
-HISTSIZE=1000000
 
 export PS1='\W\$ '
 export CLICOLOR=1
@@ -48,3 +46,4 @@ export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
+[ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
