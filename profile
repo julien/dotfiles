@@ -20,7 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-[ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
-
-
