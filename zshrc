@@ -8,8 +8,6 @@ promptinit
 prompt off
 
 setopt autocd
-setopt extendedglob
-setopt interactivecomments
 
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
@@ -25,7 +23,6 @@ case "$OSTYPE" in
     alias vimdiff="/Applications/MacVim.app/Contents/bin/vimdiff"
     ;;
   linux*)
-    [ -f /etc/bash_completion ] && . /etc/bash_completion
     alias ls="ls -a --color=auto"
     alias open="xdg-open"
     ;;
@@ -37,7 +34,6 @@ export PS1="%1~%b%# "
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
-export HISTCONTROL=ignoreboth
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
@@ -52,6 +48,5 @@ export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 
 [ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
 
-
+# Make fn+delete work as forward delete on macos
 bindkey "^[[3~" delete-char
-
