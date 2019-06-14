@@ -1,14 +1,6 @@
-autoload -U zutil
 autoload -U compinit
-autoload -U complist
 compinit -i
-
-autoload -U promptinit
-promptinit
-prompt off
-
 setopt autocd
-
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
 
@@ -45,6 +37,7 @@ export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
+export SKIM_DEFAULT_OPTIONS='--color=bw'
 
 [ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
 
