@@ -1,9 +1,5 @@
 export FIGNORE="$FIGNORE:DS_Store"
 shopt -s cmdhist
-shopt -s histappend
-HISTIGNORE='ls:bg:fg:history'
-HISTFILESIZE=1000000
-HISTSIZE=1000000
 IGNOREEOF=100
 
 case "$OSTYPE" in
@@ -44,6 +40,7 @@ export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
+export SKIM_DEFAULT_OPTIONS='--color=bw'
 
 [ -f ~/.bashrc.local ] && . ~/.bashrc.local
 [ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
