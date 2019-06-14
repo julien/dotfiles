@@ -37,7 +37,7 @@ nn <F3> :set nonu!<CR>
 nn <F4> :set cursorline!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bd!<CR>
-nm <silent> <C-t> :SK<CR>
+nm <silent> <C-t> :SK --color=bw<CR>
 nm <silent> <C-S-p> :pc<CR>
 
 vn < <gv
@@ -52,7 +52,7 @@ let g:netrw_preview = 1
 
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_rootMarkers = {
-\ 'javascript': ['package.json'],
+\ 'javascript': ['package.json', 'tsconfig.json'],
 \ 'typescript': ['tsconfig.json', 'package.json'],
 \ }
 let g:LanguageClient_serverCommands = {
