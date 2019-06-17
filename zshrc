@@ -44,13 +44,3 @@ export SKIM_DEFAULT_OPTIONS='--color=bw'
 # Make fn+delete work as forward delete on macos
 bindkey "^[[3~" delete-char
 
-bindkey '"\C-f":"_skim_insert"'
-_skim_insert() {
-    local files="$(sk --cmd='rg --files' --multi)"
-    if [[ $? -eq 0 ]]; then
-        local completions="$(python3 -c 'import sys, shlex; print(" ".join(shlex.quote(a.rstrip("\n")) for a in sys.argv[1].splitlines()))' "$files")"
-        READLINE_LINE="${READLINE_LINE:0:$READLINE_POINT}${completions}${READLINE_LINE:$READLINE_POINT}"
-        READLINE_POINT=$(( $READLINE_POINT + ${#READLINE_LINE} ))
-    fi
-}
-
