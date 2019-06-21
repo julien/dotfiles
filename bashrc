@@ -1,6 +1,7 @@
 export FIGNORE="$FIGNORE:DS_Store"
 shopt -s cmdhist
 IGNOREEOF=100
+export PS1='\W\$ '
 
 case "$OSTYPE" in
 	darwin*)
@@ -24,7 +25,6 @@ esac
 
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
-export PS1='\W\$ '
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -42,5 +42,3 @@ export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export SKIM_DEFAULT_OPTIONS='--color=bw'
 
-[ -f ~/.bashrc.local ] && . ~/.bashrc.local
-[ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
