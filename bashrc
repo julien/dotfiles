@@ -41,4 +41,3 @@ export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export SKIM_DEFAULT_OPTIONS='--color=bw'
-
