@@ -25,6 +25,11 @@ esac
 
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
+function z() {
+	local DIR
+	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
+}
+
 export CLICOLOR=1
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -36,6 +41,7 @@ export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/llvm/bin"
+export PATH="$PATH:$HOME/.local/n/bin"
 export PATH="$PATH:$HOME/.local/node/bin"
 export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
