@@ -5,8 +5,8 @@
 	gr = grep -Ii
 	l  = log --oneline
 	lf = log --numstat
-	ll = log -p --oneline HEAD~1...HEAD
 	lg = !git log --oneline | sk --no-multi
+	ll = log -p --oneline HEAD~1...HEAD
 	s = status -sb
 	sm = diff --name-status --diff-filter=U # show unmerged
 
