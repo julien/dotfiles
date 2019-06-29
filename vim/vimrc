@@ -8,7 +8,7 @@ let mapleader="\<Space>"
 
 set autoread
 set backspace=indent,eol,start
-set completeopt+=menuone,noselect
+set completeopt+=menuone,noinsert,noselect
 set hidden
 set ignorecase
 set incsearch
@@ -25,6 +25,7 @@ set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
 set shortmess+=c
 set synmaxcol=200 ttyfast
+set updatetime=500
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
