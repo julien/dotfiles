@@ -34,7 +34,7 @@ im jj <ESC>
 nn j gj
 nn k gk
 nn / /\v\C
-nn nzz
+nn n nzz
 nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <silent> <leader>e :Explore<CR>
