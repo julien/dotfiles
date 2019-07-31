@@ -30,14 +30,14 @@
 	sslVerify = false
 
 [merge]
-	tool = vimdiff
 	conflictStyle = diff3
+	tool = vimdiff
 
 [merge "npm-merge-driver"]
-	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
+	name = automatically merge npm lockfiles
 
 [user]
-	name = Julien Castelain
 	email = julien.castelain@liferay.com
 	logallrefupdates = true
+	name = Julien Castelain
