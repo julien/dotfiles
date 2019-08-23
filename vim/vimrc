@@ -13,6 +13,7 @@ set ignorecase
 set incsearch
 set lazyredraw
 set mouse=a
+set nobackup nowritebackup
 set nocursorline
 set noerrorbells visualbell t_vb=""
 set nofixendofline
@@ -61,7 +62,6 @@ let g:LanguageClient_serverCommands = {
 \ }
 set completefunc=LanguageClient#complete
 set omnifunc=LanguageClient#complete
-" let g:mucomplete#enable_auto_at_startup = 1
 
 colo apprentice
 au! GuiEnter * silent set visualbell t_vb=""
