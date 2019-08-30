@@ -62,6 +62,7 @@ let g:LanguageClient_serverCommands = {
 \ }
 set completefunc=LanguageClient#complete
 set omnifunc=LanguageClient#complete
+imap <c-space> <c-x><c-o>
 
 colo apprentice
 au! GuiEnter * silent set visualbell t_vb=""
