@@ -16,7 +16,7 @@ defutf8 on
   defbce on
 
   # set TERM
-  term screen-256color-bce
+  term xterm-256color
 
 # scroll with mouse
 termcapinfo xterm* ti@:te@
