@@ -57,6 +57,7 @@ let g:LanguageClient_rootMarkers = {
 \ 'typescript': ['tsconfig.json', 'package.json'],
 \ }
 let g:LanguageClient_serverCommands = {
+\ 'c': ['clangd'],
 \ 'javascript': ['javascript-typescript-stdio'],
 \ 'typescript': ['javascript-typescript-stdio'],
 \ }
