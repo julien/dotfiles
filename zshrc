@@ -7,7 +7,6 @@ zstyle ':completion:*' special-dirs true
 # Make fn+delete work as forward delete on macos
 bindkey "^[[3~" delete-char
 export PS1="%1~%b%# "
-export RPROMPT="%T"
 
 case "$OSTYPE" in
   darwin*)
