@@ -11,7 +11,7 @@
 	sm = diff --name-status --diff-filter=U # show unmerged
 
 [core]
-	excludesfile = /Users/jc/.gitignore
+	excludesfile = /home/jc/.gitignore
 	filemode = false
 	precomposeUnicode = true
 	quotepath = false
