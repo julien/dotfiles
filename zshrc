@@ -8,7 +8,7 @@ zstyle ':completion:*' special-dirs true
 bindkey "^[[3~" delete-char
 export PS1="%1~%b%# "
 
-alias ls="ls -a --color=auto"
+alias ls="ls -a --color=auto -w 80"
 alias open="xdg-open"
 
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
