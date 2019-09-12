@@ -14,7 +14,7 @@ function z() {
 	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
 }
 
-export ANT_OPTS="-Xmx4096m"
+export ANT_OPTS="-Xmx2560m"
 export JAVA_HOME="$HOME/.local/jdk"
 export JAVA_OPTS="-Xmx4096m"
 export CLICOLOR=1
@@ -33,6 +33,8 @@ export PATH="$PATH:$HOME/.local/jdk/bin"
 export PATH="$PATH:$HOME/.local/jdk/jre/bin"
 export PATH="$PATH:$HOME/.local/llvm/bin"
 export PATH="$PATH:$HOME/.local/n/bin"
+export PATH="$PATH:$HOME/.local/node/bin"
+export PATH="$PATH:$HOME/.local/nvim/bin"
 export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
