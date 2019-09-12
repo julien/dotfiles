@@ -1,5 +1,5 @@
-set rtp+=~/.vim-plugins/LanguageClient-neovim
-set rtp+=~/.vim-plugins/skim
+set rtp+=$HOME/.vim-plugins/LanguageClient-neovim
+set rtp+=$HOME/.vim-plugins/skim
 
 filetype plugin indent on
 syntax on
