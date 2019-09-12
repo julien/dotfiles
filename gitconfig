@@ -7,8 +7,7 @@
 	lf = log --numstat
 	lg = !git log --oneline | sk --no-multi
 	ll = log -p --oneline HEAD~1...HEAD
-	s = status -sb
-	sm = diff --name-status --diff-filter=U # show unmerged
+	s = status
 
 [core]
 	excludesfile = /home/jc/.gitignore
