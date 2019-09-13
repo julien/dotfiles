@@ -9,4 +9,4 @@ let g:mucomplete#complete_delay = 1
 set nonumber
 set signcolumn=yes
 set laststatus=0
-hi SignColumn ctermfg=8 ctermbg=0 guifg=Grey guibg=Black
+hi SignColumn ctermfg=8 ctermbg=bg guifg=Grey guibg=Black
