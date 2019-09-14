@@ -1,4 +1,4 @@
-! vim: set filetype=xdefaults :
+! vim: set filetype=xdefaults
 ! Xft
 Xft.antialias: true
 Xft.dpi:       92
@@ -6,7 +6,6 @@ Xft.hinting:   true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 Xft.rgba:      rgb
-
 
 ! XTerm
 XTerm*allowBoldFonts: true
@@ -21,24 +20,22 @@ XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
 
-! Tango color scheme
-*foreground: #a8a8a8
+*foreground: #BCBCBC
 *background: #000000
 XTerm*cursorColor: #5f5f5f
-XTerm*color0: #000000
-XTerm*color8: #888A85
-XTerm*color1: #cc0000
-XTerm*color9: #ef2929
-XTerm*color2: #4e9a06
-XTerm*color10: #8ae234
-XTerm*color3: #edd400
-XTerm*color11: #fce94f
-XTerm*color4: #3465a4
-XTerm*color12: #729fcf
-XTerm*color5: #92659a
-XTerm*color13: #c19fbe
-XTerm*color6: #07c7ca
-XTerm*color14: #63e9e9
-XTerm*color7: #d3d7cf
-XTerm*color15: #eeeeec
-
+XTerm*color0:     #1C1C1C
+XTerm*color8:     #444444
+XTerm*color1:     #AF5F5F
+XTerm*color9:     #FF8700
+XTerm*color2:     #5F875F
+XTerm*color10:    #87AF87
+XTerm*color3:     #87875F
+XTerm*color11:    #FFFFAF
+XTerm*color4:     #5F87AF
+XTerm*color12:    #8FAFD7
+XTerm*color5:     #5F5F87
+XTerm*color13:    #8787AF
+XTerm*color6:     #5F8787
+XTerm*color14:    #5FAFAF
+XTerm*color7:     #6C6C6C
+XTerm*color15:    #FFFFFF
