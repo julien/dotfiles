@@ -1,0 +1,30 @@
+#!/bin/bash
+
+ln -i -s "$(pwd)/vim"       "$HOME/.vim"
+ln -i -s "$(pwd)/bashrc"    "$HOME/.bashrc"
+ln -i -s "$(pwd)/gitconfig" "$HOME/.gitconfig"
+ln -i -s "$(pwd)/gitignore" "$HOME/.gitignore"
+
+printf "Are you going to use lxterminal? "
+read -r yn
+case $yn in
+	[Yy]* ) ln -i -s "$(pwd)/lxterminal.conf" ~/.config/lxterminal/;
+esac
+
+printf "Are you going to use tmux? "
+read -r yn
+case $yn in
+	[Yy]* ) ln -i -s "$(pwd)/tmux.conf" "$HOME/.tmux.conf";
+esac
+
+printf "Are you going to use zsh? "
+read -r yn
+case $yn in
+	[Yy]* ) ln -i -s "$(pwd)/zshrc" "$HOME/.zshrc";
+esac
+
+printf "Are you going to use xterm? "
+read -r yn
+case $yn in
+	[Yy]* ) ln -i -s "$(pwd)/XResources" "$HOME/.Xresources";
+esac
