@@ -1,4 +1,3 @@
-export FIGNORE="$FIGNORE:DS_Store"
 shopt -s cmdhist
 IGNOREEOF=100
 export PS1='\W\$ '
@@ -18,9 +17,7 @@ function z() {
 export ANT_OPTS="-Xmx2560m"
 export JAVA_HOME="$HOME/.local/jdk"
 export JAVA_OPTS="-Xmx4096m"
-export CLICOLOR=1
-export VISUAL=vim
-export EDITOR="$VISUAL"
+export EDITOR=vim
 export HISTCONTROL=ignoreboth
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
