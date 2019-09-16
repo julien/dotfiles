@@ -8,7 +8,7 @@ ln -i -s "$(pwd)/gitignore" "$HOME/.gitignore"
 printf "Are you going to use lxterminal? "
 read -r yn
 case $yn in
-	[Yy]* ) ln -i -s "$(pwd)/lxterminal.conf" ~/.config/lxterminal/;
+	[Yy]* ) ln -i -s "$(pwd)/lxterminal.conf" "$HOME/.config/lxterminal/";
 esac
 
 printf "Are you going to use tmux? "
