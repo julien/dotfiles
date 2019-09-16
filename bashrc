@@ -15,10 +15,10 @@ function z() {
 }
 
 export ANT_OPTS="-Xmx2560m"
-export JAVA_HOME="$HOME/.local/jdk"
-export JAVA_OPTS="-Xmx4096m"
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
+export JAVA_HOME="$HOME/.local/jdk"
+export JAVA_OPTS="-Xmx4096m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
