@@ -1,4 +1,2 @@
-*.old
 *.txt
 *vscode*
-.DS_Store
