@@ -45,6 +45,8 @@ vn < <gv
 vn > >gv
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
+au BufNewFile,BufRead *.jsx setf javascript
+au BufNewFile,BufRead *.tsx setf typescript
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
