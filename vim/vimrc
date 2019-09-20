@@ -23,6 +23,7 @@ set path+=**
 set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
 set shortmess+=c
+set signcolumn=yes
 set synmaxcol=200 ttyfast
 set updatetime=500
 set wildignore+=.git/*,.gradle/*,node_modules/*
@@ -54,16 +55,16 @@ let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
 
 let g:LanguageClient_diagnosticsList = 'Location'
-let g:LanguageClient_rootMarkers = {
-\ 'javascript': ['package.json', 'tsconfig.json'],
-\ 'typescript': ['tsconfig.json', 'package.json'],
-\ }
 let g:LanguageClient_serverCommands = {
 \ 'c': ['clangd'],
 \ 'javascript': ['javascript-typescript-stdio'],
+\ 'javascriptreact': ['javascript-typescript-stdio'],
 \ 'typescript': ['javascript-typescript-stdio'],
+\ 'typescriptreact': ['javascript-typescript-stdio'],
 \ }
-set completefunc=LanguageClient#complete
+let g:LanguageClient_loggingLevel = 'INFO'
+let g:LanguageClient_windowLogMessageLevel = 'Info'
+
 set omnifunc=LanguageClient#complete
 imap <c-space> <c-x><c-o>
 
@@ -78,3 +79,5 @@ if has("gui_running")
     set guifont=Input\ 12
   endif
 endif
+
+hi SignColumn ctermbg=bg guibg=bg
