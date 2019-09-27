@@ -64,8 +64,6 @@ let g:LanguageClient_serverCommands = {
 \ }
 let g:LanguageClient_loggingLevel = 'INFO'
 let g:LanguageClient_windowLogMessageLevel = 'Info'
-hi SignColumn ctermbg=bg guibg=bg
-hi link ALEError Error
 set omnifunc=LanguageClient#complete
 imap <c-space> <c-x><c-o>
 
@@ -80,3 +78,5 @@ if has("gui_running")
     set guifont=Input\ 12
   endif
 endif
+hi SignColumn ctermbg=bg guibg=bg
+hi link ALEError Error
