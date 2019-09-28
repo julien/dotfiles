@@ -69,11 +69,7 @@ au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
   set guicursor+=a:blinkon0
-  if has("mac")
-    set guifont=Menlo:h14
-  elseif has("unix")
-    set guifont=Input\ 12
-  endif
+	set guifont=Input\ 12
 endif
 hi SignColumn ctermbg=bg guibg=bg
 hi link ALEError Error
