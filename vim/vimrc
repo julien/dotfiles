@@ -33,7 +33,7 @@ im <F1> <Nop>
 im jj <ESC>
 nn j gj
 nn k gk
-nn / /\v\C
+nn / /\v
 nn n nzz
 nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
@@ -62,10 +62,7 @@ let g:LanguageClient_serverCommands = {
 \ 'typescript': ['javascript-typescript-stdio'],
 \ 'typescriptreact': ['javascript-typescript-stdio'],
 \ }
-let g:LanguageClient_loggingLevel = 'INFO'
-let g:LanguageClient_windowLogMessageLevel = 'Info'
 set omnifunc=LanguageClient#complete
-imap <c-space> <c-x><c-o>
 
 colo apprentice
 au! GuiEnter * silent set visualbell t_vb=""
