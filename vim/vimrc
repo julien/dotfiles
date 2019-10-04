@@ -15,8 +15,8 @@ set lazyredraw
 set mouse=a
 set nobackup nowritebackup
 set nocursorline
-set noerrorbells visualbell t_vb=""
 set nofixendofline
+set noerrorbells visualbell t_vb=""
 set noswapfile
 set nowrap
 set path+=**
@@ -57,10 +57,10 @@ let g:netrw_preview = 1
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
 \ 'c': ['clangd'],
-\ 'javascript': ['javascript-typescript-stdio'],
-\ 'javascriptreact': ['javascript-typescript-stdio'],
-\ 'typescript': ['javascript-typescript-stdio'],
-\ 'typescriptreact': ['javascript-typescript-stdio'],
+\ 'javascript': ['typescript-language-server --stdio'],
+\ 'javascriptreact': ['typescript-language-server --stdio'],
+\ 'typescript': ['typescript-language-server --stdio'],
+\ 'typescriptreact': ['typescript-language-server --stdio'],
 \ }
 set omnifunc=LanguageClient#complete
 
@@ -71,5 +71,3 @@ if has("gui_running")
   set guicursor+=a:blinkon0
 	set guifont=Input\ 12
 endif
-hi SignColumn ctermbg=bg guibg=bg
-hi link ALEError Error
