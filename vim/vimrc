@@ -64,7 +64,7 @@ let g:LanguageClient_serverCommands = {
 \ }
 set omnifunc=LanguageClient#complete
 
-colo apprentice
+colo wombat
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
