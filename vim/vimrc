@@ -1,4 +1,5 @@
 set rtp+=$HOME/.vim-plugins/LanguageClient-neovim
+set rtp+=$HOME/.vim-plugins/VimCompletesMe
 set rtp+=$HOME/.vim-plugins/skim
 
 filetype plugin indent on
@@ -7,7 +8,7 @@ let mapleader="\<Space>"
 
 set autoread
 set backspace=indent,eol,start
-set completeopt+=menuone,noinsert,noselect
+set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set ignorecase
 set incsearch
@@ -53,15 +54,12 @@ let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
-let g:netrw_silent = 1
 
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
 \ 'c': ['clangd'],
 \ 'javascript': ['typescript-language-server', '--stdio'],
-\ 'javascriptreact': ['typescript-language-server', '--stdio'],
 \ 'typescript': ['typescript-language-server', '--stdio'],
-\ 'typescriptreact': ['typescript-language-server', '--stdio'],
 \ }
 set omnifunc=LanguageClient#complete
 
