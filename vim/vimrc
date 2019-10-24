@@ -9,21 +9,17 @@ set autoread
 set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
-set ignorecase
 set incsearch
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
 set nocursorline
-set nofixendofline
 set noerrorbells visualbell t_vb=""
 set noswapfile
 set nowrap
 set path+=**
 set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
-set shortmess+=c
-set signcolumn=yes
 set synmaxcol=200 ttyfast
 set updatetime=500
 set wildignore+=.git/*,.gradle/*,node_modules/*
@@ -39,7 +35,7 @@ nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <F3> :set number!<CR>
 nn <silent> <leader>e :Explore<CR>
-nn <silent> <leader>q :%bd!<CR>
+nn <silent> <leader>q :%bw!<CR>
 nm <silent> <C-t> :SK<CR>
 nm <silent> <C-S-p> :pc<CR>
 vn < <gv
@@ -52,7 +48,6 @@ au BufNewFile,BufRead *.tsx set syntax=typescript
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
-let g:netrw_preview = 1
 
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
