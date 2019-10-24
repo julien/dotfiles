@@ -40,6 +40,7 @@ nm <silent> <C-t> :SK<CR>
 nm <silent> <C-S-p> :pc<CR>
 vn < <gv
 vn > >gv
+nn <silent> <leader>d :lcd %:p:h<CR> " change current pwd
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au BufNewFile,BufRead *.jsx set syntax=javascript
