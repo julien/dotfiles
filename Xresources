@@ -13,7 +13,7 @@ XTerm*boldMode: true
 XTerm*eightBitInput: false
 XTerm*faceName: Input:size=11:antialias=true
 XTerm*fastScroll: true
-XTerm*geometry: 90x40
+XTerm*geometry: 80x30
 XTerm*locale: true
 XTerm*loginShell: true
 XTerm*metaSendsEscape: true
