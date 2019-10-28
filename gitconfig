@@ -5,7 +5,6 @@
 	gr = grep -Ii
 	l  = log --oneline
 	lf = log --numstat
-	lg = !git log --oneline | sk --no-multi
 	ll = log -p --oneline HEAD~1...HEAD
 	s = status
 
@@ -31,6 +30,7 @@
 [merge]
 	conflictStyle = diff3
 	tool = vimdiff
+	renameLimit = 999999
 
 [merge "npm-merge-driver"]
 	driver = npx npm-merge-driver merge %A %O %B %P
