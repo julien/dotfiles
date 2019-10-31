@@ -1,3 +1,4 @@
+set rtp+=$HOME/.vim-plugins/LanguageClient-neovim
 set rtp+=$HOME/.vim-plugins/skim
 
 filetype plugin indent on
@@ -46,6 +47,20 @@ nn <silent> <leader>d :lcd %:p:h<CR> " change current pwd
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au BufNewFile,BufRead *.jsx set syntax=javascript
 au BufNewFile,BufRead *.tsx set syntax=typescript
+
+let g:LanguageClient_diagnosticsList = 'Location'
+let g:LanguageClient_rootMarkers = {
+\ 'javascript': ['tsconfig.json', 'package.json'],
+\ 'typescript': ['tsconfig.json', 'package.json'],
+\ }
+let g:LanguageClient_serverCommands = {
+\ 'c': ['clangd'],
+\ 'javascript': ['typescript-language-server', '--stdio'],
+\ 'typescript': ['typescript-language-server', '--stdio'],
+\ }
+let g:LanguageClient_loggingLevel = 'DEBUG'
+nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
+set omnifunc=LanguageClient#complete
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
