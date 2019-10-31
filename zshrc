@@ -43,6 +43,7 @@ export PATH="$PATH:$HOME/.local/jdk/bin"
 export PATH="$PATH:$HOME/.local/jdk/jre/bin"
 export PATH="$PATH:$HOME/.local/llvm/bin"
 export PATH="$PATH:$HOME/.local/node/bin"
+export PATH="$PATH:$HOME/.local/nvim/bin"
 export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
 export PATH="$PATH:./node_modules/.bin"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
