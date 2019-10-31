@@ -11,8 +11,6 @@ zstyle -e ':completion:*:hosts' hosts 'reply=(
 
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
-# Make fn+delete work as forward delete on macos
-bindkey "^[[3~" delete-char
 export PS1="%1~%b%# "
 
 alias ls="ls -a --color=auto -w 80"
@@ -24,7 +22,6 @@ function z() {
 	local DIR
 	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
 }
-
 
 export ANT_OPTS="-Xmx2560m"
 export CLICOLOR=1
