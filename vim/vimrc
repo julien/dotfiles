@@ -18,10 +18,11 @@ set nocursorline
 set noerrorbells visualbell t_vb=""
 set noswapfile
 set nowrap
+set number
 set path+=**
 set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
-set signcolumn=yes
+set signcolumn=number
 set synmaxcol=200 ttyfast
 set updatetime=500
 set wildignore+=.git/*,.gradle/*,node_modules/*
@@ -64,6 +65,7 @@ set omnifunc=LanguageClient#complete
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
+let g:netrw_preview = 1
 
 colo wombat
 au! GuiEnter * silent set visualbell t_vb=""
