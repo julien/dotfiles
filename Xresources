@@ -19,7 +19,7 @@ XTerm*loginShell: true
 XTerm*metaSendsEscape: true
 XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
-XTerm*termName: xterm-256color
+XTerm*termName: screen-256color
 
 *foreground: #BCBCBC
 *background: #000000
