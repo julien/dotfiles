@@ -21,7 +21,6 @@ set nowrap
 set path+=**
 set scrolljump=8 " ttyscroll=3
 set shiftwidth=2 tabstop=2
-set signcolumn=number
 set synmaxcol=200 ttyfast
 set updatetime=500
 set wildignore+=.git/*,.gradle/*,node_modules/*
