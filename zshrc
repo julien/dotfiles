@@ -15,6 +15,7 @@ export PS1="%1~%b%# "
 
 alias ls="ls -a --color=auto -w 80"
 alias open="xdg-open"
+alias vim="nvim"
 
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
