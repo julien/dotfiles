@@ -11,19 +11,17 @@ set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set incsearch
 set lazyredraw
-set laststatus=0
+set laststatus=0 noruler
 set mouse=a
 set nobackup nowritebackup
 set nocursorline
 set noerrorbells visualbell t_vb=""
 set noswapfile
 set nowrap
-set number
 set path+=**
-set scrolljump=8 " ttyscroll=3
+set scrolljump=8
 set shiftwidth=2 tabstop=2
 set synmaxcol=200 ttyfast
-" set updatetime=500
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
