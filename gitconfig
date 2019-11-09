@@ -1,7 +1,6 @@
 # vim: ft=gitconfig
 [alias]
 	edit = !vim `git ls-files -m` -p
-	fi = !git ls-files | grep -i
 	gr = grep -Ii
 	l  = log --oneline
 	lf = log --numstat
