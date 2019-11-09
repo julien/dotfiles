@@ -10,14 +10,13 @@ set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set incsearch
-set lazyredraw
 set laststatus=0 noruler
+set lazyredraw
 set mouse=a
 set nobackup nowritebackup
 set nocursorline
 set noerrorbells visualbell t_vb=""
 set noswapfile
-set nowrap
 set path+=**
 set scrolljump=8
 set shiftwidth=2 tabstop=2
