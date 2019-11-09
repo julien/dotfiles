@@ -56,6 +56,7 @@ let g:LanguageClient_serverCommands = {
 \ 'javascript': ['typescript-language-server', '--stdio'],
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ }
+let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
 set omnifunc=LanguageClient#complete
 
