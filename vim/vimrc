@@ -41,6 +41,8 @@ vn > >gv
 nn <silent> <leader>d :lcd %:p:h<CR> " change current pwd
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
+au BufNewFile,BufRead *.jsx set syntax=javascript
+au BufNewFile,BufRead *.tsx set syntax=typescript
 
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_rootMarkers = {
