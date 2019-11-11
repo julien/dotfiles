@@ -32,6 +32,7 @@ export JAVA_HOME="$HOME/.local/jdk"
 export JAVA_OPTS="-Xmx2560m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
+export LIFERAY_HOME="/home/jc/Documents/portal"
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
