@@ -17,6 +17,7 @@ set nobackup nowritebackup
 set nocursorline
 set noerrorbells visualbell t_vb=""
 set noswapfile
+set nowrap
 set number
 set path+=**
 set scrolljump=8
@@ -56,6 +57,7 @@ let g:LanguageClient_serverCommands = {
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ 'typescriptreact': ['typescript-language-server', '--stdio'],
 \ }
+let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
 set omnifunc=LanguageClient#complete
 
