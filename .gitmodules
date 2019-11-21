@@ -10,3 +10,6 @@
 [submodule "vim/pack/bundles/start/vcs-jump"]
 	path = vim/pack/bundles/start/vcs-jump
 	url = https://github.com/wincent/vcs-jump.git
+[submodule "vim/pack/bundles/start/supertab"]
+	path = vim/pack/bundles/start/supertab
+	url = https://github.com/ervandew/supertab.git
