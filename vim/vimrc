@@ -9,6 +9,7 @@ set autoread
 set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
+set ignorecase
 set incsearch
 set laststatus=0 noruler
 set lazyredraw
