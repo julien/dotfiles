@@ -61,6 +61,8 @@ let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
 set omnifunc=LanguageClient#complete
 
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
