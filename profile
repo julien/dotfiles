@@ -46,6 +46,7 @@ export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.local/ant/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/jdk/bin"
