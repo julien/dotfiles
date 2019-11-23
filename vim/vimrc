@@ -28,7 +28,8 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
 im <F1> <Nop>
-im </ </<c-x><c-o>
+im </ </<C-x><C-o>
+ino <C-x> <C-x><C-o>
 nn j gj
 nn k gk
 nn / /\v
@@ -48,23 +49,16 @@ au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au BufNewFile,BufRead *.jsx set syntax=javascript
 au BufNewFile,BufRead *.tsx set syntax=typescript
 
-let g:LanguageClient_diagnosticsDisplay = {1:{'signText': 'x'}, 4:{'signText': '>'}}
 let g:LanguageClient_diagnosticsList = 'Location'
-let g:LanguageClient_rootMarkers = {
-\ 'javascript': ['tsconfig.json', 'package.json'],
-\ 'typescript': ['tsconfig.json', 'package.json'],
-\ }
 let g:LanguageClient_serverCommands = {
 \ 'c': ['clangd'],
+\ 'rust': ['rustup', 'run', 'stable', 'rls'],
 \ 'javascript': ['typescript-language-server', '--stdio'],
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ 'typescriptreact': ['typescript-language-server', '--stdio'],
 \ }
 let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
-set omnifunc=LanguageClient#complete
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
