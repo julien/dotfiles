@@ -1,3 +1,4 @@
+shopt -s autocd
 shopt -s cmdhist
 IGNOREEOF=100
 export PS1='\W\$ '
