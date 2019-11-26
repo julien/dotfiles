@@ -11,7 +11,7 @@ set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set ignorecase
 set incsearch
-set laststatus=0 noruler
+set laststatus=0
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
@@ -19,7 +19,6 @@ set nocursorline
 set noerrorbells visualbell t_vb=""
 set noswapfile
 set nowrap
-set number
 set path+=**
 set scrolljump=8
 set shiftwidth=2 tabstop=2
@@ -29,7 +28,6 @@ set wildmenu wildmode=longest,list,full
 
 im <F1> <Nop>
 im </ </<C-x><C-o>
-ino <C-x> <C-x><C-o>
 nn j gj
 nn k gk
 nn / /\v
@@ -43,7 +41,6 @@ nm <silent> <C-t> :SK<CR>
 nm <silent> <C-S-p> :pc<CR>
 vn < <gv
 vn > >gv
-nn <silent> <leader>d :lcd %:p:h<CR> " change current pwd
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au BufNewFile,BufRead *.jsx set syntax=javascript
