@@ -56,6 +56,7 @@ let g:LanguageClient_serverCommands = {
 \ }
 let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
+let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
