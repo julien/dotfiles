@@ -24,12 +24,12 @@ function z() {
 	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
 }
 
-export ANT_OPTS="-Xmx2560m"
+export ANT_OPTS="-Xmx3080m"
 export CLICOLOR=1
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
 export JAVA_HOME="$HOME/.local/jdk"
-export JAVA_OPTS="-Xmx2560m"
+export JAVA_OPTS="-Xmx3080m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export LIFERAY_HOME="/home/jc/Documents/portal"
