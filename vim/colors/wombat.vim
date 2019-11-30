@@ -22,23 +22,22 @@ let colors_name = "wombat"
 
 " General colors
 " hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=#242424 gui=none
-hi Normal ctermfg=252 ctermbg=0 cterm=none guifg=#e3e0d7 guibg=#000000 gui=none
 hi Cursor ctermfg=234 ctermbg=228 cterm=none guifg=#242424 guibg=#eae788 gui=none
-hi Visual ctermfg=251 ctermbg=239 cterm=none guifg=#c3c6ca guibg=#554d4b gui=none
-hi VisualNOS ctermfg=251 ctermbg=236 cterm=none guifg=#c3c6ca guibg=#303030 gui=none
-hi Search ctermfg=235 ctermbg=241 cterm=none guifg=#666666 guibg=#333333 gui=none
-hi Folded ctermfg=103 ctermbg=237 cterm=none guifg=#a0a8b0 guibg=#3a4046 gui=none
-hi Title ctermfg=230 cterm=bold guifg=#ffffd7 gui=bold
-hi StatusLine ctermfg=230 ctermbg=238 cterm=none guifg=#ffffd7 guibg=#444444 gui=none
-hi VertSplit ctermfg=238 ctermbg=238 cterm=none guifg=#444444 guibg=#444444 gui=none
-hi StatusLineNC ctermfg=241 ctermbg=238 cterm=none guifg=#857b6f guibg=#444444 gui=none
-hi LineNr ctermfg=241 ctermbg=232 cterm=none guifg=#857b6f guibg=#080808 gui=none
-hi SpecialKey ctermfg=241 ctermbg=235 cterm=none guifg=#626262 guibg=#2b2b2b gui=none
-hi WarningMsg ctermfg=203 guifg=#ff5f55
 hi ErrorMsg ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
+hi Folded ctermfg=103 ctermbg=237 cterm=none guifg=#a0a8b0 guibg=#3a4046 gui=none
+hi LineNr ctermfg=241 ctermbg=232 cterm=none guifg=#857b6f guibg=#080808 gui=none
+hi Normal ctermfg=252 ctermbg=0 cterm=none guifg=#e3e0d7 guibg=#000000 gui=none
+hi Search ctermfg=250 ctermbg=241 cterm=bold guifg=#ffffff guibg=#333333 gui=bold
+hi SpecialKey ctermfg=241 ctermbg=235 cterm=none guifg=#626262 guibg=#2b2b2b gui=none
 hi SpellBad ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
 hi SpellCap ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
-
+hi StatusLine ctermfg=230 ctermbg=233 cterm=none guifg=#ffffd7 guibg=#444444 gui=none
+hi StatusLineNC ctermfg=241 ctermbg=233 cterm=none guifg=#857b6f guibg=#444444 gui=none
+hi Title ctermfg=230 cterm=bold guifg=#ffffd7 gui=bold
+hi VertSplit ctermfg=238 ctermbg=238 cterm=none guifg=#444444 guibg=#444444 gui=none
+hi Visual ctermfg=251 ctermbg=239 cterm=none guifg=#c3c6ca guibg=#554d4b gui=none
+hi VisualNOS ctermfg=251 ctermbg=236 cterm=none guifg=#c3c6ca guibg=#303030 gui=none
+hi WarningMsg ctermfg=203 guifg=#ff5f55
 " Vim >= 7.0 specific colors
 if version >= 700
 hi CursorLine ctermbg=236 cterm=none guibg=#32322f
@@ -73,4 +72,4 @@ hi! link CursorColumn CursorLine
 hi! link NonText Normal
 hi! link ColorColumn Normal
 hi! link SignColumn Normal
-hi! link ALEError Normal
+hi! link ALEError SpellBad
