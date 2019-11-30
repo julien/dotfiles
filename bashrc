@@ -25,14 +25,14 @@ export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$PATH:$HOME/.local/ant/bin"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.local/jdk/bin"
-export PATH="$PATH:$HOME/.local/jdk/jre/bin"
-export PATH="$PATH:$HOME/.local/llvm/bin"
-export PATH="$PATH:$HOME/.local/node/bin"
-export PATH="$PATH:$HOME/.local/nvim/bin"
-export PATH="$PATH:$HOME/.vim-plugins/skim/bin"
-export PATH="$PATH:./node_modules/.bin"
+export PATH="$HOME/.local/ant/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/jdk/bin:$PATH"
+export PATH="$HOME/.local/jdk/jre/bin:$PATH"
+export PATH="$HOME/.local/llvm/bin:$PATH"
+export PATH="$HOME/.local/node/bin:$PATH"
+export PATH="$HOME/.local/nvim/bin:$PATH"
+export PATH="$HOME/.vim-plugins/skim/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export SKIM_DEFAULT_OPTIONS='--color=bw'
