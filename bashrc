@@ -14,11 +14,11 @@ function z() {
 	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
 }
 
-export ANT_OPTS="-Xmx2560m"
+export ANT_OPTS="-Xmx3080m"
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
 export JAVA_HOME="$HOME/.local/jdk"
-export JAVA_OPTS="-Xmx2560m"
+export JAVA_OPTS="-Xmx3080m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export MYSQL_HISTFILE=/dev/null
@@ -29,7 +29,6 @@ export PATH="$HOME/.local/ant/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/jdk/bin:$PATH"
 export PATH="$HOME/.local/jdk/jre/bin:$PATH"
-export PATH="$HOME/.local/llvm/bin:$PATH"
 export PATH="$HOME/.local/node/bin:$PATH"
 export PATH="$HOME/.local/nvim/bin:$PATH"
 export PATH="$HOME/.vim-plugins/skim/bin:$PATH"
