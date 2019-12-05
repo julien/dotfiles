@@ -6,6 +6,7 @@ export PS1='\W\$ '
 
 alias ls="ls -a --color=auto -w 80"
 alias open="xdg-open"
+alias vim="nvim"
 
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
@@ -21,6 +22,7 @@ export JAVA_HOME="$HOME/.local/jdk"
 export JAVA_OPTS="-Xmx3080m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
+export LIFERAY_HOME="$HOME/Documents/portal"
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
