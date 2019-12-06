@@ -4,9 +4,6 @@
 [submodule "vim/pack/bundles/start/ferret"]
 	path = vim/pack/bundles/start/ferret
 	url = https://github.com/wincent/ferret.git
-[submodule "vim/pack/bundles/start/vcs-jump"]
-	path = vim/pack/bundles/start/vcs-jump
-	url = https://github.com/wincent/vcs-jump.git
 [submodule "vim/pack/bundles/start/supertab"]
 	path = vim/pack/bundles/start/supertab
 	url = https://github.com/ervandew/supertab.git
