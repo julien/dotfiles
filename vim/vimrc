@@ -22,7 +22,6 @@ set path+=**
 set scrolljump=8
 set shiftwidth=2 tabstop=2
 set synmaxcol=200 ttyfast
-set termguicolors
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
