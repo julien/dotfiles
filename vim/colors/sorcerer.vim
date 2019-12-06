@@ -21,10 +21,10 @@ hi iCursor     guifg=black   guibg=LightCoral gui=NONE
 hi cCursor     gui=reverse
 hi CursorColumn guibg=#2d2d2d
 hi CursorLine   guibg=#000000
-hi DiffAdd      guifg=#000000 guibg=#3cb371 gui=NONE
-hi DiffDelete   guifg=#000000 guibg=#aa4450 gui=NONE
-hi DiffChange   guifg=#000000 guibg=#4f94cd gui=NONE
-hi DiffText     guifg=#000000 guibg=#8ee5ee gui=NONE
+hi DiffAdd      guifg=#000000 guibg=#3cb371 gui=NONE ctermbg=17
+hi DiffDelete   guifg=#000000 guibg=#aa4450 gui=NONE ctermbg=17   ctermfg=234
+hi DiffChange   guifg=#000000 guibg=#4f94cd gui=NONE ctermbg=53
+hi DiffText     guifg=#000000 guibg=#8ee5ee gui=NONE ctermbg=237
 hi Directory    guifg=#1e90ff guibg=bg      gui=NONE
 hi ErrorMsg     guifg=#ff6a6a guibg=NONE    gui=bold
 hi FoldColumn   guifg=#68838b guibg=#4B4B4B gui=bold
@@ -35,7 +35,7 @@ hi MatchParen   guifg=#fff000 guibg=#000000 gui=bold
 hi ModeMsg      guifg=#000000 guibg=#00ff00 gui=bold
 hi MoreMsg      guifg=#2e8b57 guibg=bg      gui=bold
 hi NonText      guifg=#404050 guibg=bg      gui=NONE
-hi SignColumn   guibg=bg ctermbg=bg
+hi SignColumn   guibg=bg ctermbg=231
 
 hi Pmenu        guifg=#ffffff guibg=#444444
 hi PmenuSel     guifg=#000000 guibg=#b1d631
