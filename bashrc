@@ -10,7 +10,7 @@ alias vim="nvim"
 
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
-function z() {
+z() {
 	local DIR
 	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
 }
