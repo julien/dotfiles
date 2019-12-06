@@ -22,6 +22,7 @@ set path+=**
 set scrolljump=8
 set shiftwidth=2 tabstop=2
 set synmaxcol=200 ttyfast
+set termguicolors
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
@@ -61,7 +62,7 @@ let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
 
-colo wombat
+colo sorcerer
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
