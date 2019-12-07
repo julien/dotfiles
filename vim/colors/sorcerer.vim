@@ -24,7 +24,7 @@ hi DiffAdd cterm=NONE ctermbg=71 ctermfg=16 guifg=#000000 guibg=#3cb371 gui=NONE
 hi DiffChange cterm=NONE ctermbg=68 ctermfg=16 guifg=#000000 guibg=#4f94cd gui=NONE ctermbg=53
 hi DiffDelete cterm=NONE ctermbg=124 ctermfg=16 guifg=#000000 guibg=#aa4450 gui=NONE ctermbg=17 ctermfg=234
 hi DiffText cterm=NONE ctermbg=117 ctermfg=16 guifg=#000000 guibg=#8ee5ee gui=NONE ctermbg=237
-hi Directory cterm=NONE ctermbg=234 ctermfg=33 guifg=#1e90ff guibg=bg gui=NONE
+hi Directory cterm=NONE ctermfg=33 guifg=#1e90ff gui=NONE
 hi Error cterm=NONE ctermbg=196 ctermfg=231
 hi ErrorMsg cterm=bold  ctermfg=203 guifg=#ff6a6a guibg=NONE gui=bold
 hi FoldColumn cterm=bold ctermbg=239 ctermfg=66 guifg=#68838b guibg=#4B4B4B gui=bold
@@ -39,7 +39,6 @@ hi LineNr cterm=NONE ctermbg=16 ctermfg=59 guifg=#686858 guibg=#000000 gui=NONE
 hi MatchParen cterm=bold ctermbg=16 ctermfg=226 guifg=#fff000 guibg=#000000 gui=bold
 hi ModeMsg cterm=bold ctermbg=46 ctermfg=16 guifg=#000000 guibg=#00ff00 gui=bold
 hi MoreMsg cterm=bold ctermbg=234 ctermfg=29 guifg=#2e8b57 guibg=bg gui=bold
-hi NonText cterm=NONE  ctermfg=59 guifg=#404050 guibg=bg gui=NONE
 hi Normal cterm=NONE ctermbg=232 ctermfg=145 guifg=#c2c2b0 guibg=#202020 gui=NONE
 hi NormalModeCursorLine cterm=NONE ctermbg=235  guifg=#cc8800 gui=NONE
 hi Pmenu cterm=NONE ctermbg=238 ctermfg=231 guifg=#ffffff guibg=#444444
@@ -49,8 +48,8 @@ hi PmenuThumb cterm=reverse
 hi PreProc cterm=NONE  ctermfg=66 guifg=#528b8b gui=NONE
 hi Question cterm=bold  ctermfg=46 guifg=#00ee00 guibg=NONE gui=bold
 hi Search cterm=bold ctermbg=185 ctermfg=16 guifg=#000000 guibg=#d6e770 gui=bold
-hi SignColumn cterm=NONE ctermbg=23 ctermfg=231 guibg=bg ctermbg=231
-hi Special cterm=NONE  ctermfg=64 guifg=#719611 gui=NONE
+hi SignColumn cterm=NONE ctermbg=bg guibg=bg
+hi Special cterm=NONE ctermfg=64 guifg=#719611 gui=NONE
 hi SpecialKey cterm=NONE  ctermfg=59 guifg=#505060 guibg=NONE gui=NONE
 hi SpellBad cterm=undercurl  ctermfg=196 guisp=#ee2c2c gui=undercurl
 hi SpellCap cterm=undercurl  ctermfg=21 guisp=#0000ff gui=undercurl
