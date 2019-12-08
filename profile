@@ -26,6 +26,13 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
+
+z() {
+	local DIR
+	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
+}
+
 export ANT_OPTS="-Xmx3080m"
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
