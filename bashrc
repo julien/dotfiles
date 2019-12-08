@@ -7,11 +7,3 @@ export PS1='\W\$ '
 alias ls="ls -a --color=auto -w 80"
 alias open="xdg-open"
 alias vim="nvim"
-
-CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
-
-z() {
-	local DIR
-	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
-}
-
