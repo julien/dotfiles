@@ -24,7 +24,7 @@ hi DiffAdd cterm=NONE ctermbg=71 ctermfg=16 guifg=#000000 guibg=#3cb371 gui=NONE
 hi DiffChange cterm=NONE ctermbg=68 ctermfg=16 guifg=#000000 guibg=#4f94cd gui=NONE ctermbg=53
 hi DiffDelete cterm=NONE ctermbg=124 ctermfg=16 guifg=#000000 guibg=#aa4450 gui=NONE ctermbg=17 ctermfg=234
 hi DiffText cterm=NONE ctermbg=117 ctermfg=16 guifg=#000000 guibg=#8ee5ee gui=NONE ctermbg=237
-hi Directory cterm=NONE ctermfg=33 guifg=#1e90ff gui=NONE
+hi Directory cterm=NONE ctermfg=14 guifg=#eeeeee gui=NONE
 hi Error cterm=NONE ctermbg=196 ctermfg=231
 hi ErrorMsg cterm=bold  ctermfg=203 guifg=#ff6a6a guibg=NONE gui=bold
 hi FoldColumn cterm=bold ctermbg=239 ctermfg=66 guifg=#68838b guibg=#4B4B4B gui=bold
