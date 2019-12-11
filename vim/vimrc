@@ -55,11 +55,24 @@ let g:LanguageClient_serverCommands = {
 \ }
 let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
-let g:SuperTabDefaultCompletionType = "<C-x><C-o>"
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
+
+function! _tab()
+  if pumvisible()
+    return "\<C-N>"
+  endif
+  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+    return "\<Tab>"
+  elseif exists('&omnifunc') && &omnifunc != ''
+    return "\<C-X>\<C-O>"
+  else
+    return "\<C-N>"
+  endif
+endfunction
+inoremap <Tab> <C-R>=_tab()<CR>
 
 colo sorcerer
 au! GuiEnter * silent set visualbell t_vb=""
