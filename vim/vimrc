@@ -1,5 +1,4 @@
 set rtp+=$HOME/.vim-plugins/LanguageClient-neovim
-set rtp+=$HOME/.vim-plugins/VimCompletesMe
 set rtp+=$HOME/.vim-plugins/skim
 
 filetype plugin indent on
@@ -11,7 +10,7 @@ set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set ignorecase incsearch
-set laststatus=0 nonumber
+set laststatus=0 noru number
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
@@ -56,6 +55,20 @@ let g:LanguageClient_serverCommands = {
 \ }
 let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
+function! _tab()
+  if pumvisible()
+    return "\<C-N>"
+  endif
+  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+    return "\<Tab>"
+  elseif exists('&omnifunc') && &omnifunc != ''
+    return "\<C-X>\<C-O>"
+  else
+    return "\<C-N>"
+  endif
+endfunction
+ino <Tab> <C-R>=_tab()<CR>
+
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
