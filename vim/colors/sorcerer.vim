@@ -40,6 +40,7 @@ hi MatchParen cterm=bold ctermbg=16 ctermfg=226 guifg=#fff000 guibg=#000000 gui=
 hi ModeMsg cterm=bold ctermbg=46 ctermfg=16 guifg=#000000 guibg=#00ff00 gui=bold
 hi MoreMsg cterm=bold ctermbg=234 ctermfg=29 guifg=#2e8b57 guibg=bg gui=bold
 hi Normal cterm=NONE ctermbg=0 ctermfg=145 guifg=#c2c2b0 guibg=#000000 gui=NONE
+hi NonText ctermbg=0 guibg=#000000
 hi NormalModeCursorLine cterm=NONE ctermbg=235  guifg=#cc8800 gui=NONE
 hi Pmenu cterm=NONE ctermbg=238 ctermfg=231 guifg=#ffffff guibg=#444444
 hi PmenuSbar cterm=NONE ctermbg=250
