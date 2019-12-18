@@ -29,7 +29,7 @@ hi LineNr ctermfg=241 ctermbg=232 cterm=none guifg=#857b6f guibg=#080808 gui=non
 hi Normal ctermfg=252 ctermbg=0 cterm=none guifg=#e3e0d7 guibg=#000000 gui=none
 hi Search ctermfg=250 ctermbg=241 cterm=bold guifg=#ffffff guibg=#333333 gui=bold
 hi SpecialKey ctermfg=241 ctermbg=235 cterm=none guifg=#626262 guibg=#2b2b2b gui=none
-hi SpellBad ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
+hi SpellBad ctermfg=196 ctermbg=0 cterm=bold guifg=#e3e0d7 guibg=#000000 gui=none
 hi SpellCap ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
 hi StatusLine ctermfg=230 ctermbg=233 cterm=none guifg=#ffffd7 guibg=#444444 gui=none
 hi StatusLineNC ctermfg=241 ctermbg=233 cterm=none guifg=#857b6f guibg=#444444 gui=none
