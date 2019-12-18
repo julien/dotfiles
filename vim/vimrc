@@ -55,26 +55,13 @@ let g:LanguageClient_serverCommands = {
 \ }
 let g:LanguageClient_useVirtualText = 0
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
-function! _tab()
-  if pumvisible()
-    return "\<C-N>"
-  endif
-  if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-    return "\<Tab>"
-  elseif exists('&omnifunc') && &omnifunc != ''
-    return "\<C-X>\<C-O>"
-  else
-    return "\<C-N>"
-  endif
-endfunction
-ino <Tab> <C-R>=_tab()<CR>
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
 
-colo sorcerer
+colo minimalist
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
