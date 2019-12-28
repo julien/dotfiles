@@ -23,21 +23,3 @@ XTerm*termName: xterm-256color
 
 *foreground: #BCBCBC
 *background: #000000
-XTerm*cursorColor: #5f5f5f
-XTerm*color0:       #000000
-XTerm*color1:       #ab4642
-XTerm*color2:       #a1b56c
-XTerm*color3:       #f7ca88
-XTerm*color4:       #7cafc2
-XTerm*color5:       #ba8baf
-XTerm*color6:       #86c1b9
-XTerm*color7:       #d8d8d8
-XTerm*color8:       #585858
-XTerm*color9:       #ab4642
-XTerm*color10:      #a1b56c
-XTerm*color11:      #f7ca88
-XTerm*color12:      #7cafc2
-XTerm*color13:      #ba8baf
-XTerm*color14:      #86c1b9
-XTerm*color15:      #f8f8f8
-
