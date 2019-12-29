@@ -44,7 +44,6 @@ export LIFERAY_HOME="$HOME/Documents/portal"
 export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/ant/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/jdk/bin:$PATH"
