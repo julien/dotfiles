@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set ignorecase incsearch
-set laststatus=0 noru number
+set laststatus=0 noru nonumber
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
