@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set ignorecase incsearch
-set laststatus=0 noru nonumber
+set laststatus=0 nonumber
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
@@ -26,6 +26,7 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
 im <F1> <Nop>
+ino <C-Space> <C-x><C-o>
 nn j gj
 nn k gk
 nn / /\v
@@ -55,7 +56,6 @@ let g:LanguageClient_serverCommands = {
 \ }
 let g:LanguageClient_useVirtualText = 'No'
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
