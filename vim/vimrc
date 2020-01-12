@@ -27,6 +27,8 @@ set wildmenu wildmode=longest,list,full
 
 im <F1> <Nop>
 ino <C-Space> <C-x><C-o>
+ino <C-b> <C-x><C-p>
+ino <C-l> <C-x><C-l>
 nn j gj
 nn k gk
 nn / /\v
