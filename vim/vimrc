@@ -49,7 +49,6 @@ au FileType qf setlocal wrap
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
 \ 'c': ['clangd'],
-\ 'rust': ['rustup', 'run', 'stable', 'rls'],
 \ 'javascript': ['typescript-language-server', '--stdio'],
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ 'typescriptreact': ['typescript-language-server', '--stdio'],
