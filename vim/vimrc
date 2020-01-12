@@ -53,7 +53,7 @@ let g:LanguageClient_serverCommands = {
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ 'typescriptreact': ['typescript-language-server', '--stdio'],
 \ }
-let g:LanguageClient_useVirtualText = 0
+let g:LanguageClient_useVirtualText = 'No'
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
