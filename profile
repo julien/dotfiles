@@ -21,11 +21,6 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
 CDPATH="$CDPATH:./:$HOME/Documents:$HOME/Dropbox"
 
 z() {
@@ -48,7 +43,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/jdk/bin:$PATH"
 export PATH="$HOME/.local/jdk/jre/bin:$PATH"
 export PATH="$HOME/.local/node/bin:$PATH"
-export PATH="$HOME/.local/nvim/bin:$PATH"
 export PATH="$HOME/.vim-plugins/skim/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
