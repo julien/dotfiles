@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set ignorecase incsearch
-set laststatus=0 nonumber
+set number
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
@@ -56,7 +56,6 @@ let g:LanguageClient_serverCommands = {
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ 'typescriptreact': ['typescript-language-server', '--stdio'],
 \ }
-let g:LanguageClient_useVirtualText = 'No'
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
 let g:netrw_banner = 0
