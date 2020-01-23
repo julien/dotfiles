@@ -1,5 +1,9 @@
-set rtp+=$HOME/.vim-plugins/LanguageClient-neovim
 set rtp+=$HOME/.vim-plugins/skim
+set rtp+=$HOME/.vim-plugins/asyncomplete.vim
+set rtp+=$HOME/.vim-plugins/async.vim
+set rtp+=$HOME/.vim-plugins/vim-lsp
+set rtp+=$HOME/.vim-plugins/asyncomplete-lsp.vim
+set rtp+=$HOME/.vim-plugins/vim-lsp-settings
 
 filetype plugin indent on
 syntax on
@@ -26,9 +30,6 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
 im <F1> <Nop>
-ino <C-Space> <C-x><C-o>
-ino <C-b> <C-x><C-p>
-ino <C-l> <C-x><C-l>
 nn j gj
 nn k gk
 nn / /\v
@@ -48,13 +49,16 @@ au BufNewFile,BufRead *.jsx set syntax=javascript
 au BufNewFile,BufRead *.tsx set syntax=typescript
 au FileType qf setlocal wrap
 
-let g:LanguageClient_diagnosticsList = 'Location'
-let g:LanguageClient_serverCommands = {
-\ 'c': ['clangd'],
-\ 'javascript': ['typescript-language-server', '--stdio'],
-\ 'typescript': ['typescript-language-server', '--stdio'],
-\ }
-nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
+im <c-space> <Plug>(asyncomplete_force_refresh)
+ino <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+ino <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+ino <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+nm gD <plug>(lsp-document-diagnostics)
+nm gR <plug>(lsp-rename)
+nm gd <plug>(lsp-definition)
+nm gp <plug>(lsp-peek-definition)
+nm gr <plug>(lsp-references)
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
