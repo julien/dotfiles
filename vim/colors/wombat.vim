@@ -72,4 +72,4 @@ hi! link CursorColumn CursorLine
 hi! link NonText Normal
 hi! link ColorColumn Normal
 hi! link SignColumn Normal
-hi! link ALEError SpellBad
+hi! link ALEError Normal
