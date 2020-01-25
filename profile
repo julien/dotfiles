@@ -43,6 +43,7 @@ export NO_COLOR=1
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/ant/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
 export PATH="$HOME/.local/jdk/bin:$PATH"
 export PATH="$HOME/.local/jdk/jre/bin:$PATH"
 export PATH="$HOME/.local/llvm/bin:$PATH"
