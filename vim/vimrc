@@ -49,7 +49,6 @@ au BufNewFile,BufRead *.jsx set syntax=javascript
 au BufNewFile,BufRead *.tsx set syntax=typescript
 au FileType qf setlocal wrap
 
-im <c-space> <Plug>(asyncomplete_force_refresh)
 ino <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 ino <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 ino <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
