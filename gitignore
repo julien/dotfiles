@@ -1,13 +1,8 @@
-.DS_Store
-.DS_Store?
-.Spotlight-V100
 .Trashes
 .gradle
 .idea
 .vscode
-Thumbs.db
+.db
 bin/
 classes/
-ehthumbs.db
 node_modules/
-tags
