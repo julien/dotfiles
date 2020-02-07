@@ -10,7 +10,7 @@ Xft.rgba:      rgb
 ! XTerm
 XTerm*allowBoldFonts: true
 XTerm*boldMode: true
-XTerm*faceName: Input:size=12:antialias=true
+XTerm*faceName: Input:size=11:antialias=true
 XTerm*fastScroll: true
 XTerm*geometry: 80x30
 XTerm*locale: true
