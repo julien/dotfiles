@@ -36,7 +36,6 @@ export JAVA_HOME="$HOME/.local/jdk"
 export JAVA_OPTS="-Xmx3080m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
-export MYSQL_HISTFILE=/dev/null
 export NO_COLOR=1
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/ant/bin:$PATH"
@@ -49,4 +48,3 @@ export PATH="$HOME/.vim-plugins/skim/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export SKIM_DEFAULT_OPTIONS='--color=bw'
-
