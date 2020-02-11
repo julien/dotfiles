@@ -1,4 +1,9 @@
 ! vim: set filetype=xdefaults
+! Xft
+Xft.dpi:       96
+Xft.hinting:   true
+Xft.hintstyle: hintfull
+
 ! XTerm
 XTerm*allowBoldFonts: true
 XTerm*boldMode: true
@@ -14,3 +19,19 @@ XTerm*termName: xterm-256color
 
 *foreground: #BCBCBC
 *background: #000000
+XTerm*color0:  #000000
+XTerm*color1:  #e5786d
+XTerm*color2:  #95e454
+XTerm*color3:  #cae682
+XTerm*color4:  #8ac6f2
+XTerm*color5:  #8ac6f2
+XTerm*color6:  #8ac6f2
+XTerm*color7:  #99968b
+XTerm*color9:  #8f8f8f
+XTerm*color8:  #e5786d
+XTerm*color10: #95e454
+XTerm*color11: #cae682
+XTerm*color12: #8ac6f2
+XTerm*color13: #8ac6f2
+XTerm*color14: #8ac6f2
+XTerm*color15: #ffffff
