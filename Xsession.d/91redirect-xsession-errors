@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # Redirect $HOME/.xsession-errors to /dev/null.
-# BJEM 11 January 2012
 
 XSESSION_ERRFILE=$HOME/.xsession-errors
 
