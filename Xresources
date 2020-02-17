@@ -17,6 +17,8 @@ XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
 
+*VT100*translations: #override Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
+
 *foreground: #BCBCBC
 *background: #000000
 ! black
