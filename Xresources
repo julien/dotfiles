@@ -1,15 +1,11 @@
-! vim: set filetype=xdefaults
-! Xft
-Xft.dpi:       96
+Xft.dpi:       92
 Xft.hinting:   true
 Xft.hintstyle: hintfull
 
-! XTerm
 XTerm*allowBoldFonts: true
 XTerm*boldMode: true
 XTerm*faceName: Input:size=11:antialias=true
 XTerm*fastScroll: true
-XTerm*geometry: 80x30
 XTerm*locale: true
 XTerm*loginShell: true
 XTerm*metaSendsEscape: true
@@ -17,31 +13,22 @@ XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
 
-*VT100*translations: #override Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
-
-*foreground: #BCBCBC
-*background: #000000
-! black
+*foreground:   #eaeaea
+*background:   #000000
+*cursorColor:  #aeafad
 XTerm*color0:  #000000
-XTerm*color8:  #505050
-! red
-XTerm*color1:  #ac4142
-XTerm*color9:  #ac4142
-! green
-XTerm*color2:  #90a959
-XTerm*color10: #90a959
-! yellow
-XTerm*color3:  #f4bf75
-XTerm*color11: #f4bf75
-! blue
-XTerm*color4:  #6a9fb5
-XTerm*color12: #6a9fb5
-! magenta
-XTerm*color5:  #aa759f
-XTerm*color13: #aa759f
-! cyan
-XTerm*color6:  #75b5aa
-XTerm*color14: #75b5aa
-! white
-XTerm*color7:  #d0d0d0
-XTerm*color15: #f5f5f5
+XTerm*color1:  #912226
+XTerm*color2:  #778900
+XTerm*color3:  #ae7b00
+XTerm*color4:  #1d2594
+XTerm*color5:  #682a9b
+XTerm*color6:  #2b6651
+XTerm*color7:  #929593
+XTerm*color8:  #666666
+XTerm*color9:  #cc6666
+XTerm*color10: #b5bd68
+XTerm*color11: #f0c674
+XTerm*color12: #81a2be
+XTerm*color13: #b294bb
+XTerm*color14: #8abeb7
+XTerm*color15: #ecebec
