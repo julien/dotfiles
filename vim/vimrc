@@ -60,8 +60,6 @@ nm gr <plug>(lsp-references)
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
-let g:netrw_keepdir = 1
-let g:netrw_listtyle = 3
 let g:netrw_preview = 1
 
 colo wombat
