@@ -51,7 +51,6 @@ au FileType qf setlocal wrap
 ino <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 ino <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 ino <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 nm gD <plug>(lsp-document-diagnostics)
 nm gR <plug>(lsp-rename)
 nm gd <plug>(lsp-definition)
