@@ -5,3 +5,4 @@ export PS1='\W\$ '
 
 alias ls="ls -a --color=auto -w 60"
 alias open="xdg-open"
+alias vim=nvim
