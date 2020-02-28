@@ -27,6 +27,7 @@ z() {
 }
 
 export ANT_OPTS="-Xmx3080m"
+export COLORFGBG="15;0"
 export EDITOR=vim
 export HISTFILESIZE=
 export HISTSIZE=
