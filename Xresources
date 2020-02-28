@@ -1,10 +1,9 @@
-Xft.dpi:       92
+Xft.dpi:       96
 Xft.hinting:   true
 Xft.hintstyle: hintfull
 
 XTerm*allowBoldFonts: true
-XTerm*boldMode: true
-XTerm*faceName: Input:size=11:antialias=true
+XTerm*faceName: Input:size=12:antialias=true
 XTerm*fastScroll: true
 XTerm*locale: true
 XTerm*loginShell: true
@@ -13,23 +12,19 @@ XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
 
-*foreground:  #dedacf
-*background:  #000000
-*cursorColor: #bbbbbb
-*color0:      #000000
-*color8:      #313131
-*color1:      #ff615a
-*color9:      #f58c80
-*color2:      #b1e969
-*color10:     #ddf88f
-*color3:      #ebd99c
-*color11:     #eee5b2
-*color4:      #5da9f6
-*color12:     #a5c7ff
-*color5:      #e86aff
-*color13:     #ddaaff
-*color6:      #82fff7
-*color14:     #b7fff9
-*color7:      #dedacf
-*color15:     #ffffff
-*colorBD:     #ffffff
+*foreground:   #bcbcbc
+*background:   #000000
+! Dark grey
+XTerm*color8:  #505050
+! Dark Green + Green
+XTerm*color2: #4e9a06
+XTerm*color10: #8ae234
+! Dark Blue  + Blue
+XTerm*color4:  #3465a4
+XTerm*color12: #729fcf
+! Teal + Cyan
+XTerm*color6:  #0b939b
+XTerm*color14: #00f5e9
+! Light Grey + White
+XTerm*color7:  #cccccc
+XTerm*color15: #eeeeee
