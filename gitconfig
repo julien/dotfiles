@@ -3,7 +3,7 @@
 	edit = !vim `git ls-files -m` -p
 	gr = grep -Ii
 	l  = log --oneline
-	lf = log --numstat
+	lf = log --decorate --oneline --graph --stat
 	ll = log -p --oneline HEAD~1...HEAD
 	s = status
 
