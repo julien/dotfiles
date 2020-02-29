@@ -1,9 +1,6 @@
-# vim: ft=gitconfig
 [alias]
-	edit = !vim `git ls-files -m` -p
-	gr = grep -Ii
-	l  = log --oneline
-	lf = log --decorate --oneline --graph --stat
+	e = !vim `git ls-files -m` -p
+	l = log --decorate --oneline --graph --stat
 	ll = log -p --oneline HEAD~1...HEAD
 	s = status
 
