@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
 set hidden
 set ignorecase incsearch
-" set number
+set number
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
@@ -58,7 +58,7 @@ let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
 
-colo wombat
+colo iceberg
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
