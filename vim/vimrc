@@ -62,5 +62,5 @@ au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
   set guicursor+=a:blinkon0
-  set guifont=Input\ 12
+  set guifont=Ubuntu\ Mono\ 14
 endif
