@@ -25,6 +25,7 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
 im <F1> <Nop>
+ino jj <ESC>
 nn j gj
 nn k gk
 nn / /\v
@@ -57,7 +58,7 @@ let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
 
-colo wombat
+colo nofrils-dark
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
