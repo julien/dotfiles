@@ -57,7 +57,7 @@ let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 let g:netrw_preview = 1
 
-colo iceberg
+colo wombat
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
