@@ -44,11 +44,11 @@ hi FoldColumn term=NONE cterm=NONE ctermfg=242 ctermbg=NONE gui=NONE guifg=#6C6C
 hi Folded term=NONE cterm=NONE ctermfg=242 ctermbg=NONE gui=NONE guifg=#6C6C6C guibg=NONE
 hi Format term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi Function term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
-hi Identifier term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
+hi Identifier term=NONE cterm=bold ctermfg=NONE ctermbg=NONE gui=bold guifg=NONE guibg=NONE
 hi Ignore term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi IncSearch term=NONE cterm=NONE ctermfg=black ctermbg=green gui=NONE guifg=black guibg=green
 hi Include term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
-hi Keyword term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
+hi Keyword term=NONE cterm=bold ctermfg=NONE ctermbg=NONE gui=bold guifg=NONE guibg=NONE
 hi Label term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi LineNr term=NONE cterm=NONE ctermfg=135 ctermbg=NONE gui=NONE guifg=#AF5FFF guibg=NONE
 hi Macro term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
@@ -57,8 +57,8 @@ hi Menu term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg
 hi ModeMsg term=NONE cterm=NONE ctermfg=69 ctermbg=NONE gui=NONE guifg=#5F87FF guibg=NONE
 hi MoreMsg term=NONE cterm=NONE ctermfg=69 ctermbg=NONE gui=NONE guifg=#5F87FF guibg=NONE
 hi NonText term=NONE cterm=NONE ctermfg=242 ctermbg=NONE gui=NONE guifg=#6C6C6C guibg=NONE
-hi Normal term=NONE cterm=NONE ctermfg=255 ctermbg=235 gui=NONE guifg=#eeeeee guibg=#262626
-hi Normal term=NONE cterm=NONE ctermfg=255 ctermbg=235 gui=NONE guifg=#eeeeee guibg=#262626
+hi Normal term=NONE cterm=NONE ctermfg=255 ctermbg=0 gui=NONE guifg=#eeeeee guibg=#000000
+hi Normal term=NONE cterm=NONE ctermfg=255 ctermbg=0 gui=NONE guifg=#eeeeee guibg=#000000
 hi Number term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi Operator term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi Pmenu term=reverse cterm=reverse ctermfg=NONE ctermbg=NONE gui=reverse guifg=NONE guibg=NONE
