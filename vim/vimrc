@@ -40,14 +40,13 @@ vn < <gv
 vn > >gv
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
-au BufNewFile,BufRead *.jsx set syntax=javascript
-au BufNewFile,BufRead *.tsx set syntax=typescript
 au FileType qf setlocal wrap
 
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
 \ 'c': ['clangd'],
 \ 'javascript': ['typescript-language-server', '--stdio'],
+\ 'javascriptreact': ['typescript-language-server', '--stdio'],
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ }
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
