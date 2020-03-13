@@ -2,7 +2,7 @@
 	e = !vim `git ls-files -m` -p
 	l = log --decorate --oneline --graph --stat
 	ll = log -p --oneline HEAD~1...HEAD
-	s = status
+	s = status -uno
 
 [core]
 	excludesfile = /home/jc/.gitignore
