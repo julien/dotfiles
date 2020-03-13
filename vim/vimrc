@@ -18,7 +18,7 @@ set nocursorline
 set noerrorbells visualbell t_vb=""
 set noswapfile
 set path+=**
-set scrolljump=8
+set scrolljump=4
 set shiftwidth=2 tabstop=2
 set synmaxcol=200 ttyfast
 set wildignore+=.git/*,.gradle/*,node_modules/*
