@@ -4,7 +4,6 @@ set rtp+=$HOME/.vim-plugins/skim
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
-
 set autoread
 set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
