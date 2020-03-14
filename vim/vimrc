@@ -24,7 +24,7 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
 im <F1> <Nop>
-ino jj <ESC>
+ino ii <ESC>
 nn j gj
 nn k gk
 nn / /\v
