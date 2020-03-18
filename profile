@@ -18,6 +18,7 @@ export HISTFILESIZE=
 export HISTSIZE=
 PROMPT_COMMAND="history -a; $PROMT_COMMAND"
 export HISTCONTROL=erasedups
+export GRADLE_OPTS="-Dorg.gradle.daemon=false"
 export JAVA_HOME="$HOME/.local/jdk"
 export JAVA_OPTS="-Xmx3080m"
 export LANG=en_US.UTF-8
