@@ -13,7 +13,7 @@ set number
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup
-set nocursorline
+set nocursorline noendofline nofixendofline
 set noerrorbells visualbell t_vb=""
 set noswapfile
 set path+=**
