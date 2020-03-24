@@ -1,5 +1,4 @@
 [alias]
-	ll = log -p --oneline HEAD~1...HEAD
 	s = status
 
 [core]
