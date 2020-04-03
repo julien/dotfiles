@@ -1,9 +1,10 @@
-Xft.dpi:       96
-Xft.hinting:   true
+Xft.dpi:       92
+Xf.hinting:   true
 Xft.hintstyle: hintfull
 
 XTerm*allowBoldFonts: true
-XTerm*faceName: Input:size=12:antialias=true
+XTerm*boldMode: true
+XTerm*faceName: Ubuntu Mono:size=13:antialias=true
 XTerm*fastScroll: true
 XTerm*locale: true
 XTerm*loginShell: true
