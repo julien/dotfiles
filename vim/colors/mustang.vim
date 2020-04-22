@@ -12,19 +12,16 @@ endif
 
 let colors_name = "mustang"
 
-" Vim >= 7.0 specific colors
-if version >= 700
-  hi CursorLine                   guibg=#2d2d2d ctermbg=236
-  hi ColorColumn                  guibg=#2d2d2d ctermbg=236
-  hi CursorColumn                 guibg=#2d2d2d ctermbg=236
-  hi MatchParen    guifg=#d0ffc0  guibg=#2f2f2f gui=bold ctermfg=157 ctermbg=237 cterm=bold
-  hi Pmenu		     guifg=#ffffff  guibg=#444444 ctermfg=255 ctermbg=238
-  hi PmenuSel		   guifg=#000000  guibg=#b1d631 ctermfg=0 ctermbg=148
-endif
+hi CursorLine                   guibg=#2d2d2d ctermbg=236
+hi ColorColumn                  guibg=#2d2d2d ctermbg=236
+hi CursorColumn                 guibg=#2d2d2d ctermbg=236
+hi MatchParen    guifg=#d0ffc0  guibg=#2f2f2f gui=bold ctermfg=157 ctermbg=237 cterm=bold
+hi Pmenu		     guifg=#ffffff  guibg=#444444 ctermfg=255 ctermbg=238
+hi PmenuSel		   guifg=#000000  guibg=#b1d631 ctermfg=0 ctermbg=148
 
 " General colors
 hi Cursor       guifg=NONE    guibg=#626262 gui=none ctermbg=241
-hi Normal       guifg=#e2e2e5 guibg=#202020 gui=none ctermfg=253 ctermbg=234
+hi Normal       guifg=#e2e2e5 guibg=#202020 gui=none ctermfg=253 ctermbg=232
 hi NonText      guifg=#808080 guibg=#202020 gui=none ctermfg=244 ctermbg=235
 hi LineNr       guifg=#808080 guibg=#202020 gui=none ctermfg=244 ctermbg=232
 hi StatusLine   guifg=#d3d3d5 guibg=#444444 gui=italic ctermfg=253 ctermbg=238 cterm=italic
@@ -51,15 +48,3 @@ hi Special    guifg=#ff9800 gui=none ctermfg=208
 hi PreProc    guifg=#faf4c6 gui=none ctermfg=230
 hi Todo       guifg=#000000 guibg=#e6ea50 gui=italic
 
-" Code-specific colors
-hi pythonOperator guifg=#7e8aa2 gui=none ctermfg=103
-
-" NERDTree colors
-hi NERDTreeFile     guifg=#cdd2db ctermfg=250
-hi NERDTreeDir      guifg=#a5aebe ctermfg=111
-hi NERDTreeUp       guifg=#5b646d ctermfg=62
-
-hi def link NERDTreeOpenable String
-hi def link NERDTreeCloseable NERDTreeOpenable
-hi def link NERDTreeCWD String
-hi def link NERDTreePart String
