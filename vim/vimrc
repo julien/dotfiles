@@ -43,6 +43,7 @@ vn > >gv
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au FileType qf setlocal wrap
+au BufReadPost *.html set syntax=off
 let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
 \ 'c': ['clangd'],
