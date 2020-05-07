@@ -1,4 +1,13 @@
 set rtp+=$HOME/.vim-plugins/LanguageClient-neovim
+let g:LanguageClient_diagnosticsList = 'Location'
+let g:LanguageClient_serverCommands = {
+\ 'c': ['clangd'],
+\ 'javascript': ['typescript-language-server', '--stdio'],
+\ 'javascriptreact': ['typescript-language-server', '--stdio'],
+\ 'typescript': ['typescript-language-server', '--stdio'],
+\ }
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 set rtp+=$HOME/.vim-plugins/skim
 
 filetype plugin indent on
@@ -42,14 +51,6 @@ vn > >gv
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au FileType qf setlocal wrap
 au BufReadPost *.html set syntax=off
-let g:LanguageClient_diagnosticsList = 'Location'
-let g:LanguageClient_serverCommands = {
-\ 'c': ['clangd'],
-\ 'javascript': ['typescript-language-server', '--stdio'],
-\ 'javascriptreact': ['typescript-language-server', '--stdio'],
-\ 'typescript': ['typescript-language-server', '--stdio'],
-\ }
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
