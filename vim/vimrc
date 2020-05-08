@@ -6,8 +6,8 @@ let g:LanguageClient_serverCommands = {
 \ 'javascriptreact': ['typescript-language-server', '--stdio'],
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ }
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nn <silent> K :call LanguageClient#textDocument_hover()<CR>
 set rtp+=$HOME/.vim-plugins/skim
 
 filetype plugin indent on
