@@ -6,6 +6,9 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+d() {
+	git diff $@ --name-only | sk -m --preview "git diff $@ --color=always -- {-1}" --preview-window=80%
+}
 z() {
 	local DIR
 	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
