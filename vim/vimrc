@@ -51,11 +51,11 @@ vn > >gv
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au FileType qf setlocal wrap
 au BufReadPost *.html set syntax=off
+au FileType c,javascript,javascriptreact,typescript let b:vcm_tab_complete = "omni"
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
-let b:vcm_tab_complete = "omni"
 
 colo wombat
 au! GuiEnter * silent set visualbell t_vb=""
