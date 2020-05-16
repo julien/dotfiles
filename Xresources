@@ -15,17 +15,7 @@ XTerm*termName: xterm-256color
 
 *foreground:   #bcbcbc
 *background:   #000000
-! Dark grey
-XTerm*color8:  #505050
-! Dark Green + Green
-XTerm*color2: #4e9a06
-XTerm*color10: #8ae234
+*cursorColor:  #666666
 ! Dark Blue  + Blue
 XTerm*color4:  #3465a4
 XTerm*color12: #729fcf
-! Teal + Cyan
-XTerm*color6:  #0b939b
-XTerm*color14: #00f5e9
-! Light Grey + White
-XTerm*color7:  #cccccc
-XTerm*color15: #eeeeee
