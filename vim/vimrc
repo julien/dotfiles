@@ -21,10 +21,8 @@ set ignorecase incsearch
 set number
 set lazyredraw
 set mouse=a
-set nobackup nowritebackup
-set nocursorline noendofline nofixendofline nowrap
+set nobackup nowritebackup noswapfile nocursorline noendofline nofixendofline nowrap
 set noerrorbells visualbell t_vb=""
-set noswapfile
 set scrolljump=4
 set shiftwidth=2 tabstop=2
 set synmaxcol=200 ttyfast
@@ -50,7 +48,6 @@ vn > >gv
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au FileType qf setlocal wrap
-au BufReadPost *.html set syntax=off
 au FileType c,javascript,javascriptreact,typescript let b:vcm_tab_complete = "omni"
 
 let g:netrw_banner = 0
@@ -62,5 +59,4 @@ au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
   set guicursor+=a:blinkon0
-  set guifont=Ubuntu\ Mono\ 14
 endif
