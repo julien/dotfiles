@@ -9,6 +9,7 @@ let g:LanguageClient_serverCommands = {
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nn <silent> K :call LanguageClient#textDocument_hover()<CR>
 set rtp+=$HOME/.vim-plugins/skim
+set rtp+=$HOME/.vim-plugins/git-messenger.vim
 
 filetype plugin indent on
 syntax on
