@@ -11,7 +11,7 @@ z() {
 	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
 }
 
-export ANT_OPTS="-Xmx3072m"
+export ANT_OPTS="-Xmx2048m"
 export COLORFGBG="15;0"
 export EDITOR=vim
 export HISTFILESIZE=
@@ -20,7 +20,7 @@ export HISTCONTROL=ignoredups:erasedups
 PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMT_COMMAND"
 export GRADLE_OPTS="-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xms2g"
 export JAVA_HOME="$HOME/.local/jdk"
-export JAVA_OPTS="-Xmx3072m"
+export JAVA_OPTS="-Xmx2048m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export NO_COLOR=1
