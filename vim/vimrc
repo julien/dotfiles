@@ -21,7 +21,7 @@ set ignorecase incsearch
 set number
 set lazyredraw
 set mouse=a
-set nobackup nowritebackup noswapfile nocursorline noendofline nofixendofline nowrap
+set nobackup nowritebackup noswapfile nocursorline noendofline nofixendofline nowrap notitle
 set noerrorbells visualbell t_vb=""
 set scrolljump=4
 set shiftwidth=2 tabstop=2
