@@ -3,6 +3,7 @@ let g:LanguageClient_diagnosticsList = 'Location'
 let g:LanguageClient_serverCommands = {
 \ 'javascript': ['typescript-language-server', '--stdio'],
 \ 'javascriptreact': ['typescript-language-server', '--stdio'],
+\ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
 \ 'typescript': ['typescript-language-server', '--stdio'],
 \ }
 nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
