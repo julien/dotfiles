@@ -46,7 +46,6 @@ vn > >gv
 
 au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au FileType qf setlocal wrap
-au FileType c,javascript,javascriptreact,typescript let b:vcm_tab_complete = "omni"
 au FileType gitcommit setlocal spell
 
 let g:netrw_banner = 0
