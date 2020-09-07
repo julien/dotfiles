@@ -1,14 +1,7 @@
-set rtp+=$HOME/.vim-plugins/LanguageClient-neovim
-let g:LanguageClient_diagnosticsList = 'Location'
-let g:LanguageClient_serverCommands = {
-\ 'javascript': ['typescript-language-server', '--stdio'],
-\ 'javascriptreact': ['typescript-language-server', '--stdio'],
-\ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-\ 'typescript': ['typescript-language-server', '--stdio'],
-\ }
-nn <silent> gd :call LanguageClient#textDocument_definition()<CR>
-set rtp+=$HOME/.vim-plugins/skim
 set rtp+=$HOME/.vim-plugins/git-messenger.vim
+set rtp+=$HOME/.vim-plugins/skim
+set rtp+=$HOME/.vim-plugins/vim-lsc
+set rtp+=$HOME/.vim-plugins/vim-lsc/after
 
 filetype plugin indent on
 syntax on
