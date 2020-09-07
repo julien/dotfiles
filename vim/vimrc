@@ -9,6 +9,7 @@ let mapleader="\<Space>"
 set autoread
 set backspace=indent,eol,start
 set completeopt+=menu,menuone,noinsert,noselect
+set completeopt-=preview
 set hidden
 set ignorecase incsearch smartcase
 set number
