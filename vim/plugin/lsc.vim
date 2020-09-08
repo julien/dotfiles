@@ -14,6 +14,7 @@ let g:lsc_server_commands = {
 let g:lsc_auto_map = {
  \  'GoToDefinition': 'gd',
  \  'FindReferences': 'gr',
+ \  'ShowHover': 'gh',
  \  'Completion': 'omnifunc',
  \}
 let g:lsc_reference_highlights = v:false
