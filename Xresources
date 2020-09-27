@@ -6,12 +6,18 @@ XTerm*allowBoldFonts: true
 XTerm*boldMode: true
 XTerm*faceName: Ubuntu Mono:size=13:antialias=true
 XTerm*fastScroll: true
+XTerm*fontMenu*Background: #000000
+XTerm*fontMenu*Foreground: #bcbcbc
 XTerm*locale: true
 XTerm*loginShell: true
+XTerm*mainMenu*Background: #000000
+XTerm*mainMenu*Foreground: #bcbcbc
 XTerm*metaSendsEscape: true
 XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
+XTerm*vtMenu*Background: #000000
+XTerm*vtMenu*Foreground: #bcbcbc
 
 *foreground:   #bcbcbc
 *background:   #000000
