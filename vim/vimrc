@@ -31,8 +31,7 @@ nn <F3> :set number!<CR>
 nn <F4> :set wrap!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bw!<CR>
-nn ff /
-nn FF ?
+nn <leader>f /
 nn j gj
 nn k gk
 nn n nzz
