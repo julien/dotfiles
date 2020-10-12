@@ -14,7 +14,7 @@ hi StatusLineNC gui=NONE guifg=Grey85 guibg=Grey45
 hi VertSplit gui=NONE guifg=grey70 guibg=grey70
 hi Visual gui=reverse guifg=Grey guibg=fg
 hi VisualNOS gui=underline,bold guifg=fg guibg=bg
-hi Directory guifg=Brown guibg=bg
+hi Directory guifg=Grey10 guibg=bg
 hi LineNr guifg=Brown guibg=bg
 hi MoreMsg gui=NONE guifg=SeaGreen guibg=bg
 hi NonText guifg=fg guibg=bg
@@ -35,7 +35,6 @@ hi Statement term=bold guifg=Magenta4 guibg=bg
 hi Constant gui=NONE guifg=azure4 guibg=bg
 hi String gui=NONE guifg=DarkSeaGreen4 guibg=bg
 hi Special gui=NONE guifg=Cyan4 guibg=bg
-" hi Statement gui=NONE guifg=SlateBlue4 guibg=bg
 hi Operator gui=NONE guifg=Purple guibg=bg
 hi Ignore gui=NONE guifg=bg guibg=bg
 hi ToDo gui=NONE guifg=Grey50 guibg=bg
