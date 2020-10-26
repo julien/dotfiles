@@ -10,14 +10,9 @@ endif
 let colors_name = "ir_black"
 
 hi Comment guifg=#7C7C7C guibg=NONE gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
-hi Conditional guifg=#6699CC guibg=NONE gui=NONE ctermfg=blue ctermbg=NONE cterm=NONE
 hi Constant guifg=#99CC99 guibg=NONE gui=NONE ctermfg=cyan ctermbg=NONE cterm=NONE
 hi Cursor guifg=black guibg=white gui=NONE ctermfg=black ctermbg=white cterm=reverse
-hi CursorColumn guifg=NONE guibg=#121212 gui=NONE ctermfg=NONE ctermbg=NONE cterm=BOLD
-hi CursorLine guifg=NONE guibg=#121212 gui=NONE ctermfg=NONE ctermbg=NONE cterm=BOLD
 hi Delimiter guifg=#00A0A0 guibg=NONE gui=NONE ctermfg=cyan ctermbg=NONE cterm=NONE
-hi Error guifg=NONE guibg=NONE gui=undercurl ctermfg=white ctermbg=red cterm=NONE guisp=#FF6C60
-hi ErrorMsg guifg=white guibg=#FF6C60 gui=BOLD ctermfg=white ctermbg=red cterm=NONE
 hi Folded guifg=#a0a8b0 guibg=#384048 gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi Function guifg=#FFD2A7 guibg=NONE gui=NONE ctermfg=brown ctermbg=NONE cterm=NONE
 hi Identifier guifg=#C6C5FE guibg=NONE gui=NONE ctermfg=cyan ctermbg=NONE cterm=NONE
