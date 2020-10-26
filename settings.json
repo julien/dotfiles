@@ -10,6 +10,7 @@
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.renderWhitespace": "none",
+    "editor.rulers": [80],
     "explorer.decorations.badges": false,
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": true,
@@ -72,7 +73,7 @@
     "workbench.iconTheme": null,
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "none",
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.tips.enabled": false,
     "workbench.tree.renderIndentGuides": "none",
 }
