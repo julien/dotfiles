@@ -1,6 +1,12 @@
-Xft.dpi:       92
-Xf.hinting:   true
+Xft.antialias: 1
+Xft.autohint: 0
+! Check with xdpyinfo | grep -B 2 resolution
+Xft.dpi: 96
+Xft.hinting: true
 Xft.hintstyle: hintfull
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
 
 XTerm*allowBoldFonts: true
 XTerm*boldMode: true
