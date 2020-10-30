@@ -5,6 +5,7 @@
     "editor.accessibilitySupport": "off",
     "editor.autoClosingQuotes": "never",
     "editor.cursorBlinking": "solid",
+    "editor.dragAndDrop": false,
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "editor.renderIndentGuides": false,
