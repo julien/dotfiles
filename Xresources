@@ -3,7 +3,6 @@ Xft.autohint: 0
 ! Check with xdpyinfo | grep -B 2 resolution
 Xft.dpi: 96
 Xft.hinting: true
-Xft.hintstyle: hintfull
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
