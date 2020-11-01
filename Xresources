@@ -9,7 +9,7 @@ Xft.rgba: rgb
 
 XTerm*allowBoldFonts: true
 XTerm*boldMode: true
-XTerm*faceName: Ubuntu Mono:size=13:antialias=true
+XTerm*faceName: DejaVu Sans Mono:size=12:antialias=true
 XTerm*fastScroll: true
 XTerm*fontMenu*Background: #000000
 XTerm*fontMenu*Foreground: #bcbcbc
