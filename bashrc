@@ -4,3 +4,4 @@ export PS1='\W\$ '
 
 alias ls="ls -a --color=auto"
 alias open="xdg-open"
+alias vi="vi -u NONE"
