@@ -19,6 +19,7 @@ export JAVA_HOME="$HOME/.local/jdk"
 export JAVA_OPTS="-Xmx2048m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
+export NO_COLOR=1
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/ant/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
