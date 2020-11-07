@@ -44,7 +44,7 @@ let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 
-colo ir_black
+colo wombat
 au! GuiEnter * silent set visualbell t_vb=""
 if has("gui_running")
   set go=""
