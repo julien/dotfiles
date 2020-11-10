@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 set completeopt-=preview
 set hidden
 set ignorecase incsearch smartcase
-set number
+set number laststatus=0
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nocursorline nowrap
@@ -27,7 +27,7 @@ nn <F1> :set hls!<CR>
 nn <F2> :set invlist!<CR>
 nn <F3> :set number!<CR>
 nn <F4> :set wrap!<CR>
-nn <silent> <leader>e :Explore<CR>
+nn <silent> <leader>e :Lexplore<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <leader>f /
 nn j gj
@@ -43,6 +43,7 @@ au FileType gitcommit setlocal spell
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
+let g:netrw_winsize = 20
 
 colo wombat
 au! GuiEnter * silent set visualbell t_vb=""
