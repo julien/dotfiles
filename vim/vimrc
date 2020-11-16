@@ -27,6 +27,7 @@ nn <F2> :set invlist!<CR>
 nn <F3> :set number!<CR>
 nn <F4> :set wrap!<CR>
 nn <silent> <leader>e :Lexplore<CR>
+nn <silent> <leader>d :Explore<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <leader>f /
 nn j gj
