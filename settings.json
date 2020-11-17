@@ -44,7 +44,7 @@
         "**/node_modules": true,
         "**/tmp": true,
     },
-    "git.enabled": false,
+    "git.enabled": true,
     "outline.icons": false,
     "search.exclude": {
         "**/.DS_Store": true,
@@ -66,7 +66,7 @@
     "vim.useCtrlKeys": false,
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1.0,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 10,
