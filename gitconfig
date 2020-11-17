@@ -5,7 +5,7 @@
 
 [core]
 	excludesfile = /home/jc/.gitignore
-	filemode = false
+	fileMode = false
 	precomposeUnicode = true
 	quotepath = false
 	safecrlf = false
