@@ -296,6 +296,11 @@
         <command>gmrun</command>
       </action>
     </keybind>
+    <keybind key="C-A-l">
+      <action name="Execute">
+        <command>slock</command>
+      </action>
+    </keybind>
     <keybind key="C-A-t">
       <action name="Execute">
         <command>x-terminal-emulator</command>
