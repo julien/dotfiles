@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 set completeopt-=preview
 set hidden
 set ignorecase incsearch smartcase
-set number laststatus=0
+set number
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nocursorline nowrap
