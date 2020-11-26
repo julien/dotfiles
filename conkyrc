@@ -19,20 +19,20 @@ conky.config = {
 conky.text = [[
 ${time %H:%M:%S}
 
-Battery: ${battery}
+${battery}
 
-CPU: $cpu% ${acpitemp}C
+$cpu% ${acpitemp}C
 ${cpugraph 20,150 000000 ffffff}
 
 Processes: $processes
 
-Highest CPU:${color #ddaa00}
+CPU:${color #ddaa00}
 ${top name 1}${top_mem cpu 1}
 ${top name 2}${top cpu 2}
 ${top name 3}${top cpu 3}
 ${top name 4}${top cpu 4}${color}
 
-Highest MEM:${color #ddaa00}
+MEM:${color #ddaa00}
 ${top_mem name 1}${top_mem mem 1}
 ${top_mem name 2}${top_mem mem 2}
 ${top_mem name 3}${top_mem mem 3}
