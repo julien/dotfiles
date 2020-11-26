@@ -1,0 +1,49 @@
+conky.config = {
+	alignment = 'top_right',
+	border_width = 0,
+	double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+	font = '-*-*-*-*-*-*-13-*-*-*-*-*-*-*',
+	gap_x = 20,
+	gap_y = 20,
+	own_window = true,
+	own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+	own_window_transparent = true,
+	own_window_type = 'desktop',
+	update_interval = 2,
+}
+
+conky.text = [[
+${time %H:%M:%S}
+
+Battery: ${battery}
+
+CPU: $cpu% ${acpitemp}C
+${cpugraph 20,150 000000 ffffff}
+
+Processes: $processes
+
+Highest CPU:${color #ddaa00}
+${top name 1}${top_mem cpu 1}
+${top name 2}${top cpu 2}
+${top name 3}${top cpu 3}
+${top name 4}${top cpu 4}${color}
+
+Highest MEM:${color #ddaa00}
+${top_mem name 1}${top_mem mem 1}
+${top_mem name 2}${top_mem mem 2}
+${top_mem name 3}${top_mem mem 3}
+${top_mem name 4}${top_mem mem 4}${color}
+
+MEM: $memperc% $mem/$memmax
+${membar 3,150}
+
+NET:
+Up: ${upspeed eth0} k/s
+${upspeedgraph eth0 20,150 000000 ffffff}
+Down: ${downspeed wlp61s0}k/s${color}
+${downspeedgraph wlp61s0 20,150 000000 ffffff}
+]]
