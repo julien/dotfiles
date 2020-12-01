@@ -291,7 +291,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="W-r">
       <action name="Execute">
-        <command>gmrun</command>
+        <command>dmenu_run</command>
       </action>
     </keybind>
     <keybind key="C-A-l">
@@ -723,6 +723,9 @@
 -->
     <application class="*">
       <focus>yes</focus>
+    </application>
+    <application class="Firefox">
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>
