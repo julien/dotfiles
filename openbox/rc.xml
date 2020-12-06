@@ -335,11 +335,6 @@
         <command>amixer -D pulse sset Master toggle</command>
       </action>
     </keybind>
-    <keybind key="XF86Eject">
-      <action name="Execute">
-        <command>pavucontrol</command>
-      </action>
-    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
