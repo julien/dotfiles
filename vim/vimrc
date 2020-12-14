@@ -13,12 +13,12 @@ set ignorecase incsearch smartcase
 set number
 set lazyredraw
 set mouse=a
-set nobackup nowritebackup noswapfile nocursorline nowrap
+set nobackup nowritebackup noswapfile nowrap
 set noerrorbells visualbell t_vb=""
 set shiftwidth=4 tabstop=4
 set synmaxcol=200 ttyfast
 set wildignore+=.git/*,.gradle/*,node_modules/*
-set wildmenu wildmode=longest,list,full
+set wildmenu
 
 nm <silent> <C-t> :SK<CR>
 nn <F1> :set hls!<CR>
