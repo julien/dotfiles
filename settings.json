@@ -65,7 +65,7 @@
     "vim.useCtrlKeys": false,
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 0.5,
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "workbench.editor.enablePreview": false,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 10,
