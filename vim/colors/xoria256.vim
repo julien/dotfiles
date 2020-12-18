@@ -12,7 +12,7 @@ endif
 
 let colors_name = "xoria256"
 
-hi Normal ctermfg=252 guifg=#d0d0d0 ctermbg=232 guibg=Grey2 cterm=none gui=none
+hi Normal ctermfg=252 guifg=#d0d0d0 ctermbg=0 guibg=Black cterm=none gui=none
 hi CursorColumn ctermbg=238 guibg=#444444
 hi Cursor ctermbg=214 guibg=#ffaf00
 hi CursorLine ctermbg=238 guibg=#444444
@@ -27,7 +27,7 @@ hi PmenuThumb ctermbg=252 guibg=#d0d0d0
 hi Search ctermfg=0 guifg=#000000 ctermbg=149 guibg=#afdf5f
 hi SignColumn ctermfg=248 guifg=#a8a8a8
 hi SpecialKey ctermfg=77 guifg=#5fdf5f
-hi StatusLine ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
+hi StatusLine ctermbg=0 guibg=0 cterm=bold gui=bold
 hi StatusLineNC ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 hi TabLine ctermfg=fg guifg=fg ctermbg=242 guibg=#666666 cterm=underline gui=underline
 hi TabLineFill ctermfg=fg guifg=fg ctermbg=242 guibg=#666666 cterm=underline gui=underline
