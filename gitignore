@@ -1,8 +1,0 @@
-.Trashes
-.gradle
-.idea
-.vscode
-.db
-bin/
-classes/
-node_modules/

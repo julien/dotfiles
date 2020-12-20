@@ -4,7 +4,6 @@
 	pr = "!f() { local b=\"pull/$2\"; git fetch --update-head-ok \"$1\" +\"pull/$2/head:$b\"; git checkout $b; }; f"
 
 [core]
-	excludesfile = /home/jc/.gitignore
 	fileMode = false
 	precomposeUnicode = true
 	quotepath = false
