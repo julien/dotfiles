@@ -313,12 +313,6 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <!-- Launch scrot when Print is pressed -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command>scrot</command>
-      </action>
-    </keybind>
     <!--  Keybinding for Volume management	-->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
