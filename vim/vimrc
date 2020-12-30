@@ -11,7 +11,7 @@ set completeopt-=preview
 set hidden
 set ignorecase incsearch smartcase
 set number
-set lazyredraw
+set lazyredraw laststatus=0
 set mouse=a
 set nobackup nowritebackup noswapfile nowrap
 set noerrorbells visualbell t_vb=""
