@@ -1,14 +1,10 @@
-# if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
+   [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
 fi
 
 z() {
 	local DIR
-	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR"
+	DIR=$(git ls-tree -rd --name-only HEAD 2> /dev/null | sk --no-multi -q "$1") && cd "$DIR" || exit
 }
 
 export ANT_OPTS="-Xmx2048m"
@@ -31,4 +27,3 @@ export PATH="$HOME/.vim-plugins/skim/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export SKIM_DEFAULT_OPTIONS='--color=bw'
-export PATH="$HOME/.cargo/bin:$PATH"
