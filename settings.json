@@ -10,7 +10,7 @@
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.renderWhitespace": "none",
-    "editor.rulers": [80],
+    "editor.rulers": [],
     "explorer.decorations.badges": false,
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": true,
@@ -25,7 +25,7 @@
         "**/build/**": true,
         "**/classes": true,
         "**/node_modules": true,
-        "**/tmp": true,
+        "**/tmp": true
     },
     "files.watcherExclude": {
         "**/.DS_Store": true,
@@ -42,6 +42,7 @@
         "**/classes": true,
         "**/node_modules": true,
         "**/tmp": true,
+		"**/*": true
     },
     "git.enabled": true,
     "outline.icons": false,
@@ -56,7 +57,7 @@
         "**/build": true,
         "**/classes": true,
         "**/node_modules": true,
-        "**/tmp": true,
+        "**/tmp": true
     },
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
@@ -75,5 +76,5 @@
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true,
     "workbench.tips.enabled": false,
-    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.renderIndentGuides": "none"
 }
