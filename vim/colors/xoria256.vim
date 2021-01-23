@@ -56,4 +56,4 @@ hi diffAdd ctermfg=bg guifg=bg ctermbg=151 guibg=#afdfaf
 hi diffDelete ctermfg=bg guifg=bg ctermbg=246 guibg=#949494 cterm=none gui=none
 hi diffChange ctermfg=bg guifg=bg ctermbg=181 guibg=#dfafaf
 hi diffText ctermfg=bg guifg=bg ctermbg=174 guibg=#df8787 cterm=none gui=none
-hi SpellBad guifg=DarkRed ctermbg=1
+hi SpellBad gui=undercurl guifg=DarkRed gui=none cterm=undercurl ctermfg=1 ctermbg=bg
