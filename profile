@@ -12,7 +12,6 @@ export COLORFGBG="15;0"
 export EDITOR=vim
 export GRADLE_OPTS="-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xms2g"
 export JAVA_HOME="$HOME/.local/jdk"
-export JAVA_OPTS="-Xmx2048m"
 export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export NO_COLOR=1
