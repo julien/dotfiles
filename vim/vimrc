@@ -32,7 +32,6 @@ nn n nzz
 vn < <gv
 vn > >gv
 
-au BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 au FileType qf setlocal wrap
 au FileType gitcommit setlocal spell
 
