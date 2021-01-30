@@ -1,14 +1,3 @@
-" Vim color file
-" Original Maintainer: Lars H. Nielsen (dengmao@gmail.com)
-" Last Change: 2014-07-05
-"
-" Modified version by
-"  Adam Stankiewicz (sheerun@sher.pl)
-" Modified version of wombat for 256-color terminals by
-"  David Liang (bmdavll@gmail.com)
-" based on version by
-"  Danila Bespalov (danila.bespalov@gmail.com)
-
 set background=dark
 
 if version > 580
@@ -20,12 +9,10 @@ endif
 
 let colors_name = "wombat"
 
-" General colors
 hi Cursor ctermfg=234 ctermbg=228 cterm=none guifg=#242424 guibg=#eae788 gui=none
 hi ErrorMsg ctermfg=196 ctermbg=234 cterm=bold guifg=#e3e0d7 guibg=#3a3a3a gui=bold
 hi Folded ctermfg=103 ctermbg=237 cterm=none guifg=#a0a8b0 guibg=#3a4046 gui=none
 hi LineNr ctermfg=241 ctermbg=232 cterm=none guifg=#857b6f guibg=#080808 gui=none
-" hi Normal ctermfg=252 ctermbg=234 cterm=none guifg=#e3e0d7 guibg=#242424 gui=none
 hi Normal ctermfg=252 ctermbg=0 cterm=none guifg=#e3e0d7 guibg=#000000 gui=none
 hi Search ctermfg=250 ctermbg=241 cterm=bold guifg=#ffffff guibg=#333333 gui=bold
 hi SpellBad ctermfg=3 ctermbg=0 cterm=bold guifg=#cc0000 guibg=#000000 gui=underline
