@@ -33,7 +33,6 @@ vn < <gv
 vn > >gv
 
 au FileType qf setlocal wrap
-au FileType gitcommit setlocal spell
 
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
