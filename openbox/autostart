@@ -1,5 +1,5 @@
 # background color
-xsetroot -solid '#080808'
+xsetroot -solid '#2e4060'
 
 # disable caps
 setxkbmap -option caps:none
