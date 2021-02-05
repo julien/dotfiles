@@ -9,7 +9,7 @@ set autoread
 set backspace=indent,eol,start
 set completeopt-=preview
 set hidden
-set ignorecase incsearch smartcase
+set nohlsearch ignorecase incsearch smartcase
 set number
 set lazyredraw laststatus=2 noruler
 set mouse=a
