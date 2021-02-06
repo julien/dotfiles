@@ -1,11 +1,6 @@
-if &t_Co != 256 && ! has("gui_running")
-  finish
-endif
-
 set background=dark
 
 hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
