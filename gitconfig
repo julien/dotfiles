@@ -14,7 +14,7 @@
 
 [diff]
 	tool = vimdiff
-	renameLimit = 999999999
+	renameLimit = 999999
 
 [difftool "vimdiff"]
 	cmd = vim -f -d \"$LOCAL\" \"$REMOTE\"
@@ -26,10 +26,6 @@
 	conflictStyle = diff3
 	tool = vimdiff
 	renameLimit = 999999
-
-[merge "npm-merge-driver"]
-	driver = npx npm-merge-driver merge %A %O %B %P
-	name = automatically merge npm lockfiles
 
 [user]
 	email = julien.castelain@liferay.com
