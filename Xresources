@@ -26,6 +26,3 @@ XTerm*vtMenu*Foreground: #bcbcbc
 *foreground:   #bcbcbc
 *background:   #000000
 *cursorColor:  #666666
-! Dark Blue  + Blue
-XTerm*color4:  #3465a4
-XTerm*color12: #729fcf
