@@ -10,18 +10,12 @@ Xft.rgba: rgb
 XTerm*allowBoldFonts: true
 XTerm*faceName: Monospace:size=11:antialias=true
 XTerm*fastScroll: true
-XTerm*fontMenu*Background: #000000
-XTerm*fontMenu*Foreground: #bcbcbc
 XTerm*locale: true
 XTerm*loginShell: true
-XTerm*mainMenu*Background: #000000
-XTerm*mainMenu*Foreground: #bcbcbc
 XTerm*metaSendsEscape: true
 XTerm*saveLines: 20000
 XTerm*scrollTtyOutput: true
 XTerm*termName: xterm-256color
-XTerm*vtMenu*Background: #000000
-XTerm*vtMenu*Foreground: #bcbcbc
 
 *foreground:   #bcbcbc
 *background:   #000000
