@@ -13,7 +13,7 @@ set nohlsearch ignorecase incsearch smartcase
 set number
 set lazyredraw
 set mouse=a
-set nobackup nowritebackup noswapfile nowrap
+set nobackup nowritebackup noswapfile nofixendofline nowrap
 set noerrorbells visualbell t_vb=""
 set shiftwidth=4 tabstop=4
 set synmaxcol=200 ttyfast
