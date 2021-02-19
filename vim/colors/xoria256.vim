@@ -35,7 +35,7 @@ hi Special ctermfg=174 guifg=#df8787
 hi SpecialKey ctermfg=77 guifg=#5fdf5f
 hi SpellBad gui=undercurl guifg=DarkRed gui=none cterm=undercurl ctermfg=1 ctermbg=bg
 hi Statement ctermfg=110 guifg=#87afdf cterm=none gui=none
-hi StatusLine cterm=reverse gui=reverse
+hi StatusLine cterm=bold ctermbg=NONE ctermfg=fg gui=bold guifg=fg guibg=none
 hi TabLine ctermfg=fg guifg=fg ctermbg=242 guibg=#666666 cterm=underline gui=underline
 hi TabLineFill ctermfg=fg guifg=fg ctermbg=242 guibg=#666666 cterm=underline gui=underline
 hi Todo ctermfg=0 guifg=#000000 ctermbg=184 guibg=#dfdf00
@@ -45,11 +45,5 @@ hi VIsualNOS ctermfg=24 guifg=#005f87 ctermbg=153 guibg=#afdfff cterm=none gui=n
 hi VertSplit ctermfg=237 guifg=#3a3a3a ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 hi Visual ctermfg=24 guifg=#005f87 ctermbg=153 guibg=#afdfff
 hi WildMenu ctermfg=0 guifg=#000000 ctermbg=184 guibg=#dfdf00 cterm=bold gui=bold
-hi diffAdd ctermfg=bg guifg=bg ctermbg=151 guibg=#afdfaf
-hi diffAdded ctermfg=150 guifg=#afdf87
-hi diffChange ctermfg=bg guifg=bg ctermbg=181 guibg=#dfafaf
-hi diffDelete ctermfg=bg guifg=bg ctermbg=246 guibg=#949494 cterm=none gui=none
-hi diffRemoved ctermfg=174 guifg=#df8787
-hi diffText ctermfg=bg guifg=bg ctermbg=174 guibg=#df8787 cterm=none gui=none
 hi! link SpellRare SpellBad
 hi! link StatusLineNC StatusLine
