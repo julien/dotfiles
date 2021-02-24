@@ -35,9 +35,9 @@ hi Special ctermfg=174 guifg=#df8787
 hi SpecialKey ctermfg=77 guifg=#5fdf5f
 hi SpellBad gui=undercurl guifg=DarkRed gui=none cterm=undercurl ctermfg=1 ctermbg=bg
 hi Statement ctermfg=110 guifg=#87afdf cterm=none gui=none
-hi StatusLine cterm=bold ctermbg=NONE ctermfg=fg gui=bold guifg=fg guibg=none
-hi TabLine ctermfg=fg guifg=fg ctermbg=242 guibg=#666666 cterm=underline gui=underline
-hi TabLineFill ctermfg=fg guifg=fg ctermbg=242 guibg=#666666 cterm=underline gui=underline
+hi StatusLine cterm=bold ctermbg=234 ctermfg=fg gui=bold guifg=fg guibg=#1c1c1c
+hi TabLine ctermfg=fg guifg=fg ctermbg=234 guibg=#1c1c1c cterm=none gui=none
+hi TabLineFill ctermfg=fg guifg=fg ctermbg=234 guibg=#1c1c1c cterm=none gui=none
 hi Todo ctermfg=0 guifg=#000000 ctermbg=184 guibg=#dfdf00
 hi Type ctermfg=146 guifg=#afafdf cterm=none gui=none
 hi Underlined ctermfg=39 guifg=#00afff cterm=underline gui=underline
