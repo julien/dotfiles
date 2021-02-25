@@ -5,6 +5,7 @@
 
 [core]
 	fileMode = false
+	logAllRefUpdates = true
 	precomposeUnicode = true
 	quotepath = false
 	safecrlf = false
@@ -28,6 +29,5 @@
 	renameLimit = 999999
 
 [user]
-	email = julien.castelain@liferay.com
-	logallrefupdates = true
 	name = Julien Castelain
+	email = julien.castelain@liferay.com
