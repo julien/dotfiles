@@ -37,5 +37,6 @@ au FileType qf setlocal wrap
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
+let g:netrw_chgwin = -1
 
 colo xoria256
