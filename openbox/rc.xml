@@ -209,7 +209,7 @@
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
     <keybind key="C-S-4">
       <action name="Execute">
-        <command>scrot -s</command>
+        <command>scrot -s ~/Downloads/%Y-%m-%d-%T-screenshot.png</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
