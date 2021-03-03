@@ -1,3 +1,0 @@
-[submodule "vim/pack/bundles/start/VimCompletesMe"]
-	path = vim/pack/bundles/start/VimCompletesMe
-	url = https://github.com/ajh17/VimCompletesMe.git
