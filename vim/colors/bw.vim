@@ -17,7 +17,7 @@ hi! DiffDelete cterm=NONE ctermfg=9 ctermbg=NONE
 hi! DiffText cterm=NONE ctermfg=6 ctermbg=NONE
 hi! FoldColumn cterm=NONE ctermfg=240 ctermbg=NONE
 hi! Folded cterm=bold ctermfg=6 ctermbg=NONE
-hi! Function cterm=NONE ctermfg=172 ctermbg=NONE
+hi! Function cterm=bold ctermfg=7 ctermbg=NONE
 hi! Identifier cterm=NONE ctermfg=7 ctermbg=NONE
 hi! IncSearch cterm=NONE ctermfg=240 ctermbg=11
 hi! LineNr cterm=NONE ctermfg=240 ctermbg=NONE
