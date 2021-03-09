@@ -32,6 +32,7 @@ nn n nzz
 vn < <gv
 vn > >gv
 
+au BufWritePre * :%s/\s\+$//e
 au FileType qf setlocal wrap
 
 let g:netrw_banner = 0
