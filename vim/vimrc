@@ -21,6 +21,7 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
 nm <silent> <C-t> :SK<CR>
+nn <silent> <F1> :if exists("syntax_on")<BAR>syntax off<BAR>else<BAR>syntax enable<BAR>endif<CR>
 nn <F3> :set number!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bw!<CR>
