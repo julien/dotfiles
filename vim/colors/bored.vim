@@ -12,8 +12,8 @@ hi Conceal guifg=#5e5e5e guibg=none gui=none ctermfg=241 ctermbg=none cterm=none
 hi Constant guifg=#e6a657 gui=none ctermfg=179
 hi Cursor guibg=#ffffff ctermbg=15
 hi CursorLine guibg=#353535 ctermbg=236 cterm=none
-hi CursorLineNr guibg=none guifg=#d0d0d0 gui=none ctermbg=none ctermfg=252 cterm=none
-hi Directory guibg=none guifg=#e4e4e4 gui=bold ctermfg=254 ctermbg=none cterm=bold
+hi CursorLineNr guibg=none guifg=#d0d0d0 gui=none ctermbg=none ctermfg=3 cterm=none
+hi Directory guibg=none guifg=#e4e4e4 gui=bold ctermfg=4 ctermbg=none cterm=bold
 hi EndOfBuffer guibg=none guifg=#444444 ctermbg=0 ctermfg=238
 hi Folded guibg=#252525 guifg=#909090 gui=none ctermbg=235 ctermfg=246 cterm=none
 hi Function ctermfg=2 guifg=#00ff00
@@ -27,6 +27,7 @@ hi PmenuSbar guibg=#3a3a3a ctermbg=237
 hi PmenuSel guibg=#bcbcbc guifg=#262626 gui=none ctermbg=250 ctermfg=235
 hi PmenuThumb guibg=#808080 ctermbg=244
 hi PreProc guifg=#d0d0d0 gui=none ctermfg=252
+hi Search ctermbg=15 guibg=#c6c6c6
 hi Special guifg=#00a3ab gui=none ctermfg=8
 hi Statement guifg=#f070f0 gui=none ctermfg=170
 hi Statusline guibg=#c6c6c6 guifg=#000000 gui=none ctermbg=251 ctermfg=0 cterm=none
@@ -35,11 +36,14 @@ hi String guifg=#49b34e gui=none ctermfg=77
 hi TabLineSel guibg=#000000 guifg=#d0d0d0 gui=none ctermbg=0 ctermfg=252
 hi Title guibg=none guifg=#f0f035 gui=bold ctermfg=11 cterm=bold
 hi Type guifg=#d0d0d0 gui=none ctermfg=252
-hi Underlined guifg=#8798e5 gui=underline ctermbg=0 ctermfg=68
 hi VertSplit guibg=none guifg=#3a3a3a gui=none ctermbg=none ctermfg=237 cterm=none
 hi Visual guibg=#103040 guifg=none cterm=none ctermbg=238 ctermfg=15
 hi WildMenu guibg=#ffff00 guifg=#000000 gui=none ctermbg=11 ctermfg=16
-hi lCursor guibg=#ff0000 ctermbg=12
+hi diffAdded ctermfg=2
+hi diffFile ctermfg=6
+hi diffNewFile ctermfg=1
+hi diffRemoved ctermfg=1
+hi netrwSymlink ctermfg=14
 hi! link ColorColumn CursorLine
 hi! link CursorColumn CursorLine
 hi! link FoldColumn Folded
@@ -47,7 +51,4 @@ hi! link SpecialKey NonText
 hi! link TabLine StatusLineNC
 hi! link TabLineFill TabLine
 hi! link Todo Title
-hi diffAdded ctermfg=2
-hi diffRemoved ctermfg=1
-hi diffNewFile ctermfg=1
-hi diffFile ctermfg=6
+hi! link netrwClassify Directory
