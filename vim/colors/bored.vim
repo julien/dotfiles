@@ -1,0 +1,53 @@
+set background=dark
+
+hi clear
+if exists('syntax_on')
+	syntax reset
+endif
+
+let g:colors_name = 'bored'
+
+hi Comment ctermfg=8 guifg=#c0c0c0
+hi Conceal guifg=#5e5e5e guibg=none gui=none ctermfg=241 ctermbg=none cterm=none
+hi Constant guifg=#e6a657 gui=none ctermfg=179
+hi Cursor guibg=#ffffff ctermbg=15
+hi CursorLine guibg=#353535 ctermbg=236 cterm=none
+hi CursorLineNr guibg=none guifg=#d0d0d0 gui=none ctermbg=none ctermfg=252 cterm=none
+hi Directory guibg=none guifg=#e4e4e4 gui=bold ctermfg=254 ctermbg=none cterm=bold
+hi EndOfBuffer guibg=none guifg=#444444 ctermbg=0 ctermfg=238
+hi Folded guibg=#252525 guifg=#909090 gui=none ctermbg=235 ctermfg=246 cterm=none
+hi Function ctermfg=2 guifg=#00ff00
+hi Identifier guifg=#949494 gui=none ctermfg=246
+hi LineNr guibg=none guifg=#909090 ctermbg=none ctermfg=246
+hi MatchParen guibg=#303030 ctermbg=2 ctermfg=0 guibg=#000000
+hi NonText guibg=none guifg=#303030 gui=none ctermfg=236 cterm=none
+hi Normal guibg=#000000 guifg=#d0d0d0 gui=none ctermbg=0 ctermfg=252
+hi Pmenu guibg=#262626 guifg=#bcbcbc gui=none ctermbg=235 ctermfg=250
+hi PmenuSbar guibg=#3a3a3a ctermbg=237
+hi PmenuSel guibg=#bcbcbc guifg=#262626 gui=none ctermbg=250 ctermfg=235
+hi PmenuThumb guibg=#808080 ctermbg=244
+hi PreProc guifg=#d0d0d0 gui=none ctermfg=252
+hi Special guifg=#00a3ab gui=none ctermfg=8
+hi Statement guifg=#f070f0 gui=none ctermfg=170
+hi Statusline guibg=#c6c6c6 guifg=#000000 gui=none ctermbg=251 ctermfg=0 cterm=none
+hi StatuslineNC guibg=#3a3a3a guifg=#9e9e9e gui=none ctermbg=237 ctermfg=247 cterm=none
+hi String guifg=#49b34e gui=none ctermfg=77
+hi TabLineSel guibg=#000000 guifg=#d0d0d0 gui=none ctermbg=0 ctermfg=252
+hi Title guibg=none guifg=#f0f035 gui=bold ctermfg=11 cterm=bold
+hi Type guifg=#d0d0d0 gui=none ctermfg=252
+hi Underlined guifg=#8798e5 gui=underline ctermbg=0 ctermfg=68
+hi VertSplit guibg=none guifg=#3a3a3a gui=none ctermbg=none ctermfg=237 cterm=none
+hi Visual guibg=#103040 guifg=none cterm=none ctermbg=238 ctermfg=15
+hi WildMenu guibg=#ffff00 guifg=#000000 gui=none ctermbg=11 ctermfg=16
+hi lCursor guibg=#ff0000 ctermbg=12
+hi! link ColorColumn CursorLine
+hi! link CursorColumn CursorLine
+hi! link FoldColumn Folded
+hi! link SpecialKey NonText
+hi! link TabLine StatusLineNC
+hi! link TabLineFill TabLine
+hi! link Todo Title
+hi diffAdded ctermfg=2
+hi diffRemoved ctermfg=1
+hi diffNewFile ctermfg=1
+hi diffFile ctermfg=6
