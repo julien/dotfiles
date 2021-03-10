@@ -16,7 +16,7 @@ hi CursorLineNr guibg=none guifg=#d0d0d0 gui=none ctermbg=none ctermfg=3 cterm=n
 hi Directory guibg=none guifg=#e4e4e4 gui=bold ctermfg=4 ctermbg=none cterm=bold
 hi EndOfBuffer guibg=none guifg=#444444 ctermbg=0 ctermfg=238
 hi Folded guibg=#252525 guifg=#909090 gui=none ctermbg=235 ctermfg=246 cterm=none
-hi Function ctermfg=2 guifg=#00ff00
+hi Function ctermfg=6 guifg=#008080 cterm=bold gui=bold
 hi Identifier guifg=#949494 gui=none ctermfg=246
 hi LineNr guibg=none guifg=#909090 ctermbg=none ctermfg=246
 hi MatchParen guibg=#303030 ctermbg=2 ctermfg=0 guibg=#000000
@@ -25,7 +25,7 @@ hi Normal guibg=#000000 guifg=#d0d0d0 gui=none ctermbg=0 ctermfg=252
 hi Pmenu guibg=#262626 guifg=#bcbcbc gui=none ctermbg=235 ctermfg=250
 hi PmenuSbar guibg=#3a3a3a ctermbg=237
 hi PmenuSel guibg=#bcbcbc guifg=#262626 gui=none ctermbg=250 ctermfg=235
-hi PmenuThumb guibg=#808080 ctermbg=244
+hi PmenuThumb ctermbg=244 guibg=#808080
 hi PreProc guifg=#d0d0d0 gui=none ctermfg=252
 hi Search ctermbg=15 guibg=#c6c6c6
 hi Special guifg=#00a3ab gui=none ctermfg=8
