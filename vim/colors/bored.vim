@@ -51,4 +51,5 @@ hi! link SpecialKey NonText
 hi! link TabLine StatusLineNC
 hi! link TabLineFill TabLine
 hi! link Todo Title
+hi! link gitcommitSummary Normal
 hi! link netrwClassify Directory
