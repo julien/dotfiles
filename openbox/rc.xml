@@ -56,7 +56,7 @@
     <font place="InactiveOnScreenDisplay">
       <name>sans</name>
       <size>9</size>
-      <weight>bold</weight>     
+      <weight>bold</weight>
       <slant>normal</slant>
     </font>
   </theme>
@@ -68,9 +68,9 @@
     <popupTime>875</popupTime>
   </desktops>
   <resize>
-    <drawContents>yes</drawContents>
+    <drawContents>no</drawContents>
     <popupShow>Nonpixel</popupShow>
-    <popupPosition>Center</popupPosition>   
+    <popupPosition>Center</popupPosition>
     <popupFixedPosition>
       <x>10</x>
       <y>10</y>
