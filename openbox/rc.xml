@@ -68,7 +68,7 @@
     <popupTime>875</popupTime>
   </desktops>
   <resize>
-    <drawContents>no</drawContents>
+    <drawContents>yes</drawContents>
     <popupShow>Nonpixel</popupShow>
     <popupPosition>Center</popupPosition>
     <popupFixedPosition>
