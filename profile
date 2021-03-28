@@ -8,7 +8,6 @@ z() {
 }
 
 export ANT_OPTS="-Xmx2048m"
-export COLORFGBG="15;0"
 export EDITOR=vim
 export GRADLE_OPTS="-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xms2g"
 export JAVA_HOME="$HOME/.local/jdk"
