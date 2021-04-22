@@ -1,3 +1,6 @@
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
 shopt -s cmdhist
 export PS1='\W\$ '
 
