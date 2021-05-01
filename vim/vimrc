@@ -22,7 +22,6 @@ set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 
 nm <silent> <C-t> :SK<CR>
-nn <silent> <F1> :if exists("syntax_on")<BAR>syntax off<BAR>else<BAR>syntax enable<BAR>endif<CR>
 nn <F3> :set number!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bw!<CR>
@@ -38,6 +37,5 @@ au BufWritePre * :%s/\s\+$//e
 let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
-let g:netrw_chgwin = -1
 
 colo bored
