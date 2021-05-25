@@ -28,7 +28,6 @@ hi PmenuSel guibg=#bcbcbc guifg=#262626 gui=none ctermbg=250 ctermfg=235
 hi PmenuThumb ctermbg=244 guibg=#808080
 hi PreProc guifg=#d0d0d0 gui=none ctermfg=252
 hi Search ctermbg=15 guibg=#c6c6c6
-hi Special guifg=#00a3ab gui=none ctermfg=8
 hi Statement guifg=#f070f0 gui=none ctermfg=170
 hi Statusline guibg=#c6c6c6 guifg=#000000 gui=none ctermbg=251 ctermfg=0 cterm=none
 hi StatuslineNC guibg=#3a3a3a guifg=#9e9e9e gui=none ctermbg=237 ctermfg=247 cterm=none
@@ -47,10 +46,10 @@ hi netrwSymlink ctermfg=14
 hi! link ColorColumn CursorLine
 hi! link CursorColumn CursorLine
 hi! link FoldColumn Folded
+hi! link Special Statement
 hi! link SpecialKey NonText
 hi! link TabLine StatusLineNC
 hi! link TabLineFill TabLine
 hi! link Todo Title
 hi! link gitcommitSummary Normal
-hi! link javaScript Normal
 hi! link netrwClassify Directory
