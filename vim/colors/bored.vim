@@ -8,19 +8,19 @@ endif
 let g:colors_name = 'bored'
 
 hi Comment ctermfg=8 guifg=#c0c0c0
-hi Conceal guifg=#5e5e5e guibg=none gui=none ctermfg=241 ctermbg=none cterm=none
+hi Conceal guifg=#5e5e5e guibg=#000000 gui=none ctermfg=241 ctermbg=0 cterm=none
 hi Constant guifg=#e6a657 gui=none ctermfg=179
 hi Cursor guibg=#ffffff ctermbg=15
 hi CursorLine guibg=#353535 ctermbg=236 cterm=none
-hi CursorLineNr guibg=none guifg=#d0d0d0 gui=none ctermbg=none ctermfg=3 cterm=none
-hi Directory guibg=none guifg=#e4e4e4 gui=bold ctermfg=4 ctermbg=none cterm=bold
-hi EndOfBuffer guibg=none guifg=#444444 ctermbg=0 ctermfg=238
+hi CursorLineNr guibg=#000000 guifg=#d0d0d0 gui=none ctermbg=0 ctermfg=3 cterm=none
+hi Directory guibg=#000000 guifg=#e4e4e4 gui=bold ctermfg=4 ctermbg=0 cterm=bold
+hi EndOfBuffer guibg=#000000 guifg=#444444 ctermbg=0 ctermfg=238
 hi Folded guibg=#252525 guifg=#909090 gui=none ctermbg=235 ctermfg=246 cterm=none
 hi Function ctermfg=6 guifg=#008080 cterm=bold gui=bold
 hi Identifier guifg=#949494 gui=none ctermfg=246
-hi LineNr guibg=none guifg=#909090 ctermbg=none ctermfg=246
+hi LineNr guibg=#000000 guifg=#909090 ctermbg=0 ctermfg=246
 hi MatchParen guibg=#303030 ctermbg=2 ctermfg=0 guibg=#000000
-hi NonText guibg=none guifg=#303030 gui=none ctermfg=236 cterm=none
+hi NonText guibg=#000000 guifg=#303030 gui=none ctermfg=236 cterm=none
 hi Normal guibg=#000000 guifg=#d0d0d0 gui=none ctermbg=0 ctermfg=252
 hi Pmenu guibg=#262626 guifg=#bcbcbc gui=none ctermbg=235 ctermfg=250
 hi PmenuSbar guibg=#3a3a3a ctermbg=237
@@ -34,10 +34,10 @@ hi Statusline guibg=#c6c6c6 guifg=#000000 gui=none ctermbg=251 ctermfg=0 cterm=n
 hi StatuslineNC guibg=#3a3a3a guifg=#9e9e9e gui=none ctermbg=237 ctermfg=247 cterm=none
 hi String guifg=#49b34e gui=none ctermfg=77
 hi TabLineSel guibg=#000000 guifg=#d0d0d0 gui=none ctermbg=0 ctermfg=252
-hi Title guibg=none guifg=#f0f035 gui=bold ctermfg=11 cterm=bold
+hi Title guibg=#000000 guifg=#f0f035 gui=bold ctermfg=11 cterm=bold
 hi Type guifg=#d0d0d0 gui=none ctermfg=252
-hi VertSplit guibg=none guifg=#3a3a3a gui=none ctermbg=none ctermfg=237 cterm=none
-hi Visual guibg=#103040 guifg=none cterm=none ctermbg=238 ctermfg=15
+hi VertSplit guibg=#000000 guifg=#3a3a3a gui=none ctermbg=0 ctermfg=237 cterm=none
+hi Visual guibg=#103040 guifg=#000000 cterm=none ctermbg=238 ctermfg=15
 hi WildMenu guibg=#ffff00 guifg=#000000 gui=none ctermbg=11 ctermfg=16
 hi diffAdded ctermfg=2
 hi diffFile ctermfg=6
