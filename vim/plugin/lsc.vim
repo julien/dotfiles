@@ -31,4 +31,4 @@ let g:lsc_auto_map = {
  \  'Completion': 'omnifunc',
  \}
 let g:lsc_reference_highlights = v:false
-let g:lsc_enable_diagnostics = v:false
+let g:lsc_enable_diagnostics = v:true
