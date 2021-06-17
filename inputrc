@@ -1,5 +1,7 @@
-set completion-ignore-case on	
-set show-all-if-ambiguous on	
-set show-all-if-unmodified on	
-set bell-style none	
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set menu-complete-display-prefix on
+set bell-style none
 TAB: menu-complete
+"\e[Z": menu-complete-backward
