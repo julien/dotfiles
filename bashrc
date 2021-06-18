@@ -1,6 +1,6 @@
 shopt -s cmdhist
-HISTCONTROL=ignoreboth
-HISTIGNORE="&:[bf]g:cd*:clear:exit:history*:ls*"
+HISTCONTROL=ignoreboth:erasedups
+HISTIGNORE="&:[bf]g:cd*:clear:exit:history*:ls*:rm*"
 export PS1='\W\$ '
 alias gradlew='$(git rev-parse --show-toplevel)/gradlew $@'
 alias ls="ls -a --color"
