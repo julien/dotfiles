@@ -40,7 +40,7 @@ hi Type ctermfg=252
 hi VertSplit ctermbg=0 ctermfg=237 cterm=none
 hi Visual cterm=none ctermbg=3 ctermfg=0
 hi WildMenu ctermbg=11 ctermfg=16
-hi Question ctermfg=5
+hi Question ctermfg=3
 hi diffAdded ctermfg=2
 hi diffFile ctermfg=6
 hi diffNewFile ctermfg=2
