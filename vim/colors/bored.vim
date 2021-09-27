@@ -14,15 +14,15 @@ hi Cursor ctermbg=15
 hi CursorLine ctermbg=236 cterm=none
 hi CursorLineNr ctermbg=0 ctermfg=3 cterm=none
 hi Directory ctermfg=4 ctermbg=0 cterm=bold
-hi EndOfBuffer ctermbg=0 ctermfg=238
+hi EndOfBuffer ctermbg=none ctermfg=238
 hi Folded ctermbg=235 ctermfg=246 cterm=none
 hi Function ctermfg=6 cterm=bold
 hi Identifier ctermfg=4
 hi Keyword ctermfg=5
-hi LineNr ctermbg=0 ctermfg=246
+hi LineNr ctermbg=none ctermfg=246
 hi MatchParen ctermbg=2 ctermfg=0
-hi NonText ctermfg=236 cterm=none
-hi Normal ctermbg=0 ctermfg=252
+hi NonText ctermfg=none cterm=none
+hi Normal ctermbg=none ctermfg=252
 hi Pmenu ctermbg=235 ctermfg=250
 hi PmenuSbar ctermbg=237
 hi PmenuSel ctermbg=250 ctermfg=235
