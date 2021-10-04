@@ -13,7 +13,8 @@ hi LineNr ctermbg=none ctermfg=246
 hi NonText ctermfg=none
 hi Normal ctermbg=232 ctermfg=252
 hi Pmenu ctermbg=234 ctermfg=250
-hi StatuslineNC ctermbg=234 ctermfg=247
+hi Statusline ctermbg=234 ctermfg=247 cterm=none
+hi StatuslineNC ctermbg=233 ctermfg=247 cterm=none
 hi VertSplit ctermbg=none ctermfg=237 cterm=none
 hi Comment ctermfg=8
 hi Identifier ctermfg=10
