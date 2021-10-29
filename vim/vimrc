@@ -4,8 +4,6 @@ set rtp+=$HOME/.vim-plugins/vim-lsc,$HOME/.vim-plugins/vim-lsc/after
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
-set autoread
-set backspace=indent,eol,start
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
 set hidden
@@ -13,7 +11,7 @@ set nohlsearch ignorecase
 set number laststatus=0
 set lazyredraw
 set mouse=a
-set nobackup nowritebackup noswapfile nofixendofline nowrap
+set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
 set synmaxcol=200 ttyfast
 set wildignore+=.git/*,.gradle/*,node_modules/*
@@ -30,3 +28,4 @@ let g:netrw_banner = 0
 let g:netrw_cursor = 0
 let g:netrw_dirhistmax = 0
 colo dark
+au FileType qf setlocal wrap
