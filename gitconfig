@@ -1,7 +1,7 @@
 [alias]
 	l = log --oneline
 	pr = "!f() { local b=\"pull/$2\"; git fetch --update-head-ok \"$1\" +\"pull/$2/head:$b\"; git checkout $b; }; f"
-	s = status
+	s = status -s -uall
 
 [core]
 	fileMode = false
