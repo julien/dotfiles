@@ -18,6 +18,7 @@ export PATH="$HOME/.local/ant/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/jdk/bin:$PATH"
 export PATH="$HOME/.local/jdk/jre/bin:$PATH"
+export PATH="$HOME/.local/go/bin:$PATH"
 export PATH="$HOME/.local/node/bin:$PATH"
 export PATH="$HOME/.local/nvim/bin:$PATH"
 export PATH="$HOME/.local/src/skim/bin:$PATH"
@@ -26,3 +27,4 @@ export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export SKIM_DEFAULT_OPTIONS='--color=bw'
 export N_PREFIX=$HOME/.local/n
 export PATH="$HOME/.local/n/bin:$PATH"
+export GOPATH="$HOME/Documents"
