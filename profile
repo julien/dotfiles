@@ -8,6 +8,7 @@ z() {
 }
 
 export ANT_OPTS="-Xmx2048m"
+export EDITOR=vim
 export GRADLE_OPTS="-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xms2g"
 export JAVA_HOME="$HOME/.local/jdk"
 export LANG=en_US.UTF-8
