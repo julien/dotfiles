@@ -28,4 +28,5 @@ export SKIM_DEFAULT_COMMAND='rg --color=never --files --glob "!.git/*"'
 export SKIM_DEFAULT_OPTIONS='--color=bw'
 export N_PREFIX=$HOME/.local/n
 export PATH="$HOME/.local/n/bin:$PATH"
-export GOPATH="$HOME/Documents"
+export GOPATH="$HOME/Documents/go"
+export PATH="$HOME/Documents/go/bin:$PATH"
