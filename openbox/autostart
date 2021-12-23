@@ -3,8 +3,6 @@ xsetroot -solid black
 
 # disable caps
 setxkbmap -option caps:none
-setxkbmap -option ctrl:nocaps
 
 # turn off beep
 xset -b
-
