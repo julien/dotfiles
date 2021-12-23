@@ -4,4 +4,3 @@ set show-all-if-unmodified on
 set menu-complete-display-prefix on
 set bell-style none
 TAB: menu-complete
-"\e[Z": menu-complete-backward
