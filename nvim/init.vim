@@ -1,5 +1,4 @@
 set rtp+=$HOME/.local/src/git-messenger.vim
-set rtp+=$HOME/.local/src/skim
 set rtp+=$HOME/.local/src/vim-lsc,$HOME/.local/src/vim-lsc/after
 filetype plugin indent on
 syntax on
@@ -16,7 +15,6 @@ set shiftwidth=4 tabstop=4
 set synmaxcol=200 ttyfast
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
-nm <silent> <C-t> :SK<CR>
 nn <F3> :set number!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bw!<CR>
