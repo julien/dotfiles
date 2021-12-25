@@ -20,7 +20,6 @@ export PATH="$HOME/.local/jdk/bin:$PATH"
 export PATH="$HOME/.local/jdk/jre/bin:$PATH"
 export PATH="$HOME/.local/node/bin:$PATH"
 export PATH="$HOME/.local/nvim/bin:$PATH"
-export PATH="$HOME/.local/src/skim/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export N_PREFIX=$HOME/.local/n
 export PATH="$HOME/.local/n/bin:$PATH"
