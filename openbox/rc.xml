@@ -442,23 +442,8 @@
       </mousebind>
     </context>
     <context name="Root">
-      <!-- Menus -->
-      <mousebind button="Right" action="Press">
-        <action name="ShowMenu">
-          <menu>root-menu</menu>
-        </action>
-      </mousebind>
     </context>
   </mouse>
-  <menu>
-    <file>menu.xml</file>
-    <hideDelay>200</hideDelay>
-    <middle>no</middle>
-    <submenuShowDelay>100</submenuShowDelay>
-    <submenuHideDelay>400</submenuHideDelay>
-    <showIcons>no</showIcons>
-    <manageDesktops>no</manageDesktops>
-  </menu>
   <applications>
     <application class="*">
       <focus>yes</focus>
