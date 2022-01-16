@@ -12,7 +12,7 @@ set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
-set synmaxcol=200 ttyfast
+set synmaxcol=200
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 nn <F3> :set number!<CR>
