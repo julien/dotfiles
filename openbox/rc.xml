@@ -184,15 +184,6 @@
         <command>x-terminal-emulator</command>
       </action>
     </keybind>
-    <keybind key="W-e">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>PCManFM</name>
-        </startupnotify>
-        <command>pcmanfm</command>
-      </action>
-    </keybind>
     <!--  Keybinding for Volume management	-->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
