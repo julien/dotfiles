@@ -32,4 +32,5 @@ let g:lsc_auto_map = {
  \}
 let g:lsc_reference_highlights = v:false
 let g:lsc_enable_diagnostics = v:true
+nmap <leader>d :LSClientAllDiagnostics<CR>
 nmap <leader>l :LSClientLineDiagnostics<CR>
