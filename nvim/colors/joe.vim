@@ -9,7 +9,7 @@ let g:colors_name="joe"
 hi Normal ctermfg=254 ctermbg=none 
 hi diffAdded ctermfg=2 cterm=none
 hi diffRemoved ctermfg=1
-hi Folded ctermfg=254 ctermbg=239
+hi Folded ctermfg=254 ctermbg=232
 hi FoldColumn ctermfg=254 ctermbg=239
 hi DiffAdd ctermfg=108 ctermbg=none
 hi NonText ctermfg=239
@@ -31,3 +31,4 @@ hi Comment ctermfg=245
 hi! link LineNr Comment
 hi Constant ctermfg=34
 hi MatchParen ctermbg=7 ctermfg=0
+hi ColorColumn ctermbg=232
