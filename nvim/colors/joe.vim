@@ -15,11 +15,10 @@ hi DiffAdd ctermfg=108 ctermbg=none
 hi NonText ctermfg=239
 hi Search ctermbg=229
 hi SpecialKey ctermfg=239
-hi StatusLine ctermfg=245 ctermbg=232
-hi StatusLineNC ctermfg=239 ctermbg=none
+hi StatusLine ctermbg=245 ctermfg=232
+hi StatusLineNC ctermbg=239 ctermfg=0
 hi VertSplit cterm=none ctermfg=239 ctermbg=none
 hi Visual ctermfg=16 ctermbg=254
-" hi Comment ctermfg=167
 hi Delimiter ctermfg=254
 hi PreProc ctermfg=254
 hi Special ctermfg=44
