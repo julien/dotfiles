@@ -13,12 +13,12 @@ hi Folded ctermfg=254 ctermbg=232
 hi FoldColumn ctermfg=254 ctermbg=239
 hi DiffAdd ctermfg=108 ctermbg=none
 hi NonText ctermfg=239
-hi Search ctermbg=229
+hi Search ctermbg=167
 hi SpecialKey ctermfg=239
 hi StatusLine ctermbg=245 ctermfg=232
 hi StatusLineNC ctermbg=239 ctermfg=0
 hi VertSplit cterm=none ctermfg=239 ctermbg=none
-hi Visual ctermfg=16 ctermbg=254
+hi Visual ctermbg=167 ctermfg=0
 hi Delimiter ctermfg=254
 hi PreProc ctermfg=254
 hi Special ctermfg=44
@@ -30,7 +30,7 @@ hi Identifier ctermfg=44 cterm=none
 hi Comment ctermfg=245
 hi! link LineNr Comment
 hi Constant ctermfg=34
-hi MatchParen ctermbg=7 ctermfg=0
+hi MatchParen ctermbg=234 ctermfg=232
 hi ColorColumn ctermbg=232
 hi SpellBad cterm=underline ctermbg=none ctermfg=1
 hi! link SpellCap SpellBad
