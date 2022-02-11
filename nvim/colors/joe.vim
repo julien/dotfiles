@@ -32,3 +32,5 @@ hi! link LineNr Comment
 hi Constant ctermfg=34
 hi MatchParen ctermbg=7 ctermfg=0
 hi ColorColumn ctermbg=232
+hi SpellBad cterm=underline ctermbg=none ctermfg=1
+hi! link SpellCap SpellBad
