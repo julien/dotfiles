@@ -23,11 +23,11 @@ hi Delimiter ctermfg=254
 hi PreProc ctermfg=254
 hi Special ctermfg=44
 hi Statement ctermfg=254 
-hi Type ctermfg=250  cterm=none
+hi Type ctermfg=248  cterm=none
 hi Pmenu ctermbg=232 ctermfg=252
 hi String ctermfg=173
 hi Identifier ctermfg=44 cterm=none
-hi Comment ctermfg=245
+hi Comment ctermfg=240
 hi! link LineNr Comment
 hi Constant ctermfg=34
 hi MatchParen ctermbg=234 ctermfg=232
