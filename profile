@@ -11,7 +11,6 @@ export ANT_OPTS="-Xmx2048m"
 export EDITOR=vim
 export GRADLE_OPTS="-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xms2g"
 export JAVA_HOME="$HOME/.local/jdk"
-export NO_COLOR=1
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/ant/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -19,6 +18,5 @@ export PATH="$HOME/.local/jdk/bin:$PATH"
 export PATH="$HOME/.local/jdk/jre/bin:$PATH"
 export PATH="$HOME/.local/node/bin:$PATH"
 export PATH="$HOME/.local/nvim/bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
 export N_PREFIX=$HOME/.local/n
 export PATH="$HOME/.local/n/bin:$PATH"
