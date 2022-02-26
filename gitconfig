@@ -10,15 +10,8 @@
 	quotepath = false
 	safecrlf = false
 
-[color]
-	diff = true
-
 [diff]
-	tool = vimdiff
 	renameLimit = 999999
-
-[difftool "vimdiff"]
-	cmd = vim -f -d \"$LOCAL\" \"$REMOTE\"
 
 [http]
 	sslVerify = false
