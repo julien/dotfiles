@@ -12,15 +12,14 @@ hi diffRemoved ctermfg=1
 hi Folded ctermfg=254 ctermbg=232
 hi FoldColumn ctermfg=254 ctermbg=239
 hi DiffAdd ctermfg=108 ctermbg=none
-hi NonText ctermfg=239
 hi SpecialKey ctermfg=239
 hi StatusLine ctermbg=245 ctermfg=232
 hi StatusLineNC ctermbg=239 ctermfg=0
 hi VertSplit cterm=none ctermfg=239 ctermbg=none
-hi Delimiter ctermfg=254
-hi PreProc ctermfg=254
+hi! link Delimiter Normal
+hi! link PreProc Normal
+hi! link Statement Normal
 hi Special ctermfg=44
-hi Statement ctermfg=254 
 hi Type ctermfg=248  cterm=none
 hi Pmenu ctermbg=232 ctermfg=252
 hi String ctermfg=173
