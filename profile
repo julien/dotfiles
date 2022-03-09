@@ -11,6 +11,7 @@ export ANT_OPTS="-Xmx2048m"
 export EDITOR=vim
 export GRADLE_OPTS="-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xms2g"
 export JAVA_HOME="$HOME/.local/jdk"
+export NO_COLOR=1
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/ant/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
