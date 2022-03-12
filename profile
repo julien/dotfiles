@@ -24,4 +24,4 @@ export N_PREFIX=$HOME/.local/n
 export PATH="$HOME/.local/n/bin:$PATH"
 export PATH="$HOME/.local/go/bin:$PATH"
 export GOPATH="$HOME/Documents/go"
-export PATH="$HOME/Documents/go/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
