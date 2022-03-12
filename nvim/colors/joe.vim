@@ -20,7 +20,7 @@ hi! link Delimiter Normal
 hi! link PreProc Normal
 hi! link Statement Normal
 hi Special ctermfg=44
-hi Type ctermfg=248  cterm=none
+hi Type ctermfg=176  cterm=none
 hi Pmenu ctermbg=232 ctermfg=252
 hi String ctermfg=173
 hi Identifier ctermfg=44 cterm=none
