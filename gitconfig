@@ -5,10 +5,7 @@
 
 [core]
 	fileMode = false
-	logAllRefUpdates = true
 	precomposeUnicode = true
-	quotepath = false
-	safecrlf = false
 
 [diff]
 	renameLimit = 999999
@@ -19,7 +16,6 @@
 [merge]
 	conflictStyle = diff3
 	tool = vimdiff
-	renameLimit = 999999
 
 [user]
 	name = Julien Castelain
