@@ -11,8 +11,8 @@ zstyle -e ':completion:*:hosts' hosts 'reply=(
 
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 export PS1="%1~%b%# "
-
 export CLICOLOR=1
 alias ls="ls -a --color=auto"
 alias vim="nvim"
