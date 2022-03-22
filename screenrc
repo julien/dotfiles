@@ -27,3 +27,4 @@ bindkey "^[f" next
 bindkey "^[b" prev
 bind n screen
 bind w windowlist
+bind x kill
