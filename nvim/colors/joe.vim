@@ -2,7 +2,7 @@ hi clear Normal
 set background=dark
 hi clear
 if exists("syntax_on")
- syntax reset
+	syntax reset
 endif
 let g:colors_name="joe"
 
@@ -16,6 +16,7 @@ hi SpecialKey ctermfg=239
 hi StatusLine ctermbg=245 ctermfg=232
 hi StatusLineNC ctermbg=239 ctermfg=0
 hi VertSplit cterm=none ctermfg=239 ctermbg=none
+hi Visual ctermfg=0 ctermbg=245
 hi! link Delimiter Normal
 hi! link PreProc Normal
 hi! link Statement Normal
@@ -24,10 +25,10 @@ hi Type ctermfg=176  cterm=none
 hi Pmenu ctermbg=232 ctermfg=252
 hi String ctermfg=173
 hi Identifier ctermfg=44 cterm=none
-hi Comment ctermfg=240
+hi Comment ctermfg=244 ctermbg=none
 hi! link LineNr Comment
 hi Constant ctermfg=34
-hi MatchParen ctermbg=234 ctermfg=232
+hi MatchParen ctermbg=235 ctermfg=none
 hi ColorColumn ctermbg=232
 hi SpellBad cterm=underline ctermbg=none ctermfg=1
 hi! link SpellCap SpellBad
