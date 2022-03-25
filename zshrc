@@ -15,4 +15,6 @@ zstyle ':completion:*' special-dirs true
 export PS1="%1~%b%# "
 export CLICOLOR=1
 alias ls="ls -a --color=auto"
-alias vim="nvim"
+alias vim=nvim
+eval "$(rbenv init - zsh)"
+[[ -e ~/Documents/env.dev ]] && source ~/Documents/env.dev
