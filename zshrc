@@ -18,3 +18,4 @@ alias ls="ls -a --color=auto"
 alias vim=nvim
 eval "$(rbenv init - zsh)"
 [[ -e ~/Documents/env.dev ]] && source ~/Documents/env.dev
+set -o emacs
