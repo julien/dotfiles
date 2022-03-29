@@ -12,10 +12,12 @@ zstyle -e ':completion:*:hosts' hosts 'reply=(
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+set -o emacs
 export PS1="%1~%b%# "
 export CLICOLOR=1
 alias ls="ls -a --color=auto"
 alias vim=nvim
-eval "$(rbenv init - zsh)"
+if which rbenv > /dev/null;
+  then eval "$(rbenv init - zsh)"
+fi
 [[ -e ~/Documents/env.dev ]] && source ~/Documents/env.dev
-set -o emacs
