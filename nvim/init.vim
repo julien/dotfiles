@@ -1,5 +1,6 @@
 set rtp+=$HOME/.local/src/git-messenger.vim
-set rtp+=$HOME/.local/src/nvim-lspconfig
+set rtp+=$HOME/.local/src/vim-lsc,$HOME/.local/src/vim-lsc/after
+set rtp+=$HOME/.local/src/vim-delve
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
@@ -11,8 +12,8 @@ set nonumber laststatus=0
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nowrap
+set ruf=%30(%=%#LineNr#%.50F\ [%{strlen(&ft)?&ft:'none'}]\ %l:%c\ %p%%%)
 set shiftwidth=4 tabstop=4
-set synmaxcol=200
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 nn <F3> :set number!<CR>
