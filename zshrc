@@ -20,4 +20,4 @@ alias vim=nvim
 if which rbenv > /dev/null;
   then eval "$(rbenv init - zsh)"
 fi
-[[ -e ~/Documents/env.dev ]] && source ~/Documents/env.dev
+[[ -e ~/.env ]] && source ~/.env
