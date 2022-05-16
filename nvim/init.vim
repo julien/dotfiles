@@ -8,11 +8,10 @@ set completeopt-=preview
 set grepprg=rg\ --vimgrep
 set hidden
 set nohlsearch ignorecase
-set nonumber laststatus=0
+set nonumber laststatus=2
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nowrap
-set ruf=%30(%=%#LineNr#%.50F\ [%{strlen(&ft)?&ft:'none'}]\ %l:%c\ %p%%%)
 set shiftwidth=4 tabstop=4
 set wildignore+=.git/*,.gradle/*,node_modules/*
 set wildmenu wildmode=longest,list,full
