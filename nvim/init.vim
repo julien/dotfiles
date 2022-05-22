@@ -1,6 +1,5 @@
 set rtp+=$HOME/.local/src/git-messenger.vim
 set rtp+=$HOME/.local/src/nvim-lspconfig
-set rtp+=$HOME/.local/src/vim-delve
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
