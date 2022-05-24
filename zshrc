@@ -12,6 +12,11 @@ zstyle -e ':completion:*:hosts' hosts 'reply=(
 # Add tab completion to "cd.."
 zstyle ':completion:*' special-dirs true
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
 set -o emacs
 export PS1="%1~%b%# "
 export CLICOLOR=1
