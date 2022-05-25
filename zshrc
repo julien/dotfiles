@@ -3,6 +3,10 @@ compinit -i
 setopt autocd
 setopt ignoreeof
 
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey "^x^e" edit-command-line
+
 # Skip /etc/hosts in hosts completion
 zstyle -e ':completion:*:hosts' hosts 'reply=(
   ${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) 2>/dev/null)"}%%[#| ]*}//,/ }
@@ -13,11 +17,8 @@ zstyle -e ':completion:*:hosts' hosts 'reply=(
 zstyle ':completion:*' special-dirs true
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '^xe' edit-command-line
-bindkey '^x^e' edit-command-line
 set -o emacs
+
 export PS1="%1~%b%# "
 export CLICOLOR=1
 alias ls="ls -a --color=auto"
