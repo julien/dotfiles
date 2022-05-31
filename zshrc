@@ -1,11 +1,11 @@
 autoload -U compinit
 compinit -i
-setopt autocd
-setopt ignoreeof
-
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
+setopt autocd
+setopt ignoreeof
+
 
 # Skip /etc/hosts in hosts completion
 zstyle -e ':completion:*:hosts' hosts 'reply=(
