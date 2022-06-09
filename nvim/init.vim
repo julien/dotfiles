@@ -12,7 +12,7 @@ set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
-set wildignore+=.git/*,.gradle/*,node_modules/*
+set wildignore+=.git/*,node_modules/*
 set wildmenu wildmode=longest,list,full
 nn <F1> :if exists("g:syntax_on")<Bar>syntax off<Bar>else<Bar>syntax enable<Bar>endif<CR>
 nn <F3> :set number!<CR>
