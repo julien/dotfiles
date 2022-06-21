@@ -1,0 +1,12 @@
+local dap, dapgo = require("dap"), require("dap-go")
+dapgo.setup()
+local vscode = require('dap.ext.vscode')
+
+vim.keymap.set('n', '<leader>b', function() dap.toggle_breakpoint() end, {expr = true})
+vim.keymap.set('n', '<F1>', function() vscode.load_launchjs('.vscode/launch.json') end, {expr = true})
+vim.keymap.set('n', '<F4>', function() dap.repl.toggle({height=15}) end, {})
+vim.keymap.set('n', '<F5>', function() dap.continue() end, {expr = true})
+vim.keymap.set('n', '<F7>', function() dap.terminate() end, {expr = true})
+vim.keymap.set('n', '<F10>', function() dap.step_over() end, {expr = true})
+vim.keymap.set('n', '<F11>', function() dap.step_into() end, {expr = true})
+vim.keymap.set('n', '<F12>', function() dap.step_out() end, {expr = true})
