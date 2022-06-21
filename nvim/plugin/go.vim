@@ -20,4 +20,3 @@ function! GoTest(mode = 'package')
 endfunction
 nn <silent> <leader>rt :call GoTest('function')<CR>
 nn <silent> <leader>rp :call GoTest('package')<CR>
-nn <silent> <leader>dd :lclose<CR>
