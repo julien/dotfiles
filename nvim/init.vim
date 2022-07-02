@@ -14,9 +14,8 @@ set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
-set wildignore+=.git/*,node_modules/*
+set wildignore+=.git/*
 set wildmenu wildmode=longest,list,full
-nn <F3> :set number!<CR>
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <leader>f /
