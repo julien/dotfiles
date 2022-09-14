@@ -1,4 +1,3 @@
-set rtp+=$HOME/.local/src/git-messenger.vim
 set rtp+=$HOME/.local/src/nvim-lspconfig
 set rtp+=$HOME/.local/src/nvim-dap
 set rtp+=$HOME/.local/src/nvim-dap-go
