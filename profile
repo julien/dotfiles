@@ -2,7 +2,7 @@ if [ -n "$BASH_VERSION" ]; then
    [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
 fi
 
-export DYLD_LIBRARY_PATH=/opt/homebrew/Cellar/postgresql@14/14.5_4/lib/postgresql@14:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/opt/homebrew/lib/postgresql@14:$DYLD_LIBRARY_PATH
 export EDITOR=nvim
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/bin:/opt/homebrew/opt/libpq/bin:$PATH"
