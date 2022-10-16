@@ -15,6 +15,11 @@ end
 for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 	nvim_lsp[lsp].setup {
 		on_attach = on_attach,
+		settings = {
+			gopls = {
+				env = {GOFLAGS='-tags=unit,integration'},
+			},
+		},
 	}
 end
 
