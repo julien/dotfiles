@@ -15,7 +15,6 @@ eval bindkey '^Xe' edit-command-line
 export PS1="%1~%b%# "
 export CLICOLOR=1
 alias ls="ls -a --color=auto"
-alias vim=nvim
 if which rbenv > /dev/null;
   then eval "$(rbenv init - zsh)"
 fi
