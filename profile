@@ -5,8 +5,7 @@ fi
 export DYLD_LIBRARY_PATH=/opt/homebrew/lib/postgresql@14:$DYLD_LIBRARY_PATH
 export EDITOR=nvim
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/opt/homebrew/bin:/opt/homebrew/opt/libpq/bin:$PATH"
-export PATH="/opt/homebrew/Cellar/python@3.9/3.9.13_1/libexec/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/google-cloud-sdk/bin:$PATH"
 export PATH="$HOME/.local/node/bin:$PATH"
