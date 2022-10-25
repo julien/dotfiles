@@ -4,8 +4,6 @@ setopt autocd
 autoload edit-command-line
 zle -N edit-command-line
 setopt ignoreeof
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt share_history
 zstyle ':completion:*' special-dirs true
