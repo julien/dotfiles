@@ -8,7 +8,7 @@ set completeopt-=preview
 set grepprg=rg\ --vimgrep
 set hidden
 set nohlsearch ignorecase
-set nonumber laststatus=0
+set nonumber laststatus=2
 set lazyredraw
 set mouse=a
 set nobackup nowritebackup noswapfile nowrap
