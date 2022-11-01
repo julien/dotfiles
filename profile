@@ -12,5 +12,6 @@ export PATH="$HOME/.local/node/bin:$PATH"
 export PATH="$HOME/.local/nvim/bin:$PATH"
 export PATH="$HOME/.local/go/bin:$PATH"
 export GOPATH="$HOME/Documents/go"
+export GOPRIVATE=github.com/loyalguru
 export PATH="$GOPATH/bin:$PATH"
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
