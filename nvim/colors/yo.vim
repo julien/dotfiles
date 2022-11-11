@@ -28,8 +28,8 @@ hi SpellBad cterm=underline ctermbg=none ctermfg=1
 hi! link SpellCap SpellBad
 hi Delimiter ctermfg=230 ctermbg=NONE cterm=NONE
 hi PreProc ctermfg=134 ctermbg=NONE cterm=NONE
-hi Statement ctermfg=177 ctermbg=NONE cterm=NONE
-hi Type ctermfg=44 ctermbg=NONE cterm=NONE
+hi Statement ctermfg=44 ctermbg=NONE cterm=NONE
+hi Type ctermfg=43 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=75 ctermbg=NONE cterm=NONE
 hi String ctermfg=172 ctermbg=NONE cterm=NONE
 hi Constant ctermfg=117 ctermbg=NONE cterm=NONE
