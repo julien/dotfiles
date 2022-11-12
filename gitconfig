@@ -15,9 +15,6 @@
 [merge]
 	conflictStyle = diff3
 
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
-
 [user]
 	name = Julien Castelain
 	email = julien@users.noreply.github.com
