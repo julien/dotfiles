@@ -17,7 +17,7 @@ hi! link Special Normal
 hi StatusLine ctermbg=245 ctermfg=232
 hi StatusLineNC ctermbg=239 ctermfg=0
 hi VertSplit cterm=none ctermfg=239 ctermbg=none
-hi Visual ctermfg=0 ctermbg=245
+hi Visual ctermfg=0 ctermbg=3
 hi Pmenu ctermbg=232 ctermfg=252
 hi Identifier ctermfg=44 cterm=none
 hi Comment ctermfg=244 ctermbg=none
