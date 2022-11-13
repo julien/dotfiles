@@ -11,7 +11,4 @@ set -o emacs
 export PS1="%1~%b%# "
 alias ls="ls -Ga"
 alias vim=nvim
-if which rbenv > /dev/null;
-  then eval "$(rbenv init - zsh)"
-fi
 [[ -e ~/.env ]] && source ~/.env
