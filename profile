@@ -3,7 +3,6 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 export EDITOR=nvim
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/nvim/bin:$PATH"
