@@ -25,4 +25,4 @@ function! FzyCommand(choice_command, vim_command) abort
 	startinsert
 endfunction
 
-nn <silent> <c-t> :call FzyCommand('rg --color=never --files --glob "!.git/*"', ':e ')<CR>
+nn <silent> <c-p> :call FzyCommand('rg --color=never --files --glob "!.git/*"', ':e ')<CR>
