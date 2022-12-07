@@ -4,12 +4,10 @@ set rtp+=$HOME/.local/src/nvim-dap-go
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
+set completeopt-=preview
 set grepprg=rg\ --vimgrep
 set hidden
 set nohlsearch
-set nonumber laststatus=2
-set lazyredraw
-set mouse=a
 set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
 set wildignore+=.git/*
