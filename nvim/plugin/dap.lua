@@ -1,4 +1,4 @@
-local dap, dapgo, vscode = require("dap"), require("dap-go"), require("dap.ext.vscode")
+local dap, dapgo, vscode = require('dap'), require('dap-go'), require('dap.ext.vscode')
 dapgo.setup()
 
 vim.keymap.set('n', '<leader>b', function() dap.toggle_breakpoint() end, {expr = true})
