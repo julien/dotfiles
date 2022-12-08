@@ -7,7 +7,7 @@ let mapleader="\<Space>"
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
 set hidden
-set nohlsearch
+set nohlsearch ignorecase
 set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
 set wildignore+=.git/*
