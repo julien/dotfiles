@@ -26,3 +26,4 @@ hi SpellBad cterm=underline ctermbg=none ctermfg=1
 hi! link SpellCap SpellBad
 hi diffAdded ctermfg=2
 hi diffRemoved ctermfg=1
+hi SignColumn ctermbg=none
