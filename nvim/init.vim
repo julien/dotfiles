@@ -12,7 +12,7 @@ set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
 set wildignore+=.git/*
 set wildmode=longest,list,full
-set laststatus=0 ruler
+set laststatus=3
 nn <silent> <leader>e :Explore<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <leader>f /
