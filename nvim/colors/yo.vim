@@ -3,7 +3,7 @@ hi clear
 if exists("syntax_on")
  syntax reset
 endif
-let g:colors_name="no"
+let g:colors_name="yo"
 
 hi Normal ctermfg=254
 hi ColorColumn ctermbg=232
