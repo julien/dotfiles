@@ -14,7 +14,9 @@ hi Pmenu ctermbg=232 ctermfg=252
 hi StatusLine ctermbg=245 ctermfg=232
 hi StatusLineNC ctermbg=239 ctermfg=0
 hi Comment ctermfg=8
+hi CursorLine cterm=none ctermbg=232
 hi! link LineNr Comment
+hi Visual ctermfg=251 ctermbg=235 cterm=none
 hi Constant ctermfg=173
 hi Identifier ctermfg=15 cterm=none
 hi String ctermfg=108
