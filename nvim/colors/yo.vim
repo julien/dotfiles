@@ -12,7 +12,8 @@ hi Pmenu ctermbg=232 ctermfg=252
 hi StatusLine ctermbg=245 ctermfg=232
 hi StatusLineNC ctermbg=239 ctermfg=0
 hi Comment ctermfg=8
-hi SpecialComment ctermfg=108
+hi! link SpecialComment Comment
+hi Special ctermfg=167
 hi! link LineNr Comment
 hi Constant ctermfg=173
 hi Identifier ctermfg=15 cterm=none
