@@ -6,7 +6,7 @@ syntax on
 let mapleader="\<Space>"
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
-set hidden
+set hidden fixendofline
 set nohlsearch ignorecase
 set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
