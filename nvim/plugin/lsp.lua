@@ -1,7 +1,7 @@
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-	vim.cmd 'let b:vim_tab_complete = "omni"'
+	vim.cmd 'let b:vcm_tab_complete = "omni"'
 
 	local opts = {noremap=true, silent=true}
 	vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
