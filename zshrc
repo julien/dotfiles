@@ -10,5 +10,4 @@ zstyle ':completion:*' special-dirs true
 set -o emacs
 export PS1="%1~%b%# "
 alias ls="ls -Ga"
-alias vim=nvim
 [[ -e ~/.env ]] && source ~/.env
