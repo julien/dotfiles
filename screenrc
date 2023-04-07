@@ -1,9 +1,5 @@
 startup_message off
 defscrollback 500000
-defutf8 on
-term screen-256color
-termcapinfo xterm* ti@:te@
-defbce "on"
 hardstatus off
 msgminwait 0
 shelltitle ""
