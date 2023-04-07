@@ -6,6 +6,7 @@ endif
 let g:colors_name="yo"
 
 hi Normal ctermfg=252
+hi! link Todo Normal
 hi Folded ctermfg=254 ctermbg=232
 hi FoldColumn ctermfg=254 ctermbg=239
 hi Pmenu ctermbg=232 ctermfg=252
