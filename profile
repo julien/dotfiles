@@ -9,4 +9,5 @@ export PATH="$HOME/.local/nvim/bin:$PATH"
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+[[ -e ~/.env ]] && . ~/.env
 alias vim=nvim
