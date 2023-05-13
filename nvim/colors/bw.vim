@@ -11,7 +11,7 @@ hi! link SpellCap SpellBad
 hi! link gitcommitSummary Normal
 
 if &background ==# 'dark'
-	hi Normal term=NONE cterm=NONE ctermfg=253 ctermbg=0
+	hi Normal term=NONE cterm=NONE ctermfg=253 ctermbg=none
 
 	hi Comment ctermfg=2
 	hi Constant ctermfg=173
