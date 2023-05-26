@@ -1,5 +1,6 @@
 startup_message off
 defscrollback 500000
+termcapinfo xterm* ti@:te@
 hardstatus off
 msgminwait 0
 shelltitle ""
