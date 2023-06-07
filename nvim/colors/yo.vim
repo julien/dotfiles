@@ -27,4 +27,4 @@ hi diffAdded ctermfg=2
 hi diffRemoved ctermfg=1
 hi SignColumn ctermbg=none
 hi VertSplit ctermfg=232 ctermbg=232 cterm=NONE
-hi Visual cterm=none ctermbg=20 ctermfg=7
+hi Visual ctermfg=11 ctermbg=20 cterm=none term=none
