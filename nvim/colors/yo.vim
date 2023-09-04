@@ -15,16 +15,16 @@ hi Comment ctermfg=2
 hi! link SpecialComment Comment
 hi Special ctermfg=167
 hi LineNr ctermfg=8
-hi Constant ctermfg=173
-hi Identifier ctermfg=15 cterm=none
+hi! link Constant Normal
+hi! link Identifier Normal
 hi String ctermfg=110
 hi Statement ctermfg=140
-hi Type ctermfg=167
-hi PreProc ctermfg=254
+hi! link Type Normal
+hi! link PreProc Normal
 hi SpellBad cterm=underline ctermbg=none ctermfg=1
 hi! link SpellCap SpellBad
 hi diffAdded ctermfg=2
 hi diffRemoved ctermfg=1
 hi SignColumn ctermbg=none
 hi VertSplit ctermfg=232 ctermbg=232 cterm=NONE
-hi Visual ctermfg=11 ctermbg=20 cterm=none term=none
+hi Visual ctermfg=0 ctermbg=3 cterm=none term=none
