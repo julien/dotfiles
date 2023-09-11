@@ -17,15 +17,15 @@ hi! link SpecialComment Comment
 hi! link SpellCap SpellBad
 
 hi Normal ctermfg=252
+hi Statement ctermfg=4
+hi String ctermfg=178
+hi Comment ctermfg=8
+hi SpellBad cterm=underline ctermbg=none ctermfg=1
+hi diffAdded ctermfg=2
+hi diffRemoved ctermfg=1
+
 hi StatusLine ctermbg=245 ctermfg=232
 hi StatusLineNC ctermbg=239 ctermfg=0
 hi VertSplit ctermfg=232 ctermbg=232 cterm=NONE
 hi Pmenu ctermbg=232 ctermfg=252
-
-hi SpellBad cterm=underline ctermbg=none ctermfg=1
-hi String ctermfg=178
-hi Comment ctermfg=8
-hi Statement ctermfg=4
 hi SignColumn ctermbg=none ctermfg=none term=none
-hi diffAdded ctermfg=2
-hi diffRemoved ctermfg=1
