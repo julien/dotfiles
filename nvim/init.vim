@@ -1,6 +1,5 @@
 set rtp+=$HOME/.local/src/nvim-lspconfig
-set rtp+=$HOME/.local/src/nvim-dap
-set rtp+=$HOME/.local/src/nvim-dap-go
+set rtp+=$HOME/.local/src/nvim-dap,$HOME/.local/src/nvim-dap-go
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
@@ -21,7 +20,7 @@ nn <leader>f /
 nn n nzz
 vn < <gv
 vn > >gv
-let g:netrw_banner = 0
-let g:netrw_cursor = 0
-let g:netrw_dirhistmax = 0
+let g:netrw_banner=0
+let g:netrw_cursor=0
+let g:netrw_dirhistmax=0
 colo simple
