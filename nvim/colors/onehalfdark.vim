@@ -6,7 +6,7 @@ hi Normal ctermfg=188 ctermfg=none
 hi CursorLineNr ctermfg=8 ctermbg=none
 hi Folded ctermfg=188
 hi LineNr ctermfg=8 ctermbg=none
-hi Pmenu ctermfg=0 ctermbg=188
+hi Pmenu ctermfg=188 ctermbg=232
 hi PmenuSel ctermfg=188 ctermbg=75
 hi Question ctermfg=176
 hi SpellBad ctermfg=168
