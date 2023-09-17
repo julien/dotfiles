@@ -16,7 +16,6 @@ hi StatusLineNC ctermfg=241 ctermbg=237
 hi TabLine ctermfg=8 ctermbg=none cterm=none
 hi TabLineFill ctermbg=none cterm=none
 hi VertSplit ctermfg=237 ctermbg=237 cterm=none
-hi Visual ctermbg=239 cterm=none
 hi WarningMsg ctermfg=168
 hi! link SignColumn Normal
 hi Character ctermfg=114
@@ -44,16 +43,11 @@ hi! link Ignore Normal
 hi! link Include Statement
 hi! link Label Statement
 hi! link Macro Statement
-hi! link NonText Normal
 hi! link PreCondit PreProc
 hi! link Repeat Statement
-hi! link SpecialChar Normal
 hi! link SpecialComment Normal
 hi! link StorageClass Type
 hi! link Structure Type
 hi! link Tag Normal
 hi! link Todo Statement
 hi! link Typedef Type
-hi! link Underlined Normal
-hi diffAdded ctermfg=114
-hi diffRemoved ctermfg=168
