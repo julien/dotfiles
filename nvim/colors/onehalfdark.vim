@@ -8,7 +8,8 @@ hi Folded ctermfg=188
 hi LineNr ctermfg=8 ctermbg=none
 hi Pmenu ctermfg=188 ctermbg=232
 hi PmenuSel ctermfg=0 ctermbg=75 cterm=none
-hi PmenuThumb ctermfg=232
+hi PmenuThumb ctermbg=232
+hi! link PmenuSbar PmenuThumb
 hi Question ctermfg=176
 hi SpellBad ctermfg=168
 hi StatusLine ctermfg=75 ctermbg=237
