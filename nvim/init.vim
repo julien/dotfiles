@@ -13,7 +13,7 @@ set shiftwidth=4 tabstop=4
 set wildignore+=.git/*
 set wildmode=longest,list,full
 set laststatus=0
-nn <silent> <leader>e :Explore<CR>
+nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <F3> :set nu!<CR>
 nn <leader>f /
