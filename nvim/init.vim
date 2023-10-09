@@ -23,4 +23,6 @@ vn > >gv
 let g:netrw_banner=0
 let g:netrw_cursor=0
 let g:netrw_dirhistmax=0
-colo night
+colo habamax
+hi Normal ctermbg=none
+hi Statement ctermfg=115
