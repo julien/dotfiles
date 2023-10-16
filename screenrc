@@ -15,4 +15,4 @@ bind n screen
 bind w windowlist
 bind x kill
 bindkey -m y eval "stuff ' '" writebuf "exec sh -c '/usr/bin/pbcopy < /tmp/screen-exchange'"
-:bufferfile
+bufferfile
