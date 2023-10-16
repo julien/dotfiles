@@ -7,6 +7,7 @@ let loaded_matchparen=1
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
 set hidden nofixendofline
+set lazyredraw ttyfast mouse=a
 set nohlsearch ignorecase
 set nobackup nowritebackup noswapfile nowrap
 set shiftwidth=4 tabstop=4
