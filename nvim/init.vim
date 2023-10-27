@@ -1,5 +1,3 @@
-set rtp+=$HOME/.local/src/nvim-lspconfig
-set rtp+=$HOME/.local/src/nvim-dap,$HOME/.local/src/nvim-dap-go
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
