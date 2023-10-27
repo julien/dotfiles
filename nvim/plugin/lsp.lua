@@ -20,7 +20,7 @@ for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 		on_attach = on_attach,
 		settings = {
 			gopls = {
-				env = {GOFLAGS='-tags=unit,integration'},
+				env = {GOFLAGS='-tags=e2e,unit,integration'},
 			},
 		},
 	}
