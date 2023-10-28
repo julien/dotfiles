@@ -5,7 +5,7 @@ local on_attach = function(client, bufnr)
 
 	local opts = {noremap=true, silent=true}
 	vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-	vim.api.nvim_set_keymap('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+	vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	vim.api.nvim_set_keymap('n', '<leader>j', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 	vim.api.nvim_set_keymap('n', '<leader>d', '<cmd>lua vim.diagnostic.setqflist()<CR>', opts)
 	vim.api.nvim_set_keymap('n', '<leader>v', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
