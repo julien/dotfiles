@@ -13,7 +13,7 @@ hi StatusLineNC ctermfg=151 ctermbg=71
 hi VertSplit ctermfg=31 ctermbg=31
 hi Folded ctermfg=31 ctermbg=188
 hi IncSearch ctermfg=66 ctermbg=222
-hi Pmenu ctermfg=2310
+hi Pmenu ctermfg=0 ctermbg=254
 hi SignColumn ctermfg=16
 hi CursorLine ctermbg=153 cterm=none
 hi LineNr ctermfg=153 cterm=bold
