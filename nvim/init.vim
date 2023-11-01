@@ -22,4 +22,6 @@ vn > >gv
 let g:netrw_banner=0
 let g:netrw_cursor=0
 let g:netrw_dirhistmax=0
-colo summerfruit256
+set bg=light
+colo lunaperche
+hi Normal ctermbg=none
