@@ -1,6 +1,7 @@
 filetype plugin indent on
 syntax on
 let mapleader="\<Space>"
+let loaded_matchparen=1
 let loaded_nvim_treesitter=1
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
