@@ -5,11 +5,10 @@ let loaded_matchparen=1
 let loaded_nvim_treesitter=1
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
-set hidden nofixendofline lazyredraw ttyfast mouse=a
+set hidden lazyredraw ttyfast ls=0 mouse=a
 set shiftwidth=4 tabstop=4
 set wildignore+=.git/*
 set wildmode=longest,list,full
-set laststatus=0
 set nohlsearch ignorecase nobackup nowritebackup noswapfile
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
@@ -20,7 +19,6 @@ vn < <gv
 vn > >gv
 let g:netrw_banner=0
 let g:netrw_cursor=0
-let g:netrw_dirhistmax=0
 set bg=light
 colo lunaperche
 hi Normal ctermbg=none
