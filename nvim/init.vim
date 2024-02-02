@@ -19,4 +19,4 @@ vn < <gv
 vn > >gv
 let g:netrw_banner=0
 let g:netrw_cursor=0
-set bg=light
+colo light
