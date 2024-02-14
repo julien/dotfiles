@@ -19,7 +19,7 @@ call LspAddServer([#{
 \    args: [],
 \    syncInit: v:true
 \  }])
-call LspOptionsSet(#{showDiagWithSign: v:false})
+call LspOptionsSet(#{highlightDiagInline: v:false, showDiagWithSign: v:false})
 nn K :LspGotoDefinition<CR>
 nn gh :LspHover<CR>
 nn gi :LspPeekImpl<CR>
