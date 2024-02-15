@@ -22,8 +22,8 @@ if executable('rust-analyzer')
 	 \  }])
 endif
 call LspOptionsSet(#{highlightDiagInline: v:false, showDiagWithSign: v:false})
-nn K :LspGotoDefinition<CR>
-nn gh :LspHover<CR>
+nn gd :LspGotoDefinition<CR>
+nn K :LspHover<CR>
 nn gi :LspPeekImpl<CR>
 nn gr :LspPeekReferences<CR>
 nn <leader>n :LspDiagNext<CR>
