@@ -5,7 +5,7 @@ let loaded_matchparen=1
 set nohlsearch nobackup nowritebackup noswapfile nowrap
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
-set hidden ignorecase shiftwidth=4 tabstop=4 laststatus=0 mouse=a ttyfast timeoutlen=100
+set hidden ignorecase shiftwidth=4 tabstop=4 laststatus=0 mouse=a ttyfast ttimeoutlen=100
 set wildignore+=.git/* wildmode=longest,list,full
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
