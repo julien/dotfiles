@@ -4,4 +4,4 @@ export EDITOR=vim
 export PATH="/opt/homebrew/bin:$HOME/.local/bin:$HOME/go/bin:$PATH"
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 [[ -f "$HOME/.env" ]] && . "$HOME/.env"
-alias ls="ls -Ga"
+alias ls="ls -1a"
