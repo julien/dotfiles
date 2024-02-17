@@ -10,7 +10,6 @@ hi! link NonText Normal
 hi Pmenu ctermbg=254
 hi LineNr ctermfg=245
 hi VertSplit cterm=none ctermbg=8 ctermfg=8
-
 hi Preproc ctermfg=2
 hi Constant ctermfg=6
 hi Comment ctermfg=245 "12
