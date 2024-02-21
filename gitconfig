@@ -7,6 +7,7 @@
 	precomposeUnicode = true
 
 [diff]
+	algorithm = histogram
 	renameLimit = 999999
 
 [http]
