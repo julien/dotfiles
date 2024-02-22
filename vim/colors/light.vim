@@ -6,7 +6,7 @@ endif
 let g:colors_name="light"
 
 hi Normal ctermbg=none
-hi! link NonText Normal
+hi NonText ctermbg=none ctermfg=247
 hi Pmenu ctermbg=254
 hi LineNr ctermfg=245
 hi VertSplit ctermbg=248 ctermfg=248
