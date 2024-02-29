@@ -1,20 +1,20 @@
 packadd lsp
 if executable('clangd')
-call LspAddServer([#{
-\    name: 'clangd',
-\    filetype: ['c', 'cpp'],
-\    path: 'clangd',
-\    args: ['--background-index']
-\  }])
+	call LspAddServer([#{
+	\    name: 'clangd',
+	\    filetype: ['c', 'cpp'],
+	\    path: 'clangd',
+	\    args: ['--background-index']
+	\  }])
 endif
 if executable('gopls')
-call LspAddServer([#{
-\    name: 'gopls',
-\    filetype: ['go', 'gomod', 'gohtmltmpl', 'gotexttmpl'],
-\    path: 'gopls',
-\    args: ['serve'],
-\    syncInit: v:true
-\  }])
+	call LspAddServer([#{
+	\    name: 'gopls',
+	\    filetype: ['go', 'gomod', 'gohtmltmpl', 'gotexttmpl'],
+	\    path: 'gopls',
+	\    args: ['serve'],
+	\    syncInit: v:true
+	\  }])
 endif
 if executable('rust-analyzer')
 	 call LspAddServer([#{
