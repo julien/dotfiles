@@ -11,11 +11,13 @@ hi Pmenu ctermbg=254
 hi LineNr ctermfg=245
 hi VertSplit ctermbg=248 ctermfg=248
 hi Comment ctermfg=245 "12
-hi Conditional ctermfg=5
-hi Constant ctermfg=6
+hi! clear Special
 hi! clear Statement
-hi Keyword ctermfg=2
-hi Preproc ctermfg=2
+hi Conditional ctermfg=4
+hi Constant ctermfg=2
+hi Identifier ctermfg=5
+hi Keyword ctermfg=4
+hi Preproc ctermfg=4
 hi Type ctermfg=4
 hi! link goImport Preproc
 hi! link goPackage goImport
