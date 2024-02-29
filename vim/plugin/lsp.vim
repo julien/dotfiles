@@ -6,7 +6,7 @@ call LspAddServer([#{
 \    args: ['--background-index']
 \  }])
 call LspAddServer([#{
-\    name: 'golang',
+\    name: 'gopls',
 \    filetype: ['go', 'gomod', 'gohtmltmpl', 'gotexttmpl'],
 \    path: 'gopls',
 \    args: ['serve'],
