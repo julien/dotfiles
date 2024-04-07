@@ -10,11 +10,8 @@ set wildignore+=.git/* wildmode=longest,list,full
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <F3> :set nu!<CR>
-nn <leader>f /
 nn n nzz
 vn < <gv
 vn > >gv
-let g:netrw_banner=0
-let g:netrw_cursor=0
-let g:netrw_dirhistmax=0
+let g:netrw_banner=0 | let g:netrw_cursor=0 | let g:netrw_dirhistmax=0
 colo light
