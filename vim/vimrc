@@ -5,8 +5,9 @@ let loaded_matchparen=1
 set nohlsearch nobackup nowritebackup noswapfile nowrap
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
-set ar bs=indent,eol,start hid ic ls=0 mouse=a ru sw=4 ts=4 tf ttm=100
+set ar bs=indent,eol,start hid ic nu mouse=a sw=4 ts=4 tf ttm=100
 set wildignore+=.git/* wildmode=longest,list,full
+set shortmess-=S
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <F3> :set nu!<CR>
