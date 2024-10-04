@@ -24,3 +24,5 @@ hi! link goImport Preproc
 hi! link goPackage goImport
 hi diffAdded ctermfg=2
 hi diffRemoved ctermfg=1
+hi NormalFloat ctermbg=15 ctermfg=0
+
