@@ -15,7 +15,7 @@ local on_attach = function(client, bufnr)
 	client.server_capabilities.semanticTokensProvider = nil
 end
 
-for _, lsp in ipairs({'clangd', 'gopls', 'rust_analyzer'}) do
+for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 	nvim_lsp[lsp].setup {
 		on_attach = on_attach,
 		settings = {
