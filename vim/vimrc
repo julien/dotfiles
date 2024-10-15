@@ -3,7 +3,7 @@ syntax on
 let mapleader="\<Space>" | let loaded_matchparen=1
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
-set autoread hidden lazyredraw ttyfast ls=0 nu
+set autoread hidden lazyredraw ttyfast ls=0 mouse=a nu
 set shiftwidth=4 tabstop=4
 set wildignore+=.git/*
 set wildmode=longest,list,full
