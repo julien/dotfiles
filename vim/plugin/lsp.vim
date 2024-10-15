@@ -30,6 +30,6 @@ nn gd :LspGotoDefinition<CR>
 nn K :LspHover<CR>
 nn gi :LspPeekImpl<CR>
 nn gr :LspPeekReferences<CR>
-nn <leader>n :LspDiagNext<CR>
-nn <leader>p :LspDiagPrev<CR>
+nn <leader>j :LspDiagNext<CR>
+nn <leader>k :LspDiagPrev<CR>
 nn <leader>v :LspRename<CR>
