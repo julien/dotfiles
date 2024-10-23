@@ -5,3 +5,4 @@ export PATH="/opt/homebrew/bin:$HOME/.local/bin:$HOME/.local/nvim/bin:$HOME/go/b
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 [[ -f "$HOME/.env" ]] && . "$HOME/.env"
 alias ls="ls -1Ga"
+alias vim="$EDITOR"
