@@ -10,7 +10,7 @@ hi NonText ctermbg=none ctermfg=247
 hi Pmenu ctermbg=254 cterm=none
 hi PmenuSel cterm=none
 hi LineNr ctermfg=245
-hi VertSplit ctermbg=248 ctermfg=248
+hi! clear VertSplit
 hi Comment ctermfg=245 "12
 hi! clear Special
 hi! clear Statement

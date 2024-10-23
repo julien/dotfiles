@@ -3,12 +3,10 @@ syntax on
 let mapleader="\<Space>" | let loaded_matchparen=1 | let loaded_nvim_treesitter=1
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
-set lazyredraw ttyfast ls=0 nu
-set ruf=%30(%=%#LineNr#%.80F\ \ %l:%c\ %)
-set shiftwidth=4 tabstop=4
-set wildignore+=.git/*
-set wildmode=longest,list,full
-set nohlsearch ignorecase nobackup nowritebackup noswapfile
+set lazyredraw ttyfast ls=0 nu shiftwidth=4 tabstop=4
+set wildignore+=.git/* wildmode=longest,list,full
+set nohlsearch ignorecase nobackup nowritebackup noswapfile noru
+set fillchars=vert:\ 
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn <F3> :set nu!<CR>
