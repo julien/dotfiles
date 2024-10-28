@@ -3,8 +3,8 @@ syntax on
 let mapleader="\<Space>" | let loaded_matchparen=1
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
-set autoread hidden lazyredraw ttyfast ls=0 mouse=a nu
-set shiftwidth=4 tabstop=4
+set autoread hidden lazyredraw ttyfast mouse=a nu
+set shiftwidth=4 tabstop=4 timeoutlen=0
 set wildignore+=.git/* wildmode=longest,list,full
 set nohlsearch ignorecase nobackup nowritebackup noswapfile
 nn <silent> <leader>e :Ex<CR>
@@ -15,3 +15,4 @@ nn n nzz
 vn < <gv
 vn > >gv
 let g:netrw_banner=0 | let g:netrw_cursor=0 | let g:netrw_dirhistmax=0
+colo light
