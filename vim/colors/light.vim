@@ -9,7 +9,7 @@ hi Normal ctermbg=none
 hi NonText ctermbg=none ctermfg=247
 hi Pmenu ctermbg=254 cterm=none
 hi PmenuSel cterm=none
-hi LineNr ctermfg=7
+hi LineNr ctermfg=8
 hi! clear VertSplit
 hi! link Comment LineNr
 hi! clear Special
