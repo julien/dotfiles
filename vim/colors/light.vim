@@ -16,7 +16,7 @@ hi! clear Statement
 hi Comment ctermfg=8
 hi Conditional ctermfg=4
 hi Keyword ctermfg=4
-hi Identifier ctermfg=3
+hi Identifier ctermfg=4
 hi Preproc ctermfg=4
 hi Type ctermfg=4
 hi Constant ctermfg=2
