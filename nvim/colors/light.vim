@@ -5,24 +5,16 @@ if exists("syntax_on")
 endif
 let g:colors_name="light"
 
-hi Normal ctermbg=none
-hi NonText ctermbg=none ctermfg=247
-hi Pmenu ctermbg=254 cterm=none
-hi PmenuSel cterm=none
-hi LineNr ctermfg=245
-hi! clear VertSplit
-hi Comment ctermfg=245 "12
+hi Normal ctermbg=none guibg=none guifg=#525151
+hi LineNr ctermfg=7 guifg=#d4d3d2
+hi Pmenu cterm=none ctermbg=7 guibg=#d4d3d2
+hi PmenuSel cterm=none gui=none
 hi! clear Special
 hi! clear Statement
-hi Conditional ctermfg=4
-hi Constant ctermfg=2
-hi Identifier ctermfg=5
-hi Keyword ctermfg=4
-hi Preproc ctermfg=4
-hi Type ctermfg=4
-hi! link goImport Preproc
-hi! link goPackage goImport
-hi diffAdded ctermfg=2
-hi diffRemoved ctermfg=1
-hi NormalFloat ctermbg=15 ctermfg=0
-
+hi Comment ctermfg=8 guifg=#b9b8b7
+hi Conditional ctermfg=4 guifg=#325CC0
+hi Pmenu ctermbg=7 cterm=none
+hi Keyword ctermfg=4 guifg=#325CC0
+hi Preproc ctermfg=4 guifg=#325CC0
+hi! clear Type
+hi Constant ctermfg=2 guifg=#448C27
