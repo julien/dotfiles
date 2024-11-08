@@ -4,9 +4,9 @@ let mapleader="\<Space>" | let loaded_matchparen=1
 set completeopt-=preview
 set grepprg=rg\ --vimgrep
 set autoread hidden lazyredraw ttyfast mouse=a nu
-set shiftwidth=4 tabstop=4
+set fillchars=vert:\  shiftwidth=4 tabstop=4
 set wildignore+=.git/* wildmode=longest,list,full
-set nohlsearch ignorecase nobackup nowritebackup noswapfile
+set nohlsearch ignorecase smartcase nobackup nowritebackup noswapfile
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>l :20Lex<CR>
 nn <silent> <leader>q :%bw!<CR>
