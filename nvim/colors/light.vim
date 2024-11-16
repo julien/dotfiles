@@ -8,6 +8,9 @@ let g:colors_name="light"
 hi Normal ctermbg=none guibg=none guifg=#525151
 hi LineNr ctermfg=7 guifg=#d4d3d2
 hi Pmenu cterm=none ctermbg=7 guibg=#d4d3d2
+hi! clear Directory
+hi! clear Function
+hi! clear Question
 hi PmenuSel cterm=none gui=none
 hi! clear Special
 hi! clear Statement
