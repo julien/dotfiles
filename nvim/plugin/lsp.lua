@@ -12,13 +12,20 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_set_keymap('n', '<leader>v', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+end
 
-	client.server_capabilities.semanticTokensProvider = nil
+local on_init = function(client, result)
+	if client.server_capabilities then
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.inlayHintProvider = false
+		client.server_capabilities.semanticTokensProvider = false
+	end
 end
 
 for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 	nvim_lsp[lsp].setup {
 		on_attach = on_attach,
+		on_init = on_init,
 	}
 end
 
