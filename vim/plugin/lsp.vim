@@ -1,4 +1,5 @@
 packadd lsp
+call LspOptionsSet(#{highlightDiagInline: v:false, showDiagWithSign: v:false})
 if executable('clangd')
 	call LspAddServer([#{
 	\    name: 'clangd',
@@ -25,7 +26,6 @@ if executable('rust-analyzer')
 	 \    syncInit: v:true
 	 \  }])
 endif
-call LspOptionsSet(#{highlightDiagInline: v:false, showDiagWithSign: v:false})
 nn gd :LspGotoDefinition<CR>
 nn K :LspHover<CR>
 nn gi :LspPeekImpl<CR>
