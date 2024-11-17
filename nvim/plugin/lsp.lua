@@ -33,7 +33,9 @@ for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 		on_attach = on_attach,
 		settings = {
 			['rust-analyzer'] = {
+				cachePriming = {enable = false},
 				cargo = {buildScripts = {enable = false}},
+				diagnostics = {experimental = {enable = false}},
 				procMarco = {enable = false},
 			},
 		},
