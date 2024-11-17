@@ -10,10 +10,8 @@ vim.diagnostic.config({
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(args)
 		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		client.server_capabilities.documentFormattingProvider = false
 		client.server_capabilities.inlayHintProvider = false
 		client.server_capabilities.semanticTokensProvider = nil -- might need to be false
-		client.server_capabilities.workspace.workspaceFolders = false
 	end
 })
 
@@ -36,22 +34,16 @@ for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 	nvim_lsp[lsp].setup {
 		on_attach = on_attach,
 		settings = {
-			['rust_analyzer'] = {
-				cachePriming = {enable = false},
+			['rust-analyzer'] = {
 				cargo = {buildScripts = {enable = false}},
-				checkOnSave = {enable = false},
-				check = {workspace = false},
-				files = {
-					excludeDirs = {".cargo", ".git", "target"}
-				},
 				inlayHints = {
-					enable = false,
 					chainingHints = {enable = false},
 					closingBraceHints = {enable = false},
 					parameterHints = {enable = false},
 					typeHints = false,
 				},
 				lens = {enable = false},
+				procMarco = {enable = false},
 			},
 		},
 	}
