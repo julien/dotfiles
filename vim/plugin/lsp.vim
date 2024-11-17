@@ -26,21 +26,9 @@ if executable('rust-analyzer')
 		args: [],
 		syncInit: v:true,
 		initializationOptions: {
-			cachePriming: {enable: v:false},
 			cargo: {buildScripts: {enable: v:false}, allFeatures: v:false},
-			checkOnSave: {enable: v:false, allTargets: v:false},
-			check: {workspace: v:false},
+			checkOnSave: {enable: v:false},
 			diagnostics: {enableExperimental: v:false},
-			files: {excludeDirs: ['.cargo', '.git', 'target']},
-			inlayHints: {
-				enable: v:false,
-				chainingHints: {enable: v:false},
-				closingBraceHints: {enable: v:false},
-				parameterHints: {enable: v:false},
-				typeHints: v:false,
-			},
-			lens: {enable: v:false},
-			workspace: {workspaceFolders: v:false},
 		},
 	}])
 endif
