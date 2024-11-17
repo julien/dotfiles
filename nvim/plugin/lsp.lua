@@ -1,4 +1,22 @@
 local nvim_lsp = require('lspconfig')
+
+vim.diagnostic.config({
+	signs = false,
+	underline = false,
+	update_in_insert = false,
+	virtual_text = false,
+})
+
+vim.api.nvim_create_autocmd('LspAttach', {
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.inlayHintProvider = false
+		client.server_capabilities.semanticTokensProvider = nil -- might need to be false
+		client.server_capabilities.workspace.workspaceFolders = false
+	end
+})
+
 local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 	vim.cmd 'let b:vcm_tab_complete = "omni"'
@@ -14,27 +32,27 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 end
 
-local on_init = function(client, result)
-	if client.server_capabilities then
-		client.server_capabilities.documentFormattingProvider = false
-		client.server_capabilities.inlayHintProvider = false
-		client.server_capabilities.semanticTokensProvider = false
-	end
-end
-
 for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 	nvim_lsp[lsp].setup {
 		on_attach = on_attach,
-		on_init = on_init,
+		settings = {
+			['rust_analyzer'] = {
+				cachePriming = {enable = false},
+				cargo = {buildScripts = {enable = false}},
+				checkOnSave = {enable = false},
+				check = {workspace = false},
+				files = {
+					excludeDirs = {".cargo", ".git", "target"}
+				},
+				inlayHints = {
+					enable = false,
+					chainingHints = {enable = false},
+					closingBraceHints = {enable = false},
+					parameterHints = {enable = false},
+					typeHints = false,
+				},
+				lens = {enable = false},
+			},
+		},
 	}
 end
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-	vim.lsp.diagnostic.on_publish_diagnostics, {
-		   signs = false,
-		   underline = false,
-		   update_in_insert = false,
-		   virtual_text = false,
-		   severity_sort = false,
-	   }
-)
