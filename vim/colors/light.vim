@@ -11,8 +11,6 @@ hi NormalFloat cterm=NONE ctermbg=251 ctermfg=0
 hi Pmenu ctermbg=254 guibg=#d4d3d2
 hi PmenuSel cterm=NONE ctermbg=NONE ctermfg=0 gui=NONE guibg=NONE guifg=#000000
 hi PmenuThumb cterm=NONE ctermbg=NONE ctermfg=0 gui=NONE guibg=NONE guifg=#000000
-hi StatusLine term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE guifg=#575757
-hi StatusLineNC term=NONE cterm=NONE ctermbg=NONE ctermfg=8 gui=NONE guibg=NONE guifg=#7c7c7c
 hi Visual term=NONE guibg=#d4d3d2
 hi WildMenu term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE gui=NONE guibg=NONE guifg=NONE
 hi Comment cterm=NONE ctermfg=2 guifg=#6bab51
@@ -24,6 +22,7 @@ hi! link String Constant
 hi! clear Directory
 hi! clear Function
 hi! clear Identifier
+hi! clear Operator
 hi! clear Preproc
 hi! clear Question
 hi! clear Special
