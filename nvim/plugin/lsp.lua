@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(args)
 		local client = vim.lsp.get_client_by_id(args.data.client_id)
 		client.server_capabilities.inlayHintProvider = false
-		client.server_capabilities.semanticTokensProvider = nil -- might need to be false
+		client.server_capabilities.semanticTokensProvider = nil
 	end
 })
 
@@ -21,10 +21,8 @@ local on_attach = function(client, bufnr)
 
 	local opts = {noremap=true, silent=true}
 	vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-	vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	vim.api.nvim_set_keymap('n', '<leader>j', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 	vim.api.nvim_set_keymap('n', '<leader>k', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-	vim.api.nvim_set_keymap('n', '<leader>d', '<cmd>lua vim.diagnostic.setqflist()<CR>', opts)
 	vim.api.nvim_set_keymap('n', '<leader>v', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
@@ -36,13 +34,6 @@ for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
 		settings = {
 			['rust-analyzer'] = {
 				cargo = {buildScripts = {enable = false}},
-				inlayHints = {
-					chainingHints = {enable = false},
-					closingBraceHints = {enable = false},
-					parameterHints = {enable = false},
-					typeHints = false,
-				},
-				lens = {enable = false},
 				procMarco = {enable = false},
 			},
 		},
