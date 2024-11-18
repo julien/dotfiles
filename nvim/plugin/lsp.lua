@@ -1,4 +1,4 @@
-local nvim_lsp = require('lspconfig')
+local lsp = require('lspconfig')
 
 vim.diagnostic.config({
 	signs = false,
@@ -30,8 +30,8 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 end
 
-for _, lsp in ipairs({'gopls', 'rust_analyzer'}) do
-	nvim_lsp[lsp].setup {
+for _, s in ipairs({'gopls', 'rust_analyzer'}) do
+	lsp[s].setup {
 		on_attach = on_attach,
 		settings = {
 			['rust-analyzer'] = {
