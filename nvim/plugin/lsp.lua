@@ -10,8 +10,10 @@ vim.diagnostic.config({
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(args)
 		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		client.server_capabilities.documentFormattingProvider = false
 		client.server_capabilities.inlayHintProvider = false
 		client.server_capabilities.semanticTokensProvider = nil
+		client.server_capabilities.workspace.workspaceFolders = false
 	end
 })
 
