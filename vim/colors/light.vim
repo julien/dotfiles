@@ -19,7 +19,6 @@ hi Conditional ctermfg=4 guifg=#325cc0
 hi Constant ctermfg=2 guifg=#448C27
 hi Keyword ctermfg=4 guifg=#325cc0
 hi! link String Constant
-hi! clear Directory
 hi! clear Function
 hi! clear Identifier
 hi! clear Operator
