@@ -1,4 +1,4 @@
-local lsp = require('lspconfig')
+local lsp = require 'lspconfig'
 
 vim.diagnostic.config({
 	signs = false,
