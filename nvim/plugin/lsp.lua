@@ -1,4 +1,8 @@
 local lsp = require 'lspconfig'
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion = {completionItem = {documentationFormat =  {'plaintext'}}}
+capabilities.textDocument.hover = {contentFormat =  {'plaintext'}}
+capabilities.workspace.workspaceFolders = false
 
 vim.diagnostic.config({
 	signs = false,
@@ -28,11 +32,12 @@ end
 
 for _, s in ipairs({'gopls', 'rust_analyzer'}) do
 	lsp[s].setup {
+		capabilities = capabilities,
 		on_attach = on_attach,
 		settings = {
 			['rust-analyzer'] = {
 				cachePriming = {enable = false},
-				cargo = {buildScripts = {enable = false}, check = {workspace = false}},
+				cargo = {check = {workspace = false}},
 			},
 		},
 	}
