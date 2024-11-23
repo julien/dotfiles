@@ -10,4 +10,4 @@ function! FzyCommand(choice_command, vim_command)
   endif
 endfunction
 
-nn <silent> <c-p> :call FzyCommand('rg --files --glob "!.git/*"', ':e')<CR>
+nn <silent> <c-p> :call FzyCommand('rg -g "!.git/*" -g "!target/*" --files', ':e')<CR>

@@ -27,8 +27,7 @@ if executable('rust-analyzer')
 		syncInit: v:true,
 		initializationOptions: {
 			cachePriming: {enable: v:false},
-			cargo: {buildScripts: {enable: v:false}, allFeatures: v:false},
-			diagnostics: {enableExperimental: v:false},
+			cargo: {buildScripts: {enable: v:false}, check: {workspace: v:false}},
 		},
 	}])
 endif
@@ -36,5 +35,6 @@ nn K :LspHover<CR>
 nn gd :LspGotoDefinition<CR>
 nn gi :LspPeekImpl<CR>
 nn gr :LspPeekReferences<CR>
-nn gl :LspDiag show<CR>
+nn gj :LspDiagNextWrap<CR>
+nn gk :LspDiagPrevWrap<CR>
 nn gv :LspRename<CR>
