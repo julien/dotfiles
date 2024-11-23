@@ -15,7 +15,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 local on_attach = function(client, bufnr)
-	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 	vim.cmd 'let b:vcm_tab_complete = "omni"'
 	local opts = {noremap=true, silent=true}
 	vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -33,8 +32,7 @@ for _, s in ipairs({'gopls', 'rust_analyzer'}) do
 		settings = {
 			['rust-analyzer'] = {
 				cachePriming = {enable = false},
-				cargo = {buildScripts = {enable = false}},
-				diagnostics = {enableExperimental = false},
+				cargo = {buildScripts = {enable = false}, check = {workspace = false}},
 			},
 		},
 	}
