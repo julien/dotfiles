@@ -1,6 +1,6 @@
 vim9script
 packadd lsp
-call LspOptionsSet({highlightDiagInline: v:false, showDiagWithSign: v:false})
+call LspOptionsSet({autoHighlightDiags: v:false, showDiagWithSign: v:false, showSignature: v:false})
 if executable('clangd')
 	call LspAddServer([{
 		name: 'clangd',
