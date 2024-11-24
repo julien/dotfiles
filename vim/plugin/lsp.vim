@@ -1,6 +1,6 @@
 vim9script
 packadd lsp
-call LspOptionsSet({autoHighlightDiags: v:false, showDiagWithSign: v:false, showSignature: v:false})
+call LspOptionsSet({autoHighlightDiags: v:false, semanticHighlight: v:false, showSignature: v:false})
 if executable('clangd')
 	call LspAddServer([{
 		name: 'clangd',
@@ -31,6 +31,12 @@ if executable('rust-analyzer')
 		}
 	}])
 endif
+
+augroup LspSetup
+	au!
+	au User LspAttached :set completeopt-=popup
+augroup END
+
 nn K :LspHover<CR>
 nn gd :LspGotoDefinition<CR>
 nn gi :LspPeekImpl<CR>
