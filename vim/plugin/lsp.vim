@@ -27,8 +27,8 @@ if executable('rust-analyzer')
 		syncInit: v:true,
 		initializationOptions: {
 			cachePriming: {enable: v:false},
-			cargo: {buildScripts: {enable: v:false}, check: {workspace: v:false}},
-		},
+			cargo: {check: {workspace: v:false}},
+		}
 	}])
 endif
 nn K :LspHover<CR>
