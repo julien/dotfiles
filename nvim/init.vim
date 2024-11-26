@@ -2,7 +2,6 @@ filetype plugin indent on
 syntax on
 let mapleader="\<Space>" | let loaded_matchparen=1 | let loaded_nvim_treesitter=1
 set completeopt-=preview
-set grepprg=rg\ --vimgrep
 set ls=0 nu shiftwidth=4 tabstop=4
 set wildignore+=.git/* wildmode=longest,list,full
 set nohlsearch ignorecase nobackup nowritebackup noswapfile noru
