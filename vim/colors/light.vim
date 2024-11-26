@@ -27,5 +27,6 @@ hi! clear Question
 hi! clear Special
 hi! clear Statement
 hi! clear Type
+hi! clear Title
 hi diffAdded ctermfg=2 guifg=#448c27
 hi diffRemoved ctermfg=1 guifg=#d7453a
