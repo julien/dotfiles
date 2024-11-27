@@ -5,6 +5,7 @@ set wildignore+=.git/* wildmode=longest,list,full
 set nohlsearch ignorecase nobackup nowritebackup noswapfile noru
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
+nn <silent> <leader>w :bw!<CR>
 nn <F3> :set nu!<CR>
 nn <leader>f /
 nn n nzz
