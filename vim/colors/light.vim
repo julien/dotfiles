@@ -6,6 +6,8 @@ endif
 let g:colors_name="light"
 
 hi Normal cterm=NONE ctermbg=NONE guibg=NONE guifg=#525151
+hi CursorLine term=NONE cterm=NONE gui=NONE
+hi CursorLineNr term=NONE cterm=NONE gui=NONE
 hi LineNr ctermfg=242 guifg=#b9b8b7
 hi NormalFloat cterm=NONE ctermbg=251 ctermfg=0
 hi Pmenu ctermbg=254 guibg=#d4d3d2
