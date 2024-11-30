@@ -1,8 +1,0 @@
-# background color
-xsetroot -solid '#203040'
-
-# disable caps
-setxkbmap -option caps:none
-
-# turn off beep
-xset -b
