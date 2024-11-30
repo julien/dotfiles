@@ -5,6 +5,7 @@
 [core]
 	fileMode = false
 	precomposeUnicode = true
+	symlinks = false
 
 [diff]
 	algorithm = histogram
@@ -17,7 +18,7 @@
 	conflictStyle = diff3
 
 [user]
-	name = Julien Castelain
+	name = julien castelain
 	email = julien@users.noreply.github.com
 
 [url "ssh://git@github.com/"]
