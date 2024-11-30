@@ -1,21 +1,19 @@
 vim9script
 packadd lsp
-call LspOptionsSet({autoHighlightDiags: v:false, semanticHighlight: v:false, showSignature: v:false})
-if executable('clangd')
-	call LspAddServer([{
-		name: 'clangd',
-		filetype: ['c', 'cpp'],
-		path: 'clangd',
-		args: ['--background-index']
-  }])
-endif
+call LspOptionsSet({
+	autoComplete: v:true,
+	autoHighlightDiags: v:false,
+	completionTextEdit: v:false,
+	omniComplete: v:true,
+	showSignature: v:false,
+})
 if executable('gopls')
 	call LspAddServer([{
 		name: 'gopls',
 		filetype: ['go', 'gomod', 'gohtmltmpl', 'gotexttmpl'],
 		path: 'gopls',
 		args: ['serve'],
-		syncInit: v:true
+		syncInit: v:true,
 	}])
 endif
 if executable('rust-analyzer')
@@ -32,15 +30,19 @@ if executable('rust-analyzer')
 	}])
 endif
 
+def OnAttach()
+	setbufvar(bufnr(), '&completeopt', 'menu,menuone,noinsert')
+	setbufvar(bufnr(), 'vcm_tab_complete', 'omni')
+enddef
+
 augroup LspSetup
 	au!
-	au User LspAttached :set completeopt-=popup
+	au User LspAttached call s:OnAttach()
 augroup END
 
-nn K :LspHover<CR>
 nn gd :LspGotoDefinition<CR>
 nn gi :LspPeekImpl<CR>
 nn gr :LspPeekReferences<CR>
 nn gj :LspDiagNextWrap<CR>
 nn gk :LspDiagPrevWrap<CR>
-nn gv :LspRename<CR>
+nn gR :LspRename<CR>
