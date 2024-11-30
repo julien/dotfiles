@@ -1,11 +1,13 @@
-filetype plugin indent on
-syntax on
-let mapleader="\<Space>" | let loaded_matchparen=1
-set completeopt-=preview grepprg=rg\ --vimgrep
-set autoread hidden lazyredraw ttyfast mouse=a nu
-set shiftwidth=4 tabstop=4 ttymouse=xterm2 ttimeoutlen=50
-set wildignore+=.git/* wildmode=longest,list,full
-set nohlsearch ignorecase smartcase nobackup nowritebackup noswapfile
+let mapleader="\<Space>" | let loaded_matchparen=1 | let loaded_nvim_treesitter=1
+if !has('nvim')
+	filetype plugin indent on
+	syntax on
+	set ar hid lz mouse=a gp=rg\ --vimgrep
+	set tf ttym=xterm2 ttm=50
+endif
+set cot-=preview ic scs sw=4 ts=4 nu ls=0
+set wig+=.git/* wim=longest,list,full
+set nohls nobk noswf nopvw
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>l :20Lex<CR>
 nn <silent> <leader>q :%bw!<CR>
