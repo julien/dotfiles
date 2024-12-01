@@ -1,8 +1,8 @@
 local lsp = require 'lspconfig'
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion = {completionItem = {documentationFormat =  {'plaintext'}}}
-capabilities.textDocument.hover = {contentFormat =  {'plaintext'}}
-capabilities.workspace.workspaceFolders = false
+local caps = vim.lsp.protocol.make_client_capabilities()
+caps.textDocument.completion = {completionItem = {documentationFormat =  {'plaintext'}}}
+caps.textDocument.hover = {contentFormat =  {'plaintext'}}
+caps.workspace.workspaceFolders = false
 
 vim.diagnostic.config({
 	signs = false,
@@ -25,11 +25,13 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 	vim.api.nvim_set_keymap('n', 'gj', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 	vim.api.nvim_set_keymap('n', 'gk', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+	vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+	vim.api.nvim_set_keymap('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 end
 
 for _, s in ipairs({'gopls', 'rust_analyzer'}) do
 	lsp[s].setup {
-		capabilities = capabilities,
+		capabilities = caps,
 		on_attach = on_attach,
 		settings = {
 			['rust-analyzer'] = {
