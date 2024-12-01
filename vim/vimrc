@@ -7,7 +7,7 @@ if !has('nvim')
 endif
 set cot-=preview ic scs sw=4 ts=4 nu ls=0
 set wig+=.git/* wim=longest,list,full
-set nohls nobk noswf nopvw
+set nohls nobk noswf nopvw nowrap
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>l :20Lex<CR>
 nn <silent> <leader>q :%bw!<CR>
