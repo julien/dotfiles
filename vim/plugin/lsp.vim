@@ -5,8 +5,32 @@ call LspOptionsSet({
 	autoHighlightDiags: v:false,
 	completionTextEdit: v:false,
 	omniComplete: v:true,
+	echoSignature: v:true,
+	showDiagInPopup: v:false,
 	showSignature: v:false,
 })
+var features = {
+	callHierarchy: v:false,
+	codeAction: v:false,
+	codeLens: v:false,
+	documentFormatting: v:false,
+	documentHighlight: v:false,
+	documentSymbol: v:false,
+	foldingRange: v:false,
+	inlayHint: v:false,
+	selectionRange: v:false,
+	typeHierarchy: v:false,
+	workspaceSymbol: v:false,
+}
+if executable('clangd')
+	call LspAddServer([{
+		name: 'clangd',
+		filetype: ['c', 'cpp'],
+		path: 'clangd',
+		args: ['--background-index'],
+		features: features,
+	}])
+endif
 if executable('gopls')
 	call LspAddServer([{
 		name: 'gopls',
@@ -14,6 +38,7 @@ if executable('gopls')
 		path: 'gopls',
 		args: ['serve'],
 		syncInit: v:true,
+		features: features,
 	}])
 endif
 if executable('rust-analyzer')
@@ -26,7 +51,8 @@ if executable('rust-analyzer')
 		initializationOptions: {
 			cachePriming: {enable: v:false},
 			cargo: {check: {workspace: v:false}},
-		}
+		},
+		features: features,
 	}])
 endif
 
