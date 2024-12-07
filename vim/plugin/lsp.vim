@@ -61,11 +61,12 @@ def OnAttach()
 	setbufvar(bufnr(), 'vcm_tab_complete', 'omni')
 enddef
 
-augroup LspSetup
+aug LspSetup
 	au!
 	au User LspAttached call s:OnAttach()
-augroup END
+aug END
 
+nn K  :LspHover<CR>
 nn gd :LspGotoDefinition<CR>
 nn gi :LspPeekImpl<CR>
 nn gr :LspPeekReferences<CR>
