@@ -5,20 +5,21 @@ if exists("syntax_on")
 endif
 let g:colors_name="light"
 
-hi Normal cterm=NONE ctermbg=NONE guibg=NONE guifg=#525151
+hi Normal term=NONE cterm=NONE ctermfg=239 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
 hi CursorLine term=NONE cterm=NONE gui=NONE
 hi CursorLineNr term=NONE cterm=NONE gui=NONE
 hi LineNr ctermfg=242 guifg=#b9b8b7
-hi NormalFloat cterm=NONE ctermbg=251 ctermfg=0
+hi NormalFloat cterm=NONE ctermbg=251 ctermfg=246
 hi Pmenu ctermbg=254 guibg=#d4d3d2
-hi PmenuSel cterm=NONE ctermbg=NONE ctermfg=0 gui=NONE guibg=NONE guifg=#000000
-hi PmenuThumb cterm=NONE ctermbg=NONE ctermfg=0 gui=NONE guibg=NONE guifg=#000000
+hi PmenuSel cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
+hi PmenuThumb cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
 hi Visual term=NONE guibg=#d4d3d2
-hi WildMenu term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE gui=NONE guibg=NONE guifg=NONE
+hi WildMenu term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi Comment cterm=NONE ctermfg=2 guifg=#6bab51
+hi VertSplit cterm=NONE gui=NONE
 hi Todo term=NONE cterm=NONE ctermfg=2 ctermbg=NONE gui=NONE guifg=#6bab51 guibg=NONE
 hi Conditional ctermfg=4 guifg=#325cc0
-hi Constant ctermfg=2 guifg=#448C27
+hi Constant ctermfg=2 guifg=#448c27
 hi Keyword ctermfg=4 guifg=#325cc0
 hi! link String Constant
 hi! clear Function
