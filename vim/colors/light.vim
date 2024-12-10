@@ -13,7 +13,7 @@ hi CursorLineNr term=NONE cterm=NONE gui=NONE
 hi LineNr ctermfg=242 guifg=#b9b8b7
 hi NormalFloat cterm=NONE ctermbg=251 ctermfg=246
 hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
-hi PmenuSel cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
+hi PmenuSel cterm=NONE ctermfg=254 ctermbg=16 gui=NONE guifg=#525151 guibg=#4e4e4e
 hi PmenuThumb cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
 hi Visual cterm=NONE ctermbg=245 guibg=#d4d3d2
 hi WildMenu term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
