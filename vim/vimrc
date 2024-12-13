@@ -1,5 +1,5 @@
 let mapleader="\<Space>" | let loaded_matchparen=1 | let loaded_nvim_treesitter=1
-if !has('nvim')
+if !has("nvim")
 	filetype plugin indent on
 	syntax on
 	set ar hid lz mouse=a gp=rg\ --vimgrep
