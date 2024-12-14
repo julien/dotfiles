@@ -5,7 +5,6 @@ if !has("nvim")
 	set ar hid lz mouse=a gp=rg\ --vimgrep
 	set tf ttym=xterm2 ttm=50 noeol
 endif
-let &t_md=""
 set cot-=preview ic scs sw=4 ts=4 nu ls=0
 set wig+=.git/* wim=longest,list,full
 set nohls nobk noswf nopvw nowrap
