@@ -5,7 +5,7 @@ if exists("syntax_on")
 endif
 let g:colors_name="light"
 
-hi Normal cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
+hi Normal cterm=NONE ctermbg=NONE gui=NONE guifg=#434343 guibg=NONE
 hi LineNr ctermfg=242 guifg=#b9b8b7
 hi MatchParen term=NONE cterm=NONE ctermbg=8 guibg=#cccccc
 hi NonText ctermfg=7 ctermbg=NONE guifg=#b9b8b7 guibg=NONE
