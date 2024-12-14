@@ -1,1 +1,0 @@
-/Users/jc/.dot/nvim/plugin/fzy.vim
