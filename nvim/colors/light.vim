@@ -5,8 +5,7 @@ if exists("syntax_on")
 endif
 let g:colors_name="light"
 
-hi! clear Normal
-hi Normal cterm=NONE ctermbg=NONE gui=NONE guibg=NONE guifg=#4e4e4e
+hi Normal cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
 hi LineNr ctermfg=242 guifg=#b9b8b7
 hi MatchParen term=NONE cterm=NONE ctermbg=8 guibg=#cccccc
 hi NonText ctermfg=7 ctermbg=NONE guifg=#b9b8b7 guibg=NONE
@@ -30,5 +29,4 @@ hi! clear Question
 hi! clear Special
 hi diffAdded ctermfg=2 guifg=#448c27
 hi diffRemoved ctermfg=1 guifg=#d7453a
-" for nvim
 hi manBold ctermfg=NONE ctermbg=NONE cterm=NONE gui=bold
