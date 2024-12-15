@@ -10,28 +10,22 @@ if exists("syntax_on")
 endif
 let g:colors_name = "noop"
 
-hi Normal cterm=NONE ctermfg=240 ctermbg=NONE guifg=#405050 gui=NONE guibg=NONE
-
+hi Normal cterm=NONE ctermfg=235 ctermbg=NONE guifg=#405050 gui=NONE guibg=NONE
 hi Search ctermbg=167 guibg=#d7453a guifg=#eeeeee gui=NONE
 hi LineNr ctermfg=7
 hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
-hi PmenuThumb cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
-
 hi Comment ctermfg=244 guifg=#767676
-hi Constant cterm=NONE ctermfg=9 guifg=#b3453d
+hi Constant cterm=NONE ctermfg=1 guifg=#b3453d
 hi Identifier ctermfg=241 guifg=#323633 gui=NONE
 hi Statement cterm=NONE ctermfg=238 gui=NONE guifg=#323633
-hi String ctermfg=215 guifg=#695005
-hi Type term=NONE cterm=NONE ctermfg=9 guifg=#b3453d gui=NONE
+hi String ctermfg=3 guifg=#695005
+hi Type term=NONE cterm=NONE ctermfg=1 guifg=#b3453d gui=NONE
 hi! clear Special
-
 hi! link vimGroup Normal
 hi! link vimHiTerm vimGroup
-
 hi diffAdded ctermfg=2 guifg=#448c27
 hi diffRemoved ctermfg=1 guifg=#d7453a
 hi manBold ctermfg=NONE ctermbg=NONE cterm=NONE gui=bold
-
 hi! link Boolean Normal
 hi! link Delimiter Normal
 hi! link Identifier Normal
