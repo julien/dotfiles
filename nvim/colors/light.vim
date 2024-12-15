@@ -13,7 +13,7 @@ hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
 hi PmenuSel cterm=NONE ctermfg=254 ctermbg=16 gui=NONE guifg=#d4d3d2 guibg=#4e4e4e
 hi PmenuThumb cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
 hi VertSplit cterm=NONE gui=NONE
-hi Comment ctermfg=2 guifg=#6bab51 " term=NONE cterm=NONE
+hi Comment ctermfg=2 guifg=#6bab51
 hi! link SpecialComment Comment
 hi Constant ctermfg=2 guifg=#448c27
 hi! link String Constant
