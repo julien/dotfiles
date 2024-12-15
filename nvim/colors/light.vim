@@ -6,8 +6,13 @@ endif
 let g:colors_name="light"
 
 hi Normal cterm=NONE ctermbg=NONE gui=NONE guifg=#505252 guibg=NONE
+hi! clear Directory
+hi! clear FloatFooter
+hi! clear FloatTitle
 hi LineNr ctermfg=242 guifg=#b9b8b7
 hi MatchParen term=NONE cterm=NONE ctermbg=8 guibg=#cccccc
+hi! clear ModeMsg
+hi! clear MoreMsg
 hi NonText ctermfg=7 ctermbg=NONE guifg=#b9b8b7 guibg=NONE
 hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
 hi PmenuSel cterm=NONE ctermfg=254 ctermbg=16 gui=NONE guifg=#d4d3d2 guibg=#4e4e4e
@@ -21,6 +26,7 @@ hi Conditional ctermfg=4 guifg=#325cc0
 hi Keyword ctermfg=4 guifg=#325cc0
 hi! clear Identifier
 hi Statement ctermfg=4 guifg=#325cc0
+hi! clear Delimiter
 hi! clear Type
 hi! clear Function
 hi! clear Operator
