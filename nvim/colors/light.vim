@@ -20,6 +20,7 @@ hi PmenuThumb cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NON
 hi VertSplit cterm=NONE gui=NONE
 hi Comment ctermfg=2 guifg=#6bab51
 hi! link SpecialComment Comment
+hi! link Todo Comment
 hi Constant ctermfg=2 guifg=#448c27
 hi! link String Constant
 hi Conditional ctermfg=4 guifg=#325cc0
