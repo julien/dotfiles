@@ -4,10 +4,14 @@ call LspOptionsSet({
 	autoComplete: v:true,
 	autoHighlightDiags: v:false,
 	completionTextEdit: v:false,
+	echoSignature: v:false,
+	highlightDiagInline: v:false,
 	omniComplete: v:true,
-	echoSignature: v:true,
+	semanticHighlight: v:false,
 	showDiagInPopup: v:false,
 	showSignature: v:false,
+	showDiagWithSign: v:false,
+	bufferCompletionTimeout: 400,
 })
 var features = {
 	callHierarchy: v:false,
@@ -17,8 +21,10 @@ var features = {
 	documentHighlight: v:false,
 	documentSymbol: v:false,
 	foldingRange: v:false,
+	hover: v:false,
 	inlayHint: v:false,
 	selectionRange: v:false,
+	signatureHelp: v:false,
 	typeHierarchy: v:false,
 	workspaceSymbol: v:false,
 }
@@ -66,7 +72,6 @@ aug LspSetup
 	au User LspAttached call s:OnAttach()
 aug END
 
-nn K  :LspHover<CR>
 nn gd :LspGotoDefinition<CR>
 nn gi :LspPeekImpl<CR>
 nn gr :LspPeekReferences<CR>
