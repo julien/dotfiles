@@ -17,9 +17,16 @@
 [merge]
 	conflictStyle = diff3
 
+[rerere]
+	enabled = true
+
 [user]
-	name = julien castelain
+	name = julien c
 	email = julien@users.noreply.github.com
 
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
