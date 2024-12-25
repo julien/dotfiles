@@ -10,15 +10,14 @@ hi! clear Directory
 hi! clear FloatFooter
 hi! clear FloatTitle
 hi LineNr ctermfg=242 guifg=#b9b8b7
-hi MatchParen term=NONE cterm=NONE ctermbg=8 guibg=#cccccc
+hi! link MatchParen Visual
 hi! link CursorLine Visual
 hi! link CursorLineNr Visual
 hi! clear ModeMsg
 hi! clear MoreMsg
 hi NonText ctermfg=7 ctermbg=NONE guifg=#b9b8b7 guibg=NONE
 hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
-hi PmenuSel cterm=NONE ctermfg=254 ctermbg=16 gui=NONE guifg=#d4d3d2 guibg=#4e4e4e
-hi PmenuThumb cterm=NONE ctermfg=0 ctermbg=NONE gui=NONE guifg=#525151 guibg=NONE
+hi! link PmenuThumb Visual
 hi VertSplit cterm=NONE gui=NONE
 hi Comment ctermfg=2 guifg=#6bab51
 hi! link SpecialComment Comment
@@ -27,8 +26,8 @@ hi Constant ctermfg=2 guifg=#448c27
 hi! link String Constant
 hi Conditional ctermfg=4 guifg=#325cc0
 hi Keyword ctermfg=4 guifg=#325cc0
-hi! clear Identifier
 hi Statement ctermfg=4 guifg=#325cc0
+hi! clear Identifier
 hi! clear Delimiter
 hi! clear Type
 hi! clear Function
@@ -36,6 +35,13 @@ hi! clear Operator
 hi! clear Preproc
 hi! clear Question
 hi! clear Special
-hi diffAdded ctermfg=2 guifg=#448c27
-hi diffRemoved ctermfg=1 guifg=#d7453a
 hi manBold ctermfg=NONE ctermbg=NONE cterm=NONE gui=bold
+hi diffAdded ctermfg=2 guifg=#448c27
+hi diffComment ctermfg=8 guifg=#505252
+hi diffLine ctermfg=237 guifg=#505252
+hi diffRemoved ctermfg=1 guifg=#d7453a
+hi gitcommitComment ctermfg=237 guifg=#505252
+hi gitcommitFile ctermfg=237 guifg=#505252
+hi gitcommitOnBranch ctermfg=237 guifg=#505252
+hi gitcommitSummary ctermfg=237 guifg=#505252
+hi gitcommitTrailerToken ctermfg=237 guifg=#505252
