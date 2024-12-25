@@ -11,6 +11,8 @@ hi! clear FloatFooter
 hi! clear FloatTitle
 hi LineNr ctermfg=242 guifg=#b9b8b7
 hi MatchParen term=NONE cterm=NONE ctermbg=8 guibg=#cccccc
+hi! link CursorLine Visual
+hi! link CursorLineNr Visual
 hi! clear ModeMsg
 hi! clear MoreMsg
 hi NonText ctermfg=7 ctermbg=NONE guifg=#b9b8b7 guibg=NONE
