@@ -38,10 +38,10 @@ hi! clear Special
 hi manBold ctermfg=NONE ctermbg=NONE cterm=NONE gui=bold
 hi diffAdded ctermfg=2 guifg=#448c27
 hi diffComment ctermfg=8 guifg=#505252
-hi diffLine ctermfg=237 guifg=#505252
+hi diffLine ctermfg=8 guifg=#505252
 hi diffRemoved ctermfg=1 guifg=#d7453a
-hi gitcommitComment ctermfg=237 guifg=#505252
-hi gitcommitFile ctermfg=237 guifg=#505252
-hi gitcommitOnBranch ctermfg=237 guifg=#505252
+hi gitcommitComment ctermfg=8 guifg=#505252
+hi gitcommitFile ctermfg=8 guifg=#505252
+hi gitcommitOnBranch ctermfg=8 guifg=#505252
 hi gitcommitSummary ctermfg=237 guifg=#505252
-hi gitcommitTrailerToken ctermfg=237 guifg=#505252
+hi gitcommitTrailerToken ctermfg=8 guifg=#505252
