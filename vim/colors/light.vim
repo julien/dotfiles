@@ -10,6 +10,7 @@ hi! clear Directory
 hi! clear FloatFooter
 hi! clear FloatTitle
 hi LineNr ctermfg=242 guifg=#b9b8b7
+hi Visual cterm=none ctermbg=248 ctermfg=NONE guifg=NONE guibg=#eeeeee
 hi! link MatchParen Visual
 hi! link CursorLine Visual
 hi! link CursorLineNr Visual
