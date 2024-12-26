@@ -1,4 +1,4 @@
-let mapleader="\<Space>" | let loaded_matchparen=1 | let loaded_nvim_treesitter=1
+let mapleader="\<Space>" | let g:loaded_matchparen=1
 filetype plugin indent on
 syntax on
 set ar hid lz mouse=a gp=rg\ --vimgrep
@@ -9,7 +9,6 @@ set wig+=.git/* wim=longest,list,full
 set nohls nobk noswf nopvw nowrap
 nn <silent> <leader>e :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
-nn <leader>f /
 nn n nzz
 vn < <gv
 vn > >gv
