@@ -7,7 +7,7 @@ if exists('$TMUX') && !has('nvim') | set ttym=xterm2 | endif
 set cot-=preview ic scs sw=4 ts=4 nu ls=0
 set wig+=.git/* wim=longest,list,full
 set nohls nobk noswf nopvw nowrap
-nn <silent> <leader>e :Ex<CR>
+nn <silent> - :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
 nn n nzz
 vn < <gv
