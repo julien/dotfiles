@@ -5,12 +5,12 @@ if exists("syntax_on")
 endif
 let g:colors_name="light"
 
-hi Normal cterm=NONE ctermbg=NONE gui=NONE guifg=#505252 guibg=NONE
+hi Normal cterm=NONE ctermbg=NONE gui=NONE guifg=#343434 guibg=NONE
 hi! clear Directory
 hi! clear FloatFooter
 hi! clear FloatTitle
 hi LineNr ctermfg=242 guifg=#b9b8b7
-hi Visual cterm=none ctermbg=248 ctermfg=NONE guifg=NONE guibg=#eeeeee
+hi Visual cterm=none ctermbg=248 ctermfg=NONE guifg=NONE guibg=#cccccc
 hi! link MatchParen Visual
 hi! link CursorLine Visual
 hi! link CursorLineNr Visual
@@ -38,11 +38,11 @@ hi! clear Question
 hi! clear Special
 hi manBold ctermfg=NONE ctermbg=NONE cterm=NONE gui=bold
 hi diffAdded ctermfg=2 guifg=#448c27
-hi diffComment ctermfg=8 guifg=#505252
-hi diffLine ctermfg=8 guifg=#505252
+hi diffComment ctermfg=8 guifg=#343434
+hi diffLine ctermfg=8 guifg=#343434
 hi diffRemoved ctermfg=1 guifg=#d7453a
-hi gitcommitComment ctermfg=8 guifg=#505252
-hi gitcommitFile ctermfg=8 guifg=#505252
-hi gitcommitOnBranch ctermfg=8 guifg=#505252
-hi gitcommitSummary ctermfg=237 guifg=#505252
-hi gitcommitTrailerToken ctermfg=8 guifg=#505252
+hi gitcommitComment ctermfg=8 guifg=#343434
+hi gitcommitFile ctermfg=8 guifg=#343434
+hi gitcommitOnBranch ctermfg=8 guifg=#343434
+hi gitcommitSummary ctermfg=237 guifg=#343434
+hi gitcommitTrailerToken ctermfg=8 guifg=#343434
