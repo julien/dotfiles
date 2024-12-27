@@ -3,15 +3,13 @@ packadd lsp
 call LspOptionsSet({
 	autoComplete: v:true,
 	autoHighlightDiags: v:false,
-	completionTextEdit: v:false,
 	echoSignature: v:false,
 	highlightDiagInline: v:false,
 	omniComplete: v:true,
 	semanticHighlight: v:false,
 	showDiagInPopup: v:false,
-	showSignature: v:false,
 	showDiagWithSign: v:false,
-	bufferCompletionTimeout: 400,
+	showSignature: v:false,
 })
 var features = {
 	callHierarchy: v:false,
@@ -40,7 +38,7 @@ endif
 if executable('gopls')
 	call LspAddServer([{
 		name: 'gopls',
-		filetype: ['go', 'gomod', 'gohtmltmpl', 'gotexttmpl'],
+		filetype: ['go', 'gomod'],
 		path: 'gopls',
 		args: ['serve'],
 		syncInit: v:true,
