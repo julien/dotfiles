@@ -5,7 +5,7 @@ if exists("syntax_on")
 endif
 let g:colors_name="light"
 
-hi Normal cterm=NONE ctermbg=NONE gui=NONE guifg=#343434 guibg=NONE
+hi Normal cterm=NONE ctermbg=NONE gui=bold guifg=NONE guibg=NONE
 hi! clear Directory
 hi! clear FloatFooter
 hi! clear FloatTitle
