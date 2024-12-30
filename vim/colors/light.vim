@@ -14,23 +14,26 @@ hi! link CursorLine   Visual
 hi! link CursorLineNr Visual
 hi! link PmenuThumb   Visual
 
-hi Search ctermfg=237 ctermbg=NONE guifg=#333333 guibg=NONE
+hi Search cterm=bold ctermfg=237 ctermbg=NONE gui=bold guifg=#333333 guibg=NONE
 hi CurSearch ctermfg=15 ctermbg=237 guifg=#eeeeee guibg=#333333
-
 hi NonText ctermfg=7 ctermbg=NONE guifg=#c0c0c0 guibg=NONE
 hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
 hi PmenuSel cterm=reverse,bold ctermfg=NONE ctermbg=15 gui=reverse,bold guifg=NONE guibg=#eeeeee
 hi StatusLineNC term=NONE cterm=NONE gui=NONE
 hi VertSplit cterm=NONE gui=NONE
 
-hi Comment ctermfg=2 guifg=#448c27
+" hi Comment ctermfg=2 guifg=#448c27
+hi Comment ctermfg=6 guifg=#0083b2
 hi! link SpecialComment Comment
 hi! link Todo           Comment
 
-hi Constant ctermfg=5 guifg=#7A3E9D
+"hi Constant ctermfg=5 guifg=#7A3E9D
+hi Constant ctermfg=1 guifg=#d7453a
 hi String NONE
 
-hi Statement ctermfg=4 guifg=#325cc0
+" hi Statement ctermfg=4 guifg=#325cc0
+" suppoosed to be 5 but 52,53,88,89
+hi Statement cterm=bold ctermfg=52 gui=bold guifg=#7a3e9d
 hi! link Conditional Statement
 hi! link Keyword     Statement
 
