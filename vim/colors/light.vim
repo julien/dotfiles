@@ -22,18 +22,14 @@ hi PmenuSel cterm=reverse,bold ctermfg=NONE ctermbg=15 gui=reverse,bold guifg=NO
 hi StatusLineNC term=NONE cterm=NONE gui=NONE
 hi VertSplit cterm=NONE gui=NONE
 
-" hi Comment ctermfg=2 guifg=#448c27
 hi Comment ctermfg=6 guifg=#0083b2
 hi! link SpecialComment Comment
 hi! link Todo           Comment
 
-"hi Constant ctermfg=5 guifg=#7A3E9D
-hi Constant ctermfg=1 guifg=#d7453a
+hi Constant ctermfg=14 guifg=#14b5ae
 hi String NONE
 
-" hi Statement ctermfg=4 guifg=#325cc0
-" suppoosed to be 5 but 52,53,88,89
-hi Statement cterm=bold ctermfg=52 gui=bold guifg=#7a3e9d
+hi Statement ctermfg=4 guifg=#325cc0
 hi! link Conditional Statement
 hi! link Keyword     Statement
 
