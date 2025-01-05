@@ -26,7 +26,7 @@ hi Comment ctermfg=6 guifg=#0083b2
 hi! link SpecialComment Comment
 hi! link Todo           Comment
 
-hi Constant ctermfg=14 guifg=#14b5ae
+hi Constant ctermfg=12 guifg=#007aac
 hi String NONE
 
 hi Statement ctermfg=4 guifg=#325cc0
