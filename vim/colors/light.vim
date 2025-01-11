@@ -5,7 +5,7 @@ if exists("syntax_on")
 endif
 let g:colors_name="light"
 
-hi Normal term=none cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=#343434 guibg=NONE
+hi Normal term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=#343434 guibg=NONE
 hi LineNr ctermfg=8 guifg=#999999
 
 hi Visual cterm=bold ctermfg=15 ctermbg=245 gui=bold guifg=#eeeeee guibg=#999999
@@ -43,18 +43,21 @@ hi gitcommitOnBranch     ctermfg=NONE guifg=fg
 hi gitcommitSummary      ctermfg=NONE guifg=fg
 hi gitcommitTrailerToken ctermfg=NONE guifg=fg
 
-hi! clear Delimiter
-hi! clear Directory
-hi! clear FloatFooter
-hi! clear FloatTitle
-hi! clear Function
-hi! clear Identifier
-hi! clear ModeMsg
-hi! clear MoreMsg
-hi! clear Operator
-hi! clear Preproc
-hi! clear Question
-hi! clear Special
-hi! clear SpecialKey
-hi! clear Title
-hi! clear Type
+hi Delimiter NONE
+hi Directory NONE
+hi FloatFooter NONE
+hi FloatTitle NONE
+hi Function NONE
+hi Identifier NONE
+hi ModeMsg NONE
+hi MoreMsg NONE
+hi Operator NONE
+hi Preproc NONE
+hi Question NONE
+hi Special NONE
+hi SpecialKey NONE
+hi TabLine NONE
+hi Title NONE
+hi Type NONE
+hi Underlined NONE
+hi VisualNOS NONE
