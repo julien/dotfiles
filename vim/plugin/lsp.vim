@@ -19,7 +19,6 @@ var features = {
 	documentHighlight: v:false,
 	documentSymbol: v:false,
 	foldingRange: v:false,
-	hover: v:false,
 	inlayHint: v:false,
 	selectionRange: v:false,
 	signatureHelp: v:false,
@@ -76,3 +75,4 @@ nn gr :LspPeekReferences<CR>
 nn gj :LspDiagNextWrap<CR>
 nn gk :LspDiagPrevWrap<CR>
 nn gR :LspRename<CR>
+nn K  :LspHover<CR>
