@@ -33,4 +33,5 @@ hi! link Keyword     Statement
 
 hi diffAdded   ctermfg=2 guifg=#448c27
 hi diffRemoved ctermfg=1 guifg=#d7453a
+hi gitCommitSummary ctermfg=NONE guifg=fg
 hi Type NONE
