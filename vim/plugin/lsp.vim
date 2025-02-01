@@ -58,6 +58,20 @@ if executable('rust-analyzer')
 		features: features,
 	}])
 endif
+if executable('typescript-language-server')
+	call LspAddServer([{
+		name: 'typescript-language-server',
+		filetype: ['typescript'],
+		path: 'typescript-language-server',
+		args: ['--stdio'],
+		syncInit: v:true,
+		initializationOptions: {
+			cachePriming: {enable: v:false},
+			cargo: {check: {workspace: v:false}},
+		},
+		features: features,
+	}])
+endif
 
 def OnAttach()
 	setbufvar(bufnr(), '&completeopt', 'menu,menuone,noinsert')
