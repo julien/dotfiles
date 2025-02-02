@@ -61,7 +61,7 @@ endif
 if executable('typescript-language-server')
 	call LspAddServer([{
 		name: 'typescript-language-server',
-		filetype: ['typescript'],
+		filetype: ['javascript', 'typescript'],
 		path: 'typescript-language-server',
 		args: ['--stdio'],
 		syncInit: v:true,

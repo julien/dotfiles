@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_set_keymap('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 end
 
-for _, s in ipairs({'gopls', 'rust_analyzer'}) do
+for _, s in ipairs({'clangd', 'gopls', 'rust_analyzer', 'ts_ls'}) do
 	lsp[s].setup {
 		capabilities = caps,
 		on_attach = on_attach,
