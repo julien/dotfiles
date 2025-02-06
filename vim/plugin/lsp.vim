@@ -1,7 +1,7 @@
 vim9script
 packadd lsp
 call LspOptionsSet({
-	autoComplete: v:true,
+	autoComplete: v:false,
 	autoHighlightDiags: v:false,
 	echoSignature: v:false,
 	highlightDiagInline: v:false,
@@ -10,6 +10,7 @@ call LspOptionsSet({
 	showDiagInPopup: v:false,
 	showDiagWithSign: v:false,
 	showSignature: v:false,
+	bufferCompletionTimeout: 50,
 })
 var features = {
 	callHierarchy: v:false,
@@ -54,6 +55,24 @@ if executable('rust-analyzer')
 		initializationOptions: {
 			cachePriming: {enable: v:false},
 			cargo: {check: {workspace: v:false}},
+		},
+		features: features,
+	}])
+endif
+if executable('vtsls')
+	call LspAddServer([{
+		name: 'vtsls',
+		filetype: ['javascript', 'typescript'],
+		path: 'vtsls',
+		args: ['--stdio'],
+		syncInit: v:true,
+		initializationOptions: {
+			disableAutomaticTypingAcquisition: true,
+			preferences: {
+				disableSuggestions: true,
+				includeCompletionsWithInsertText: false,
+				includeCompletionsWithClassMemberSnippets: false,
+			},
 		},
 		features: features,
 	}])
