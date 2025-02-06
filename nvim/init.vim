@@ -10,8 +10,6 @@ set nohls nobk noswf nopvw nowrap
 nn <silent> - :Ex<CR>
 nn <silent> <leader>q :%bw!<CR>
 tno <Esc> <C-\><C-n>
-nn <C-n> :bn<CR>
-nn <C-t> :terminal ++curwin<CR>
 nn <C-b> :ls<CR>:b<SPACE>
 nn n nzz
 vn < <gv
