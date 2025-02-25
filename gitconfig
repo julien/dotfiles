@@ -2,14 +2,32 @@
 	l = log --oneline
 	s = status -s -uall
 
+[commit]
+	verbose = true
+
 [core]
+	excludefiles = ~/.gitignore
 	fileMode = false
 	precomposeUnicode = true
 	symlinks = false
 
 [diff]
 	algorithm = histogram
+	colorMoved = plain
 	renameLimit = 999999
+	renames = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+
+[help]
+	autocorrect = prompt
 
 [http]
 	sslVerify = false
@@ -19,6 +37,7 @@
 
 [rerere]
 	enabled = true
+	autoupdate = true
 
 [user]
 	name = julien c
