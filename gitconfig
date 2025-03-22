@@ -17,10 +17,6 @@
 	renameLimit = 999999
 	renames = true
 
-[fetch]
-	prune = true
-	pruneTags = true
-
 [push]
 	default = simple
 	autoSetupRemote = true
