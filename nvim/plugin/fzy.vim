@@ -1,41 +1,26 @@
-if has('nvim')
-	function! FzyCommand(choice_command, vim_command) abort
-		let l:callback = {
-		\'window_id': win_getid(),
-		\'filename': tempname(),
-		\'vim_command':  a:vim_command,
-		\}
+function! s:completed(winid, filename, action, ...) abort
+    bdelete!
+    call win_gotoid(a:winid)
+    if filereadable(a:filename)
+      let lines = readfile(a:filename)
+      if !empty(lines)
+        exe a:action . ' ' . lines[0]
+      endif
+      call delete(a:filename)
+    endif
+endfunction
 
-		function! l:callback.on_exit(job_id, data, event) abort
-			bdelete!
-			call win_gotoid(self.window_id)
-			if filereadable(self.filename)
-				try
-					let l:selected_filename = readfile(self.filename)[0]
-					exec self.vim_command . l:selected_filename
-				catch /E684/
-				endtry
-			endif
-			call delete(self.filename)
-		endfunction
-
-		botright 10 new
-		let l:term_command = a:choice_command . ' | fzy > ' .  l:callback.filename
-		silent call termopen(l:term_command, l:callback)
-		setlocal nonumber norelativenumber
-		startinsert
-	endfunction
-else
-	function! FzyCommand(choice_command, vim_command)
-		try
-			let output = system(a:choice_command . " | fzy ")
-		catch /Vim:Interrupt/
-			" Swallow errors from ^C, allow redraw! below
-		endtry
-		redraw!
-		if v:shell_error == 0 && !empty(output)
-			exec a:vim_command . ' ' . output
-		endif
-	endfunction
-end
+function! FzyCommand(choice_command, vim_command)
+    let file = tempname()
+    let winid = win_getid()
+    let cmd = split(&shell) + split(&shellcmdflag) + [a:choice_command . ' | fzy > ' . file]
+    let F = function('s:completed', [winid, file, a:vim_command])
+    botright 10 new
+    if has('nvim')
+        call termopen(cmd, {'on_exit': F})
+    else
+        call term_start(cmd, {'exit_cb': F, 'curwin': 1})
+    endif
+    startinsert
+endfunction
 nn <silent> <c-p> :call FzyCommand('rg -g "!.git/*" -g "!target/*" --files', ':e ')<CR>
