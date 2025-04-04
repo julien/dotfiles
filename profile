@@ -5,4 +5,3 @@ export PATH="/opt/homebrew/bin:$HOME/.local/bin:$HOME/.local/node/bin:$HOME/.loc
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 [[ -f "$HOME/.env" ]] && . "$HOME/.env"
 alias ls="ls -1Ga"
-export N_PREFIX=$HOME/.local/node
