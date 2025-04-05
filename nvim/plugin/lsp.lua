@@ -1,15 +1,60 @@
-local lsp = require 'lspconfig'
-local caps = vim.lsp.protocol.make_client_capabilities()
-caps.textDocument.completion = {completionItem = {documentationFormat =  {'plaintext'}}}
-caps.textDocument.hover = {contentFormat =  {'plaintext'}}
-caps.workspace.workspaceFolders = false
-
 vim.diagnostic.config({
 	signs = false,
 	underline = false,
 	update_in_insert = false,
 	virtual_text = false,
 })
+
+local on_attach = function(client, bufnr)
+	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+	vim.cmd 'let b:vcm_tab_complete = "omni"'
+	local opts = {noremap=true}
+	-- defaults: grn (rename), grr (references), gri (implementation)
+	vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+	vim.api.nvim_set_keymap('n', 'gj', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+	vim.api.nvim_set_keymap('n', 'gk', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+end
+
+vim.lsp.config('*', {
+	capabilities = {
+		textDocument = {
+			completion = {completionItem = {documentationFormat = {'plaintext'}}},
+			hover = {contentFormat = {'plaintext'}}
+		},
+		workspace = {workspaceFolders = false},
+	},
+	root_markers = {'.git'},
+	on_attach = on_attach,
+})
+
+vim.lsp.config.clangd = {
+	cmd = {'clangd', '--background-index'},
+	root_markers = {'compile_commands.json', 'compile_flags.txt'},
+	filetypes = {'c', 'cpp'},
+	single_file_support = true,
+}
+
+vim.lsp.config.gopls = {
+	cmd = {'gopls'},
+	filetypes =  {'go', 'gomod', 'gowork', 'gotmpl'},
+	root_markers = {'go.mod', 'go.work'},
+	single_file_support = true,
+}
+
+vim.lsp.config.rust_analyzer = {
+    cmd = {'rust-analyzer'},
+    filetypes = {'rust'},
+	root_markers = {'Cargo.toml'},
+    single_file_support = true,
+	settings = {cachePriming = {enable = false}, cargo = {check = {workspace = false}}},
+}
+
+vim.lsp.config.vtsls = {
+	cmd = {'vtsls', '--stdio'},
+	filetypes = {'javascript', 'typescript'},
+	root_markers = {'tsconfig.json', 'package.json'},
+	single_file_support = true,
+}
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(args)
@@ -18,26 +63,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
 })
 
-local on_attach = function(client, bufnr)
-	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-	vim.cmd 'let b:vcm_tab_complete = "omni"'
-	local opts = {noremap=true}
-	vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-	vim.api.nvim_set_keymap('n', 'gj', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-	vim.api.nvim_set_keymap('n', 'gk', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-	vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-	vim.api.nvim_set_keymap('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-end
-
-for _, s in ipairs({'clangd', 'gopls', 'rust_analyzer', 'vtsls'}) do
-	lsp[s].setup {
-		capabilities = caps,
-		on_attach = on_attach,
-		settings = {
-			['rust-analyzer'] = {
-				cachePriming = {enable = false},
-				cargo = {check = {workspace = false}},
-			},
-		},
-	}
-end
+vim.lsp.enable({'clangd', 'gopls', 'rust_analyzer', 'vtsls'})
