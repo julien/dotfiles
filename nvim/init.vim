@@ -1,4 +1,4 @@
-let mapleader="\<Space>" | let g:loaded_matchparen=1
+let mapleader='\<Space>' | let g:loaded_matchparen=1
 filetype plugin indent on
 syntax on
 set ar hid lz mouse=a gp=rg\ --vimgrep
