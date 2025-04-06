@@ -1,9 +1,9 @@
-let mapleader='\<Space>' | let g:loaded_matchparen=1
+let mapleader="\<Space>" | let g:loaded_matchparen=1
 filetype plugin indent on
 syntax on
-set ar hid lz mouse=a gp=rg\ --vimgrep
-set tf ttm=50 noeol
 if exists('$TMUX') && !has('nvim') | set ttym=xterm2 | endif
+set ar hid lz mouse=a gp=rg\ --vimgrep
+set tf ttm=50
 set cot-=preview ic scs sw=4 ts=4 nu ls=0
 set wig+=.git/* wim=longest,list,full
 set nohls nobk noswf nopvw nowrap
