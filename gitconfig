@@ -36,7 +36,7 @@
 	autoupdate = true
 
 [user]
-	name = julien c
+	name = julien
 	email = julien@users.noreply.github.com
 
 [url "ssh://git@github.com/"]
