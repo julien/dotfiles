@@ -4,7 +4,7 @@ syntax on
 if exists('$TMUX') && !has('nvim') | set ttym=xterm2 | endif
 set ar hid lz mouse=a gp=rg\ --vimgrep
 set tf ttm=50
-set cot-=preview ic scs sw=4 ts=4 nu ls=0
+set cot-=preview,popup ic scs sw=4 ts=4 nu ls=0
 set wig+=.git/* wim=longest,list,full
 set nohls nobk noswf nopvw nowrap
 nn <silent> - :Ex<CR>
