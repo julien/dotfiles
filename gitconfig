@@ -20,7 +20,6 @@
 [push]
 	default = simple
 	autoSetupRemote = true
-	followTags = true
 
 [help]
 	autocorrect = prompt
