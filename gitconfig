@@ -6,7 +6,6 @@
 	verbose = true
 
 [core]
-	excludefiles = ~/.gitignore
 	fileMode = false
 	precomposeUnicode = true
 	symlinks = false
