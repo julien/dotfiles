@@ -30,8 +30,8 @@ hi String NONE
 hi Statement ctermfg=4 guifg=#325cc0
 hi! link Conditional Statement
 hi! link Keyword     Statement
+hi! link Type        Statement
 
 hi diffAdded   ctermfg=2 guifg=#448c27
 hi diffRemoved ctermfg=1 guifg=#d7453a
 hi gitCommitSummary ctermfg=NONE guifg=fg
-hi Type NONE
