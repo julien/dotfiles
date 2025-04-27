@@ -41,14 +41,6 @@ vim.lsp.config.gopls = {
 	single_file_support = true,
 }
 
-vim.lsp.config.rust_analyzer = {
-    cmd = {'rust-analyzer'},
-    filetypes = {'rust'},
-	root_markers = {'Cargo.toml'},
-    single_file_support = true,
-	settings = {cachePriming = {enable = false}, cargo = {check = {workspace = false}}},
-}
-
 vim.lsp.config.vtsls = {
 	cmd = {'vtsls', '--stdio'},
 	filetypes = {'javascript', 'typescript'},
@@ -66,4 +58,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
 })
 
-vim.lsp.enable({'clangd', 'gopls', 'rust_analyzer', 'vtsls'})
+vim.lsp.enable({'clangd', 'gopls', 'vtsls'})
