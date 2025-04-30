@@ -41,6 +41,12 @@ vim.lsp.config.gopls = {
 	single_file_support = true,
 }
 
+vim.lsp.config.ols = {
+	cmd = {'ols', '-strict-style'},
+	filetypes = {'odin'},
+	single_file_support = true,
+}
+
 vim.lsp.config.vtsls = {
 	cmd = {'vtsls', '--stdio'},
 	filetypes = {'javascript', 'typescript'},
@@ -58,4 +64,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
 })
 
-vim.lsp.enable({'clangd', 'gopls', 'vtsls'})
+vim.lsp.enable({'clangd', 'gopls', 'vtsls', 'ols'})
