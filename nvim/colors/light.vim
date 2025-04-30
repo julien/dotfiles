@@ -16,6 +16,9 @@ hi! link CursorLine   Visual
 hi! link CursorLineNr Visual
 hi! link PmenuThumb   Visual
 
+hi! clear NormalFloat
+hi NormalFloat cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=#000000 guibg=#eeeeee
+
 hi NonText ctermfg=7 guifg=#cccccc
 hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
 hi PmenuSel cterm=reverse ctermfg=NONE ctermbg=15 gui=reverse guifg=NONE guibg=#eeeeee
