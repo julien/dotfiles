@@ -23,4 +23,6 @@ function! FzyCommand(choice_command, vim_command)
     endif
     startinsert
 endfunction
+
 nn <silent> <c-p> :call FzyCommand('rg --files', ':e ')<CR>
+autocmd TermOpen * tnoremap <buffer> <ESC> <C-\><C-n>:close<CR>
