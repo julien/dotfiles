@@ -8,7 +8,7 @@ let g:colors_name="light"
 hi Normal term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=#343434 guibg=NONE
 hi LineNr ctermfg=8 guifg=#999999
 
-hi Visual ctermfg=15 ctermbg=245 guifg=#eeeeee guibg=#999999
+hi Visual term=NONE cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=#eeeeee guibg=#999999
 hi! link Search       Visual
 hi! link CurSearch    Visual
 hi! link MatchParen   Visual
@@ -28,12 +28,17 @@ hi! link SpecialComment Comment
 hi! link Todo           Comment
 
 hi Constant ctermfg=12 guifg=#007aac
+hi! link  Identifier Constant
 hi String NONE
+
+hi! clear PreProc
+hi! clear Question
 
 hi Statement ctermfg=4 guifg=#325cc0
 hi! link Conditional Statement
 hi! link Keyword     Statement
 hi! link Type        Statement
+hi! link Special      Statement
 
 hi diffAdded   ctermfg=2 guifg=#448c27
 hi diffRemoved ctermfg=1 guifg=#d7453a
