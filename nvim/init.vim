@@ -11,7 +11,7 @@ nn <silent> - :Ex<CR>
 nn <silent> <leader>q :%bd!<CR>
 tno <Esc> <C-\><C-n>
 nn <C-b> :ls<CR>:b
-nn <C-t> :term<CR>i
+nn <expr> <C-t> has('nvim') ? ':term<CR>i' : ':term ++curwin<CR>'
 nn <C-s> :%s/\s\+$//e<CR>
 nn n nzz
 vn < <gv
