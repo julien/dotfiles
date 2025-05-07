@@ -23,7 +23,8 @@ hi NonText ctermfg=7 guifg=#cccccc
 hi Pmenu cterm=NONE ctermbg=254 guibg=#d4d3d2
 hi PmenuSel cterm=reverse ctermfg=NONE ctermbg=15 gui=reverse guifg=NONE guibg=#eeeeee
 
-hi Comment ctermfg=6 guifg=#0083b2
+" hi Comment ctermfg=6 guifg=#0083b2
+hi Comment ctermfg=2 guifg=#448c27
 hi! link SpecialComment Comment
 hi! link Todo           Comment
 
